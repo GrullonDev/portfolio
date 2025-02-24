@@ -38,10 +38,11 @@ Las tecnologías que he usado incluyen:
 
 Puedes contactarme a través de los siguientes medios:
 
-- **Email**: jorge@example.com
-- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://linkedin.com/in/jorgegrullon)
-- **GitHub**: [github.com/jorgegrullon](https://github.com/jorgegrullon)
-- **Twitter**: [twitter.com/jorgegrullon](https://twitter.com/jorgegrullon)
+- **Email**: prosystem155@gmail.com
+- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://www.linkedin.com/in/jorge-luis-grullón-marroquin)
+- **GitHub**: [github.com/jorgegrullon](https://github.com/GrullonDev)
+- **Twitter**: [twitter.com/jorgegrullon](https://x.com/JorgeLuisGM8)
+- **WhatsApp Business**[GrullonDev](https://wa.me/+50242909548)
 - **Portafolio**: [jorgegrullon.dev](https://jorgegrullon.dev)
 
 ## Recursos
@@ -79,16 +80,18 @@ Visita mi [blog](https://jorgegrullon.dev/blog) donde comparto artículos sobre 
 
 Sígueme en mis redes sociales para estar al tanto de mis últimos proyectos y artículos:
 
-- **Twitter**: [twitter.com/jorgegrullon](https://twitter.com/jorgegrullon)
-- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://linkedin.com/in/jorgegrullon)
-- **GitHub**: [github.com/jorgegrullon](https://github.com/jorgegrullon)
+- **Twitter**: [twitter.com/jorgegrullon](https://x.com/JorgeLuisGM8)
+- **LinkedIn**: [linkedin.com/in/jorgegrullon]('https://www.linkedin.com/in/jorge-luis-grullón-marroquin)
+- **GitHub**: [github.com/jorgegrullon](https://github.com/GrullonDev)
 
 ## Contribuciones Open Source
 
-He contribuido a varios proyectos de código abierto, incluyendo:
+Buscando contribuciones para apoyar a algun proyecto que lo necesite.
+
+<!-- He contribuido a varios proyectos de código abierto, incluyendo:
 
 - **Proyecto Open Source 1**: Descripción breve del proyecto y mi contribución.
-- **Proyecto Open Source 2**: Descripción breve del proyecto y mi contribución.
+- **Proyecto Open Source 2**: Descripción breve del proyecto y mi contribución. -->
 
 ## Disponibilidad
 
