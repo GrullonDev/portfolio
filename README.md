@@ -1,16 +1,95 @@
 # flutter_portfolio
 
-A new Flutter project.
+Este es mi portafolio personal desarrollado con Flutter.
 
-## Getting Started
+## Sobre mí
 
-This project is a starting point for a Flutter application.
+Soy Jorge Grullón, un desarrollador de software apasionado por crear aplicaciones móviles y web de alta calidad. Tengo experiencia en diversas tecnologías y siempre estoy buscando aprender y mejorar mis habilidades.
 
-A few resources to get you started if this is your first Flutter project:
+## Proyectos
+
+Aquí hay algunos de los proyectos que he realizado:
+
+- **Proyecto 1**: Descripción breve del proyecto 1.
+- **Proyecto 2**: Descripción breve del proyecto 2.
+- **Proyecto 3**: Descripción breve del proyecto 3.
+
+## Servicios
+
+Ofrezco los siguientes servicios:
+
+- Desarrollo de aplicaciones móviles con Flutter.
+- Desarrollo de aplicaciones web.
+- Consultoría en desarrollo de software.
+- Mantenimiento y actualización de aplicaciones existentes.
+
+## Tecnologías
+
+Las tecnologías que he usado incluyen:
+
+- **Flutter** (predominante)
+- Dart
+- JavaScript
+- HTML/CSS
+- Firebase
+- REST APIs
+
+## Contacto
+
+Puedes contactarme a través de los siguientes medios:
+
+- **Email**: jorge@example.com
+- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://linkedin.com/in/jorgegrullon)
+- **GitHub**: [github.com/jorgegrullon](https://github.com/jorgegrullon)
+- **Twitter**: [twitter.com/jorgegrullon](https://twitter.com/jorgegrullon)
+- **Portafolio**: [jorgegrullon.dev](https://jorgegrullon.dev)
+
+## Recursos
+
+Algunos recursos para comenzar con Flutter:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Para obtener ayuda con el desarrollo en Flutter, consulta la [documentación en línea](https://docs.flutter.dev/), que ofrece tutoriales, ejemplos, guías sobre desarrollo móvil y una referencia completa de la API.
+
+## Testimonios
+
+### Agriconecta
+
+_"Jorge hizo un trabajo excepcional desarrollando nuestra aplicación móvil. Su atención al detalle y su habilidad para resolver problemas fueron impresionantes."_
+
+<!-- ### Cliente 2
+*"Recomiendo a Jorge sin dudarlo. Su conocimiento en Flutter y su capacidad para entregar proyectos a tiempo son invaluables."* -->
+
+## Blog
+
+Visita mi [blog](https://jorgegrullon.dev/blog) donde comparto artículos sobre desarrollo de software, tutoriales y mis experiencias en la industria.
+
+## Certificaciones
+
+- **Certificación en Flutter** - Platzi
+- **Certificación en Desarrollo Web** - Udemy
+
+## Educación
+
+- **Licenciatura en Ciencias de la Computación** - Universidad XYZ
+
+## Redes Sociales
+
+Sígueme en mis redes sociales para estar al tanto de mis últimos proyectos y artículos:
+
+- **Twitter**: [twitter.com/jorgegrullon](https://twitter.com/jorgegrullon)
+- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://linkedin.com/in/jorgegrullon)
+- **GitHub**: [github.com/jorgegrullon](https://github.com/jorgegrullon)
+
+## Contribuciones Open Source
+
+He contribuido a varios proyectos de código abierto, incluyendo:
+
+- **Proyecto Open Source 1**: Descripción breve del proyecto y mi contribución.
+- **Proyecto Open Source 2**: Descripción breve del proyecto y mi contribución.
+
+## Disponibilidad
+
+Actualmente estoy disponible para nuevos proyectos y colaboraciones. No dudes en contactarme si tienes alguna propuesta interesante.
