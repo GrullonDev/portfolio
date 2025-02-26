@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/nav_bar.dart';
+import 'package:flutter_portfolio/responsive.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -7,8 +9,20 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Proyectos"),
+        title: const Text(
+          'GrullonDev - Flutter Developer',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+        ),
+        centerTitle: true,
+        actions: Responsive.isMobile(context)
+            ? null
+            : [
+                // Navbar para pantallas grandes
+                const Navbar(),
+              ],
       ),
+      drawer:
+          Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),

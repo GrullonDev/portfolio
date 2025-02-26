@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_portfolio/footer.dart';
 import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,19 +22,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
-        child: Center(
-          child: Text(
-            'GrullonDev - Flutter Developer',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+      appBar: AppBar(
+        title: const Text(
+          'GrullonDev - Flutter Developer',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
         ),
+        centerTitle: true,
+        actions: Responsive.isMobile(context)
+            ? null
+            : [
+                // Navbar para pantallas grandes
+                const Navbar(),
+              ],
       ),
-      drawer: Navbar(),
+      drawer:
+          Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
       body: Column(
         children: [
           Expanded(
@@ -58,6 +62,7 @@ class HomePage extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {
                         // Acción para ver proyectos
+                        navigateTo(context, 'projects');
                       },
                       child: const Text("Ver mis proyectos"),
                     ),
@@ -69,7 +74,9 @@ class HomePage extends StatelessWidget {
                           icon: const FaIcon(FontAwesomeIcons.github),
                           onPressed: () {
                             // Acción para abrir GitHub
-                            launchURL('https://github.com/GrullonDev');
+                            launchURL(
+                              'https://github.com/GrullonDev',
+                            );
                           },
                         ),
                         IconButton(
@@ -77,7 +84,8 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             // Acción para abrir LinkedIn
                             launchURL(
-                                'https://www.linkedin.com/in/jorge-luis-grullón-marroquin');
+                              'https://www.linkedin.com/in/jorge-luis-grullón-marroquin',
+                            );
                           },
                         ),
                         IconButton(
@@ -92,7 +100,8 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             // Acción para abrir Instagram
                             launchURL(
-                                'https://www.instagram.com/jorge_grullon98');
+                              'https://www.instagram.com/jorge_grullon98',
+                            );
                           },
                         ),
                         IconButton(
@@ -100,7 +109,8 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             // Acción para abrir TikTok
                             launchURL(
-                                'https://www.tiktok.com/@grullondev?_t=ZM-8uBiN1YmMRL&_r=1');
+                              'https://www.tiktok.com/@grullondev?_t=ZM-8uBiN1YmMRL&_r=1',
+                            );
                           },
                         ),
                       ],
