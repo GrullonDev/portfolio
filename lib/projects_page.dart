@@ -12,7 +12,7 @@ class ProjectsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'GrullonDev - Flutter Developer',
+          "Proyectos",
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
@@ -36,11 +36,6 @@ class ProjectsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Título y descripción general
-                  const Text(
-                    "Proyectos",
-                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-                  ),
                   const SizedBox(height: 10),
                   const Text(
                     "Aquí puedes ver algunos de mis proyectos desarrollados con Flutter.",
