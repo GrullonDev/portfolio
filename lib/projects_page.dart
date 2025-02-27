@@ -66,7 +66,7 @@ class ProjectsPage extends StatelessWidget {
                       "images/projects/services1.png",
                       "images/projects/services2.png",
                     ],
-                    videoUrl: "videos/project1.mp4",
+                    videoUrl: "videos/portfolio.mov",
                     height: 500,
                   ),
                   const SizedBox(height: 30),
