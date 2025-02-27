@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:flutter_portfolio/project_card.dart';
+import 'package:flutter_portfolio/service_project_card.dart';
 import 'package:flutter_portfolio/responsive.dart';
 import 'package:flutter_portfolio/service_card.dart';
 
@@ -223,7 +223,7 @@ class ServicesPage extends StatelessWidget {
                     runSpacing: 20,
                     alignment: WrapAlignment.center,
                     children: [
-                      ProjectCard(
+                      ServiceProjectCard(
                         image: 'images/commingSoon.png',
                         title: 'Proximamente ',
                         description: 'Se agregaran los proyectos destacados',
