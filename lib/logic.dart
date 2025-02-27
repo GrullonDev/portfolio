@@ -43,3 +43,24 @@ final List<Map<String, String>> certificados = [
     "image": "certificate/productividad.png",
   },
 ];
+
+// Function to redirect to WhatsApp
+void launchWhatsApp({
+  required String name,
+  required String email,
+  required String message,
+}) async {
+  const String phoneNumber = '+50242909548';
+
+  final messages = 'name: $name, \nemail: $email, \nmessage: $message';
+
+  final Uri whatsappUri = Uri.parse(
+    'https://wa.me/$phoneNumber?text=${Uri.encodeComponent(messages)}',
+  );
+
+  if (await canLaunchUrl(whatsappUri)) {
+    await launchUrl(whatsappUri);
+  } else {
+    throw 'No se pudo abrir WhatsApp.';
+  }
+}
