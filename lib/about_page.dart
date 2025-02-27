@@ -104,7 +104,7 @@ class _AboutPageState extends State<AboutPage> {
                   // Foto de perfil destacada
                   const CircleAvatar(
                     radius: 80,
-                    backgroundImage: AssetImage('images/profile.jpg'),
+                    backgroundImage: AssetImage('assets/images/profile.jpg'),
                   ),
                   const SizedBox(height: 20),
 

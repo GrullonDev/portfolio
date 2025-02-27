@@ -224,7 +224,7 @@ class ServicesPage extends StatelessWidget {
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceProjectCard(
-                        image: 'images/commingSoon.png',
+                        image: 'assets/images/commingSoon.png',
                         title: 'Proximamente ',
                         description: 'Se agregaran los proyectos destacados',
                       ),

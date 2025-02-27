@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             // Acción para abrir Instagram
                             launchURL(
-                              'https://www.instagram.com/jorge_grullon98',
+                              'https://www.instagram.com/jorgegrullondev',
                             );
                           },
                         ),
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
                           onPressed: () {
                             // Acción para abrir TikTok
                             launchURL(
-                              'https://www.tiktok.com/@grullondev?_t=ZM-8uBiN1YmMRL&_r=1',
+                              'https://www.tiktok.com/@grullondev',
                             );
                           },
                         ),
