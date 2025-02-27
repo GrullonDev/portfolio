@@ -11,35 +11,35 @@ void launchURL(String url) async {
 
 final List<Map<String, String>> certificados = [
   {
-    "title": "Basic English Course A1 For Beginners",
-    "image": "assets/images/certificate/English.png",
+    "title": "Curso Basic English Course A1 For Beginners",
+    "image": "certificate/English.png",
   },
   {
     "title": "Curso avanzado de Flutter",
-    "image": "assets/images/certificate/flutter.png",
+    "image": "certificate/flutter.png",
   },
   {
-    "title": "Frameworks y Arquitecturas Frontend",
-    "image": "assets/images/certificate/frontend.png",
+    "title": "Curso Frameworks y Arquitecturas Frontend",
+    "image": "certificate/frontend.png",
   },
   {
-    "title": "Meditciones Para Seguir Aprendiendo",
-    "image": "assets/images/certificate/meditacion.png",
+    "title": "Curso Meditciones Para Seguir Aprendiendo",
+    "image": "certificate/meditacion.png",
   },
   {
-    "title": "Como dar Feedback",
-    "image": "assets/images/certificate/feedback.png",
+    "title": "Curso Como dar Feedback",
+    "image": "certificate/feedback.png",
   },
   {
-    "title": "Desarrollo de Habilidades Blandas para Equipos de Trabajo",
-    "image": "assets/images/certificate/blandas.png",
+    "title": "Curso Desarrollo de Habilidades Blandas para Equipos de Trabajo",
+    "image": "certificate/blandas.png",
   },
   {
-    "title": "Marca Personal",
-    "image": "assets/images/certificate/marcaPersonal.png",
+    "title": "Curso Marca Personal",
+    "image": "certificate/marcaPersonal.png",
   },
   {
-    "title": "Productividad",
-    "image": "assets/images/certificate/productividad.png",
+    "title": "Curso Productividad",
+    "image": "certificate/productividad.png",
   },
 ];

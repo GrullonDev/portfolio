@@ -24,12 +24,12 @@ class CardInformation extends StatelessWidget {
           children: [
             Text(
               title,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             Text(
               content,
-              style: const TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 24),
             ),
           ],
         ),
