@@ -11,12 +11,12 @@ void launchURL(String url) async {
 
 final List<Map<String, String>> certificados = [
   {
-    "title": "Curso Basic English Course A1 For Beginners",
-    "image": "certificate/English.png",
-  },
-  {
     "title": "Curso avanzado de Flutter",
     "image": "certificate/flutter.png",
+  },
+  {
+    "title": "Curso Basic English Course A1 For Beginners",
+    "image": "certificate/English.png",
   },
   {
     "title": "Curso Frameworks y Arquitecturas Frontend",

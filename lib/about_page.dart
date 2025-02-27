@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/logic.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,6 +21,54 @@ class AboutPage extends StatefulWidget {
 
 class _AboutPageState extends State<AboutPage> {
   final PageController _pageController = PageController(viewportFraction: 0.85);
+  Timer? _timer;
+  int _currentPage = 0;
+  bool _isReversed = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _startAutoScroll();
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel(); // Cancelar el Timer cuando el widget se destruya
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  // Método para iniciar el desplazamiento automático
+  void _startAutoScroll() {
+    _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (!_isReversed) {
+        // Desplazamiento ascendente
+        if (_currentPage < certificados.length - 1) {
+          _currentPage++;
+        } else {
+          // Cambiar a dirección descendente
+          _isReversed = true;
+          _currentPage--;
+        }
+      } else {
+        // Desplazamiento descendente
+        if (_currentPage > 0) {
+          _currentPage--;
+        } else {
+          // Cambiar a dirección ascendente
+          _isReversed = false;
+          _currentPage++;
+        }
+      }
+
+      // Desplazar a la página correspondiente
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
