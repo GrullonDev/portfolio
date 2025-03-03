@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "web/index.html",
+      "src": "build/web/**",
       "use": "@vercel/static"
     }
   ],

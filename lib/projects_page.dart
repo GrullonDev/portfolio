@@ -77,7 +77,7 @@ class ProjectsPage extends StatelessWidget {
                       ProjectCard(
                         title: "App de Gestión de Tiempo y Tareas (Pomodoro)",
                         description:
-                            "Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos. prueba",
+                            "Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.",
                         images: const [
                           "assets/images/projects/pomodoro/init.png",
                           "assets/images/projects/pomodoro/session.png",
