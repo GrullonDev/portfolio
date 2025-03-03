@@ -43,11 +43,16 @@ flutter:
   assets:
     - assets/images/profile.jpg
     - assets/images/commingSoon.png
-    - assets/images/projects/inicio.png
-    - assets/images/projects/about_me1.png
-    - assets/images/projects/about_me1.png
-    - assets/images/projects/services1.png
-    - assets/images/projects/services2.png
+    - assets/images/projects/portfolio/inicio.png
+    - assets/images/projects/portfolio/about_me1.png
+    - assets/images/projects/portfolio/about_me2.png
+    - assets/images/projects/portfolio/services1.png
+    - assets/images/projects/portfolio/services2.png
+    - assets/images/projects/pomodoro/break.png
+    - assets/images/projects/pomodoro/data.png
+    - assets/images/projects/pomodoro/history.png
+    - assets/images/projects/pomodoro/init.png
+    - assets/images/projects/pomodoro/session.png
     - assets/certificate/English.png
     - assets/certificate/flutter.png
     - assets/certificate/frontend.png

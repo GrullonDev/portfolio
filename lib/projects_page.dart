@@ -55,11 +55,11 @@ class ProjectsPage extends StatelessWidget {
                     description:
                         "Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.",
                     images: const [
-                      "assets/images/projects/inicio.png",
-                      "assets/images/projects/about_me1.png",
-                      "assets/images/projects/about_me2.png",
-                      "assets/images/projects/services1.png",
-                      "assets/images/projects/services2.png",
+                      "assets/images/projects/portfolio/inicio.png",
+                      "assets/images/projects/portfolio/about_me1.png",
+                      "assets/images/projects/portfolio/about_me2.png",
+                      "assets/images/projects/portfolio/services1.png",
+                      "assets/images/projects/portfolio/services2.png",
                     ],
                     videoUrl: "assets/videos/portfolio.mov",
                     height: 500,
@@ -74,15 +74,20 @@ class ProjectsPage extends StatelessWidget {
                   const SizedBox(height: 20),
                   Column(
                     children: [
-                      /* ProjectCard(
-                        title: "App de Gestión de Tareas",
-                        description:
-                            "Aplicación móvil para gestión de tareas con sincronización en la nube.",
-                        images: const [
-                          "images/project1.jpg",
-                        ],
-                      ),
                       ProjectCard(
+                        title: "App de Gestión de Tiempo y Tareas (Pomodoro)",
+                        description:
+                            "Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.",
+                        images: const [
+                          "assets/images/projects/pomodoro/init.png",
+                          "assets/images/projects/pomodoro/session.png",
+                          "assets/images/projects/pomodoro/data.png",
+                          "assets/images/projects/pomodoro/history.png",
+                          "assets/images/projects/pomodoro/break.png",
+                        ],
+                        height: 1800,
+                      ),
+                      /* ProjectCard(
                         title: "E-commerce Móvil",
                         description:
                             "Plataforma de comercio electrónico con integración de pasarelas de pago.",
@@ -90,8 +95,8 @@ class ProjectsPage extends StatelessWidget {
                           "images/project2.jpg",
                           "images/project3.jpg",
                         ],
-                      ),
-                      ProjectCard(
+                      ), */
+                      /* ProjectCard(
                         title: "App de Noticias",
                         description:
                             "Aplicación de noticias en tiempo real con integración de APIs externas.",
