@@ -1,6 +1,6 @@
 # flutter_portfolio
 
-Este es mi portafolio personal desarrollado con Flutter.
+Este es mi portafolio personal desarrollado con Flutter. Deployado en Vercel
 
 ## Sobre mí
 
