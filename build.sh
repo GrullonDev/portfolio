@@ -1,18 +1,26 @@
 #!/bin/bash
-# Instala Flutter manualmente (si es necesario)
-# Esto es opcional, ya que Vercel no tiene apt ni otros gestores de paquetes.
+# Descarga y extrae Flutter 3.27.4
+FLUTTER_VERSION="3.27.4"
+FLUTTER_TAR="flutter_linux_${FLUTTER_VERSION}-stable.tar.xz"
+FLUTTER_URL="https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/${FLUTTER_TAR}"
 
-# Descarga y extrae Flutter
-curl -fsSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.1-stable.tar.xz | tar xJf -
+# Descarga Flutter
+echo "Descargando Flutter ${FLUTTER_VERSION}..."
+curl -fsSL ${FLUTTER_URL} | tar xJf -
 
 # Agrega Flutter al PATH
 export PATH="$PWD/flutter/bin:$PATH"
 
 # Verifica la instalación de Flutter
+echo "Verificando la instalación de Flutter..."
 flutter doctor
 
 # Instala las dependencias de Flutter
+echo "Instalando dependencias de Flutter..."
 flutter pub get
 
 # Construye el proyecto en modo release
+echo "Construyendo el proyecto..."
 flutter build web --release
+
+echo "¡Construcción completada!"
