@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/nav_bar.dart';
 import 'package:flutter_portfolio/project_card.dart';
 import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -59,11 +60,11 @@ class ProjectsPage extends StatelessWidget {
                     description:
                         'Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.',
                     images: [
-                      'assets/images/projects/portfolio/inicio.png',
-                      'assets/images/projects/portfolio/about_me1.png',
-                      'assets/images/projects/portfolio/about_me2.png',
-                      'assets/images/projects/portfolio/services1.png',
-                      'assets/images/projects/portfolio/services2.png',
+                      ImageAssets.inicio,
+                      ImageAssets.aboutMe1,
+                      ImageAssets.aboutMe2,
+                      ImageAssets.services1,
+                      ImageAssets.services2,
                     ],
                     videoUrl: 'assets/videos/portfolio.mov',
                     height: 500,
@@ -83,11 +84,11 @@ class ProjectsPage extends StatelessWidget {
                         description:
                             'Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.',
                         images: [
-                          'assets/images/projects/pomodoro/init.png',
-                          'assets/images/projects/pomodoro/session.png',
-                          'assets/images/projects/pomodoro/data.png',
-                          'assets/images/projects/pomodoro/history.png',
-                          'assets/images/projects/pomodoro/break.png',
+                          ImageAssets.pomodoroInit,
+                          ImageAssets.pomodoroSession,
+                          ImageAssets.pomodoroData,
+                          ImageAssets.pomodoroHistory,
+                          ImageAssets.pomodoroBreak,
                         ],
                         height: 1800,
                       ),

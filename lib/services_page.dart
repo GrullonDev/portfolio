@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_portfolio/nav_bar.dart';
 import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/routes.dart';
 import 'package:flutter_portfolio/service_card.dart';
 import 'package:flutter_portfolio/service_project_card.dart';
+import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
@@ -224,7 +226,7 @@ class ServicesPage extends StatelessWidget {
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceProjectCard(
-                        image: 'assets/images/commingSoon.png',
+                        image: ImageAssets.commingSoon,
                         title: 'Proximamente ',
                         description: 'Se agregaran los proyectos destacados',
                       ),
@@ -247,6 +249,7 @@ class ServicesPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // Aquí puedes agregar la lógica para redirigir a un formulario de contacto o enviar un correo.
+                      navigateTo(context, 'contact');
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(

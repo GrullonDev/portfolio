@@ -1,3 +1,4 @@
+import 'package:flutter_portfolio/utils/const/images_assets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void launchURL(String url) async {
@@ -12,35 +13,35 @@ void launchURL(String url) async {
 final List<Map<String, String>> certificados = [
   {
     'title': 'Curso avanzado de Flutter',
-    'image': 'assets/certificate/flutter.png',
+    'image': ImageAssets.flutter,
   },
   {
     'title': 'Curso Basic English Course A1 For Beginners',
-    'image': 'assets/certificate/English.png',
+    'image': ImageAssets.english,
   },
   {
     'title': 'Curso Frameworks y Arquitecturas Frontend',
-    'image': 'assets/certificate/frontend.png',
+    'image': ImageAssets.frontend,
   },
   {
     'title': 'Curso Meditciones Para Seguir Aprendiendo',
-    'image': 'assets/certificate/meditacion.png',
+    'image': ImageAssets.meditacion,
   },
   {
     'title': 'Curso Como dar Feedback',
-    'image': 'assets/certificate/feedback.png',
+    'image': ImageAssets.feedback,
   },
   {
     'title': 'Curso Desarrollo de Habilidades Blandas para Equipos de Trabajo',
-    'image': 'assets/certificate/blandas.png',
+    'image': ImageAssets.blandas,
   },
   {
     'title': 'Curso Marca Personal',
-    'image': 'assets/certificate/marcaPersonal.png',
+    'image': ImageAssets.marcaPersonal,
   },
   {
     'title': 'Curso Productividad',
-    'image': 'assets/certificate/productividad.png',
+    'image': ImageAssets.productividad,
   },
 ];
 

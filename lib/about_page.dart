@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -104,7 +105,7 @@ class _AboutPageState extends State<AboutPage> {
                   // Foto de perfil destacada
                   const CircleAvatar(
                     radius: 80,
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
+                    backgroundImage: AssetImage(ImageAssets.profile),
                   ),
                   const SizedBox(height: 20),
 
