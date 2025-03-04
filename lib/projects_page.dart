@@ -40,7 +40,11 @@ class ProjectsPage extends StatelessWidget {
                   Text(
                     'Aquí puedes ver algunos de mis proyectos desarrollados con Flutter.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Montserrat',
+                    ),
                   ),
                   SizedBox(height: 30),
 
