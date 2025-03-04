@@ -1,6 +1,18 @@
 #!/bin/bash
-# Construye la imagen de Docker
-docker build -t my-flutter-app .
+# Instala Flutter manualmente (si es necesario)
+# Esto es opcional, ya que Vercel no tiene apt ni otros gestores de paquetes.
 
-# Ejecuta el contenedor y copia los archivos generados a la carpeta build/web
-docker run --rm -v $(pwd)/build/web:/app/build/web my-flutter-app
+# Descarga y extrae Flutter
+curl -fsSL https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.1-stable.tar.xz | tar xJf -
+
+# Agrega Flutter al PATH
+export PATH="$PWD/flutter/bin:$PATH"
+
+# Verifica la instalación de Flutter
+flutter doctor
+
+# Instala las dependencias de Flutter
+flutter pub get
+
+# Construye el proyecto en modo release
+flutter build web --release
