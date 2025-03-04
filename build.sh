@@ -11,6 +11,9 @@ curl -fsSL ${FLUTTER_URL} | tar xJf -
 # Agrega Flutter al PATH
 export PATH="$PWD/flutter/bin:$PATH"
 
+# Configura Git para evitar el error de propiedad
+git config --global --add safe.directory /vercel/path0/flutter
+
 # Verifica la instalación de Flutter
 echo "Verificando la instalación de Flutter..."
 flutter doctor
