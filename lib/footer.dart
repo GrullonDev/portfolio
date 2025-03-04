@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_portfolio/responsive.dart';
 
 class Footer extends StatelessWidget {
@@ -14,13 +15,13 @@ class Footer extends StatelessWidget {
             .min, // Asegura que el footer ocupe el mínimo espacio necesario
         children: [
           const Text(
-            "© 2025 Jorge Grullón",
+            '© 2025 Jorge Grullón',
             style: TextStyle(color: Colors.white),
             textAlign: TextAlign.center,
           ),
           if (Responsive.isMobile(context))
             const Text(
-              "Desarrollado con Flutter",
+              'Desarrollado con Flutter',
               style: TextStyle(color: Colors.white),
               textAlign: TextAlign.center,
             ),

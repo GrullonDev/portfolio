@@ -47,14 +47,14 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Hola, soy Jorge Grullón, un Flutter Developer 👋",
+                      'Hola, soy Jorge Grullón, un Flutter Developer 👋',
                       style:
                           TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      "Desarrollo aplicaciones móviles y web con Flutter.",
+                      'Desarrollo aplicaciones móviles y web con Flutter.',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 18),
                     ),
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                         // Acción para ver proyectos
                         navigateTo(context, 'projects');
                       },
-                      child: const Text("Ver mis proyectos"),
+                      child: const Text('Ver mis proyectos'),
                     ),
                     const SizedBox(height: 20),
                     Row(

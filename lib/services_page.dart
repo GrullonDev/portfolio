@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:flutter_portfolio/service_project_card.dart';
 import 'package:flutter_portfolio/responsive.dart';
 import 'package:flutter_portfolio/service_card.dart';
+import 'package:flutter_portfolio/service_project_card.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
@@ -42,12 +42,12 @@ class ServicesPage extends StatelessWidget {
                 children: [
                   // Título y descripción general
                   const Text(
-                    "Servicios",
+                    'Servicios',
                     style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    "Ofrezco servicios de desarrollo de aplicaciones móviles y web utilizando Flutter.",
+                    'Ofrezco servicios de desarrollo de aplicaciones móviles y web utilizando Flutter.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
@@ -55,158 +55,158 @@ class ServicesPage extends StatelessWidget {
 
                   // Servicios destacados
                   const Text(
-                    "¿Qué puedo hacer por ti?",
+                    '¿Qué puedo hacer por ti?',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
-                  Wrap(
+                  const Wrap(
                     spacing: 20,
                     runSpacing: 20,
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceCard(
                         icon: Icons.phone_android,
-                        title: "Desarrollo de Apps Móviles",
+                        title: 'Desarrollo de Apps Móviles',
                         description:
-                            "Creación de aplicaciones móviles multiplataforma (iOS y Android) utilizando Flutter.",
+                            'Creación de aplicaciones móviles multiplataforma (iOS y Android) utilizando Flutter.',
                       ),
                       ServiceCard(
                         icon: Icons.cloud,
-                        title: "Integración con Firebase",
+                        title: 'Integración con Firebase',
                         description:
-                            "Autenticación, Firestore, Storage, notificaciones push, almacenamiento en la nube, Cloud Functions y más servicios de Firebase.",
+                            'Autenticación, Firestore, Storage, notificaciones push, almacenamiento en la nube, Cloud Functions y más servicios de Firebase.',
                       ),
                       ServiceCard(
                         icon: Icons.web,
-                        title: "Desarrollo Web",
+                        title: 'Desarrollo Web',
                         description:
-                            "Desarrollo de aplicaciones web responsivas y modernas con Flutter y tecnologías complementarias.",
+                            'Desarrollo de aplicaciones web responsivas y modernas con Flutter y tecnologías complementarias.',
                       ),
                       ServiceCard(
                         icon: Icons.api,
-                        title: "Integración de APIs",
+                        title: 'Integración de APIs',
                         description:
-                            "Conexión de aplicaciones con APIs REST, GraphQL y servicios en la nube como Firebase.",
+                            'Conexión de aplicaciones con APIs REST, GraphQL y servicios en la nube como Firebase.',
                       ),
                       ServiceCard(
                         icon: Icons.animation,
-                        title: "Animaciones personalizadas",
+                        title: 'Animaciones personalizadas',
                         description:
-                            "Creación de animaciones fluidas con Flare, Rive o Lottie para mejorar la experiencia del usuario.",
+                            'Creación de animaciones fluidas con Flare, Rive o Lottie para mejorar la experiencia del usuario.',
                       ),
                       ServiceCard(
                         icon: Icons.widgets,
-                        title: "Widgets personalizados",
+                        title: 'Widgets personalizados',
                         description:
-                            "Creación de widgets reutilizables y diseño de interfaces de usuario únicas.",
+                            'Creación de widgets reutilizables y diseño de interfaces de usuario únicas.',
                       ),
                       ServiceCard(
                         icon: Icons.swap_horiz,
-                        title: "Migración de aplicaciones",
+                        title: 'Migración de aplicaciones',
                         description:
-                            "Migración de aplicaciones nativas a Flutter y actualización de aplicaciones Flutter.",
+                            'Migración de aplicaciones nativas a Flutter y actualización de aplicaciones Flutter.',
                       ),
                       ServiceCard(
                         icon: Icons.design_services,
-                        title: "Diseño UI/UX",
+                        title: 'Diseño UI/UX',
                         description:
-                            "Diseño de interfaces de usuario atractivas y optimizadas para una experiencia de usuario excepcional.",
+                            'Diseño de interfaces de usuario atractivas y optimizadas para una experiencia de usuario excepcional.',
                       ),
                       ServiceCard(
                         icon: Icons.engineering,
-                        title: "Consultoría Técnica",
+                        title: 'Consultoría Técnica',
                         description:
-                            "Asesoría en arquitectura de software, optimización de código y buenas prácticas de desarrollo.",
+                            'Asesoría en arquitectura de software, optimización de código y buenas prácticas de desarrollo.',
                       ),
                       ServiceCard(
                         icon: Icons.settings,
-                        title: "Mantenimiento y Soporte",
+                        title: 'Mantenimiento y Soporte',
                         description:
-                            "Mantenimiento continuo y soporte técnico para aplicaciones existentes.",
+                            'Mantenimiento continuo y soporte técnico para aplicaciones existentes.',
                       ),
                       ServiceCard(
                         icon: Icons.monetization_on,
-                        title: "Aplicaciones Financieras",
+                        title: 'Aplicaciones Financieras',
                         description:
-                            "Desarrollo de aplicaciones para gestión de finanzas personales e integración con APIs bancarias.",
+                            'Desarrollo de aplicaciones para gestión de finanzas personales e integración con APIs bancarias.',
                       ),
                       ServiceCard(
                         icon: Icons.health_and_safety,
-                        title: "Aplicaciones de Salud",
+                        title: 'Aplicaciones de Salud',
                         description:
-                            "Creación de aplicaciones de telemedicina y seguimiento de actividad física.",
+                            'Creación de aplicaciones de telemedicina y seguimiento de actividad física.',
                       ),
                       ServiceCard(
                         icon: Icons.shopping_cart,
-                        title: "E-commerce",
+                        title: 'E-commerce',
                         description:
-                            "Desarrollo de tiendas en línea con carritos de compra y pasarelas de pago.",
+                            'Desarrollo de tiendas en línea con carritos de compra y pasarelas de pago.',
                       ),
                       ServiceCard(
                         icon: Icons.travel_explore,
-                        title: "Aplicaciones de Viajes",
+                        title: 'Aplicaciones de Viajes',
                         description:
-                            "Creación de aplicaciones para reservas de hoteles, vuelos y actividades turísticas.",
+                            'Creación de aplicaciones para reservas de hoteles, vuelos y actividades turísticas.',
                       ),
                       ServiceCard(
                         icon: Icons.speed,
-                        title: "Optimización de rendimiento",
+                        title: 'Optimización de rendimiento',
                         description:
-                            "Mejora del rendimiento de aplicaciones Flutter y uso de herramientas como Flutter DevTools.",
+                            'Mejora del rendimiento de aplicaciones Flutter y uso de herramientas como Flutter DevTools.',
                       ),
                       ServiceCard(
                         icon: Icons.extension,
-                        title: "Plugins personalizados",
+                        title: 'Plugins personalizados',
                         description:
-                            "Creación de plugins para funcionalidades específicas e integración con hardware.",
+                            'Creación de plugins para funcionalidades específicas e integración con hardware.',
                       ),
                       ServiceCard(
                         icon: Icons.business,
-                        title: "Aplicaciones empresariales",
+                        title: 'Aplicaciones empresariales',
                         description:
-                            "Creación de aplicaciones para gestión interna (ERP, CRM) e integración con sistemas legacy.",
+                            'Creación de aplicaciones para gestión interna (ERP, CRM) e integración con sistemas legacy.',
                       ),
                       ServiceCard(
                         icon: Icons.school,
-                        title: "Aplicaciones educativas",
+                        title: 'Aplicaciones educativas',
                         description:
-                            "Creación de aplicaciones interactivas para aprendizaje en línea y plataformas de e-learning.",
+                            'Creación de aplicaciones interactivas para aprendizaje en línea y plataformas de e-learning.',
                       ),
                       ServiceCard(
                         icon: Icons.movie,
-                        title: "Aplicaciones de entretenimiento",
+                        title: 'Aplicaciones de entretenimiento',
                         description:
-                            "Creación de aplicaciones de streaming y juegos simples con Flutter y Flame.",
+                            'Creación de aplicaciones de streaming y juegos simples con Flutter y Flame.',
                       ),
                       ServiceCard(
                         icon: Icons.people,
-                        title: "Aplicaciones de redes sociales",
+                        title: 'Aplicaciones de redes sociales',
                         description:
-                            "Creación de plataformas sociales con publicaciones, mensajería y notificaciones.",
+                            'Creación de plataformas sociales con publicaciones, mensajería y notificaciones.',
                       ),
                       ServiceCard(
                         icon: Icons.work,
-                        title: "Aplicaciones de productividad",
+                        title: 'Aplicaciones de productividad',
                         description:
-                            "Creación de aplicaciones para gestión de tareas, calendarios y recordatorios.",
+                            'Creación de aplicaciones para gestión de tareas, calendarios y recordatorios.',
                       ),
                       ServiceCard(
                         icon: Icons.people_alt,
-                        title: "Consultoría y mentoría",
+                        title: 'Consultoría y mentoría',
                         description:
-                            "Asesoría en arquitectura de software y mentoría para equipos que adoptan Flutter.",
+                            'Asesoría en arquitectura de software y mentoría para equipos que adoptan Flutter.',
                       ),
                       ServiceCard(
                         icon: Icons.bug_report,
-                        title: "Pruebas y QA",
+                        title: 'Pruebas y QA',
                         description:
-                            "Implementación de pruebas unitarias, de integración y de UI en aplicaciones Flutter.",
+                            'Implementación de pruebas unitarias, de integración y de UI en aplicaciones Flutter.',
                       ),
                       ServiceCard(
                         icon: Icons.smart_toy,
-                        title: "Aplicaciones IoT",
+                        title: 'Aplicaciones IoT',
                         description:
-                            "Integración con dispositivos IoT como sensores y cámaras inteligentes.",
+                            'Integración con dispositivos IoT como sensores y cámaras inteligentes.',
                       ),
                     ],
                   ),
@@ -214,11 +214,11 @@ class ServicesPage extends StatelessWidget {
 
                   // Proyectos destacados
                   const Text(
-                    "Proyectos Destacados",
+                    'Proyectos Destacados',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
-                  Wrap(
+                  const Wrap(
                     spacing: 20,
                     runSpacing: 20,
                     alignment: WrapAlignment.center,
@@ -234,12 +234,12 @@ class ServicesPage extends StatelessWidget {
 
                   // Llamado a la acción (CTA)
                   const Text(
-                    "¿Listo para comenzar tu proyecto?",
+                    '¿Listo para comenzar tu proyecto?',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    "Contáctame para discutir tus ideas y hacerlas realidad.",
+                    'Contáctame para discutir tus ideas y hacerlas realidad.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
@@ -253,7 +253,7 @@ class ServicesPage extends StatelessWidget {
                           horizontal: 30, vertical: 15),
                       textStyle: const TextStyle(fontSize: 18),
                     ),
-                    child: const Text("Contáctame"),
+                    child: const Text('Contáctame'),
                   ),
                   const SizedBox(height: 30),
                 ],

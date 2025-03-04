@@ -18,7 +18,7 @@ class CertificationList extends StatelessWidget {
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  cert["title"]!,
+                  cert['title']!,
                   style: const TextStyle(fontSize: 24),
                 ),
               ),

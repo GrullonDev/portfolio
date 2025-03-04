@@ -26,7 +26,7 @@ class CertificationCarousel extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   boxShadow: [
-                    BoxShadow(
+                    const BoxShadow(
                       color: Colors.black26,
                       blurRadius: 8,
                       spreadRadius: 2,
@@ -36,7 +36,7 @@ class CertificationCarousel extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    certificados[index]["image"]!,
+                    certificados[index]['image']!,
                     fit: BoxFit.cover,
                   ),
                 ),

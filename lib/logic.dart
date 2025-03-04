@@ -11,36 +11,36 @@ void launchURL(String url) async {
 
 final List<Map<String, String>> certificados = [
   {
-    "title": "Curso avanzado de Flutter",
-    "image": "certificate/flutter.png",
+    'title': 'Curso avanzado de Flutter',
+    'image': 'certificate/flutter.png',
   },
   {
-    "title": "Curso Basic English Course A1 For Beginners",
-    "image": "certificate/English.png",
+    'title': 'Curso Basic English Course A1 For Beginners',
+    'image': 'certificate/English.png',
   },
   {
-    "title": "Curso Frameworks y Arquitecturas Frontend",
-    "image": "certificate/frontend.png",
+    'title': 'Curso Frameworks y Arquitecturas Frontend',
+    'image': 'certificate/frontend.png',
   },
   {
-    "title": "Curso Meditciones Para Seguir Aprendiendo",
-    "image": "certificate/meditacion.png",
+    'title': 'Curso Meditciones Para Seguir Aprendiendo',
+    'image': 'certificate/meditacion.png',
   },
   {
-    "title": "Curso Como dar Feedback",
-    "image": "certificate/feedback.png",
+    'title': 'Curso Como dar Feedback',
+    'image': 'certificate/feedback.png',
   },
   {
-    "title": "Curso Desarrollo de Habilidades Blandas para Equipos de Trabajo",
-    "image": "certificate/blandas.png",
+    'title': 'Curso Desarrollo de Habilidades Blandas para Equipos de Trabajo',
+    'image': 'certificate/blandas.png',
   },
   {
-    "title": "Curso Marca Personal",
-    "image": "certificate/marcaPersonal.png",
+    'title': 'Curso Marca Personal',
+    'image': 'certificate/marcaPersonal.png',
   },
   {
-    "title": "Curso Productividad",
-    "image": "certificate/productividad.png",
+    'title': 'Curso Productividad',
+    'image': 'certificate/productividad.png',
   },
 ];
 

@@ -60,7 +60,7 @@ class _ContactPageState extends State<ContactPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    "Puedes contactarme a través de mis redes sociales, enviándome un correo electrónico o escribiéndome por WhatsApp.",
+                    'Puedes contactarme a través de mis redes sociales, enviándome un correo electrónico o escribiéndome por WhatsApp.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
@@ -141,7 +141,7 @@ class _ContactPageState extends State<ContactPage> {
                                     horizontal: 30, vertical: 15),
                                 textStyle: const TextStyle(fontSize: 18),
                               ),
-                              child: const Text("Enviar mensaje"),
+                              child: const Text('Enviar mensaje'),
                             ),
                           ],
                         ),

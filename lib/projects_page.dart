@@ -12,7 +12,7 @@ class ProjectsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Proyectos",
+          'Proyectos',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
@@ -31,59 +31,59 @@ class ProjectsPage extends StatelessWidget {
             constraints: BoxConstraints(
               maxWidth: Responsive.isMobile(context) ? 400 : 950,
             ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 10),
-                  const Text(
-                    "Aquí puedes ver algunos de mis proyectos desarrollados con Flutter.",
+                  SizedBox(height: 10),
+                  Text(
+                    'Aquí puedes ver algunos de mis proyectos desarrollados con Flutter.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18),
                   ),
-                  const SizedBox(height: 30),
+                  SizedBox(height: 30),
 
                   // Proyecto principal destacado
-                  const Text(
-                    "Proyecto Principal",
+                  Text(
+                    'Proyecto Principal',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   ProjectCard(
-                    title: "Portafolio Flutter",
+                    title: 'Portafolio Flutter',
                     description:
-                        "Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.",
-                    images: const [
-                      "assets/images/projects/portfolio/inicio.png",
-                      "assets/images/projects/portfolio/about_me1.png",
-                      "assets/images/projects/portfolio/about_me2.png",
-                      "assets/images/projects/portfolio/services1.png",
-                      "assets/images/projects/portfolio/services2.png",
+                        'Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.',
+                    images: [
+                      'assets/images/projects/portfolio/inicio.png',
+                      'assets/images/projects/portfolio/about_me1.png',
+                      'assets/images/projects/portfolio/about_me2.png',
+                      'assets/images/projects/portfolio/services1.png',
+                      'assets/images/projects/portfolio/services2.png',
                     ],
-                    videoUrl: "assets/videos/portfolio.mov",
+                    videoUrl: 'assets/videos/portfolio.mov',
                     height: 500,
                   ),
-                  const SizedBox(height: 30),
+                  SizedBox(height: 30),
 
                   // Listado de otros proyectos
-                  const Text(
-                    "Otros Proyectos",
+                  Text(
+                    'Otros Proyectos',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20),
                   Column(
                     children: [
                       ProjectCard(
-                        title: "App de Gestión de Tiempo y Tareas (Pomodoro)",
+                        title: 'App de Gestión de Tiempo y Tareas (Pomodoro)',
                         description:
-                            "Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.",
-                        images: const [
-                          "assets/images/projects/pomodoro/init.png",
-                          "assets/images/projects/pomodoro/session.png",
-                          "assets/images/projects/pomodoro/data.png",
-                          "assets/images/projects/pomodoro/history.png",
-                          "assets/images/projects/pomodoro/break.png",
+                            'Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.',
+                        images: [
+                          'assets/images/projects/pomodoro/init.png',
+                          'assets/images/projects/pomodoro/session.png',
+                          'assets/images/projects/pomodoro/data.png',
+                          'assets/images/projects/pomodoro/history.png',
+                          'assets/images/projects/pomodoro/break.png',
                         ],
                         height: 1800,
                       ),

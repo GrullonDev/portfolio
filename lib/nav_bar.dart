@@ -15,40 +15,40 @@ class Navbar extends StatelessWidget {
           const DrawerHeader(
             decoration: BoxDecoration(color: Colors.blueGrey),
             child: Text(
-              "Menú",
+              'Menú',
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
           ListTile(
-            title: const Text("Inicio"),
+            title: const Text('Inicio'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'home');
             },
           ),
           ListTile(
-            title: const Text("Sobre mí"),
+            title: const Text('Sobre mí'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'about');
             },
           ),
           ListTile(
-            title: const Text("Servicios"),
+            title: const Text('Servicios'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'services');
             },
           ),
           ListTile(
-            title: const Text("Proyectos"),
+            title: const Text('Proyectos'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'projects');
             },
           ),
           ListTile(
-            title: const Text("Contacto"),
+            title: const Text('Contacto'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'contact');
@@ -62,23 +62,23 @@ class Navbar extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () => navigateTo(context, 'home'),
-            child: const Text("Inicio"),
+            child: const Text('Inicio'),
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'about'),
-            child: const Text("Sobre mí"),
+            child: const Text('Sobre mí'),
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'services'),
-            child: const Text("Servicios"),
+            child: const Text('Servicios'),
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'projects'),
-            child: const Text("Proyectos"),
+            child: const Text('Proyectos'),
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'contact'),
-            child: const Text("Contacto"),
+            child: const Text('Contacto'),
           ),
         ],
       );

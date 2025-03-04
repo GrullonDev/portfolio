@@ -1,5 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:video_player/video_player.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -93,7 +94,7 @@ class _ProjectCardState extends State<ProjectCard> {
               Column(
                 children: [
                   const Text(
-                    "Video del Proyecto",
+                    'Video del Proyecto',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),

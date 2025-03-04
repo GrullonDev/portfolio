@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/logic.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:flutter_portfolio/build_card.dart';
 import 'package:flutter_portfolio/carrousel_certificate.dart';
 import 'package:flutter_portfolio/certificate_list.dart';
+import 'package:flutter_portfolio/logic.dart';
 import 'package:flutter_portfolio/nav_bar.dart';
 import 'package:flutter_portfolio/responsive.dart';
 import 'package:flutter_portfolio/social_icon.dart';
@@ -77,7 +77,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Sobre mí",
+          'Sobre mí',
           style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
@@ -109,12 +109,12 @@ class _AboutPageState extends State<AboutPage> {
                   const SizedBox(height: 20),
 
                   // Información Personal
-                  CardInformation(
+                  const CardInformation(
                     title:
-                        "🚀 Desarrollador Flutter | Especialista en Apps Móviles y Web",
+                        '🚀 Desarrollador Flutter | Especialista en Apps Móviles y Web',
                     content:
-                        "Soy Jorge Grullón, desarrollador con experiencia en el desarrollo de aplicaciones móviles y web. "
-                        "Me especializo en Flutter, enfocándome en la arquitectura limpia, patrones de diseño y optimización de UI/UX.",
+                        'Soy Jorge Grullón, desarrollador con experiencia en el desarrollo de aplicaciones móviles y web. '
+                        'Me especializo en Flutter, enfocándome en la arquitectura limpia, patrones de diseño y optimización de UI/UX.',
                   ),
 
                   const SizedBox(height: 20),
@@ -126,24 +126,24 @@ class _AboutPageState extends State<AboutPage> {
                     alignment: WrapAlignment.center,
                     children: [
                       CardInformation(
-                        title: "🎓 Formación & Experiencia",
+                        title: '🎓 Formación & Experiencia',
                         content:
-                            "📌 Ingeniero en Sistemas con más de 3 años de experiencia en desarrollo de software.\n"
-                            "📌 Experto en Flutter, Firebase, API REST y GraphQL.\n"
-                            "📌 Desarrollo de backend con Node.js y NestJS.\n"
-                            "📌 Apasionado por la innovación y la tecnología.",
+                            '📌 Ingeniero en Sistemas con más de 3 años de experiencia en desarrollo de software.\n'
+                            '📌 Experto en Flutter, Firebase, API REST y GraphQL.\n'
+                            '📌 Desarrollo de backend con Node.js y NestJS.\n'
+                            '📌 Apasionado por la innovación y la tecnología.',
                         width: screenWidth > 600 ? 320 : double.infinity,
                       ),
                       CardInformation(
-                        title: "📌 Metodologías Ágiles",
+                        title: '📌 Metodologías Ágiles',
                         content:
-                            "✔️ Scrum: Experiencia trabajando con sprints y retrospectivas.\n"
-                            "✔️ Design Thinking: Creación de soluciones innovadoras centradas en el usuario.\n",
+                            '✔️ Scrum: Experiencia trabajando con sprints y retrospectivas.\n'
+                            '✔️ Design Thinking: Creación de soluciones innovadoras centradas en el usuario.\n',
                         width: screenWidth > 600 ? 320 : double.infinity,
                       ),
 
                       const Text(
-                        "🏆 Certificaciones",
+                        '🏆 Certificaciones',
                         style: TextStyle(
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
@@ -162,14 +162,14 @@ class _AboutPageState extends State<AboutPage> {
 
                       // Sección de redes sociales
                       const Text(
-                        "🌎 Conéctate conmigo",
+                        '🌎 Conéctate conmigo',
                         style: TextStyle(
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 10),
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: [
                           SocialIcon(
                             icon: FontAwesomeIcons.github,
                             url: 'https://github.com/GrullonDev',
