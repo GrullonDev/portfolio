@@ -12,35 +12,35 @@ void launchURL(String url) async {
 final List<Map<String, String>> certificados = [
   {
     'title': 'Curso avanzado de Flutter',
-    'image': 'certificate/flutter.png',
+    'image': 'assets/certificate/flutter.png',
   },
   {
     'title': 'Curso Basic English Course A1 For Beginners',
-    'image': 'certificate/English.png',
+    'image': 'assets/certificate/English.png',
   },
   {
     'title': 'Curso Frameworks y Arquitecturas Frontend',
-    'image': 'certificate/frontend.png',
+    'image': 'assets/certificate/frontend.png',
   },
   {
     'title': 'Curso Meditciones Para Seguir Aprendiendo',
-    'image': 'certificate/meditacion.png',
+    'image': 'assets/certificate/meditacion.png',
   },
   {
     'title': 'Curso Como dar Feedback',
-    'image': 'certificate/feedback.png',
+    'image': 'assets/certificate/feedback.png',
   },
   {
     'title': 'Curso Desarrollo de Habilidades Blandas para Equipos de Trabajo',
-    'image': 'certificate/blandas.png',
+    'image': 'assets/certificate/blandas.png',
   },
   {
     'title': 'Curso Marca Personal',
-    'image': 'certificate/marcaPersonal.png',
+    'image': 'assets/certificate/marcaPersonal.png',
   },
   {
     'title': 'Curso Productividad',
-    'image': 'certificate/productividad.png',
+    'image': 'assets/certificate/productividad.png',
   },
 ];
 
