@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/mobile_projects_card.dart';
 
 import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:flutter_portfolio/project_card.dart';
+import 'package:flutter_portfolio/utils/const/video_assets.dart';
+import 'package:flutter_portfolio/web_projects_card.dart';
 import 'package:flutter_portfolio/responsive.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
@@ -55,7 +57,7 @@ class ProjectsPage extends StatelessWidget {
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20),
-                  ProjectCard(
+                  WebProjectsCard(
                     title: 'Portafolio Flutter',
                     description:
                         'Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.',
@@ -66,8 +68,7 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.services1,
                       ImageAssets.services2,
                     ],
-                    videoUrl: 'assets/videos/portfolio.mov',
-                    height: 500,
+                    videoUrl: VideoAssets.videoPortafolio,
                   ),
                   SizedBox(height: 30),
 
@@ -79,7 +80,7 @@ class ProjectsPage extends StatelessWidget {
                   SizedBox(height: 20),
                   Column(
                     children: [
-                      ProjectCard(
+                      MobileProjectCard(
                         title: 'App de Gestión de Tiempo y Tareas (Pomodoro)',
                         description:
                             'Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.',
@@ -90,26 +91,7 @@ class ProjectsPage extends StatelessWidget {
                           ImageAssets.pomodoroHistory,
                           ImageAssets.pomodoroBreak,
                         ],
-                        height: 1800,
                       ),
-                      /* ProjectCard(
-                        title: "E-commerce Móvil",
-                        description:
-                            "Plataforma de comercio electrónico con integración de pasarelas de pago.",
-                        images: const [
-                          "images/project2.jpg",
-                          "images/project3.jpg",
-                        ],
-                      ), */
-                      /* ProjectCard(
-                        title: "App de Noticias",
-                        description:
-                            "Aplicación de noticias en tiempo real con integración de APIs externas.",
-                        images: const [
-                          "images/project3.jpg",
-                        ],
-                        videoUrl: "videos/project2.mp4", // Video opcional
-                      ), */
                     ],
                   ),
                 ],
