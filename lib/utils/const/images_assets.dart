@@ -19,5 +19,4 @@ class ImageAssets {
   static const String blandas = 'certificate/blandas.png';
   static const String marcaPersonal = 'certificate/marcaPersonal.png';
   static const String productividad = 'certificate/productividad.png';
-  static const String videoPortafolio = 'videos/portfolio.mov';
 }
