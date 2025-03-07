@@ -1,6 +1,5 @@
 name: flutter_portfolio
-description: "A new Flutter project."
-
+description: "A personal portfolio app built with Flutter showcasing my projects, skills, and certifications."
 
 publish_to: 'none'
 
