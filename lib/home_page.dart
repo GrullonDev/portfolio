@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_portfolio/footer.dart';
-import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/utils/widgets/footer.dart';
+import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
+import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/routes.dart';
 
 class HomePage extends StatelessWidget {

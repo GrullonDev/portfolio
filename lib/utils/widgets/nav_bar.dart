@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/routes.dart';
 
 class Navbar extends StatelessWidget {

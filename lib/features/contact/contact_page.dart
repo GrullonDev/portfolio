@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/logic.dart';
-import 'package:flutter_portfolio/nav_bar.dart';
-import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
+import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});

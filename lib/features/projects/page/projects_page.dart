@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
 
-import 'package:flutter_portfolio/nav_bar.dart';
+import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/const/video_assets.dart';
 import 'package:flutter_portfolio/features/projects/widgets/web_projects_card.dart';
-import 'package:flutter_portfolio/responsive.dart';
+import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 class ProjectsPage extends StatelessWidget {
