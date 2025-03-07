@@ -3,27 +3,29 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:video_player/video_player.dart';
 
-class ProjectCard extends StatefulWidget {
-  const ProjectCard({
+class WebProjectsCard extends StatefulWidget {
+  const WebProjectsCard({
     super.key,
     required this.title,
     required this.description,
     required this.images,
     this.videoUrl,
-    required this.height,
+    this.height,
+    this.width,
   });
 
   final String title;
   final String description;
   final List<String> images;
   final String? videoUrl;
-  final double height;
+  final double? height;
+  final double? width;
 
   @override
-  State<ProjectCard> createState() => _ProjectCardState();
+  State<WebProjectsCard> createState() => _WebProjectsCardState();
 }
 
-class _ProjectCardState extends State<ProjectCard> {
+class _WebProjectsCardState extends State<WebProjectsCard> {
   late VideoPlayerController _videoController;
   bool _isVideoPlaying = false;
 
@@ -76,14 +78,36 @@ class _ProjectCardState extends State<ProjectCard> {
                 (image) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return ClipRRect(
+                      return LayoutBuilder(builder: (context, constraints) {
+                        bool isMobile = constraints.maxWidth < 600;
+
+                        return ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: AspectRatio(
+                            aspectRatio: isMobile ? 9 / 16 : 16 / 9,
+                            child: Image.asset(
+                              image,
+                              fit: BoxFit.cover,
+                              width: widget.width,
+                              height: widget.height,
+                            ),
+                          ),
+                        );
+                      });
+
+                      /* return ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          image,
-                          fit: BoxFit.cover,
-                          width: double.infinity,
+                        child: AspectRatio(
+                          aspectRatio:
+                              Responsive.isMobile(context) ? 9 / 16 : 16 / 9,
+                          child: Image.asset(
+                            image,
+                            fit: BoxFit.cover,
+                            width: widget.width,
+                            height: widget.height,
+                          ),
                         ),
-                      );
+                      ); */
                     },
                   );
                 },
