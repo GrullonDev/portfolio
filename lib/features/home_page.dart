@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_portfolio/utils/widgets/footer.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
-import 'package:flutter_portfolio/routes.dart';
+import 'package:flutter_portfolio/utils/router/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

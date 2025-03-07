@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:flutter_portfolio/features/about_me/page/about_page.dart';
 import 'package:flutter_portfolio/features/contact/contact_page.dart';
-import 'package:flutter_portfolio/home_page.dart';
+import 'package:flutter_portfolio/features/home_page.dart';
 import 'package:flutter_portfolio/features/projects/page/projects_page.dart';
 import 'package:flutter_portfolio/features/services/page/services_page.dart';
 

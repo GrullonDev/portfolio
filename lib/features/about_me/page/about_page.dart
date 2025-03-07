@@ -5,7 +5,7 @@ import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_portfolio/build_card.dart';
+import 'package:flutter_portfolio/utils/widgets/build_card.dart';
 import 'package:flutter_portfolio/features/about_me/widgets/carrousel_certificate.dart';
 import 'package:flutter_portfolio/features/about_me/widgets/certificate_list.dart';
 import 'package:flutter_portfolio/bloc/logic.dart';
