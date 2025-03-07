@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/nav_bar.dart';
 import 'package:flutter_portfolio/responsive.dart';
 import 'package:flutter_portfolio/routes.dart';
-import 'package:flutter_portfolio/service_card.dart';
-import 'package:flutter_portfolio/service_project_card.dart';
+import 'package:flutter_portfolio/features/services/widgets/service_card.dart';
+import 'package:flutter_portfolio/features/services/widgets/service_project_card.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 class ServicesPage extends StatelessWidget {
