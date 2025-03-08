@@ -29,13 +29,10 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
-        leading: const ThemeSwitcher(),
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                // Navbar para pantallas grandes
-                const Navbar(),
-              ],
+        actions: [
+          if (!Responsive.isMobile(context)) const Navbar(),
+          const ThemeSwitch(), // Aquí usamos el ThemeSwitch
+        ],
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,

@@ -10,15 +10,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeProvider = context.watch<ThemeProvider>();
-
-    return MaterialApp.router(
-      routerConfig: router,
-      title: 'GrullonDev Portfolio',
-      debugShowCheckedModeBanner: false,
-      themeMode: themeProvider.themeMode, // Usa el ThemeMode dinámico
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ThemeProvider(),
+        )
+      ],
+      child: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, child) {
+          return MaterialApp.router(
+            routerConfig: router,
+            title: 'GrullonDev Portfolio',
+            debugShowCheckedModeBanner: false,
+            themeMode: themeProvider.themeMode, // Usa el ThemeMode dinámico
+            theme: ThemeData.light(),
+            darkTheme: ThemeData.dark(),
+          );
+        },
+      ),
     );
   }
 }
