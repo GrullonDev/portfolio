@@ -22,9 +22,8 @@ class MyApp extends StatelessWidget {
             routerConfig: router,
             title: 'GrullonDev Portfolio',
             debugShowCheckedModeBanner: false,
-            themeMode: themeProvider.themeMode, // Usa el ThemeMode dinámico
-            theme: ThemeData.light(),
-            darkTheme: ThemeData.dark(),
+            theme:
+                themeProvider.isDarkMode ? ThemeData.dark() : ThemeData.light(),
           );
         },
       ),
