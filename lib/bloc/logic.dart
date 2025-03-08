@@ -1,5 +1,6 @@
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 void launchURL(String url) async {
   final Uri uri = Uri.parse(url);

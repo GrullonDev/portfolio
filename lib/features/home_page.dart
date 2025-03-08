@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/bloc/theme_bloc.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_portfolio/utils/widgets/footer.dart';
@@ -21,6 +23,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = context.watch<ThemeProvider>();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -28,6 +32,12 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
+        leading: Switch.adaptive(
+          value: themeProvider.themeMode == ThemeMode.dark,
+          onChanged: (value) {
+            themeProvider.toggleTheme(value);
+          },
+        ),
         actions: Responsive.isMobile(context)
             ? null
             : [
