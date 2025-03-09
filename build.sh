@@ -26,4 +26,13 @@ flutter pub get
 echo "Construyendo el proyecto..."
 flutter build web --release
 
+# Verifica que los recursos estén en el directorio de construcción
+echo "Verificando el directorio de construcción..."
+if [ -d "build/web/assets" ]; then
+  echo "¡Recursos encontrados en build/web/assets!"
+else
+  echo "Error: No se encontraron recursos en build/web/assets."
+  exit 1
+fi
+
 echo "¡Construcción completada!"
