@@ -1,12 +1,6 @@
 #!/bin/bash
 set -e  # Detener ejecución si hay errores
 
-# Verificar si el script se está ejecutando como root
-if [ "$EUID" -eq 0 ]; then
-  echo "❌ ERROR: No ejecutes Flutter como root. Usa un usuario normal en Vercel."
-  exit 1
-fi
-
 # Definir la versión de Flutter
 FLUTTER_VERSION="3.27.4"
 FLUTTER_TAR="flutter_linux_${FLUTTER_VERSION}-stable.tar.xz"
