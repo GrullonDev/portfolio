@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:html' as html;
 
 class ThemeProvider extends ChangeNotifier {
   bool _isDarkMode = false;
 
   ThemeProvider() {
-    _loadTheme(); // Cargar el tema al iniciar
+    _loadTheme(); // Cargar el tema guardado
   }
 
   bool get isDarkMode => _isDarkMode;
   ThemeMode get themeMode => _isDarkMode ? ThemeMode.dark : ThemeMode.light;
 
-  void toggleTheme() async {
+  void toggleTheme() {
     _isDarkMode = !_isDarkMode;
     notifyListeners();
 
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('isDarkMode', _isDarkMode); // Guardar el tema
+    // Guardar en localStorage para persistencia en la web
+    html.window.localStorage['isDarkMode'] = _isDarkMode.toString();
   }
 
-  Future<void> _loadTheme() async {
-    final prefs = await SharedPreferences.getInstance();
-    _isDarkMode =
-        prefs.getBool('isDarkMode') ?? false; // Cargar el tema guardado
+  void _loadTheme() {
+    final savedTheme = html.window.localStorage['isDarkMode'];
+    _isDarkMode = savedTheme == 'true';
     notifyListeners();
   }
 }
