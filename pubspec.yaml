@@ -21,7 +21,6 @@ dependencies:
   carousel_slider: ^5.0.0
   http: ^1.3.0
   provider: ^6.1.2
-  shared_preferences: ^2.5.2
 
 dev_dependencies:
   flutter_test:
@@ -30,7 +29,6 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 flutter:
-
   uses-material-design: true
 
   fonts:
@@ -40,7 +38,6 @@ flutter:
         - asset: assets/fonts/NotoSans-Bold.ttf
           weight: 700
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/profile.JPG
     - assets/images/commingSoon.png
@@ -63,7 +60,6 @@ flutter:
     - assets/certificate/marcaPersonal.png
     - assets/certificate/productividad.png
     - assets/videos/portfolio.mov
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
