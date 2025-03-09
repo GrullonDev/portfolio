@@ -22,6 +22,23 @@ flutter doctor
 echo "Instalando dependencias de Flutter..."
 flutter pub get
 
+# Crea el archivo vercel.json para configurar las rutas de archivos estáticos
+echo "Creando archivo vercel.json..."
+cat > vercel.json <<EOF
+{
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/\$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
+EOF
+
 # Construye el proyecto en modo release
 echo "Construyendo el proyecto..."
 flutter build web --release
