@@ -1,6 +1,15 @@
 #!/bin/bash
 set -e  # Detener ejecución si hay errores
 
+# Evitar ejecución como root (solo advertencia)
+if [ "$EUID" -eq 0 ]; then
+  echo "⚠️ ADVERTENCIA: No se recomienda ejecutar Flutter como root. Usa un usuario normal."
+fi
+
+# Agregar directorio de Flutter como seguro para Git
+echo "🔧 Configurando Git..."
+git config --global --add safe.directory /vercel/path0/flutter
+
 # Definir la versión de Flutter
 FLUTTER_VERSION="3.27.4"
 FLUTTER_TAR="flutter_linux_${FLUTTER_VERSION}-stable.tar.xz"
@@ -15,10 +24,6 @@ export PATH="$PWD/flutter/bin:$PATH"
 # Verificar instalación de Flutter
 echo "✅ Verificando Flutter..."
 flutter doctor
-
-# Agregar directorio de Flutter como seguro para Git
-echo "🔧 Configurando Git..."
-git config --global --add safe.directory $PWD/flutter
 
 # Verificar que Flutter tiene la versión correcta
 echo "✅ Versión de Flutter:"
