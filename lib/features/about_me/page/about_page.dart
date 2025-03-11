@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -76,20 +77,12 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Sobre mí',
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700),
-        ),
-        centerTitle: true,
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                // Navbar para pantallas grandes
-                const Navbar(),
-              ],
+      appBar: CustomAppBar(
+        isMobile: isMobile,
+        title: 'Sobre mí',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,

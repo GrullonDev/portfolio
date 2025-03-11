@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
+import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
 
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/const/video_assets.dart';
@@ -12,19 +13,12 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Proyectos',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-        ),
-        centerTitle: true,
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                // Navbar para pantallas grandes
-                const Navbar(),
-              ],
+      appBar: CustomAppBar(
+        isMobile: isMobile,
+        title: 'Proyectos',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,

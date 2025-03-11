@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
 import 'package:flutter_portfolio/utils/router/routes.dart';
 import 'package:flutter_portfolio/utils/widgets/footer.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
@@ -17,17 +18,9 @@ class HomePage extends StatelessWidget {
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'GrullonDev - Flutter Developer',
-          style: TextStyle(
-              fontSize: isMobile ? 18 : 30, fontWeight: FontWeight.w700),
-        ),
-        centerTitle: true,
-        actions: [
-          // Navbar para pantallas grandes
-          if (isMobile) const SizedBox.shrink() else const Navbar(),
-        ],
+      appBar: CustomAppBar(
+        isMobile: isMobile,
+        title: 'GrullonDev - Flutter Developer',
       ),
       drawer: isMobile ? const Drawer(child: Navbar()) : null,
       body: Column(
