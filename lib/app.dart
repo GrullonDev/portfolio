@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
       routerConfig: router,
       title: 'GrullonDev Portfolio',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData.dark(),
     );
   }
 }
