@@ -14,22 +14,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'GrullonDev - Flutter Developer',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+          style: TextStyle(
+              fontSize: isMobile ? 18 : 30, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                // Navbar para pantallas grandes
-                const Navbar(),
-              ],
+        actions: [
+          // Navbar para pantallas grandes
+          if (isMobile) const SizedBox.shrink() else const Navbar(),
+        ],
       ),
-      drawer:
-          Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
+      drawer: isMobile ? const Drawer(child: Navbar()) : null,
       body: Column(
         children: [
           Expanded(
