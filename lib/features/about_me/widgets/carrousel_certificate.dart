@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -17,7 +18,7 @@ class CertificationCarousel extends StatelessWidget {
           height: 460,
           child: PageView.builder(
             controller: pageController,
-            itemCount: certificados.length,
+            itemCount: context.read<PortfolioLogic>().certificates.length,
             itemBuilder: (context, index) {
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 500),
@@ -36,7 +37,8 @@ class CertificationCarousel extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    certificados[index]['image']!,
+                    context.read<PortfolioLogic>().certificates[index]
+                        ['image']!,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -47,7 +49,7 @@ class CertificationCarousel extends StatelessWidget {
         const SizedBox(height: 10),
         SmoothPageIndicator(
           controller: pageController,
-          count: certificados.length,
+          count: context.read<PortfolioLogic>().certificates.length,
           effect: const ExpandingDotsEffect(
             dotHeight: 8,
             dotWidth: 8,
