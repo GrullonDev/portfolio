@@ -4,17 +4,14 @@
   "outputDirectory": "build/web",
   "builds": [
     {
-      "src": "build.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "zeroConfig": true
-      }
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/build/web/$1"
+      "dest": "/$1"
     }
   ]
 }
