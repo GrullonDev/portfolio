@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "chmod +x build.sh && ./build.sh"
+    "vercel-build": "chmod +x build.sh && ./build.sh"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
