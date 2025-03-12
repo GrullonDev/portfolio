@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:provider/provider.dart';
 
 class CertificationList extends StatelessWidget {
   const CertificationList({super.key});
@@ -9,7 +10,7 @@ class CertificationList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: certificados.map((cert) {
+      children: context.read<PortfolioLogic>().certificates.map((cert) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Row(

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:provider/provider.dart';
 
 class SocialIcon extends StatelessWidget {
   const SocialIcon({
@@ -18,7 +19,7 @@ class SocialIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       icon: FaIcon(icon, size: 30, color: Colors.blueAccent),
-      onPressed: () => launchURL(url),
+      onPressed: () => context.read<PortfolioLogic>().launchURL(url),
     );
   }
 }

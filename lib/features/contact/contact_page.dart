@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
+
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:provider/provider.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
@@ -33,18 +35,12 @@ class _ContactPageState extends State<ContactPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = Responsive.isMobile(context);
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Contacto',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-        ),
-        centerTitle: true,
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                const Navbar(),
-              ],
+      appBar: CustomAppBar(
+        isMobile: isMobile,
+        title: 'Contacto',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
@@ -122,11 +118,11 @@ class _ContactPageState extends State<ContactPage> {
                             ElevatedButton(
                               onPressed: () {
                                 if (_formKey.currentState!.validate()) {
-                                  launchWhatsApp(
-                                    name: _nameController.text,
-                                    email: _emailController.text,
-                                    message: _messageController.text,
-                                  );
+                                  context.read<PortfolioLogic>().launchWhatsApp(
+                                        name: _nameController.text,
+                                        email: _emailController.text,
+                                        message: _messageController.text,
+                                      );
                                   _clearForm();
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(

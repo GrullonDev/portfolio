@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,6 +13,7 @@ import 'package:flutter_portfolio/bloc/logic.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/utils/widgets/social_media/social_icon.dart';
+import 'package:provider/provider.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -44,7 +46,8 @@ class _AboutPageState extends State<AboutPage> {
     _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
       if (!_isReversed) {
         // Desplazamiento ascendente
-        if (_currentPage < certificados.length - 1) {
+        if (_currentPage <
+            context.read<PortfolioLogic>().certificates.length - 1) {
           _currentPage++;
         } else {
           // Cambiar a dirección descendente
@@ -74,20 +77,12 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Sobre mí',
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.w700),
-        ),
-        centerTitle: true,
-        actions: Responsive.isMobile(context)
-            ? null
-            : [
-                // Navbar para pantallas grandes
-                const Navbar(),
-              ],
+      appBar: CustomAppBar(
+        isMobile: isMobile,
+        title: 'Sobre mí',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
