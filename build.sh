@@ -1,6 +1,6 @@
 #!/bin/bash
-# Descarga y extrae Flutter 3.27.4
-FLUTTER_VERSION="3.27.4"
+# Descarga y extrae Flutter 3.29.1
+FLUTTER_VERSION="3.29.1"
 FLUTTER_TAR="flutter_linux_${FLUTTER_VERSION}-stable.tar.xz"
 FLUTTER_URL="https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/${FLUTTER_TAR}"
 
