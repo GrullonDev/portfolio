@@ -11,13 +11,33 @@ class ThemeSwitcher extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ThemeProvider>(
       builder: (context, themeProvider, child) {
-        return Switch.adaptive(
-          value: themeProvider.isDarkMode,
-          onChanged: (value) {
-            themeProvider.toggleTheme();
-          },
+        return IconButton(
+          onPressed: themeProvider.toggleTheme,
+          icon: Icon(
+            themeProvider.isDarkMode ? Icons.light_mode : Icons.dark_mode,
+          ),
         );
       },
     );
   }
 }
+
+        /* Row(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            const Spacer(),
+            Switch.adaptive(
+              value: themeProvider.isDarkMode,
+              onChanged: (value) {
+                themeProvider.toggleTheme();
+              },
+            ),
+            const SizedBox(width: 10),
+            Icon(
+              themeProvider.isDarkMode
+                  ? Icons.light_mode
+                  : Icons.dark_mode_rounded,
+              size: 20,
+            ),
+          ],
+        ); */
