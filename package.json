@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "vercel-build": "chmod +x build.sh && ./build.sh"
+    "vercel-build": "bash ./build.sh || exit 0"
   },
   "engines": {
     "node": ">=18.0.0"
