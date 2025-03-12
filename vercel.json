@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "outputDirectory": "build/web",
+  "framework": "flutter",
+  "builds": [
+    {
+      "src": "build.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "zeroConfig": true
+      }
+    }
+  ]
+}
