@@ -4,10 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_portfolio/bloc/logic.dart';
-import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
+import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 import 'package:flutter_portfolio/utils/router/routes.dart';
 import 'package:flutter_portfolio/utils/widgets/footer.dart';
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +21,6 @@ class HomePage extends StatelessWidget {
         isMobile: isMobile,
         title: 'GrullonDev - Flutter Developer',
       ),
-      drawer: isMobile ? const Drawer(child: Navbar()) : null,
       body: Column(
         children: [
           Expanded(
