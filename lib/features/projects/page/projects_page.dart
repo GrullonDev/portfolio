@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
-import 'package:flutter_portfolio/utils/appBar/custom_appBar.dart';
+import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/const/video_assets.dart';
