@@ -16,7 +16,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: const ThemeSwitcher(),
       title: Text(
         title,
         style: TextStyle(
@@ -26,6 +25,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         // Navbar para pantallas grandes
         if (isMobile) const SizedBox.shrink() else const Navbar(),
+        const ThemeSwitcher(),
       ],
     );
   }
