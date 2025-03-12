@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "vercel-build": "bash ./build.sh && [ -d build/web ]",
-    "postbuild": "[ -d build/web ] || exit 1"
+    "vercel-build": "set -e && bash ./build.sh",
+    "build": "bash ./build.sh"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }

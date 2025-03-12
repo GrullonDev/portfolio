@@ -33,9 +33,6 @@ if ! flutter pub get; then
     exit 1
 fi
 
-echo "Cleaning previous builds..."
-flutter clean
-
 # Construye el proyecto en modo release con configuraciones optimizadas
 echo "Construyendo el proyecto..."
 flutter build web --release \
