@@ -2,7 +2,6 @@
   "version": 2,
   "buildCommand": "chmod +x build.sh && ./build.sh",
   "outputDirectory": "build/web",
-  "framework": "flutter",
   "builds": [
     {
       "src": "build.sh",
@@ -10,6 +9,12 @@
       "config": {
         "zeroConfig": true
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/build/web/$1"
     }
   ]
 }
