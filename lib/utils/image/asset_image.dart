@@ -16,20 +16,20 @@ class CustomImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Determina si estamos en producción o desarrollo
-    const bool isProduction = bool.fromEnvironment('dart.vm.product');
-
-    // Si estamos en producción, usa la ruta relativa desde la raíz del proyecto
-    // Si estamos en desarrollo, usa la ruta local
-    final String fullImagePath = isProduction
-        ? 'assets/$imagePath' // Ruta relativa en producción
-        : 'assets/$imagePath'; // Ruta local en desarrollo
-
     return Image.asset(
-      fullImagePath,
+      imagePath,
       width: width,
       height: height,
       fit: fit,
+      errorBuilder: (context, error, stackTrace) {
+        debugPrint('Error loading image: $imagePath - $error');
+        return Container(
+          width: width,
+          height: height,
+          color: Colors.grey[200],
+          child: const Icon(Icons.image_not_supported),
+        );
+      },
     );
   }
 }
