@@ -6,7 +6,8 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build/web"
+        "distDir": "build/web",
+        "installCommand": "apt-get update && apt-get install -y wget xz-utils"
       }
     }
   ],

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "vercel-build": "mkdir -p /tmp/flutter && cd /tmp/flutter && curl -L https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.29.1-stable.tar.xz | tar xJ && export PATH=\"$PATH:/tmp/flutter/flutter/bin\" && cd $INIT_CWD && flutter pub get && flutter build web --release",
+    "vercel-build": "mkdir -p /tmp/flutter && cd /tmp/flutter && wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.29.1-stable.tar.xz && tar xf flutter_linux_3.29.1-stable.tar.xz && export PATH=\"$PATH:/tmp/flutter/flutter/bin\" && cd $INIT_CWD && flutter pub get && flutter build web --release",
     "build": "bash ./build.sh"
   },
   "engines": {
