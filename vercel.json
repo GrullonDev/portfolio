@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "bash ./build.sh",
-  "outputDirectory": "build/web",
+
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build/web"
+      }
     }
   ],
+  "outputDirectory": "build/web",
   "routes": [
     {
       "handle": "filesystem"
