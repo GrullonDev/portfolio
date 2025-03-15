@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_portfolio/utils/image/asset_image.dart';
 
 class MobileProjectCard extends StatelessWidget {
   const MobileProjectCard({
@@ -8,11 +9,15 @@ class MobileProjectCard extends StatelessWidget {
     required this.title,
     required this.description,
     required this.images,
+    this.height,
+    this.width,
   });
 
   final String title;
   final String description;
   final List<String> images;
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +54,16 @@ class MobileProjectCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: AspectRatio(
                         aspectRatio: 9 / 20,
-                        child: Image.asset(
+                        child: CustomImage(
+                          imagePath: image,
+                          fit: BoxFit.cover,
+                          width: width,
+                          height: height,
+                        ),
+                        /* Image.asset(
                           image,
                           fit: BoxFit.cover,
-                        ),
+                        ), */
                       ),
                     ),
                   )
