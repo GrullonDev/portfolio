@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:video_player/video_player.dart';
 
+import 'package:flutter_portfolio/utils/image/asset_image.dart';
+
 class WebProjectsCard extends StatefulWidget {
   const WebProjectsCard({
     super.key,
@@ -85,12 +87,18 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                           borderRadius: BorderRadius.circular(10),
                           child: AspectRatio(
                             aspectRatio: isMobile ? 9 / 16 : 16 / 9,
-                            child: Image.asset(
-                              image,
+                            child: CustomImage(
+                              imagePath: image,
                               fit: BoxFit.cover,
                               width: widget.width,
                               height: widget.height,
                             ),
+                            /* Image.asset(
+                              image,
+                              fit: BoxFit.cover,
+                              width: widget.width,
+                              height: widget.height,
+                            ), */
                           ),
                         );
                       });

@@ -37,7 +37,6 @@ pubspec.lock
 *.mocks.dart
 
 # Web related
-lib/generated_plugin_registrant.dart
 web/firebase-config.js
 
 # iOS/XCode related
