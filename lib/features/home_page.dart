@@ -172,7 +172,6 @@ Widget _buildHeroSection(BuildContext context) {
       const CircleAvatar(
         radius: 80,
         backgroundImage: AssetImage(ImageAssets.profile),
-        child: CustomImage(imagePath: ImageAssets.profile),
       ),
       const SizedBox(height: 20),
       const Text(

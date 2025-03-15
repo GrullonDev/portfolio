@@ -1,19 +1,18 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
-import 'package:flutter_portfolio/utils/widgets/build_card.dart';
+import 'package:flutter_portfolio/bloc/logic.dart';
 import 'package:flutter_portfolio/features/about_me/widgets/carrousel_certificate.dart';
 import 'package:flutter_portfolio/features/about_me/widgets/certificate_list.dart';
-import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
+import 'package:flutter_portfolio/utils/widgets/build_card.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/utils/widgets/social_media/social_icon.dart';
-import 'package:provider/provider.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
