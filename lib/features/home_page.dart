@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/image/asset_image.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -170,7 +171,8 @@ Widget _buildHeroSection(BuildContext context) {
     children: [
       const CircleAvatar(
         radius: 80,
-        backgroundImage: AssetImage(ImageAssets.profile),
+        /* backgroundImage: AssetImage(ImageAssets.profile), */ child:
+            CustomImage(imagePath: ImageAssets.profile),
       ),
       const SizedBox(height: 20),
       const Text(

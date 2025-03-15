@@ -1,3 +1,3 @@
 class VideoAssets {
-  static const String videoPortafolio = 'videos/portfolio.mov';
+  static const String videoPortafolio = 'assets/videos/portfolio.mov';
 }
