@@ -82,7 +82,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       appBar: CustomAppBar(
         isMobile: isMobile,
-        title: 'Sobre mí',
+        title: 'Mi Trayectoria',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
@@ -97,22 +97,6 @@ class _AboutPageState extends State<AboutPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Foto de perfil destacada
-                  const CircleAvatar(
-                    radius: 80,
-                    backgroundImage: AssetImage(ImageAssets.profile),
-                  ),
-                  const SizedBox(height: 20),
-
-                  // Información Personal
-                  const CardInformation(
-                    title:
-                        '🚀 Desarrollador Flutter | Especialista en Apps Móviles y Web',
-                    content:
-                        'Soy Jorge Grullón, desarrollador con experiencia en el desarrollo de aplicaciones móviles y web. '
-                        'Me especializo en Flutter, enfocándome en la arquitectura limpia, patrones de diseño y optimización de UI/UX.',
-                  ),
-
                   const SizedBox(height: 20),
 
                   // Secciones en una Grid si hay espacio suficiente
@@ -128,13 +112,6 @@ class _AboutPageState extends State<AboutPage> {
                             '📌 Experto en Flutter, Firebase, API REST y GraphQL.\n'
                             '📌 Desarrollo de backend con Node.js y NestJS.\n'
                             '📌 Apasionado por la innovación y la tecnología.',
-                        width: screenWidth > 600 ? 320 : double.infinity,
-                      ),
-                      CardInformation(
-                        title: '📌 Metodologías Ágiles',
-                        content:
-                            '✔️ Scrum: Experiencia trabajando con sprints y retrospectivas.\n'
-                            '✔️ Design Thinking: Creación de soluciones innovadoras centradas en el usuario.\n',
                         width: screenWidth > 600 ? 320 : double.infinity,
                       ),
 

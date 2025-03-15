@@ -27,7 +27,7 @@ class Navbar extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Sobre mí'),
+            title: const Text('Trayectoria'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
               navigateTo(context, 'about');
@@ -66,7 +66,7 @@ class Navbar extends StatelessWidget {
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'about'),
-            child: const Text('Sobre mí'),
+            child: const Text('Trayectoria'),
           ),
           TextButton(
             onPressed: () => navigateTo(context, 'services'),
