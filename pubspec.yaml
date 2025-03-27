@@ -63,6 +63,11 @@ flutter:
     - assets/certificate/marcaPersonal.png
     - assets/certificate/productividad.png
     - assets/videos/portfolio.mov
+    - assets/images/projects/yellow_flowers/fase1.png
+    - assets/images/projects/yellow_flowers/fase2.png
+    - assets/images/projects/yellow_flowers/fase20.png
+    - assets/images/projects/yellow_flowers/idea.png
+    - assets/images/projects/eduplay/menu_web.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

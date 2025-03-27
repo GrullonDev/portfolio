@@ -74,6 +74,7 @@ class ProjectsPage extends StatelessWidget {
                   SizedBox(height: 20),
                   Column(
                     children: [
+                      // App de Gestión de Tiempo y Tareas (Pomodoro)
                       MobileProjectCard(
                         title: 'App de Gestión de Tiempo y Tareas (Pomodoro)',
                         description:
@@ -84,6 +85,18 @@ class ProjectsPage extends StatelessWidget {
                           ImageAssets.pomodoroData,
                           ImageAssets.pomodoroHistory,
                           ImageAssets.pomodoroBreak,
+                        ],
+                      ),
+                      // App de Motivación de Flores Amarillas para las mujeres
+                      MobileProjectCard(
+                        title:
+                            'Flores Amarillas para motivación para las mujeres',
+                        description: '',
+                        images: [
+                          ImageAssets.fase1YellowFlowers,
+                          ImageAssets.fase2YellowFlowers,
+                          ImageAssets.fase20YellowFlowers,
+                          ImageAssets.ideaYellowFlowers,
                         ],
                       ),
                     ],
