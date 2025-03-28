@@ -16,20 +16,25 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 3.29.1  # Ajusta según tu versión de Flutter
+          flutter-version: 3.29.1  # Asegurar versión correcta de Flutter
 
-      - name: Install dependencies
-        run: flutter pub get
+      - name: Verificar versión de Flutter
+        run: flutter --version
 
-      - name: Build Flutter Web
-        run: flutter build web --release
+      - name: Limpiar y reconstruir
+        run: |
+          flutter clean
+          flutter pub get
+          flutter build web --release
+
+      - name: Verificar archivos después de build
+        run: ls -la build/
+
+      - name: Verificar archivos en build/web
+        run: ls -la build/web || echo "⚠️ build/web no existe"
 
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-
-      - name: Clear Firebase Hosting Cache
-        run: firebase hosting:channel:clear live --project portfolio-b302f --token ${{ secrets.FIREBASE_TOKEN }}
-        
