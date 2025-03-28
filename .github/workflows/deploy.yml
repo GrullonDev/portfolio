@@ -29,3 +29,7 @@ jobs:
 
       - name: Deploy to Firebase Hosting
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Clear Firebase Hosting Cache
+        run: firebase hosting:channel:clear live --project portfolio-b302f --token ${{ secrets.FIREBASE_TOKEN }}
+        
