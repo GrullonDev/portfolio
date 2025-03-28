@@ -38,6 +38,7 @@ pubspec.lock
 
 # Web related
 web/firebase-config.js
+.firebase/
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
