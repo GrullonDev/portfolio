@@ -1,6 +1,6 @@
 class ImageAssets {
-  static const String profile = 'assets/images/profile.jpg';
-  static const String commingSoon = 'assets/images/commingSoon.png';
+  static const String profile = 'assets/images/profile.webp';
+  static const String commingSoon = 'assets/images/commingSoon.webp';
   static const String inicio = 'assets/images/projects/portfolio/inicio.png';
   static const String aboutMe1 =
       'assets/images/projects/portfolio/about_me1.png';

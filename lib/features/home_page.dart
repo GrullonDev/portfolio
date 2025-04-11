@@ -168,9 +168,11 @@ class HomePage extends StatelessWidget {
 Widget _buildHeroSection(BuildContext context) {
   return Column(
     children: [
-      const CircleAvatar(
+      CircleAvatar(
         radius: 80,
-        backgroundImage: AssetImage(ImageAssets.profile),
+        backgroundImage: NetworkImage(
+          Uri.base.resolve(ImageAssets.profile).toString(),
+        ),
       ),
       const SizedBox(height: 20),
       const Text(
@@ -188,6 +190,11 @@ Widget _buildHeroSection(BuildContext context) {
       ElevatedButton(
         onPressed: () => navigateTo(context, 'projects'),
         child: const Text('Ver mis proyectos'),
+      ),
+      const SizedBox(height: 20),
+      ElevatedButton(
+        onPressed: () => navigateTo(context, 'projects'),
+        child: const Text('Descargar mi CV'),
       ),
       const SizedBox(height: 20),
       Row(
