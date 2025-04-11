@@ -1,3 +1,4 @@
 {
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "dart.flutterSdkPath": ".fvm/versions/3.29.1"
 }

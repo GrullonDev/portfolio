@@ -103,3 +103,6 @@ coverage/
 *.mocks.dart
 *.config.dart
 *.gr.dart
+
+# FVM Version Cache
+.fvm/
