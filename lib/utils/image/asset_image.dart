@@ -16,8 +16,14 @@ class CustomImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      imagePath,
+    return Image(
+      image: NetworkImage(
+        Uri.base
+            .resolve(
+              imagePath,
+            )
+            .toString(),
+      ),
       width: width,
       height: height,
       fit: fit,
@@ -31,5 +37,20 @@ class CustomImage extends StatelessWidget {
         );
       },
     );
+    /* Image.asset(
+      imagePath,
+      width: width,
+      height: height,
+      fit: fit,
+      errorBuilder: (context, error, stackTrace) {
+        debugPrint('Error loading image: $imagePath - $error');
+        return Container(
+          width: width,
+          height: height,
+          color: Colors.grey[200],
+          child: const Icon(Icons.image_not_supported),
+        );
+      },
+    ); */
   }
 }

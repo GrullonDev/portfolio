@@ -11,13 +11,15 @@ class ImageAssets {
   static const String services2 =
       'assets/images/projects/portfolio/services2.png';
   static const String pomodoroBreak =
-      'assets/images/projects/pomodoro/break.png';
-  static const String pomodoroData = 'assets/images/projects/pomodoro/data.png';
+      'assets/images/projects/pomodoro/break.webp';
+  static const String pomodoroData =
+      'assets/images/projects/pomodoro/data.webp';
   static const String pomodoroHistory =
-      'assets/images/projects/pomodoro/history.png';
-  static const String pomodoroInit = 'assets/images/projects/pomodoro/init.png';
+      'assets/images/projects/pomodoro/history.webp';
+  static const String pomodoroInit =
+      'assets/images/projects/pomodoro/init.webp';
   static const String pomodoroSession =
-      'assets/images/projects/pomodoro/session.png';
+      'assets/images/projects/pomodoro/session.webp';
   static const String english = 'assets/certificate/English.png';
   static const String flutter = 'assets/certificate/flutter.png';
   static const String frontend = 'assets/certificate/frontend.png';
@@ -35,5 +37,5 @@ class ImageAssets {
   static const String ideaYellowFlowers =
       'assets/images/projects/yellow_flowers/idea.png';
   static const String menuWebEduplay =
-      'assets/images/projects/eduplay/menu_web.png';
+      'assets/images/projects/eduplay/menu_web.webp';
 }
