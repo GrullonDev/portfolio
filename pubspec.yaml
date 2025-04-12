@@ -33,22 +33,22 @@ flutter:
 
   uses-material-design: true
 
-  fonts:
-    - family: NotoSans
-      fonts:
-        - asset: assets/fonts/NotoSans-Regular.ttf
-        - asset: assets/fonts/NotoSans-Bold.ttf
-          weight: 700
+  # fonts:
+  #   - family: NotoSans
+  #     fonts:
+  #       - asset: assets/fonts/NotoSans-Regular.ttf
+  #       - asset: assets/fonts/NotoSans-Bold.ttf
+  #         weight: 700
 
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/profile.webp
     - assets/images/commingSoon.webp
-    - assets/images/projects/portfolio/inicio.png
-    - assets/images/projects/portfolio/about_me1.png
-    - assets/images/projects/portfolio/about_me2.png
-    - assets/images/projects/portfolio/services1.png
-    - assets/images/projects/portfolio/services2.png
+    - assets/images/projects/portfolio/inicio.webp
+    - assets/images/projects/portfolio/about_me1.webp
+    - assets/images/projects/portfolio/about_me2.webp
+    - assets/images/projects/portfolio/services1.webp
+    - assets/images/projects/portfolio/services2.webp
     - assets/images/projects/pomodoro/break.webp
     - assets/images/projects/pomodoro/data.webp
     - assets/images/projects/pomodoro/history.webp
@@ -63,10 +63,10 @@ flutter:
     - assets/certificate/marcaPersonal.png
     - assets/certificate/productividad.png
     - assets/videos/portfolio.mov
-    - assets/images/projects/yellow_flowers/fase1.png
-    - assets/images/projects/yellow_flowers/fase2.png
-    - assets/images/projects/yellow_flowers/fase20.png
-    - assets/images/projects/yellow_flowers/idea.png
+    - assets/images/projects/yellow_flowers/fase1.webp
+    - assets/images/projects/yellow_flowers/fase2.webp
+    - assets/images/projects/yellow_flowers/fase20.webp
+    - assets/images/projects/yellow_flowers/idea.webp
     - assets/images/projects/eduplay/menu_web.webp
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,15 +1,15 @@
 class ImageAssets {
   static const String profile = 'assets/images/profile.webp';
   static const String commingSoon = 'assets/images/commingSoon.webp';
-  static const String inicio = 'assets/images/projects/portfolio/inicio.png';
+  static const String inicio = 'assets/images/projects/portfolio/inicio.webp';
   static const String aboutMe1 =
-      'assets/images/projects/portfolio/about_me1.png';
+      'assets/images/projects/portfolio/about_me1.webp';
   static const String aboutMe2 =
-      'assets/images/projects/portfolio/about_me2.png';
+      'assets/images/projects/portfolio/about_me2.webp';
   static const String services1 =
-      'assets/images/projects/portfolio/services1.png';
+      'assets/images/projects/portfolio/services1.webp';
   static const String services2 =
-      'assets/images/projects/portfolio/services2.png';
+      'assets/images/projects/portfolio/services2.webp';
   static const String pomodoroBreak =
       'assets/images/projects/pomodoro/break.webp';
   static const String pomodoroData =
@@ -29,13 +29,13 @@ class ImageAssets {
   static const String marcaPersonal = 'assets/certificate/marcaPersonal.png';
   static const String productividad = 'assets/certificate/productividad.png';
   static const String fase1YellowFlowers =
-      'assets/images/projects/yellow_flowers/fase1.png';
+      'assets/images/projects/yellow_flowers/fase1.webp';
   static const String fase2YellowFlowers =
-      'assets/images/projects/yellow_flowers/fase2.png';
+      'assets/images/projects/yellow_flowers/fase2.webp';
   static const String fase20YellowFlowers =
-      'assets/images/projects/yellow_flowers/fase20.png';
+      'assets/images/projects/yellow_flowers/fase20.webp';
   static const String ideaYellowFlowers =
-      'assets/images/projects/yellow_flowers/idea.png';
+      'assets/images/projects/yellow_flowers/idea.webp';
   static const String menuWebEduplay =
       'assets/images/projects/eduplay/menu_web.webp';
 }
