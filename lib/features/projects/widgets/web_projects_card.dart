@@ -35,19 +35,12 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
   void initState() {
     super.initState();
     if (widget.videoUrl != null) {
-      _videoController = VideoPlayerController.asset(widget.videoUrl!)
-        ..initialize().then((_) {
+      _videoController = VideoPlayerController.networkUrl(
+        Uri.base.resolve(widget.videoUrl!),
+      )..initialize().then((_) {
           setState(() {});
         });
     }
-  }
-
-  @override
-  void dispose() {
-    if (widget.videoUrl != null) {
-      _videoController.dispose();
-    }
-    super.dispose();
   }
 
   @override
@@ -80,28 +73,30 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                 (image) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return LayoutBuilder(builder: (context, constraints) {
-                        bool isMobile = constraints.maxWidth < 600;
+                      return LayoutBuilder(
+                        builder: (context, constraints) {
+                          bool isMobile = constraints.maxWidth < 600;
 
-                        return ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: AspectRatio(
-                            aspectRatio: isMobile ? 9 / 16 : 16 / 9,
-                            child: CustomImage(
-                              imagePath: image,
-                              fit: BoxFit.cover,
-                              width: widget.width,
-                              height: widget.height,
-                            ),
-                            /* Image.asset(
+                          return ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: AspectRatio(
+                              aspectRatio: isMobile ? 9 / 16 : 16 / 9,
+                              child: CustomImage(
+                                imagePath: image,
+                                fit: BoxFit.cover,
+                                width: widget.width,
+                                height: widget.height,
+                              ),
+                              /* Image.asset(
                               image,
                               fit: BoxFit.cover,
                               width: widget.width,
                               height: widget.height,
                             ), */
-                          ),
-                        );
-                      });
+                            ),
+                          );
+                        },
+                      );
 
                       /* return ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -122,7 +117,7 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
               ).toList(),
             ),
             const SizedBox(height: 20),
-            if (widget.videoUrl != null)
+            if (widget.videoUrl != null && _videoController.value.isInitialized)
               Column(
                 children: [
                   const Text(
@@ -157,5 +152,13 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    if (widget.videoUrl != null) {
+      _videoController.dispose();
+    }
+    super.dispose();
   }
 }

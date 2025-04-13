@@ -36,11 +36,22 @@ class CertificationCarousel extends StatelessWidget {
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
-                  child: Image.asset(
+                  child: Image(
+                    image: NetworkImage(
+                      Uri.base
+                          .resolve(
+                            context.read<PortfolioLogic>().certificates[index]
+                                ['image']!,
+                          )
+                          .toString(),
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  /* Image.asset(
                     context.read<PortfolioLogic>().certificates[index]
                         ['image']!,
                     fit: BoxFit.cover,
-                  ),
+                  ), */
                 ),
               );
             },

@@ -20,14 +20,14 @@ class ImageAssets {
       'assets/images/projects/pomodoro/init.webp';
   static const String pomodoroSession =
       'assets/images/projects/pomodoro/session.webp';
-  static const String english = 'assets/certificate/English.png';
-  static const String flutter = 'assets/certificate/flutter.png';
-  static const String frontend = 'assets/certificate/frontend.png';
-  static const String meditacion = 'assets/certificate/meditacion.png';
-  static const String feedback = 'assets/certificate/feedback.png';
-  static const String blandas = 'assets/certificate/blandas.png';
-  static const String marcaPersonal = 'assets/certificate/marcaPersonal.png';
-  static const String productividad = 'assets/certificate/productividad.png';
+  static const String english = 'assets/certificate/English.webp';
+  static const String flutter = 'assets/certificate/flutter.webp';
+  static const String frontend = 'assets/certificate/frontend.webp';
+  static const String meditacion = 'assets/certificate/meditacion.webp';
+  static const String feedback = 'assets/certificate/feedback.webp';
+  static const String blandas = 'assets/certificate/blandas.webp';
+  static const String marcaPersonal = 'assets/certificate/marcaPersonal.webp';
+  static const String productividad = 'assets/certificate/productividad.webp';
   static const String fase1YellowFlowers =
       'assets/images/projects/yellow_flowers/fase1.webp';
   static const String fase2YellowFlowers =

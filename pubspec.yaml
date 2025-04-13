@@ -54,15 +54,15 @@ flutter:
     - assets/images/projects/pomodoro/history.webp
     - assets/images/projects/pomodoro/init.webp
     - assets/images/projects/pomodoro/session.webp
-    - assets/certificate/English.png
-    - assets/certificate/flutter.png
-    - assets/certificate/frontend.png
-    - assets/certificate/meditacion.png
-    - assets/certificate/feedback.png
-    - assets/certificate/blandas.png
-    - assets/certificate/marcaPersonal.png
-    - assets/certificate/productividad.png
-    - assets/videos/portfolio.mov
+    - assets/certificate/English.webp
+    - assets/certificate/flutter.webp
+    - assets/certificate/frontend.webp
+    - assets/certificate/meditacion.webp
+    - assets/certificate/feedback.webp
+    - assets/certificate/blandas.webp
+    - assets/certificate/marcaPersonal.webp
+    - assets/certificate/productividad.webp
+    - assets/videos/portfolio.mp4
     - assets/images/projects/yellow_flowers/fase1.webp
     - assets/images/projects/yellow_flowers/fase2.webp
     - assets/images/projects/yellow_flowers/fase20.webp
