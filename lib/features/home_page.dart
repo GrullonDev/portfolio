@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +12,7 @@ import 'package:flutter_portfolio/utils/widgets/build_card.dart';
 import 'package:flutter_portfolio/utils/widgets/footer.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:universal_html/html.dart' as html;
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -193,7 +195,16 @@ Widget _buildHeroSection(BuildContext context) {
       ),
       const SizedBox(height: 20),
       ElevatedButton(
-        onPressed: () => navigateTo(context, 'projects'),
+        onPressed: () async {
+          final bytes = await rootBundle
+              .load('assets/docs/Curriculum_Mobile_Jorge_Grullon.pdf');
+          final blob = html.Blob([bytes.buffer.asUint8List()]);
+          final url = html.Url.createObjectUrlFromBlob(blob);
+          final anchor = html.AnchorElement(href: url)
+            ..setAttribute('download', 'Curriculum Mobile Jorge Grullon.pdf')
+            ..click();
+          html.Url.revokeObjectUrl(url);
+        },
         child: const Text('Descargar mi CV'),
       ),
       const SizedBox(height: 20),
