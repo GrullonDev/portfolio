@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
 import 'package:flutter_portfolio/utils/image/asset_image.dart';
@@ -12,6 +13,7 @@ class WebProjectsCard extends StatefulWidget {
     required this.description,
     required this.images,
     this.videoUrl,
+    this.demo,
     this.height,
     this.width,
   });
@@ -20,6 +22,7 @@ class WebProjectsCard extends StatefulWidget {
   final String description;
   final List<String> images;
   final String? videoUrl;
+  final String? demo;
   final double? height;
   final double? width;
 
@@ -145,6 +148,49 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                         },
                       );
                     },
+                  ),
+                ],
+              ),
+            const SizedBox(height: 20),
+            if (widget.demo != null)
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Center(
+                    child: Text(
+                      'Demo',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Center(
+                    child: GestureDetector(
+                      onTap: () async {
+                        final Uri url = Uri.parse(widget.demo!);
+                        if (await canLaunchUrl(url)) {
+                          await launchUrl(url,
+                              mode: LaunchMode.externalApplication);
+                        } else {
+                          // ignore: use_build_context_synchronously
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text('No se pudo abrir el enlace')),
+                          );
+                        }
+                      },
+                      child: Text(
+                        widget.demo!,
+                        style: const TextStyle(
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline,
+                          fontSize: 18,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ),
                 ],
               ),

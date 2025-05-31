@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/const/video_assets.dart';
+import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
 import 'package:flutter_portfolio/features/projects/widgets/web_projects_card.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
+import 'package:flutter_portfolio/utils/const/video_assets.dart';
+import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
+import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -98,6 +98,17 @@ class ProjectsPage extends StatelessWidget {
                           ImageAssets.fase20YellowFlowers,
                           ImageAssets.ideaYellowFlowers,
                         ],
+                      ),
+                      // App de Gestión de Certificados para la Parroquia Inmaculada de Villa Nueva
+                      WebProjectsCard(
+                        title:
+                            'Sistema de Gestión Parroquial - Parroquia Inmaculada Concepción (Sede Villa Nueva)',
+                        description:
+                            '\t\t\tTecnologías: Angular · NestJS · GraphQL · PostgreSQL · Docker · Firebase Hosting \nDesarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción. El sistema permite registrar, consultar y gestionar certificados de bautismo, comunión, confirmación y matrimonio, facilitando la trazabilidad de los registros históricos y actuales.\n\nSe implementó un panel administrativo seguro con autenticación, navegación moderna y reportería dinámica, permitiendo visualizar estadísticas clave como el número de documentos por año, celebrantes más activos y rangos de fechas disponibles. Además, se integró un módulo de escaneo de documentos físicos con almacenamiento centralizado en la base de datos.\n\nEl backend fue desarrollado con NestJS y GraphQL, desplegado mediante Docker en nGrok Run para asegurar escalabilidad y rendimiento. El frontend fue desarrollado con Angular, optimizado para funcionar como una aplicación web progresiva (PWA) y alojado en Firebase Hosting.',
+                        images: [
+                          ImageAssets.loginParroquia,
+                        ],
+                        demo: 'https://iglesia-inmaculada-concepcion.web.app',
                       ),
                     ],
                   ),
