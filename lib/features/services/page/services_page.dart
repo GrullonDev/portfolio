@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/features/services/widgets/service_card.dart';
-import 'package:flutter_portfolio/features/services/widgets/service_project_card.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
-import 'package:flutter_portfolio/utils/router/routes.dart';
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/features/services/widgets/service_card.dart';
+import 'package:portafolio_app/features/services/widgets/service_project_card.dart';
+import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/utils/router/routes.dart';
+import 'package:portafolio_app/utils/widgets/nav_bar.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});

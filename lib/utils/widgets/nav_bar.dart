@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
-import 'package:flutter_portfolio/utils/router/routes.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/utils/router/routes.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});

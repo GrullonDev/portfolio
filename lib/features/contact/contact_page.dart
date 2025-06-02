@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/bloc/logic.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:provider/provider.dart';
+
+import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
+import 'package:portafolio_app/utils/widgets/nav_bar.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});

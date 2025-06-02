@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/bloc/logic.dart';
+import 'package:portafolio_app/bloc/logic.dart';
 import 'package:provider/provider.dart';
 
 class CertificationList extends StatelessWidget {

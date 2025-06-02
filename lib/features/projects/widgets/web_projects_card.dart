@@ -4,7 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
-import 'package:flutter_portfolio/utils/image/asset_image.dart';
+import 'package:portafolio_app/utils/image/asset_image.dart';
 
 class WebProjectsCard extends StatefulWidget {
   const WebProjectsCard({

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card.dart';
-import 'package:flutter_portfolio/features/projects/widgets/web_projects_card.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
-import 'package:flutter_portfolio/utils/const/video_assets.dart';
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/features/projects/widgets/mobile_projects_card.dart';
+import 'package:portafolio_app/features/projects/widgets/web_projects_card.dart';
+import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/utils/const/video_assets.dart';
+import 'package:portafolio_app/utils/widgets/nav_bar.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});

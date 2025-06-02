@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter_portfolio/utils/image/asset_image.dart';
+import 'package:portafolio_app/utils/image/asset_image.dart';
 
 class MobileProjectCard extends StatelessWidget {
   const MobileProjectCard({

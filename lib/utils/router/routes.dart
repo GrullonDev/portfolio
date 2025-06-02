@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:flutter_portfolio/features/about_me/page/about_page.dart';
-import 'package:flutter_portfolio/features/contact/contact_page.dart';
-import 'package:flutter_portfolio/features/home_page.dart';
-import 'package:flutter_portfolio/features/projects/page/projects_page.dart';
-import 'package:flutter_portfolio/features/services/page/services_page.dart';
+import 'package:portafolio_app/features/about_me/page/about_page.dart';
+import 'package:portafolio_app/features/contact/contact_page.dart';
+import 'package:portafolio_app/features/home_page.dart';
+import 'package:portafolio_app/features/projects/page/projects_page.dart';
+import 'package:portafolio_app/features/services/page/services_page.dart';
 
 void navigateTo(BuildContext context, String routeName) {
   context.goNamed(routeName);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/utils/theme_switcher/theme_switcher.dart';
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
+import 'package:portafolio_app/utils/theme_switcher/theme_switcher.dart';
+import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({

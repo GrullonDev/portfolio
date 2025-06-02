@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
 
 class PortfolioLogic extends ChangeNotifier {
   PortfolioLogic();

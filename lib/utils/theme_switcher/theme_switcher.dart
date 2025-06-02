@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 
-import 'package:flutter_portfolio/utils/theme_switcher/theme_switcher_bloc.dart';
+import 'package:portafolio_app/utils/theme_switcher/theme_switcher_bloc.dart';
 
 class ThemeSwitcher extends StatelessWidget {
   const ThemeSwitcher({super.key});
