@@ -35,6 +35,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
     - assets/docs/curriculum_mobile.pdf
     - assets/images/profile.webp
     - assets/images/commingSoon.webp
