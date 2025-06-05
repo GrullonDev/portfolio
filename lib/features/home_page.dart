@@ -87,11 +87,15 @@ Widget _buildHeroSection(BuildContext context) {
       const SizedBox(height: 20),
       ElevatedButton(
         onPressed: () async {
-          final bytes =
-              await rootBundle.load('assets/docs/curriculum_mobile.pdf');
+          final bytes = await rootBundle.load('assets/docs/curriculum_mobile.pdf');
           final blob = html.Blob([bytes.buffer.asUint8List()]);
           final url = html.Url.createObjectUrlFromBlob(blob);
-          html.Url.revokeObjectUrl(url);
+
+          final anchor = html.AnchorElement(href: url)
+            ..setAttribute("download", "CV_Jorge_Grullon.pdf")
+            ..click();
+
+          html.Url.revokeObjectUrl(url); // libera el recurso
         },
         child: const Text('Descargar mi CV'),
       ),
