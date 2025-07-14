@@ -63,9 +63,7 @@ Widget _buildHeroSection(BuildContext context) {
     children: [
       CircleAvatar(
         radius: 80,
-        backgroundImage: NetworkImage(
-          Uri.base.resolve(ImageAssets.profile).toString(),
-        ),
+        backgroundImage: AssetImage(ImageAssets.profile),
       ),
       const SizedBox(height: 20),
       const Text(

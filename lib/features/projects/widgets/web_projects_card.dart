@@ -38,11 +38,20 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
   void initState() {
     super.initState();
     if (widget.videoUrl != null) {
-      _videoController = VideoPlayerController.networkUrl(
-        Uri.base.resolve(widget.videoUrl!),
-      )..initialize().then((_) {
-          setState(() {});
-        });
+      // Si el video es un asset local (empieza con 'assets/')
+      if (widget.videoUrl!.startsWith('assets/')) {
+        _videoController = VideoPlayerController.asset(widget.videoUrl!)
+          ..initialize().then((_) {
+            setState(() {});
+          });
+      } else {
+        // Si es una URL de red
+        _videoController = VideoPlayerController.networkUrl(
+          Uri.base.resolve(widget.videoUrl!),
+        )..initialize().then((_) {
+            setState(() {});
+          });
+      }
     }
   }
 

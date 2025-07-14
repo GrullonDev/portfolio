@@ -37,5 +37,22 @@
   </head>
   <body>
     <script src="flutter_bootstrap.js" async></script>
+    <script>
+      // Script para limpiar el service worker solo una vez
+      if ('serviceWorker' in navigator && !sessionStorage.getItem('swCleared')) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        }).then(function() {
+          // Marcar que ya se limpió el service worker en esta sesión
+          sessionStorage.setItem('swCleared', 'true');
+          // Solo recargar si no estamos en modo desarrollo
+          if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            window.location.reload(true);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
