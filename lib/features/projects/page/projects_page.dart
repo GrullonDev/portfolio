@@ -3,10 +3,10 @@ import 'package:flutter_portfolio/features/projects/widgets/mobile_projects_card
 import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
 
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/const/video_assets.dart';
 import 'package:flutter_portfolio/features/projects/widgets/web_projects_card.dart';
 import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
 import 'package:flutter_portfolio/utils/const/images_assets.dart';
+import 'package:flutter_portfolio/utils/widgets/device_mockups.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -35,7 +35,7 @@ class ProjectsPage extends StatelessWidget {
                 children: [
                   SizedBox(height: 10),
                   Text(
-                    'Aquí puedes ver algunos de mis proyectos desarrollados con Flutter.',
+                    'Proyectos reales en desarrollo activo. Solicita acceso a betas y demos.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 28,
@@ -44,49 +44,98 @@ class ProjectsPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 30),
-
-                  // Proyecto principal destacado
+                  // Categoría: Apps móviles
                   Text(
-                    'Proyecto Principal',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                    '📱 Apps móviles',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 12),
+                  // 1) Finanzas Personales
                   WebProjectsCard(
-                    title: 'Portafolio Flutter',
+                    title: 'Finanzas Personales',
                     description:
-                        'Este es mi portafolio personal desarrollado con Flutter, donde muestro mis habilidades y proyectos.',
+                        'Ayuda a usuarios a controlar su presupuesto mensual con reportes claros y metas alcanzables. Ahorra tiempo y evita sorpresas a fin de mes.',
                     images: [
-                      ImageAssets.inicio,
-                      ImageAssets.aboutMe1,
-                      ImageAssets.aboutMe2,
                       ImageAssets.services1,
                       ImageAssets.services2,
                     ],
-                    videoUrl: VideoAssets.videoPortafolio,
-                  ),
-                  SizedBox(height: 30),
-
-                  // Listado de otros proyectos
-                  Text(
-                    'Otros Proyectos',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 20),
-                  Column(
-                    children: [
-                      MobileProjectCard(
-                        title: 'App de Gestión de Tiempo y Tareas (Pomodoro)',
-                        description:
-                            'Aplicación de gestión de tiempo y tareas con la técnica Pomodoro. Incluye notificaciones y sonidos.',
-                        images: [
-                          ImageAssets.pomodoroInit,
-                          ImageAssets.pomodoroSession,
-                          ImageAssets.pomodoroData,
-                          ImageAssets.pomodoroHistory,
-                          ImageAssets.pomodoroBreak,
-                        ],
-                      ),
+                    technologies: [
+                      'Flutter',
+                      'Firebase Auth',
+                      'Cloud Firestore',
+                      'Firebase Storage',
+                      'Riverpod/Provider',
                     ],
+                    github: null,
+                    demo: null,
+                  ),
+                  SizedBox(height: 24),
+
+                  // 2) Pomodoro App
+                  MobileProjectCard(
+                    title: 'Pomodoro App (Gestión de tiempo)',
+                    description:
+                        'Mejora el enfoque con sesiones cronometradas y estadísticas sencillas. Ideal para estudiantes y profesionales que quieren rendir más en menos tiempo.',
+                    images: [
+                      ImageAssets.pomodoroInit,
+                      ImageAssets.pomodoroSession,
+                      ImageAssets.pomodoroData,
+                      ImageAssets.pomodoroHistory,
+                      ImageAssets.pomodoroBreak,
+                    ],
+                    platform: PhonePlatform.android,
+                    technologies: [
+                      'Flutter',
+                      'Local Notifications',
+                      'Shared Preferences/Isar',
+                    ],
+                    github: null,
+                    demo: null,
+                  ),
+                  SizedBox(height: 24),
+
+                  // Categoría: Proyectos web
+                  Text(
+                    '🖥️ Proyectos web',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 12),
+                  // 3) App interna Tropigas (demo privado)
+                  WebProjectsCard(
+                    title: 'App interna Tropigas (Demo privado)',
+                    description:
+                        'Plataforma interna para digitalizar procesos y reducir gestión manual. Por confidencialidad, la demo es privada (solicita acceso controlado).',
+                    images: [
+                      ImageAssets.inicio,
+                    ],
+                    technologies: [
+                      'Flutter',
+                      'Firebase',
+                      'REST APIs',
+                    ],
+                    demo: null,
+                    github: null,
+                  ),
+                  SizedBox(height: 24),
+
+                  // Categoría: Proyectos personales / experimentales
+                  Text(
+                    '🧪 Proyectos personales / experimentales',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 12),
+                  MobileProjectCard(
+                    title: 'Flores Amarillas (Motivación)',
+                    description:
+                        'Mini app de motivación con UI agradable para pruebas rápidas de animaciones y onboarding. Pensada para experimentar y probar ideas.',
+                    images: const [], // Añadir capturas cuando estén listas
+                    platform: PhonePlatform.ios,
+                    technologies: [
+                      'Flutter',
+                      'Animations',
+                    ],
+                    github: null,
+                    demo: null,
                   ),
                 ],
               ),
