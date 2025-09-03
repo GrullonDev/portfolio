@@ -40,5 +40,12 @@ flutter:
 
   assets:
   - assets/images/
+  # Ensure nested project image folders are bundled on Web
+  - assets/images/projects/
+  - assets/images/projects/portfolio/
+  - assets/images/projects/pomodoro/
+  - assets/images/projects/eduplay/
+  - assets/images/projects/parroquia/
+  - assets/images/projects/yellow_flowers/
   - assets/certificate/
   - assets/videos/

@@ -50,12 +50,14 @@ class ProjectsPage extends StatelessWidget {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 12),
-                  // 1) Finanzas Personales
+                  // 1) Portafolio App
                   WebProjectsCard(
-                    title: 'Finanzas Personales',
-                    description:
-                        'Ayuda a usuarios a controlar su presupuesto mensual con reportes claros y metas alcanzables. Ahorra tiempo y evita sorpresas a fin de mes.',
+                    title: 'Portafolio App',
+                    description: '',
                     images: [
+                      ImageAssets.inicio,
+                      ImageAssets.aboutMe1,
+                      ImageAssets.aboutMe2,
                       ImageAssets.services1,
                       ImageAssets.services2,
                     ],
@@ -71,7 +73,27 @@ class ProjectsPage extends StatelessWidget {
                   ),
                   SizedBox(height: 24),
 
-                  // 2) Pomodoro App
+                  // 2) Finanzas Personales
+                  MobileProjectCard(
+                    title: 'Finanzas Personales',
+                    description:
+                        'Ayuda a usuarios a controlar su presupuesto mensual con reportes claros y metas alcanzables. Ahorra tiempo y evita sorpresas a fin de mes.',
+                    images: [
+                      ImageAssets.productividad,
+                      ImageAssets.pomodoroBreak,
+                      ImageAssets.pomodoroData,
+                      ImageAssets.pomodoroHistory,
+                    ],
+                    betaEnabled: true,
+                    platform: PhonePlatform.ios,
+                    technologies: [
+                      'Flutter',
+                      'Firebase',
+                      'REST APIs',
+                    ],
+                  ),
+
+                  // 3) Pomodoro App
                   MobileProjectCard(
                     title: 'Pomodoro App (Gestión de tiempo)',
                     description:
@@ -100,7 +122,7 @@ class ProjectsPage extends StatelessWidget {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 12),
-                  // 3) App interna Tropigas (demo privado)
+                  // 4) App interna Tropigas (demo privado)
                   WebProjectsCard(
                     title: 'App interna Tropigas (Demo privado)',
                     description:
