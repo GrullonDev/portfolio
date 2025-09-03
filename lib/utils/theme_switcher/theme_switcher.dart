@@ -22,7 +22,7 @@ class ThemeSwitcher extends StatelessWidget {
   }
 }
 
-        /* Row(
+/* Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             const Spacer(),

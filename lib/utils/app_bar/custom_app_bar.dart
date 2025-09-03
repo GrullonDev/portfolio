@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_portfolio/utils/router/routes.dart';
 import 'package:flutter_portfolio/utils/theme_switcher/theme_switcher.dart';
 import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
 
@@ -24,7 +25,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       actions: [
         // Navbar para pantallas grandes
-        if (isMobile) const SizedBox.shrink() else const Navbar(),
+        if (isMobile)
+          IconButton(
+            tooltip: 'Agenda una reunión',
+            onPressed: () => navigateTo(context, 'contact'),
+            icon: const Icon(Icons.calendar_today_outlined),
+          )
+        else
+          const Navbar(),
         const ThemeSwitcher(),
       ],
     );

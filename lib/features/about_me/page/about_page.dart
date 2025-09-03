@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

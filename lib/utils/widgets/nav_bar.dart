@@ -20,6 +20,14 @@ class Navbar extends StatelessWidget {
             ),
           ),
           ListTile(
+            title: const Text('Contrátame'),
+            leading: const Icon(Icons.flash_on),
+            onTap: () {
+              Navigator.pop(context);
+              navigateTo(context, 'contact');
+            },
+          ),
+          ListTile(
             title: const Text('Inicio'),
             onTap: () {
               Navigator.pop(context); // Cierra el drawer
@@ -79,6 +87,11 @@ class Navbar extends StatelessWidget {
           TextButton(
             onPressed: () => navigateTo(context, 'contact'),
             child: const Text('Contacto'),
+          ),
+          const SizedBox(width: 8),
+          ElevatedButton(
+            onPressed: () => navigateTo(context, 'contact'),
+            child: const Text('Contrátame'),
           ),
         ],
       );

@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   font_awesome_flutter: ^10.1.0
+  google_fonts: ^6.2.1
   url_launcher: ^6.3.1
   go_router: ^14.8.0
   smooth_page_indicator: ^1.2.1
@@ -32,36 +33,30 @@ flutter:
 
   uses-material-design: true
 
-  fonts:
-    - family: NotoSans
-      fonts:
-        - asset: assets/fonts/NotoSans-Regular.ttf
-        - asset: assets/fonts/NotoSans-Bold.ttf
-          weight: 700
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/profile.jpg
-    - assets/images/commingSoon.png
-    - assets/images/projects/portfolio/inicio.png
-    - assets/images/projects/portfolio/about_me1.png
-    - assets/images/projects/portfolio/about_me2.png
-    - assets/images/projects/portfolio/services1.png
-    - assets/images/projects/portfolio/services2.png
-    - assets/images/projects/pomodoro/break.png
-    - assets/images/projects/pomodoro/data.png
-    - assets/images/projects/pomodoro/history.png
-    - assets/images/projects/pomodoro/init.png
-    - assets/images/projects/pomodoro/session.png
-    - assets/certificate/English.png
-    - assets/certificate/flutter.png
-    - assets/certificate/frontend.png
-    - assets/certificate/meditacion.png
-    - assets/certificate/feedback.png
-    - assets/certificate/blandas.png
-    - assets/certificate/marcaPersonal.png
-    - assets/certificate/productividad.png
-    - assets/videos/portfolio.mov
+  - assets/images/profile.JPG
+  - assets/images/commingSoon.png
+  - assets/images/projects/portfolio/inicio.png
+  - assets/images/projects/portfolio/about_me1.png
+  - assets/images/projects/portfolio/about_me2.png
+  - assets/images/projects/portfolio/services1.png
+  - assets/images/projects/portfolio/services2.png
+  - assets/images/projects/pomodoro/break.png
+  - assets/images/projects/pomodoro/data.png
+  - assets/images/projects/pomodoro/history.png
+  - assets/images/projects/pomodoro/init.png
+  - assets/images/projects/pomodoro/session.png
+  - assets/certificate/English.png
+  - assets/certificate/flutter.png
+  - assets/certificate/frontend.png
+  - assets/certificate/meditacion.png
+  - assets/certificate/feedback.png
+  - assets/certificate/blandas.png
+  - assets/certificate/marcaPersonal.png
+  - assets/certificate/productividad.png
+  - assets/videos/portfolio.mov
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
