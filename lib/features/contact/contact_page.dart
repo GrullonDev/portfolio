@@ -56,11 +56,48 @@ class _ContactPageState extends State<ContactPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    'Puedes contactarme a través de mis redes sociales, enviándome un correo electrónico o escribiéndome por WhatsApp.',
+                    'Me encantaría escuchar tu idea y ayudarte a hacerla realidad.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 14),
+                  const Text(
+                    'Elige una opción rápida o envíame un mensaje con el formulario.',
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  Wrap(
+                    spacing: 12,
+                    runSpacing: 12,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'https://calendar.app.google/pa4CCPAQBonh5e5s7');
+                        },
+                        icon: const Icon(Icons.calendar_today),
+                        label: const Text('Agendar en Google Calendar'),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'https://wa.me/+50242909548?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.');
+                        },
+                        icon: const Icon(Icons.chat_bubble_outline),
+                        label: const Text('WhatsApp'),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'mailto:prosystem155@gmail.com?subject=Quiero%20hablar%20de%20un%20proyecto&body=Hola%20Jorge%2C%20tengo%20esta%20idea%20y%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n.');
+                        },
+                        icon: const Icon(Icons.email_outlined),
+                        label: const Text('Email directo'),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
                   Card(
                     elevation: 4,
                     child: Padding(
