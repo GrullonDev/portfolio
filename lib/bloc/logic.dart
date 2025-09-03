@@ -10,6 +10,22 @@ class PortfolioLogic extends ChangeNotifier {
   // Certificates list getter
   List<Map<String, String>> get certificates => _certificates;
 
+  // Curated list for client-facing pages (Flutter, Architecture, English)
+  List<Map<String, String>> get relevantCertificates {
+    final desiredOrder = [
+      ImageAssets.flutter,
+      ImageAssets.frontend,
+      ImageAssets.english,
+    ];
+    final byImage = {
+      for (final c in _certificates) c['image']!: c,
+    };
+    return [
+      for (final img in desiredOrder)
+        if (byImage.containsKey(img)) byImage[img]!,
+    ];
+  }
+
   // Private certificates list
   final List<Map<String, String>> _certificates = [
     {
