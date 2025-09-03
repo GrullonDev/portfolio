@@ -122,21 +122,22 @@ class ProjectsPage extends StatelessWidget {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 12),
+
                   // 4) App interna Tropigas (demo privado)
-                  WebProjectsCard(
+                  MobileProjectCard(
                     title: 'App interna Tropigas (Demo privado)',
                     description:
                         'Plataforma interna para digitalizar procesos y reducir gestión manual. Por confidencialidad, la demo es privada (solicita acceso controlado).',
-                    images: [
-                      ImageAssets.inicio,
-                    ],
                     technologies: [
                       'Flutter',
-                      'Firebase',
                       'REST APIs',
                     ],
-                    demo: null,
-                    github: null,
+                    images: [
+                      ImageAssets.loginTropi,
+                      ImageAssets.dashboardTropi,
+                      ImageAssets.scheduleTropi,
+                    ],
+                    platform: PhonePlatform.android,
                   ),
                   SizedBox(height: 24),
 
@@ -150,7 +151,7 @@ class ProjectsPage extends StatelessWidget {
                     title: 'Flores Amarillas (Motivación)',
                     description:
                         'Mini app de motivación con UI agradable para pruebas rápidas de animaciones y onboarding. Pensada para experimentar y probar ideas.',
-                    images: [], // Añadir capturas cuando estén listas
+                    images: [],
                     platform: PhonePlatform.ios,
                     technologies: [
                       'Flutter',

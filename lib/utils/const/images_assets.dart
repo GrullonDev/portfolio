@@ -19,4 +19,8 @@ class ImageAssets {
     static const String blandas = 'assets/certificate/blandas.webp';
     static const String marcaPersonal = 'assets/certificate/marcaPersonal.webp';
     static const String productividad = 'assets/certificate/productividad.webp';
+    // Tropigas (under projects/tropigas)
+    static const String loginTropi = 'assets/images/projects/tropigas/login.webp';
+    static const String dashboardTropi = 'assets/images/projects/tropigas/dashboard.webp';
+    static const String scheduleTropi = 'assets/images/projects/tropigas/agendar.webp';
 }
