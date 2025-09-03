@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         isMobile: isMobile,
-        title: 'GrullonDev - Flutter Developer',
+        title: 'Grullon Dev',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,
