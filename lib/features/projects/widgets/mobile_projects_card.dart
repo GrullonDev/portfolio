@@ -18,7 +18,7 @@ class MobileProjectCard extends StatelessWidget {
     this.github,
     this.demo,
     this.betaEnabled = true,
-  this.platform = PhonePlatform.android,
+    this.platform = PhonePlatform.android,
     this.height,
     this.width,
   });
@@ -83,15 +83,13 @@ class MobileProjectCard extends StatelessWidget {
                         )
                         .toList(),
               ),
-
             if (technologies != null && technologies!.isNotEmpty) ...[
               const SizedBox(height: 12),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
-                children: technologies!
-                    .map((t) => Chip(label: Text(t)))
-                    .toList(),
+                children:
+                    technologies!.map((t) => Chip(label: Text(t))).toList(),
               ),
             ],
             const SizedBox(height: 16),
@@ -104,7 +102,8 @@ class MobileProjectCard extends StatelessWidget {
                     onPressed: () async {
                       final uri = Uri.parse(googlePlay!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.android),
@@ -115,7 +114,8 @@ class MobileProjectCard extends StatelessWidget {
                     onPressed: () async {
                       final uri = Uri.parse(github!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.code),
@@ -126,7 +126,8 @@ class MobileProjectCard extends StatelessWidget {
                     onPressed: () async {
                       final uri = Uri.parse(demo!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.link),

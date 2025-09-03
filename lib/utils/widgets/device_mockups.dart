@@ -25,7 +25,10 @@ class PhoneMockup extends StatelessWidget {
               color: Colors.black,
               borderRadius: borderRadius,
               boxShadow: const [
-                BoxShadow(blurRadius: 10, color: Colors.black26, offset: Offset(0, 6)),
+                BoxShadow(
+                    blurRadius: 10,
+                    color: Colors.black26,
+                    offset: Offset(0, 6)),
               ],
             ),
             padding: EdgeInsets.all(isIOS ? 12 : 10),
@@ -72,7 +75,8 @@ class BrowserMockup extends StatelessWidget {
             color: Theme.of(context).colorScheme.surface,
             borderRadius: border,
             boxShadow: const [
-              BoxShadow(blurRadius: 10, color: Colors.black26, offset: Offset(0, 6)),
+              BoxShadow(
+                  blurRadius: 10, color: Colors.black26, offset: Offset(0, 6)),
             ],
           ),
           child: Column(
@@ -80,9 +84,10 @@ class BrowserMockup extends StatelessWidget {
             children: [
               // Top browser bar
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.surfaceVariant,
+                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.only(
                     topLeft: border.topLeft,
                     topRight: border.topRight,
@@ -101,9 +106,9 @@ class BrowserMockup extends StatelessWidget {
                       child: Container(
                         height: 26,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.8),
+                          color: const Color(0xFFFFFFFF).withValues(alpha: 0.8),
                           borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: Colors.black12),
+                          border: Border.all(color: const Color(0x1F000000)),
                         ),
                       ),
                     ),

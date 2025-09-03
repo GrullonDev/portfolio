@@ -21,7 +21,7 @@ class ServiceCategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cardWidth = Responsive.isMobile(context) ? double.infinity : 440.0;
-    
+
     return SizedBox(
       width: cardWidth,
       child: Card(

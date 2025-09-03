@@ -109,7 +109,8 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                     onPressed: () async {
                       final uri = Uri.parse(widget.googlePlay!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.android),
@@ -120,7 +121,8 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                     onPressed: () async {
                       final uri = Uri.parse(widget.github!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.code),
@@ -131,14 +133,16 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                     onPressed: () async {
                       final uri = Uri.parse(widget.demo!);
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.link),
                     label: const Text('Demo'),
                   ),
                 ElevatedButton.icon(
-                  onPressed: () => showBetaRequestSheet(context, projectName: widget.title),
+                  onPressed: () =>
+                      showBetaRequestSheet(context, projectName: widget.title),
                   icon: const Icon(Icons.bug_report_outlined),
                   label: const Text('Solicitar beta'),
                 ),

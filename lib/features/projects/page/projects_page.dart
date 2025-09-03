@@ -128,7 +128,7 @@ class ProjectsPage extends StatelessWidget {
                     title: 'Flores Amarillas (Motivación)',
                     description:
                         'Mini app de motivación con UI agradable para pruebas rápidas de animaciones y onboarding. Pensada para experimentar y probar ideas.',
-                    images: const [], // Añadir capturas cuando estén listas
+                    images: [], // Añadir capturas cuando estén listas
                     platform: PhonePlatform.ios,
                     technologies: [
                       'Flutter',

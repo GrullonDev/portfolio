@@ -69,12 +69,14 @@ Future<void> showBetaRequestSheet(
                   child: ElevatedButton.icon(
                     onPressed: () async {
                       final email = emailController.text.trim();
-                      final text = 'Solicitud de beta: $projectName\nPlataforma: $platform\nEmail: $email';
+                      final text =
+                          'Solicitud de beta: $projectName\nPlataforma: $platform\nEmail: $email';
                       final uri = Uri.parse(
                         'https://wa.me/+50242909548?text=${Uri.encodeComponent(text)}',
                       );
                       if (await canLaunchUrl(uri)) {
-                        await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
                       }
                     },
                     icon: const Icon(Icons.chat),
@@ -87,8 +89,10 @@ Future<void> showBetaRequestSheet(
                     onPressed: () async {
                       final email = emailController.text.trim();
                       final subject = 'Solicitud de beta - $projectName';
-                      final body = 'Hola Jorge,%0D%0A%0D%0AMe gustaría acceder a la beta de $projectName.%0D%0APlataforma: $platform%0D%0AMi correo: $email%0D%0A%0D%0AGracias!';
-                      final uri = Uri.parse('mailto:prosystem155@gmail.com?subject=$subject&body=$body');
+                      final body =
+                          'Hola Jorge,%0D%0A%0D%0AMe gustaría acceder a la beta de $projectName.%0D%0APlataforma: $platform%0D%0AMi correo: $email%0D%0A%0D%0AGracias!';
+                      final uri = Uri.parse(
+                          'mailto:prosystem155@gmail.com?subject=$subject&body=$body');
                       if (await canLaunchUrl(uri)) {
                         await launchUrl(uri);
                       }
