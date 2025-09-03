@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/features/services/widgets/tech.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/features/services/widgets/tech.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ServiceCategoryCard extends StatelessWidget {
   const ServiceCategoryCard({

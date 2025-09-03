@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:portafolio_app/features/services/widgets/service_category_card.dart';
 import 'package:portafolio_app/features/services/widgets/service_project_card.dart';
-import 'package:flutter_portfolio/features/services/widgets/tech.dart';
+import 'package:portafolio_app/features/services/widgets/tech.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/router/routes.dart';

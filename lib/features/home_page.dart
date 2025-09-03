@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-import 'package:universal_html/html.dart' as html;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
-import 'package:flutter_portfolio/bloc/logic.dart';
-import 'package:flutter_portfolio/utils/app_bar/custom_app_bar.dart';
-import 'package:flutter_portfolio/utils/const/images_assets.dart';
-import 'package:flutter_portfolio/utils/router/routes.dart';
-import 'package:flutter_portfolio/utils/widgets/build_card.dart';
-import 'package:flutter_portfolio/utils/widgets/footer.dart';
-import 'package:flutter_portfolio/utils/widgets/nav_bar.dart';
-import 'package:flutter_portfolio/utils/widgets/responsive/responsive.dart';
-import 'package:flutter_portfolio/utils/widgets/animated_gradient_background.dart';
+import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/utils/image/asset_image.dart';
+import 'package:portafolio_app/utils/router/routes.dart';
+import 'package:portafolio_app/utils/widgets/animated_gradient_background.dart';
+import 'package:portafolio_app/utils/widgets/build_card.dart';
+import 'package:portafolio_app/utils/widgets/footer.dart';
+import 'package:portafolio_app/utils/widgets/nav_bar.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         isMobile: isMobile,
-        title: 'Grullon Dev',
+        title: '',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,

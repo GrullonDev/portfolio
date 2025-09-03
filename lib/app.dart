@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:provider/provider.dart';
 
-import 'package:flutter_portfolio/bloc/logic.dart';
-import 'package:flutter_portfolio/utils/router/routes.dart';
-import 'package:flutter_portfolio/utils/theme_switcher/theme_switcher_bloc.dart';
-import 'package:flutter_portfolio/l10n/app_localizations.dart';
+import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:portafolio_app/utils/router/routes.dart';
+import 'package:portafolio_app/utils/theme_switcher/theme_switcher_bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

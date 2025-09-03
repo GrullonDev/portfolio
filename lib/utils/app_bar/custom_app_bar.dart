@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_portfolio/utils/router/routes.dart';
+import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/theme_switcher/theme_switcher.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 

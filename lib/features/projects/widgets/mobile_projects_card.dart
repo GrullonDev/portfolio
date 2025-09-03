@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter_portfolio/features/projects/widgets/beta_request_sheet.dart';
-import 'package:flutter_portfolio/utils/image/asset_image.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_portfolio/utils/widgets/device_mockups.dart';
+
+import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
+import 'package:portafolio_app/utils/image/asset_image.dart';
+import 'package:portafolio_app/utils/widgets/device_mockups.dart';
 
 class MobileProjectCard extends StatelessWidget {
   const MobileProjectCard({
