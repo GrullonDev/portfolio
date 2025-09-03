@@ -15,7 +15,13 @@ dependencies:
   firebase_core: ^3.12.1
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
   font_awesome_flutter: ^10.1.0
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.1
   go_router: ^14.8.0
   http: ^1.3.0
   provider: ^6.1.2
@@ -33,33 +39,56 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  generate: true
 
+
+  # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
-    - assets/docs/curriculum_mobile.pdf
-    - assets/images/profile.webp
-    - assets/images/commingSoon.webp
-    - assets/images/projects/portfolio/inicio.webp
-    - assets/images/projects/portfolio/about_me1.webp
-    - assets/images/projects/portfolio/about_me2.webp
-    - assets/images/projects/portfolio/services1.webp
-    - assets/images/projects/portfolio/services2.webp
-    - assets/images/projects/pomodoro/break.webp
-    - assets/images/projects/pomodoro/data.webp
-    - assets/images/projects/pomodoro/history.webp
-    - assets/images/projects/pomodoro/init.webp
-    - assets/images/projects/pomodoro/session.webp
-    - assets/certificate/English.webp
-    - assets/certificate/flutter.webp
-    - assets/certificate/frontend.webp
-    - assets/certificate/meditacion.webp
-    - assets/certificate/feedback.webp
-    - assets/certificate/blandas.webp
-    - assets/certificate/marcaPersonal.webp
-    - assets/certificate/productividad.webp
-    - assets/videos/portfolio.mp4
-    - assets/images/projects/yellow_flowers/fase1.webp
-    - assets/images/projects/yellow_flowers/fase2.webp
-    - assets/images/projects/yellow_flowers/fase20.webp
-    - assets/images/projects/yellow_flowers/idea.webp
-    - assets/images/projects/parroquia/login_parroquia.webp
+  - assets/images/profile.JPG
+  - assets/images/commingSoon.png
+  - assets/images/projects/portfolio/inicio.png
+  - assets/images/projects/portfolio/about_me1.png
+  - assets/images/projects/portfolio/about_me2.png
+  - assets/images/projects/portfolio/services1.png
+  - assets/images/projects/portfolio/services2.png
+  - assets/images/projects/pomodoro/break.png
+  - assets/images/projects/pomodoro/data.png
+  - assets/images/projects/pomodoro/history.png
+  - assets/images/projects/pomodoro/init.png
+  - assets/images/projects/pomodoro/session.png
+  - assets/certificate/English.png
+  - assets/certificate/flutter.png
+  - assets/certificate/frontend.png
+  - assets/certificate/meditacion.png
+  - assets/certificate/feedback.png
+  - assets/certificate/blandas.png
+  - assets/certificate/marcaPersonal.png
+  - assets/certificate/productividad.png
+  - assets/videos/portfolio.mov
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package

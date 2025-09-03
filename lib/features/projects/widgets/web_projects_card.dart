@@ -5,6 +5,9 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
 import 'package:portafolio_app/utils/image/asset_image.dart';
+import 'package:flutter_portfolio/features/projects/widgets/beta_request_sheet.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_portfolio/utils/widgets/device_mockups.dart';
 
 class WebProjectsCard extends StatefulWidget {
   const WebProjectsCard({
@@ -13,6 +16,9 @@ class WebProjectsCard extends StatefulWidget {
     required this.description,
     required this.images,
     this.videoUrl,
+    this.technologies,
+    this.googlePlay,
+    this.github,
     this.demo,
     this.height,
     this.width,
@@ -22,6 +28,9 @@ class WebProjectsCard extends StatefulWidget {
   final String description;
   final List<String> images;
   final String? videoUrl;
+  final List<String>? technologies;
+  final String? googlePlay;
+  final String? github;
   final String? demo;
   final double? height;
   final double? width;
@@ -75,6 +84,74 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),
+            if (widget.technologies != null && widget.technologies!.isNotEmpty)
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Tecnologías',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: widget.technologies!
+                        .map((t) => Chip(label: Text(t)))
+                        .toList(),
+                  ),
+                  const SizedBox(height: 12),
+                ],
+              ),
+            Wrap(
+              spacing: 12,
+              runSpacing: 8,
+              children: [
+                if (widget.googlePlay != null)
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final uri = Uri.parse(widget.googlePlay!);
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
+                      }
+                    },
+                    icon: const Icon(Icons.android),
+                    label: const Text('Google Play'),
+                  ),
+                if (widget.github != null)
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final uri = Uri.parse(widget.github!);
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
+                      }
+                    },
+                    icon: const Icon(Icons.code),
+                    label: const Text('GitHub'),
+                  ),
+                if (widget.demo != null)
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final uri = Uri.parse(widget.demo!);
+                      if (await canLaunchUrl(uri)) {
+                        await launchUrl(uri,
+                            mode: LaunchMode.externalApplication);
+                      }
+                    },
+                    icon: const Icon(Icons.link),
+                    label: const Text('Demo'),
+                  ),
+                ElevatedButton.icon(
+                  onPressed: () =>
+                      showBetaRequestSheet(context, projectName: widget.title),
+                  icon: const Icon(Icons.bug_report_outlined),
+                  label: const Text('Solicitar beta'),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
             CarouselSlider(
               options: CarouselOptions(
                 height: widget.height,
@@ -85,30 +162,16 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                 (image) {
                   return Builder(
                     builder: (BuildContext context) {
-                      return LayoutBuilder(
-                        builder: (context, constraints) {
-                          bool isMobile = constraints.maxWidth < 600;
-
-                          return ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: AspectRatio(
-                              aspectRatio: isMobile ? 9 / 16 : 16 / 9,
-                              child: CustomImage(
-                                imagePath: image,
-                                fit: BoxFit.cover,
-                                width: widget.width,
-                                height: widget.height,
-                              ),
-                              /* Image.asset(
-                              image,
-                              fit: BoxFit.cover,
-                              width: widget.width,
-                              height: widget.height,
-                            ), */
-                            ),
-                          );
-                        },
-                      );
+                      return LayoutBuilder(builder: (context, constraints) {
+                        return BrowserMockup(
+                          child: CustomImage(
+                            imagePath: image,
+                            fit: BoxFit.cover,
+                            width: widget.width,
+                            height: widget.height,
+                          ),
+                        );
+                      });
 
                       /* return ClipRRect(
                         borderRadius: BorderRadius.circular(10),

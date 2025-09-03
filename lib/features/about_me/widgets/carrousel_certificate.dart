@@ -7,18 +7,22 @@ import 'package:portafolio_app/bloc/logic.dart';
 
 class CertificationCarousel extends StatelessWidget {
   final PageController pageController;
+  final bool onlyRelevant;
 
-  const CertificationCarousel({super.key, required this.pageController});
+  const CertificationCarousel(
+      {super.key, required this.pageController, this.onlyRelevant = false});
 
   @override
   Widget build(BuildContext context) {
+    final logic = context.read<PortfolioLogic>();
+    final data = onlyRelevant ? logic.relevantCertificates : logic.certificates;
     return Column(
       children: [
         SizedBox(
           height: 460,
           child: PageView.builder(
             controller: pageController,
-            itemCount: context.read<PortfolioLogic>().certificates.length,
+            itemCount: data.length,
             itemBuilder: (context, index) {
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 500),
@@ -37,8 +41,7 @@ class CertificationCarousel extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    context.read<PortfolioLogic>().certificates[index]
-                        ['image']!,
+                    data[index]['image']!,
                     fit: BoxFit.cover,
                   ),
                   /* Image.asset(
@@ -54,7 +57,7 @@ class CertificationCarousel extends StatelessWidget {
         const SizedBox(height: 10),
         SmoothPageIndicator(
           controller: pageController,
-          count: context.read<PortfolioLogic>().certificates.length,
+          count: data.length,
           effect: const ExpandingDotsEffect(
             dotHeight: 8,
             dotWidth: 8,
