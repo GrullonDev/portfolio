@@ -1,98 +1,149 @@
-# flutter_portfolio
+<div align="center">
 
-Este es mi portafolio personal desarrollado con Flutter. Deployado en Vercel
+# Portafolio Flutter (Web/Móvil/Escritorio)
 
-## Sobre mí
+Ficha técnica del proyecto de portafolio personal desarrollado con Flutter. Deploy principal en Firebase Hosting.
 
-Soy Jorge Grullón, un desarrollador de software apasionado por crear aplicaciones móviles y web de alta calidad. Tengo experiencia en diversas tecnologías y siempre estoy buscando aprender y mejorar mis habilidades.
+</div>
 
-## Proyectos
+## 📦 Resumen
 
-Aquí hay algunos de los proyectos que he realizado:
+- Nombre del paquete: `portafolio_app`
+- Descripción: Portafolio personal con foco en conversión (CTAs a agenda/WhatsApp/email), proyectos destacados y bilingüe ES/EN.
+- Plataformas: Web, Android, iOS, Windows, macOS, Linux
+- Estado: Producción (hosting en Firebase)
 
-- **Proyecto 1**: Descripción breve del proyecto 1.
-- **Proyecto 2**: Descripción breve del proyecto 2.
-- **Proyecto 3**: Descripción breve del proyecto 3.
+## 🧰 Stack y Versiones
 
-## Servicios
+- Flutter: 3.35.2 (stable)
+- Dart: 3.9.0
+- Router: `go_router`
+- Estado: `provider`
+- i18n: ARB + `flutter_localizations` (l10n.yaml)
+- UI: Material 3, `google_fonts`, `font_awesome_flutter`
+- Media: `video_player`
+- Integraciones: `url_launcher`, `firebase_core`
 
-Ofrezco los siguientes servicios:
+## 📁 Estructura principal
 
-- Desarrollo de aplicaciones móviles con Flutter.
-- Desarrollo de aplicaciones web.
-- Consultoría en desarrollo de software.
-- Mantenimiento y actualización de aplicaciones existentes.
+```
+lib/
+	app.dart               # MaterialApp, theming, localizationsDelegates
+	main.dart              # Entry point
+	l10n/                  # ARB (app_en.arb, app_es.arb) y generados
+	features/              # Páginas por dominio (home, contact, projects, ...)
+	utils/                 # AppBar, widgets, routing, responsive, language
+assets/
+	images/, videos/, certificate/  # Assets declarados en pubspec.yaml
+web/                     # Bootstrap web y service worker
+public/                  # Host público (404, index opcional)
+```
 
-## Tecnologías
+## 🌐 Localización (ES/EN)
 
-Las tecnologías que he usado incluyen:
+- Configuración en `l10n.yaml` y ARB en `lib/l10n/`.
+- Clase generada: `AppLocalizations` con getters seguros (nullable-getter: false).
+- Selector de idioma simple en el NavBar (auto/ES/EN opcional) y toggle rápido.
+- Todo el contenido visible usa `AppLocalizations.of(context)`.
 
-- **Flutter** (predominante)
-- Dart
-- JavaScript
-- HTML/CSS
-- Firebase
-- REST APIs
+## 🧭 Navegación
 
-## Contacto
+- `go_router` para rutas declarativas y navegación web-friendly.
+- Utilidades en `utils/router/routes.dart`.
 
-Puedes contactarme a través de los siguientes medios:
+## 🧠 Estado
 
-- **Email**: prosystem155@gmail.com
-- **LinkedIn**: [linkedin.com/in/jorgegrullon](https://www.linkedin.com/in/jorge-luis-grullón-marroquin)
-- **GitHub**: [github.com/jorgegrullon](https://github.com/GrullonDev)
-- **Twitter**: [twitter.com/jorgegrullon](https://x.com/JorgeLuisGM8)
-- **WhatsApp Business**[GrullonDev](https://wa.me/+50242909548)
-- **Portafolio**: [jorgegrullon.dev](https://jorgegrullon.dev)
+- `provider` para idioma y lógica simple (e.g., `PortfolioLogic`).
 
-## Recursos
+## 📐 Responsive y UI
 
-Algunos recursos para comenzar con Flutter:
+- Diseño responsive con utilidades en `utils/widgets/responsive/`.
+- Barra de navegación adaptable (Drawer en móvil, botones en desktop).
+- CTAs de Contacto priorizados: Calendar > WhatsApp > Email; formulario clásico como opción secundaria (ExpansionTile).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📄 SEO y PWA (Web)
 
-Para obtener ayuda con el desarrollo en Flutter, consulta la [documentación en línea](https://docs.flutter.dev/), que ofrece tutoriales, ejemplos, guías sobre desarrollo móvil y una referencia completa de la API.
+- Archivos en `web/` (favicon, manifest, service worker).
+- Rewrites configurados en Firebase Hosting (`firebase.json`).
 
-## Testimonios
+## 🚀 Ejecución y Build
 
-### Agriconecta
+Requisitos: Flutter SDK 3.35.2, Dart 3.9.0.
 
-_"Jorge hizo un trabajo excepcional desarrollando nuestra aplicación móvil. Su atención al detalle y su habilidad para resolver problemas fueron impresionantes."_
+- Ejecutar en Chrome (dev):
+	- `flutter run -d chrome`
+- Ejecutar en dispositivo/emulador Android/iOS:
+	- `flutter run` (selecciona dispositivo en VS Code/Android Studio)
+- Build Web de producción:
+	- `flutter build web --release`
+- Build Android (apk/appbundle):
+	- `flutter build apk --release`
+	- `flutter build appbundle --release`
+- Build iOS (requiere macOS/Xcode):
+	- `flutter build ios --release`
 
-<!-- ### Cliente 2
-*"Recomiendo a Jorge sin dudarlo. Su conocimiento en Flutter y su capacidad para entregar proyectos a tiempo son invaluables."* -->
+## 📤 Deploy
 
-## Blog
+- Hosting: Firebase Hosting.
+- Config: `firebase.json` (public: `build/web`, rewrites a `index.html`).
+- Scripts útiles:
+	- `./deploy.sh` → limpia, compila Web y hace deploy.
+	- `./clear_cache.sh` → limpia caché/service worker en navegadores.
+- Manual:
+	1) `rm -rf build/web`
+	2) `flutter build web --release`
+	3) `firebase deploy`
 
-Visita mi [blog](https://jorgegrullon.dev/blog) donde comparto artículos sobre desarrollo de software, tutoriales y mis experiencias en la industria.
+Ver también `DEPLOY_INSTRUCTIONS.md` para flujo con FVM y notas de caché.
 
-## Certificaciones
+## 📚 Dependencias clave
 
-- **Certificación en Flutter** - Platzi
-- **Certificación en Desarrollo Web** - Udemy
+```
+go_router, provider, flutter_localizations, google_fonts,
+font_awesome_flutter, url_launcher, video_player, firebase_core
+```
 
-## Educación
+Ver versión exacta en `pubspec.yaml`.
 
-- **Licenciatura en Ciencias de la Computación** - Universidad XYZ
+## 🔤 i18n (detalles)
 
-## Redes Sociales
+- Archivos fuente: `lib/l10n/app_en.arb`, `lib/l10n/app_es.arb`.
+- Generación: automática por Flutter (basada en `l10n.yaml`).
+- Ejemplos de claves: navegación, CTAs, validaciones de formulario, textos de proyectos/servicios, mensajes de error de video, etc.
 
-Sígueme en mis redes sociales para estar al tanto de mis últimos proyectos y artículos:
+## 🧪 Testing y Calidad
 
-- **Twitter**: [twitter.com/jorgegrullon](https://x.com/JorgeLuisGM8)
-- **LinkedIn**: [linkedin.com/in/jorgegrullon]('https://www.linkedin.com/in/jorge-luis-grullón-marroquin)
-- **GitHub**: [github.com/jorgegrullon](https://github.com/GrullonDev)
+- Lint: `flutter_lints` (reglas modernas de estilo).
+- Análisis estático:
+	- `flutter analyze`
+- Pruebas (placeholder base): `test/widget_test.dart`.
 
-## Contribuciones Open Source
+## 🔧 Troubleshooting
 
-Buscando contribuciones para apoyar a algun proyecto que lo necesite.
+- Problemas de caché tras deploy Web:
+	- Ver `DEPLOY_INSTRUCTIONS.md` (limpieza de Service Worker y Storage).
+- Fallos en generación de localizaciones:
+	- Validar formato JSON en ARB; ejecutar `flutter gen-l10n` o un build.
+- Activos no encontrados:
+	- Confirmar rutas en `pubspec.yaml` (assets: images, videos, certificate).
 
-<!-- He contribuido a varios proyectos de código abierto, incluyendo:
+## 🔐 Notas de plataforma
 
-- **Proyecto Open Source 1**: Descripción breve del proyecto y mi contribución.
-- **Proyecto Open Source 2**: Descripción breve del proyecto y mi contribución. -->
+- iOS/macOS: requiere Xcode y cuentas Apple para firmar y publicar.
+- Android: configurar keystore para release si se publica en Play Store.
+- Web: asegurarse de limpiar caché en cambios de assets/JS.
 
-## Disponibilidad
+## 🗺️ Roadmap (corto)
 
-Actualmente estoy disponible para nuevos proyectos y colaboraciones. No dudes en contactarme si tienes alguna propuesta interesante.
+- Persistencia de preferencia de idioma.
+- Métricas/analytics de CTAs (Calendar/WhatsApp/Email).
+- Más pruebas de widgets y golden tests.
+
+## 👤 Autor
+
+- Jorge Grullón — https://jorgegrullon.dev
+- Contacto: prosystem155@gmail.com — WhatsApp: +502 4290 9548
+
+## 📝 Licencia
+
+Proyecto personal. Si deseas reutilizar partes, por favor abre un issue para discutir los términos.
