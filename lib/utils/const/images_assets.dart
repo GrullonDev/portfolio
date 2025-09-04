@@ -26,11 +26,11 @@ class ImageAssets {
 
   // Yellow Flowers (under projects/yellow_flowers)
   static const String phase1 =
-      'assets/images/projects/yellow_flowers/phase1.webp';
+      'assets/images/projects/yellow_flowers/fase1.webp';
   static const String phase2 =
-      'assets/images/projects/yellow_flowers/phase2.webp';
+      'assets/images/projects/yellow_flowers/fase2.webp';
   static const String phase3 =
-      'assets/images/projects/yellow_flowers/phase20.webp';
+      'assets/images/projects/yellow_flowers/fase20.webp';
   static const String phase4 =
       'assets/images/projects/yellow_flowers/idea.webp';
   static const String newVersion =
@@ -46,7 +46,7 @@ class ImageAssets {
   // Finanzas Personales (under projects/finanzas_personales)
 
   // EduPlay (under projects/eduplay)
-  static const String menu = 'assets/images/projects/eduplay/menu.webp';
+  static const String menu = 'assets/images/projects/eduplay/menu_web.webp';
 
   // Parroquia (under projects/parroquia)
   static const String parroquiaLogin =

@@ -333,7 +333,7 @@ class _HeroSectionState extends State<_HeroSection>
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(6),
                               child: Image.asset(
-                                'assets/images/projects/parroquia/login_parroquia.png',
+                                ImageAssets.parroquiaLogin,
                                 width: 24,
                                 height: 24,
                                 fit: BoxFit.cover,

@@ -721,6 +721,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Classic form'**
   String get contactClassicFormTitle;
+
+  /// No description provided for @projectParroquiaName.
+  ///
+  /// In en, this message translates to:
+  /// **'Parish Management System | Villa Nueva'**
+  String get projectParroquiaName;
+
+  /// No description provided for @projectParroquiaDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.'**
+  String get projectParroquiaDesc;
+
+  /// No description provided for @eduPlayTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Educational Management System | EduPlay'**
+  String get eduPlayTitle;
+
+  /// No description provided for @eduPlayDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.'**
+  String get eduPlayDesc;
 }
 
 class _AppLocalizationsDelegate

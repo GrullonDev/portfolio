@@ -113,5 +113,11 @@
   "platformAndroid": "Android",
   "platformIos": "iOS",
   "contactSlaLanguages": "Respondo en menos de 24h ⏱️ | Español & English 🌍",
-  "contactClassicFormTitle": "Formulario clásico"
+  "contactClassicFormTitle": "Formulario clásico",
+
+  "projectParroquiaName": "Sistema de Gestión Parroquial | Villa Nueva",
+  "projectParroquiaDesc": "Desarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción.",
+
+  "eduPlayTitle": "EduPlay - Plataforma Educativa (Beta)",
+  "eduPlayDesc": "Plataforma web para educación interactiva con juegos y quizzes. Beta privada, solicita acceso."
 }

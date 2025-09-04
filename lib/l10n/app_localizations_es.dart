@@ -341,4 +341,19 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get contactClassicFormTitle => 'Formulario clásico';
+
+  @override
+  String get projectParroquiaName =>
+      'Sistema de Gestión Parroquial | Villa Nueva';
+
+  @override
+  String get projectParroquiaDesc =>
+      'Desarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción.';
+
+  @override
+  String get eduPlayTitle => 'EduPlay - Plataforma Educativa (Beta)';
+
+  @override
+  String get eduPlayDesc =>
+      'Plataforma web para educación interactiva con juegos y quizzes. Beta privada, solicita acceso.';
 }

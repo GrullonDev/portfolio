@@ -338,4 +338,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contactClassicFormTitle => 'Classic form';
+
+  @override
+  String get projectParroquiaName => 'Parish Management System | Villa Nueva';
+
+  @override
+  String get projectParroquiaDesc =>
+      'I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.';
+
+  @override
+  String get eduPlayTitle => 'Educational Management System | EduPlay';
+
+  @override
+  String get eduPlayDesc =>
+      'I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.';
 }

@@ -113,5 +113,11 @@
   "platformAndroid": "Android",
   "platformIos": "iOS",
   "contactSlaLanguages": "Reply within 24h ⏱️ | Spanish & English 🌍",
-  "contactClassicFormTitle": "Classic form"
+  "contactClassicFormTitle": "Classic form",
+
+  "projectParroquiaName": "Parish Management System | Villa Nueva",
+  "projectParroquiaDesc": "I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.",
+
+  "eduPlayTitle": "Educational Management System | EduPlay",
+  "eduPlayDesc": "I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management."
 }

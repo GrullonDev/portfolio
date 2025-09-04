@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:portafolio_app/features/projects/widgets/mobile_projects_card.dart';
 import 'package:portafolio_app/features/projects/widgets/web_projects_card.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
-import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -53,52 +53,16 @@ class ProjectsPage extends StatelessWidget {
                         fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 12),
-                  // 1) Portafolio App
-                  WebProjectsCard(
-                    title: t.appTitle,
-                    description: '',
-                    images: [
-                      ImageAssets.inicio,
-                      ImageAssets.aboutMe1,
-                      ImageAssets.aboutMe2,
-                      ImageAssets.services1,
-                      ImageAssets.services2,
-                    ],
-                    technologies: [
-                      'Flutter',
-                      'Firebase Auth',
-                      'Cloud Firestore',
-                      'Firebase Storage',
-                      'Riverpod/Provider',
-                    ],
-                    github: null,
-                    demo: null,
-                  ),
-                  const SizedBox(height: 24),
 
-                  // 2) Finanzas Personales
-                  MobileProjectCard(
-                    title: t.projectFinanceName,
-                    description: t.projectFinanceDesc,
-                    images: [
-                      ImageAssets.productividad,
-                      ImageAssets.pomodoroBreak,
-                      ImageAssets.pomodoroData,
-                      ImageAssets.pomodoroHistory,
-                    ],
-                    betaEnabled: true,
-                    platform: PhonePlatform.ios,
-                    technologies: [
-                      'Flutter',
-                      'Firebase',
-                      'REST APIs',
-                    ],
-                  ),
-
-                  // 3) Pomodoro App
+                  // 1) Pomodoro App
                   MobileProjectCard(
                     title: t.projectPomodoroName,
                     description: t.projectPomodoroDesc,
+                    technologies: [
+                      'Flutter',
+                      'Local Notifications',
+                      'Shared Preferences/Isar',
+                    ],
                     images: [
                       ImageAssets.pomodoroInit,
                       ImageAssets.pomodoroSession,
@@ -107,23 +71,30 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.pomodoroBreak,
                     ],
                     platform: PhonePlatform.android,
+                    github: 'https://github.com/GrullonDev/pomodoro',
+                  ),
+
+                  // 2) Finanzas Personales
+                  MobileProjectCard(
+                    title: t.projectFinanceName,
+                    description: t.projectFinanceDesc,
                     technologies: [
                       'Flutter',
-                      'Local Notifications',
-                      'Shared Preferences/Isar',
+                      'Firebase',
+                      'REST APIs',
                     ],
-                    github: null,
-                    demo: null,
+                    images: [
+                      ImageAssets.pomodoroInit,
+                      ImageAssets.pomodoroData,
+                      ImageAssets.pomodoroSession,
+                      ImageAssets.pomodoroBreak,
+                      ImageAssets.pomodoroHistory,
+                    ],
+                    betaEnabled: true,
+                    platform: PhonePlatform.ios,
                   ),
-                  const SizedBox(height: 24),
 
-                  // Categoría: Proyectos web
-                  Text(
-                    t.projectsWeb,
-                    style: const TextStyle(
-                        fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 24),
 
                   // 4) App interna Tropigas (demo privado)
                   MobileProjectCard(
@@ -139,7 +110,65 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.scheduleTropi,
                     ],
                     platform: PhonePlatform.android,
+                    betaEnabled: false,
                   ),
+
+                  const SizedBox(height: 24),
+
+                  // Categoría: Proyectos web
+                  Text(
+                    t.projectsWeb,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // 1) Portafolio App
+                  WebProjectsCard(
+                    title: t.appTitle,
+                    description: '',
+                    technologies: [
+                      'Flutter',
+                      'Firebase Auth',
+                      'Cloud Firestore',
+                      'Firebase Storage',
+                      'Riverpod/Provider',
+                    ],
+                    images: [
+                      ImageAssets.inicio,
+                      ImageAssets.aboutMe1,
+                      ImageAssets.aboutMe2,
+                      ImageAssets.services1,
+                      ImageAssets.services2,
+                    ],
+                    github: 'https://github.com/GrullonDev/portfolio',
+                  ),
+
+                  const SizedBox(height: 12),
+
+                  // 2) Parroquia App
+                  WebProjectsCard(
+                    title: t.projectParroquiaName,
+                    description: t.projectParroquiaDesc,
+                    technologies: [
+                      'Angular',
+                      'NestJS',
+                      'PostgreSQL',
+                      'TypeScript',
+                      'Docker',
+                      'Firebase Hosting',
+                      'Google Cloud',
+                      'GitHub Actions',
+                      'CI/CD',
+                      'GraphQL',
+                    ],
+                    images: [
+                      ImageAssets.parroquiaLogin,
+                    ],
+                    github:
+                        'https://github.com/GrullonDev/AngularIglesiaConcepcion',
+                  ),
+
                   const SizedBox(height: 24),
 
                   // Categoría: Proyectos personales / experimentales
@@ -152,14 +181,37 @@ class ProjectsPage extends StatelessWidget {
                   MobileProjectCard(
                     title: t.projectYellowFlowersName,
                     description: t.projectYellowFlowersDesc,
-                    images: [],
+                    images: [
+                      ImageAssets.phase1,
+                      ImageAssets.phase2,
+                      ImageAssets.phase3,
+                      ImageAssets.phase4,
+                      ImageAssets.newVersion,
+                      ImageAssets.onboarding,
+                      ImageAssets.name,
+                      ImageAssets.message,
+                      ImageAssets.share,
+                    ],
                     platform: PhonePlatform.ios,
                     technologies: [
                       'Flutter',
                       'Animations',
                     ],
-                    github: null,
-                    demo: null,
+                    github: 'https://github.com/GrullonDev/YellowFlowers',
+                  ),
+                  const SizedBox(height: 12),
+                  WebProjectsCard(
+                    title: t.eduPlayTitle,
+                    description: t.eduPlayDesc,
+                    technologies: [
+                      'Flutter',
+                      'Firebase',
+                      'REST API',
+                    ],
+                    images: [
+                      ImageAssets.menu,
+                    ],
+                    github: 'https://github.com/GrullonDev/EduPlay',
                   ),
                 ],
               ),
