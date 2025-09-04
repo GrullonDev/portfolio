@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
@@ -18,6 +19,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final t = AppLocalizations.of(context);
     double screenWidth = MediaQuery.of(context).size.width;
     final isMobile = Responsive.isMobile(context);
 
@@ -34,7 +36,6 @@ class HomePage extends StatelessWidget {
           child: const Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Fondo animado abarcando Hero + "Lo que hago"
               _HeroAndWhatIDo(),
             ],
           ),
@@ -45,7 +46,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// Sección compuesta: fondo animado + Hero + "Lo que hago"
 class _HeroAndWhatIDo extends StatelessWidget {
   const _HeroAndWhatIDo();
 
@@ -133,6 +133,7 @@ class _HeroSectionState extends State<_HeroSection>
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
     final theme = Theme.of(context);
 
@@ -170,23 +171,21 @@ class _HeroSectionState extends State<_HeroSection>
             position: _slideTitle,
             child: Column(
               children: [
-                Text('Hola, soy Jorge Grullón',
+                Text(t.homeGreeting,
                     style: titleStyle, textAlign: TextAlign.center),
                 const SizedBox(height: 8),
                 Text(
-                  'Flutter Developer | Apps móviles y web de alto impacto',
+                  t.homeRoleTagline,
                   style: subtitleStyle,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 6),
-                // Diferenciador clave
                 Text(
-                  'Especialista en apps de productividad con Flutter',
+                  t.homeDifferentiator,
                   style: differentiatorStyle,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 10),
-                // Socials debajo del subtítulo / foto
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -239,7 +238,7 @@ class _HeroSectionState extends State<_HeroSection>
           ),
           const SizedBox(height: 16),
           Text(
-            'Ahorra tiempo y costos con apps multiplataforma. Trabajo remoto con clientes en todo el mundo.',
+            t.homeValueProp,
             textAlign: TextAlign.center,
             style: ctaStyle,
           ),
@@ -271,7 +270,7 @@ class _HeroSectionState extends State<_HeroSection>
                                 horizontal: 18, vertical: 14),
                             elevation: 2,
                           ),
-                          label: const Text('Agenda una reunión'),
+                          label: Text(t.homeCtaSchedule),
                         ),
                       ),
                       // CTA secundario
@@ -292,7 +291,7 @@ class _HeroSectionState extends State<_HeroSection>
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 18, vertical: 14),
                           ),
-                          label: const Text('Pide un presupuesto gratis'),
+                          label: Text(t.homeCtaBudget),
                         ),
                       ),
                       // CTA terciario
@@ -300,7 +299,7 @@ class _HeroSectionState extends State<_HeroSection>
                         cursor: SystemMouseCursors.click,
                         child: TextButton(
                           onPressed: () => navigateTo(context, 'projects'),
-                          child: const Text('Ver proyectos'),
+                          child: Text(t.homeCtaProjects),
                         ),
                       ),
                     ],
@@ -310,7 +309,7 @@ class _HeroSectionState extends State<_HeroSection>
                   Column(
                     children: [
                       Text(
-                        'Casos de éxito en productividad, finanzas y entretenimiento.',
+                        t.homeSocialProof,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: isMobile ? 13 : 14,
@@ -339,7 +338,7 @@ class _HeroSectionState extends State<_HeroSection>
                             ),
                           ),
                           Text(
-                            '“Jorge nos ayudó a lanzar nuestra app más rápido de lo esperado.” — Parroquia',
+                            t.homeTestimonialParroquia,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontStyle: FontStyle.italic,
@@ -398,10 +397,10 @@ class _ProfilePhoto extends StatelessWidget {
   }
 }
 
-// Nueva sección compacta: Lo que hago + logos + CTA repetido
 class _WhatIDoSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
     final theme = Theme.of(context);
 
@@ -425,7 +424,7 @@ class _WhatIDoSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text('Lo que hago', style: titleStyle, textAlign: TextAlign.center),
+        Text(t.whatIDoTitle, style: titleStyle, textAlign: TextAlign.center),
         const SizedBox(height: 14),
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 900),
@@ -442,17 +441,11 @@ class _WhatIDoSection extends StatelessWidget {
               : Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                        child: bullet(
-                            'Desarrollo de apps móviles multiplataforma (iOS/Android).')),
+                    Expanded(child: bullet(t.whatIDoBullet1)),
                     const SizedBox(width: 16),
-                    Expanded(
-                        child: bullet(
-                            'Integración con APIs y Firebase (Auth, Firestore, Cloud Functions).')),
+                    Expanded(child: bullet(t.whatIDoBullet2)),
                     const SizedBox(width: 16),
-                    Expanded(
-                        child: bullet(
-                            'Diseño UI/UX y optimización de rendimiento.')),
+                    Expanded(child: bullet(t.whatIDoBullet3)),
                   ],
                 ),
         ),
@@ -462,13 +455,11 @@ class _WhatIDoSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                bullet(
-                    'Desarrollo de apps móviles multiplataforma (iOS/Android).'),
+                bullet(t.whatIDoBullet1),
                 const SizedBox(height: 6),
-                bullet(
-                    'Integración con APIs y Firebase (Auth, Firestore, Cloud Functions).'),
+                bullet(t.whatIDoBullet2),
                 const SizedBox(height: 6),
-                bullet('Diseño UI/UX y optimización de rendimiento.'),
+                bullet(t.whatIDoBullet3),
               ],
             ),
           ),
@@ -483,6 +474,7 @@ class _WhatIDoSection extends StatelessWidget {
             _HoverChip(label: 'Dart'),
             _HoverChip(label: 'Firebase'),
             _HoverChip(label: 'REST APIs'),
+            _HoverChip(label: 'GraphQL APIs'),
             _HoverChip(label: 'CI/CD'),
           ],
         ),
@@ -492,8 +484,7 @@ class _WhatIDoSection extends StatelessWidget {
           onPressed: () => context.read<PortfolioLogic>().launchWhatsApp(
                 name: 'Cliente',
                 email: 'cliente@example.com',
-                message:
-                    'Hola Jorge, quiero hablar de mi proyecto. ¿Nos das un presupuesto? 🚀',
+                message: t.whatIDoCtaTalk,
               ),
           icon: const Icon(Icons.rocket_launch_outlined),
           style: ElevatedButton.styleFrom(
@@ -501,11 +492,11 @@ class _WhatIDoSection extends StatelessWidget {
             foregroundColor: Colors.white,
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
           ),
-          label: const Text('Hablemos de tu proyecto 🚀'),
+          label: Text(t.whatIDoCtaTalk),
         ),
         const SizedBox(height: 8),
         Text(
-          'Respuesta en menos de 24h · Presupuesto gratis',
+          t.whatIDoResponseSla,
           style: TextStyle(
             color: theme.colorScheme.onSurface.withValues(alpha: 0.65),
           ),

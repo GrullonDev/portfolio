@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 // A simple bottom sheet to collect an email and platform and send a beta request
 Future<void> showBetaRequestSheet(
@@ -14,6 +15,7 @@ Future<void> showBetaRequestSheet(
     isScrollControlled: true,
     showDragHandle: true,
     builder: (ctx) {
+      final t = AppLocalizations.of(ctx);
       final viewInsets = MediaQuery.of(ctx).viewInsets.bottom;
       return Padding(
         padding: EdgeInsets.only(
@@ -26,34 +28,29 @@ Future<void> showBetaRequestSheet(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Solicitar acceso a la beta',
-              style: Theme.of(ctx).textTheme.titleLarge,
-            ),
+            Text(t.betaRequestTitle, style: Theme.of(ctx).textTheme.titleLarge),
             const SizedBox(height: 8),
-            Text(
-              'Déjame tu correo y la plataforma para enviarte una build de prueba por Firebase App Distribution.',
-              style: Theme.of(ctx).textTheme.bodyMedium,
-            ),
+            Text(t.betaRequestSubtitle,
+                style: Theme.of(ctx).textTheme.bodyMedium),
             const SizedBox(height: 12),
             TextField(
               controller: emailController,
               keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                labelText: 'Correo electrónico',
-                hintText: 'tu@correo.com',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                labelText: t.betaFieldEmail,
+                hintText: t.betaFieldEmailHint,
+                border: const OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 12),
             Row(
               children: [
-                const Text('Plataforma:'),
+                Text(t.betaFieldPlatform),
                 const SizedBox(width: 8),
                 SegmentedButton<String>(
-                  segments: const [
-                    ButtonSegment(value: 'Android', label: Text('Android')),
-                    ButtonSegment(value: 'iOS', label: Text('iOS')),
+                  segments: [
+                    ButtonSegment(value: 'Android', label: Text(t.platformAndroid)),
+                    ButtonSegment(value: 'iOS', label: Text(t.platformIos)),
                   ],
                   selected: {platform},
                   onSelectionChanged: (v) {
@@ -80,7 +77,7 @@ Future<void> showBetaRequestSheet(
                       }
                     },
                     icon: const Icon(Icons.chat),
-                    label: const Text('Enviar por WhatsApp'),
+                    label: Text(t.betaSendWhatsapp),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -98,16 +95,13 @@ Future<void> showBetaRequestSheet(
                       }
                     },
                     icon: const Icon(Icons.email_outlined),
-                    label: const Text('Enviar por Email'),
+                    label: Text(t.betaSendEmail),
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 8),
-            Text(
-              'Nota: Para Android necesitas una cuenta de Google. Para iOS, compartiré un enlace de TestFlight si aplica.',
-              style: Theme.of(ctx).textTheme.bodySmall,
-            ),
+            Text(t.betaNote, style: Theme.of(ctx).textTheme.bodySmall),
           ],
         ),
       );

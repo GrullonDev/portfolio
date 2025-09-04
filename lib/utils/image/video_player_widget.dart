@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 import 'package:video_player/video_player.dart';
 
@@ -35,8 +36,8 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
   @override
   Widget build(BuildContext context) {
     if (_hasError) {
-      return const Center(
-        child: Text('Error loading video'),
+      return Center(
+        child: Text(AppLocalizations.of(context).videoErrorLoading),
       );
     }
 

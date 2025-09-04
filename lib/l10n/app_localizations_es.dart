@@ -46,6 +46,25 @@ class AppLocalizationsEs extends AppLocalizations {
       'He desarrollado apps de productividad, finanzas y entretenimiento, ayudando a empresas y personas a lanzar sus ideas con Flutter.';
 
   @override
+  String get homeRoleTagline =>
+      'Flutter Developer | Apps móviles y web de alto impacto';
+
+  @override
+  String get homeDifferentiator =>
+      'Especialista en apps de productividad con Flutter';
+
+  @override
+  String get homeValueProp =>
+      'Ahorra tiempo y costos con apps multiplataforma. Trabajo remoto con clientes en todo el mundo.';
+
+  @override
+  String get homeCtaBudget => 'Pide un presupuesto gratis';
+
+  @override
+  String get homeTestimonialParroquia =>
+      '“Jorge nos ayudó a lanzar nuestra app más rápido de lo esperado.” — Parroquia';
+
+  @override
   String get projectsTitle => 'Proyectos';
 
   @override
@@ -105,6 +124,27 @@ class AppLocalizationsEs extends AppLocalizations {
   String get btnRequestBeta => 'Solicitar beta';
 
   @override
+  String get whatIDoTitle => 'Lo que hago';
+
+  @override
+  String get whatIDoBullet1 =>
+      'Desarrollo de apps móviles multiplataforma (iOS/Android).';
+
+  @override
+  String get whatIDoBullet2 =>
+      'Integración con APIs y Firebase (Auth, Firestore, Cloud Functions).';
+
+  @override
+  String get whatIDoBullet3 => 'Diseño UI/UX y optimización de rendimiento.';
+
+  @override
+  String get whatIDoCtaTalk => 'Hablemos de tu proyecto 🚀';
+
+  @override
+  String get whatIDoResponseSla =>
+      'Respuesta en menos de 24h · Presupuesto gratis';
+
+  @override
   String get contactTitle => 'Contacto';
 
   @override
@@ -137,7 +177,82 @@ class AppLocalizationsEs extends AppLocalizations {
   String get contactSend => 'Enviar mensaje';
 
   @override
+  String get contactErrorNameRequired => 'Por favor, ingresa tu nombre';
+
+  @override
+  String get contactErrorEmailRequired =>
+      'Por favor, ingresa tu correo electrónico';
+
+  @override
+  String get contactErrorEmailInvalid => 'Ingresa un correo electrónico válido';
+
+  @override
+  String get contactErrorMessageRequired => 'Por favor, ingresa un mensaje';
+
+  @override
+  String get contactSentOk => 'Mensaje enviado correctamente.';
+
+  @override
   String get servicesTitle => '🛠️ Servicios Ofertados';
+
+  @override
+  String get servicesIntro =>
+      'Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.';
+
+  @override
+  String get serviceCategoryDevelopment => 'Desarrollo';
+
+  @override
+  String get serviceDevBullet1 => 'Apps móviles (iOS/Android) con Flutter';
+
+  @override
+  String get serviceDevBullet2 => 'Web responsive (Flutter Web)';
+
+  @override
+  String get serviceDevBullet3 => 'APIs REST/GraphQL (Node.js/NestJS)';
+
+  @override
+  String get serviceDevBullet4 => 'E-commerce y pagos';
+
+  @override
+  String get serviceCategoryOptimization => 'Optimización';
+
+  @override
+  String get serviceOptBullet1 => 'UI/UX y accesibilidad';
+
+  @override
+  String get serviceOptBullet2 => 'Rendimiento con DevTools';
+
+  @override
+  String get serviceOptBullet3 => 'Mantenimiento continuo';
+
+  @override
+  String get serviceOptBullet4 => 'Refactor y migraciones';
+
+  @override
+  String get serviceCategoryConsulting => 'Consultoría & Soporte';
+
+  @override
+  String get serviceConsultBullet1 => 'QA y pruebas (unitarias/integ/UI)';
+
+  @override
+  String get serviceConsultBullet2 => 'Mentoría Flutter';
+
+  @override
+  String get serviceConsultBullet3 => 'Integración IoT';
+
+  @override
+  String get serviceConsultBullet4 => 'Publicación en App Store / Play';
+
+  @override
+  String get featuredProjectsTitle => 'Proyectos Destacados';
+
+  @override
+  String get comingSoon => 'Próximamente';
+
+  @override
+  String get featuredProjectsComingSoonDesc =>
+      'Se agregarán los proyectos destacados';
 
   @override
   String get ctaReady => '¿Listo para comenzar tu proyecto?';
@@ -148,4 +263,75 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get ctaInvite =>
       'Contáctame para discutir tus ideas y hacerlas realidad.';
+
+  @override
+  String get aboutTrajectoryTitle => '🎓 Trayectoria';
+
+  @override
+  String get aboutImpact1 => '3+ años desarrollando software.';
+
+  @override
+  String get aboutImpact2 => 'Experto en Flutter, Firebase, APIs REST/GraphQL.';
+
+  @override
+  String get aboutImpact3 => 'Experiencia en backend con Node.js y NestJS.';
+
+  @override
+  String get aboutCertificationsTitle => '🏆 Certificaciones';
+
+  @override
+  String get aboutMoreCertsLinkedIn => 'Ver más certificaciones en LinkedIn';
+
+  @override
+  String get aboutConnectTitle => '🌎 Conéctate conmigo';
+
+  @override
+  String get navMenu => 'Menú';
+
+  @override
+  String get footerMadeWith => 'Desarrollado con Flutter';
+
+  @override
+  String get projectVideoTitle => 'Video del Proyecto';
+
+  @override
+  String get linkOpenError => 'No se pudo abrir el enlace';
+
+  @override
+  String get betaRequestTitle => 'Solicitar acceso a la beta';
+
+  @override
+  String get betaRequestSubtitle =>
+      'Déjame tu correo y la plataforma para enviarte una build de prueba por Firebase App Distribution.';
+
+  @override
+  String get betaFieldEmail => 'Correo electrónico';
+
+  @override
+  String get betaFieldEmailHint => 'tu@correo.com';
+
+  @override
+  String get betaFieldPlatform => 'Plataforma:';
+
+  @override
+  String get betaSendWhatsapp => 'Enviar por WhatsApp';
+
+  @override
+  String get betaSendEmail => 'Enviar por Email';
+
+  @override
+  String get betaNote =>
+      'Nota: Para Android necesitas una cuenta de Google. Para iOS, compartiré un enlace de TestFlight si aplica.';
+
+  @override
+  String get videoErrorLoading => 'Error al cargar el video';
+
+  @override
+  String get languageToggleLabel => 'Idioma';
+
+  @override
+  String get platformAndroid => 'Android';
+
+  @override
+  String get platformIos => 'iOS';
 }

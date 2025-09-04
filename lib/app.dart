@@ -6,9 +6,9 @@ import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:portafolio_app/utils/language/language_provider.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/theme_switcher/theme_switcher_bloc.dart';
-import 'package:portafolio_app/utils/language/language_provider.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: Consumer2<ThemeProvider, LanguageProvider>(
-        builder: (context, themeProvider, langProvider, child) => MaterialApp.router(
+        builder: (context, themeProvider, langProvider, child) =>
+            MaterialApp.router(
           routerConfig: router,
           title: 'GrullonDev Portfolio',
           debugShowCheckedModeBanner: false,
@@ -47,6 +48,20 @@ class MyApp extends StatelessWidget {
             Locale('es'),
             Locale('en'),
           ],
+          localeListResolutionCallback: (locales, supported) {
+            // If user set a fixed locale, let Flutter use it (langProvider.locale != null)
+            // Otherwise, respect browser/device ordering
+            if (langProvider.locale != null) return langProvider.locale;
+            if (locales == null || locales.isEmpty) return supported.first;
+            for (final deviceLocale in locales) {
+              for (final sup in supported) {
+                if (deviceLocale.languageCode == sup.languageCode) {
+                  return sup;
+                }
+              }
+            }
+            return supported.first;
+          },
         ),
       ),
     );

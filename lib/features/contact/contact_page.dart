@@ -6,6 +6,7 @@ import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
@@ -36,6 +37,7 @@ class _ContactPageState extends State<ContactPage> {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
@@ -56,14 +58,15 @@ class _ContactPageState extends State<ContactPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text(
-                    'Me encantaría escuchar tu idea y ayudarte a hacerla realidad.',
+                  Text(
+                    t.contactPersonal,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 14),
-                  const Text(
-                    'Elige una opción rápida o envíame un mensaje con el formulario.',
+                  Text(
+                    t.contactPickOption,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 16),
@@ -78,7 +81,7 @@ class _ContactPageState extends State<ContactPage> {
                               'https://calendar.app.google/pa4CCPAQBonh5e5s7');
                         },
                         icon: const Icon(Icons.calendar_today),
-                        label: const Text('Agendar en Google Calendar'),
+                        label: Text(t.contactBtnCalendar),
                       ),
                       OutlinedButton.icon(
                         onPressed: () {
@@ -86,7 +89,7 @@ class _ContactPageState extends State<ContactPage> {
                               'https://wa.me/+50242909548?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.');
                         },
                         icon: const Icon(Icons.chat_bubble_outline),
-                        label: const Text('WhatsApp'),
+                        label: Text(t.contactBtnWhatsapp),
                       ),
                       OutlinedButton.icon(
                         onPressed: () {
@@ -94,7 +97,7 @@ class _ContactPageState extends State<ContactPage> {
                               'mailto:prosystem155@gmail.com?subject=Quiero%20hablar%20de%20un%20proyecto&body=Hola%20Jorge%2C%20tengo%20esta%20idea%20y%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n.');
                         },
                         icon: const Icon(Icons.email_outlined),
-                        label: const Text('Email directo'),
+                        label: Text(t.contactBtnEmail),
                       ),
                     ],
                   ),
@@ -109,13 +112,13 @@ class _ContactPageState extends State<ContactPage> {
                           children: [
                             TextFormField(
                               controller: _nameController,
-                              decoration: const InputDecoration(
-                                labelText: 'Nombre',
-                                prefixIcon: Icon(Icons.person),
+                              decoration: InputDecoration(
+                                labelText: t.contactFormName,
+                                prefixIcon: const Icon(Icons.person),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Por favor, ingresa tu nombre';
+                                  return t.contactErrorNameRequired;
                                 }
                                 return null;
                               },
@@ -123,16 +126,16 @@ class _ContactPageState extends State<ContactPage> {
                             const SizedBox(height: 20),
                             TextFormField(
                               controller: _emailController,
-                              decoration: const InputDecoration(
-                                labelText: 'Correo electrónico',
-                                prefixIcon: Icon(Icons.email),
+                              decoration: InputDecoration(
+                                labelText: t.contactFormEmail,
+                                prefixIcon: const Icon(Icons.email),
                               ),
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Por favor, ingresa tu correo electrónico';
+                                  return t.contactErrorEmailRequired;
                                 }
                                 if (!value.contains('@')) {
-                                  return 'Ingresa un correo electrónico válido';
+                                  return t.contactErrorEmailInvalid;
                                 }
                                 return null;
                               },
@@ -140,14 +143,14 @@ class _ContactPageState extends State<ContactPage> {
                             const SizedBox(height: 20),
                             TextFormField(
                               controller: _messageController,
-                              decoration: const InputDecoration(
-                                labelText: 'Mensaje',
-                                prefixIcon: Icon(Icons.message),
+                              decoration: InputDecoration(
+                                labelText: t.contactFormMessage,
+                                prefixIcon: const Icon(Icons.message),
                               ),
                               maxLines: 5,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Por favor, ingresa un mensaje';
+                                  return t.contactErrorMessageRequired;
                                 }
                                 return null;
                               },
@@ -163,9 +166,8 @@ class _ContactPageState extends State<ContactPage> {
                                       );
                                   _clearForm();
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(
-                                      content: Text(
-                                          'Mensaje enviado correctamente.'),
+                                    SnackBar(
+                                      content: Text(t.contactSentOk),
                                     ),
                                   );
                                 }
@@ -175,7 +177,7 @@ class _ContactPageState extends State<ContactPage> {
                                     horizontal: 30, vertical: 15),
                                 textStyle: const TextStyle(fontSize: 18),
                               ),
-                              child: const Text('Enviar mensaje'),
+                              child: Text(t.contactSend),
                             ),
                           ],
                         ),

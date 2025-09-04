@@ -12,6 +12,7 @@ import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/utils/widgets/social_media/social_icon.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -74,7 +75,7 @@ class _AboutPageState extends State<AboutPage> {
 
   @override
   Widget build(BuildContext context) {
-    // double screenWidth = MediaQuery.of(context).size.width;
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
@@ -96,42 +97,39 @@ class _AboutPageState extends State<AboutPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 20),
-
                   // Secciones en una Grid si hay espacio suficiente
                   Wrap(
                     spacing: 70,
                     runSpacing: 40,
                     alignment: WrapAlignment.center,
                     children: [
-                      const Card(
+                      Card(
                         elevation: 4,
-                        shape: RoundedRectangleBorder(
+                        shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(12)),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '🎓 Trayectoria',
-                                style: TextStyle(
+                                t.aboutTrajectoryTitle,
+                                style: const TextStyle(
                                     fontSize: 30, fontWeight: FontWeight.bold),
                               ),
-                              SizedBox(height: 10),
-                              _ImpactLine('3+ años desarrollando software.'),
-                              _ImpactLine(
-                                  'Experto en Flutter, Firebase, APIs REST/GraphQL.'),
-                              _ImpactLine(
-                                  'Experiencia en backend con Node.js y NestJS.'),
+                              const SizedBox(height: 10),
+                              _ImpactLine(t.aboutImpact1),
+                              _ImpactLine(t.aboutImpact2),
+                              _ImpactLine(t.aboutImpact3),
                             ],
                           ),
                         ),
                       ),
 
-                      const Text(
-                        '🏆 Certificaciones',
-                        style: TextStyle(
+                      Text(
+                        t.aboutCertificationsTitle,
+                        style: const TextStyle(
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
 
@@ -153,16 +151,15 @@ class _AboutPageState extends State<AboutPage> {
                               'https://www.linkedin.com/in/jorgeluisgrullonmarroquin/');
                         },
                         icon: const FaIcon(FontAwesomeIcons.linkedin),
-                        label:
-                            const Text('Ver más certificaciones en LinkedIn'),
+                        label: Text(t.aboutMoreCertsLinkedIn),
                       ),
 
                       const SizedBox(height: 20),
 
                       // Sección de redes sociales
-                      const Text(
-                        '🌎 Conéctate conmigo',
-                        style: TextStyle(
+                      Text(
+                        t.aboutConnectTitle,
+                        style: const TextStyle(
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 10),

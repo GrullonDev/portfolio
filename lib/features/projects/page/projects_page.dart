@@ -7,12 +7,14 @@ import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
@@ -28,31 +30,32 @@ class ProjectsPage extends StatelessWidget {
             constraints: BoxConstraints(
               maxWidth: Responsive.isMobile(context) ? 400 : 950,
             ),
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
-                    'Proyectos reales en desarrollo activo. Solicita acceso a betas y demos.',
+                    t.projectsIntro,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w500,
                       fontFamily: 'Montserrat',
                     ),
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   // Categoría: Apps móviles
                   Text(
-                    '📱 Apps móviles',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    t.projectsMobile,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   // 1) Portafolio App
                   WebProjectsCard(
-                    title: 'Portafolio App',
+                    title: t.appTitle,
                     description: '',
                     images: [
                       ImageAssets.inicio,
@@ -71,13 +74,12 @@ class ProjectsPage extends StatelessWidget {
                     github: null,
                     demo: null,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
                   // 2) Finanzas Personales
                   MobileProjectCard(
-                    title: 'Finanzas Personales',
-                    description:
-                        'Ayuda a usuarios a controlar su presupuesto mensual con reportes claros y metas alcanzables. Ahorra tiempo y evita sorpresas a fin de mes.',
+                    title: t.projectFinanceName,
+                    description: t.projectFinanceDesc,
                     images: [
                       ImageAssets.productividad,
                       ImageAssets.pomodoroBreak,
@@ -95,9 +97,8 @@ class ProjectsPage extends StatelessWidget {
 
                   // 3) Pomodoro App
                   MobileProjectCard(
-                    title: 'Pomodoro App (Gestión de tiempo)',
-                    description:
-                        'Mejora el enfoque con sesiones cronometradas y estadísticas sencillas. Ideal para estudiantes y profesionales que quieren rendir más en menos tiempo.',
+                    title: t.projectPomodoroName,
+                    description: t.projectPomodoroDesc,
                     images: [
                       ImageAssets.pomodoroInit,
                       ImageAssets.pomodoroSession,
@@ -114,20 +115,20 @@ class ProjectsPage extends StatelessWidget {
                     github: null,
                     demo: null,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
                   // Categoría: Proyectos web
                   Text(
-                    '🖥️ Proyectos web',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    t.projectsWeb,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
 
                   // 4) App interna Tropigas (demo privado)
                   MobileProjectCard(
-                    title: 'App interna Tropigas (Demo privado)',
-                    description:
-                        'Plataforma interna para digitalizar procesos y reducir gestión manual. Por confidencialidad, la demo es privada (solicita acceso controlado).',
+                    title: t.projectTropigasName,
+                    description: t.projectTropigasDesc,
                     technologies: [
                       'Flutter',
                       'REST APIs',
@@ -139,18 +140,18 @@ class ProjectsPage extends StatelessWidget {
                     ],
                     platform: PhonePlatform.android,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
                   // Categoría: Proyectos personales / experimentales
                   Text(
-                    '🧪 Proyectos personales / experimentales',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    t.projectsPersonal,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 12),
+                  const SizedBox(height: 12),
                   MobileProjectCard(
-                    title: 'Flores Amarillas (Motivación)',
-                    description:
-                        'Mini app de motivación con UI agradable para pruebas rápidas de animaciones y onboarding. Pensada para experimentar y probar ideas.',
+                    title: t.projectYellowFlowersName,
+                    description: t.projectYellowFlowersDesc,
                     images: [],
                     platform: PhonePlatform.ios,
                     technologies: [

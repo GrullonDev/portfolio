@@ -170,6 +170,36 @@ abstract class AppLocalizations {
   /// **'I\'ve built apps for productivity, finance and entertainment — helping companies and people launch their ideas with Flutter.'**
   String get homeSocialProof;
 
+  /// No description provided for @homeRoleTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter Developer | High-impact mobile and web apps'**
+  String get homeRoleTagline;
+
+  /// No description provided for @homeDifferentiator.
+  ///
+  /// In en, this message translates to:
+  /// **'Specialist in productivity apps with Flutter'**
+  String get homeDifferentiator;
+
+  /// No description provided for @homeValueProp.
+  ///
+  /// In en, this message translates to:
+  /// **'Save time and costs with cross-platform apps. I work remotely with clients worldwide.'**
+  String get homeValueProp;
+
+  /// No description provided for @homeCtaBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Request a free quote'**
+  String get homeCtaBudget;
+
+  /// No description provided for @homeTestimonialParroquia.
+  ///
+  /// In en, this message translates to:
+  /// **'“Jorge helped us launch our app faster than expected.” — Parroquia'**
+  String get homeTestimonialParroquia;
+
   /// No description provided for @projectsTitle.
   ///
   /// In en, this message translates to:
@@ -278,6 +308,42 @@ abstract class AppLocalizations {
   /// **'Request beta'**
   String get btnRequestBeta;
 
+  /// No description provided for @whatIDoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'What I do'**
+  String get whatIDoTitle;
+
+  /// No description provided for @whatIDoBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-platform mobile app development (iOS/Android).'**
+  String get whatIDoBullet1;
+
+  /// No description provided for @whatIDoBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'API and Firebase integration (Auth, Firestore, Cloud Functions).'**
+  String get whatIDoBullet2;
+
+  /// No description provided for @whatIDoBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'UI/UX design and performance optimization.'**
+  String get whatIDoBullet3;
+
+  /// No description provided for @whatIDoCtaTalk.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s talk about your project 🚀'**
+  String get whatIDoCtaTalk;
+
+  /// No description provided for @whatIDoResponseSla.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply within 24h · Free quote'**
+  String get whatIDoResponseSla;
+
   /// No description provided for @contactTitle.
   ///
   /// In en, this message translates to:
@@ -338,11 +404,155 @@ abstract class AppLocalizations {
   /// **'Send message'**
   String get contactSend;
 
+  /// No description provided for @contactErrorNameRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get contactErrorNameRequired;
+
+  /// No description provided for @contactErrorEmailRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your email'**
+  String get contactErrorEmailRequired;
+
+  /// No description provided for @contactErrorEmailInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address'**
+  String get contactErrorEmailInvalid;
+
+  /// No description provided for @contactErrorMessageRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a message'**
+  String get contactErrorMessageRequired;
+
+  /// No description provided for @contactSentOk.
+  ///
+  /// In en, this message translates to:
+  /// **'Message sent successfully.'**
+  String get contactSentOk;
+
   /// No description provided for @servicesTitle.
   ///
   /// In en, this message translates to:
   /// **'Offered Services'**
   String get servicesTitle;
+
+  /// No description provided for @servicesIntro.
+  ///
+  /// In en, this message translates to:
+  /// **'I group my services into three key areas to maximize value and clarity.'**
+  String get servicesIntro;
+
+  /// No description provided for @serviceCategoryDevelopment.
+  ///
+  /// In en, this message translates to:
+  /// **'Development'**
+  String get serviceCategoryDevelopment;
+
+  /// No description provided for @serviceDevBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile apps (iOS/Android) with Flutter'**
+  String get serviceDevBullet1;
+
+  /// No description provided for @serviceDevBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Responsive web (Flutter Web)'**
+  String get serviceDevBullet2;
+
+  /// No description provided for @serviceDevBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'REST/GraphQL APIs (Node.js/NestJS)'**
+  String get serviceDevBullet3;
+
+  /// No description provided for @serviceDevBullet4.
+  ///
+  /// In en, this message translates to:
+  /// **'E-commerce and payments'**
+  String get serviceDevBullet4;
+
+  /// No description provided for @serviceCategoryOptimization.
+  ///
+  /// In en, this message translates to:
+  /// **'Optimization'**
+  String get serviceCategoryOptimization;
+
+  /// No description provided for @serviceOptBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'UI/UX and accessibility'**
+  String get serviceOptBullet1;
+
+  /// No description provided for @serviceOptBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance with DevTools'**
+  String get serviceOptBullet2;
+
+  /// No description provided for @serviceOptBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'Ongoing maintenance'**
+  String get serviceOptBullet3;
+
+  /// No description provided for @serviceOptBullet4.
+  ///
+  /// In en, this message translates to:
+  /// **'Refactors and migrations'**
+  String get serviceOptBullet4;
+
+  /// No description provided for @serviceCategoryConsulting.
+  ///
+  /// In en, this message translates to:
+  /// **'Consulting & Support'**
+  String get serviceCategoryConsulting;
+
+  /// No description provided for @serviceConsultBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'QA and testing (unit/integration/UI)'**
+  String get serviceConsultBullet1;
+
+  /// No description provided for @serviceConsultBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter mentoring'**
+  String get serviceConsultBullet2;
+
+  /// No description provided for @serviceConsultBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'IoT integration'**
+  String get serviceConsultBullet3;
+
+  /// No description provided for @serviceConsultBullet4.
+  ///
+  /// In en, this message translates to:
+  /// **'Publishing to App Store / Play'**
+  String get serviceConsultBullet4;
+
+  /// No description provided for @featuredProjectsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured Projects'**
+  String get featuredProjectsTitle;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get comingSoon;
+
+  /// No description provided for @featuredProjectsComingSoonDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured projects will be added'**
+  String get featuredProjectsComingSoonDesc;
 
   /// No description provided for @ctaReady.
   ///
@@ -361,6 +571,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Contact me to discuss your idea and make it real.'**
   String get ctaInvite;
+
+  /// No description provided for @aboutTrajectoryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'🎓 Journey'**
+  String get aboutTrajectoryTitle;
+
+  /// No description provided for @aboutImpact1.
+  ///
+  /// In en, this message translates to:
+  /// **'3+ years building software.'**
+  String get aboutImpact1;
+
+  /// No description provided for @aboutImpact2.
+  ///
+  /// In en, this message translates to:
+  /// **'Expert in Flutter, Firebase, REST/GraphQL APIs.'**
+  String get aboutImpact2;
+
+  /// No description provided for @aboutImpact3.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend experience with Node.js and NestJS.'**
+  String get aboutImpact3;
+
+  /// No description provided for @aboutCertificationsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'🏆 Certifications'**
+  String get aboutCertificationsTitle;
+
+  /// No description provided for @aboutMoreCertsLinkedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'See more certifications on LinkedIn'**
+  String get aboutMoreCertsLinkedIn;
+
+  /// No description provided for @aboutConnectTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'🌎 Connect with me'**
+  String get aboutConnectTitle;
+
+  /// No description provided for @navMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get navMenu;
+
+  /// No description provided for @footerMadeWith.
+  ///
+  /// In en, this message translates to:
+  /// **'Built with Flutter'**
+  String get footerMadeWith;
+
+  /// No description provided for @projectVideoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Project Video'**
+  String get projectVideoTitle;
+
+  /// No description provided for @linkOpenError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not open the link'**
+  String get linkOpenError;
+
+  /// No description provided for @betaRequestTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Request beta access'**
+  String get betaRequestTitle;
+
+  /// No description provided for @betaRequestSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave your email and platform to send you a test build via Firebase App Distribution.'**
+  String get betaRequestSubtitle;
+
+  /// No description provided for @betaFieldEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get betaFieldEmail;
+
+  /// No description provided for @betaFieldEmailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'you@email.com'**
+  String get betaFieldEmailHint;
+
+  /// No description provided for @betaFieldPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform:'**
+  String get betaFieldPlatform;
+
+  /// No description provided for @betaSendWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Send via WhatsApp'**
+  String get betaSendWhatsapp;
+
+  /// No description provided for @betaSendEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Send via Email'**
+  String get betaSendEmail;
+
+  /// No description provided for @betaNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Note: For Android you need a Google account. For iOS, I will share a TestFlight link if applicable.'**
+  String get betaNote;
+
+  /// No description provided for @videoErrorLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading video'**
+  String get videoErrorLoading;
+
+  /// No description provided for @languageToggleLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get languageToggleLabel;
+
+  /// No description provided for @platformAndroid.
+  ///
+  /// In en, this message translates to:
+  /// **'Android'**
+  String get platformAndroid;
+
+  /// No description provided for @platformIos.
+  ///
+  /// In en, this message translates to:
+  /// **'iOS'**
+  String get platformIos;
 }
 
 class _AppLocalizationsDelegate

@@ -10,12 +10,14 @@ import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
@@ -40,78 +42,84 @@ class ServicesPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Título y descripción general
-                  const Text(
-                    '🛠️ Servicios Ofertados',
-                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  Text(
+                    t.servicesTitle,
+                    style: const TextStyle(
+                        fontSize: 32, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.',
+                  Text(
+                    t.servicesIntro,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                   const SizedBox(height: 30),
 
                   // Categorías principales
-                  const Wrap(
+                  Wrap(
                     spacing: 20,
                     runSpacing: 20,
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceCategoryCard(
                         icon: Icons.developer_mode,
-                        title: 'Desarrollo',
+                        title: t.serviceCategoryDevelopment,
                         bullets: [
-                          'Apps móviles (iOS/Android) con Flutter',
-                          'Web responsive (Flutter Web)',
-                          'APIs REST/GraphQL (Node.js/NestJS)',
-                          'E-commerce y pagos',
+                          t.serviceDevBullet1,
+                          t.serviceDevBullet2,
+                          t.serviceDevBullet3,
+                          t.serviceDevBullet4,
                         ],
                         techs: [
-                          Tech(
+                          const Tech(
                               label: 'Flutter', icon: Icon(Icons.flutter_dash)),
-                          Tech(label: 'Dart', icon: Icon(Icons.code)),
-                          Tech(label: 'Firebase', icon: Icon(Icons.cloud)),
-                          Tech(
+                          const Tech(label: 'Dart', icon: Icon(Icons.code)),
+                          const Tech(
+                              label: 'Firebase', icon: Icon(Icons.cloud)),
+                          const Tech(
                               label: 'Node.js',
                               icon: FaIcon(FontAwesomeIcons.nodeJs)),
-                          Tech(label: 'NestJS', icon: Icon(Icons.architecture)),
+                          const Tech(
+                              label: 'NestJS', icon: Icon(Icons.architecture)),
                         ],
                       ),
                       ServiceCategoryCard(
                         icon: Icons.speed,
-                        title: 'Optimización',
+                        title: t.serviceCategoryOptimization,
                         bullets: [
-                          'UI/UX y accesibilidad',
-                          'Rendimiento con DevTools',
-                          'Mantenimiento continuo',
-                          'Refactor y migraciones',
+                          t.serviceOptBullet1,
+                          t.serviceOptBullet2,
+                          t.serviceOptBullet3,
+                          t.serviceOptBullet4,
                         ],
                         techs: [
-                          Tech(label: 'DevTools', icon: Icon(Icons.speed)),
-                          Tech(
+                          const Tech(
+                              label: 'DevTools', icon: Icon(Icons.speed)),
+                          const Tech(
                               label: 'Lottie/Rive',
                               icon: Icon(Icons.animation)),
-                          Tech(label: 'CI/CD', icon: Icon(Icons.merge_type)),
+                          const Tech(
+                              label: 'CI/CD', icon: Icon(Icons.merge_type)),
                         ],
                       ),
                       ServiceCategoryCard(
                         icon: Icons.handshake,
-                        title: 'Consultoría & Soporte',
+                        title: t.serviceCategoryConsulting,
                         bullets: [
-                          'QA y pruebas (unitarias/integ/UI)',
-                          'Mentoría Flutter',
-                          'Integración IoT',
-                          'Publicación en App Store / Play',
+                          t.serviceConsultBullet1,
+                          t.serviceConsultBullet2,
+                          t.serviceConsultBullet3,
+                          t.serviceConsultBullet4,
                         ],
                         techs: [
-                          Tech(label: 'QA', icon: Icon(Icons.bug_report)),
-                          Tech(label: 'Mentoría', icon: Icon(Icons.school)),
-                          Tech(label: 'IoT', icon: Icon(Icons.memory)),
-                          Tech(
+                          const Tech(label: 'QA', icon: Icon(Icons.bug_report)),
+                          const Tech(
+                              label: 'Mentoría', icon: Icon(Icons.school)),
+                          const Tech(label: 'IoT', icon: Icon(Icons.memory)),
+                          const Tech(
                               label: 'Play Store',
                               icon: FaIcon(FontAwesomeIcons.googlePlay)),
-                          Tech(
+                          const Tech(
                               label: 'App Store',
                               icon: FaIcon(FontAwesomeIcons.appStoreIos)),
                         ],
@@ -121,35 +129,37 @@ class ServicesPage extends StatelessWidget {
                   const SizedBox(height: 30),
 
                   // Proyectos destacados
-                  const Text(
-                    'Proyectos Destacados',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  Text(
+                    t.featuredProjectsTitle,
+                    style: const TextStyle(
+                        fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
-                  const Wrap(
+                  Wrap(
                     spacing: 20,
                     runSpacing: 20,
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceProjectCard(
                         image: ImageAssets.commingSoon,
-                        title: 'Proximamente ',
-                        description: 'Se agregaran los proyectos destacados',
+                        title: t.comingSoon,
+                        description: t.featuredProjectsComingSoonDesc,
                       ),
                     ],
                   ),
                   const SizedBox(height: 30),
 
                   // Llamado a la acción (CTA)
-                  const Text(
-                    '¿Listo para comenzar tu proyecto?',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  Text(
+                    t.ctaReady,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
-                  const Text(
-                    'Contáctame para discutir tus ideas y hacerlas realidad.',
+                  Text(
+                    t.ctaInvite,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                   const SizedBox(height: 20),
                   ElevatedButton(
@@ -162,7 +172,7 @@ class ServicesPage extends StatelessWidget {
                           horizontal: 30, vertical: 15),
                       textStyle: const TextStyle(fontSize: 18),
                     ),
-                    child: const Text('Contáctame'),
+                    child: Text(t.ctaContact),
                   ),
                   const SizedBox(height: 30),
                 ],

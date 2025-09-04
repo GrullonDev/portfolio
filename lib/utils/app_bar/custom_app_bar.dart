@@ -5,6 +5,7 @@ import 'package:portafolio_app/utils/theme_switcher/theme_switcher.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:portafolio_app/utils/language/language_provider.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -18,6 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     return AppBar(
       title: Text(
         title,
@@ -31,7 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         // Navbar para pantallas grandes
         if (isMobile)
           IconButton(
-            tooltip: 'Agenda una reunión',
+            tooltip: t.homeCtaSchedule,
             onPressed: () => navigateTo(context, 'contact'),
             icon: const Icon(Icons.calendar_today_outlined),
           )

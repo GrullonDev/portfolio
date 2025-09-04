@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class MobileProjectCard extends StatelessWidget {
   const MobileProjectCard({
@@ -39,6 +40,7 @@ class MobileProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     return Card(
       elevation: 4,
       margin: const EdgeInsets.symmetric(vertical: 10),
@@ -108,7 +110,7 @@ class MobileProjectCard extends StatelessWidget {
                       }
                     },
                     icon: const Icon(Icons.android),
-                    label: const Text('Google Play'),
+                    label: Text(t.btnGooglePlay),
                   ),
                 if (github != null)
                   OutlinedButton.icon(
@@ -120,7 +122,7 @@ class MobileProjectCard extends StatelessWidget {
                       }
                     },
                     icon: const Icon(Icons.code),
-                    label: const Text('GitHub'),
+                    label: Text(t.btnGithub),
                   ),
                 if (demo != null)
                   OutlinedButton.icon(
@@ -132,7 +134,7 @@ class MobileProjectCard extends StatelessWidget {
                       }
                     },
                     icon: const Icon(Icons.link),
-                    label: const Text('Demo'),
+                    label: Text(t.btnDemo),
                   ),
                 if (betaEnabled)
                   ElevatedButton.icon(
@@ -141,7 +143,7 @@ class MobileProjectCard extends StatelessWidget {
                       projectName: title,
                     ),
                     icon: const Icon(Icons.bug_report_outlined),
-                    label: const Text('Solicitar beta'),
+                    label: Text(t.btnRequestBeta),
                   ),
               ],
             ),

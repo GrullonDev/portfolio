@@ -7,6 +7,7 @@ import 'package:video_player/video_player.dart';
 import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class WebProjectsCard extends StatefulWidget {
   const WebProjectsCard({
@@ -65,6 +66,7 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     return Card(
       elevation: 4,
       margin: const EdgeInsets.symmetric(vertical: 10),
@@ -87,9 +89,10 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Tecnologías',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  Text(
+                    t.tech,
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 8),
                   Wrap(
@@ -116,7 +119,7 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                       }
                     },
                     icon: const Icon(Icons.android),
-                    label: const Text('Google Play'),
+                    label: Text(t.btnGooglePlay),
                   ),
                 if (widget.github != null)
                   OutlinedButton.icon(
@@ -128,7 +131,7 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                       }
                     },
                     icon: const Icon(Icons.code),
-                    label: const Text('GitHub'),
+                    label: Text(t.btnGithub),
                   ),
                 if (widget.demo != null)
                   OutlinedButton.icon(
@@ -140,13 +143,13 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                       }
                     },
                     icon: const Icon(Icons.link),
-                    label: const Text('Demo'),
+                    label: Text(t.btnDemo),
                   ),
                 ElevatedButton.icon(
                   onPressed: () =>
                       showBetaRequestSheet(context, projectName: widget.title),
                   icon: const Icon(Icons.bug_report_outlined),
-                  label: const Text('Solicitar beta'),
+                  label: Text(t.btnRequestBeta),
                 ),
               ],
             ),
@@ -194,9 +197,10 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
             if (widget.videoUrl != null && _videoController.value.isInitialized)
               Column(
                 children: [
-                  const Text(
-                    'Video del Proyecto',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  Text(
+                    t.projectVideoTitle,
+                    style: const TextStyle(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 10),
                   AspectRatio(
@@ -228,11 +232,11 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Center(
+                  Center(
                     child: Text(
-                      'Demo',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      t.btnDemo,
+                      style: const TextStyle(
+                          fontSize: 24, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -247,8 +251,7 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                         } else {
                           // ignore: use_build_context_synchronously
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                                content: Text('No se pudo abrir el enlace')),
+                            SnackBar(content: Text(t.linkOpenError)),
                           );
                         }
                       },
