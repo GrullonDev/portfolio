@@ -1,6 +1,6 @@
 <div align="center">
 
-# Portafolio Flutter (Web/Móvil/Escritorio)
+# Portafolio Flutter (Web)
 
 Ficha técnica del proyecto de portafolio personal desarrollado con Flutter. Deploy principal en Firebase Hosting.
 
@@ -10,7 +10,7 @@ Ficha técnica del proyecto de portafolio personal desarrollado con Flutter. Dep
 
 - Nombre del paquete: `portafolio_app`
 - Descripción: Portafolio personal con foco en conversión (CTAs a agenda/WhatsApp/email), proyectos destacados y bilingüe ES/EN.
-- Plataformas: Web, Android, iOS, Windows, macOS, Linux
+- Plataformas: Web
 - Estado: Producción (hosting en Firebase)
 
 ## 🧰 Stack y Versiones
@@ -66,21 +66,14 @@ public/                  # Host público (404, index opcional)
 - Archivos en `web/` (favicon, manifest, service worker).
 - Rewrites configurados en Firebase Hosting (`firebase.json`).
 
-## 🚀 Ejecución y Build
+## 🚀 Ejecución y Build (Web)
 
 Requisitos: Flutter SDK 3.35.2, Dart 3.9.0.
 
 - Ejecutar en Chrome (dev):
 	- `flutter run -d chrome`
-- Ejecutar en dispositivo/emulador Android/iOS:
-	- `flutter run` (selecciona dispositivo en VS Code/Android Studio)
 - Build Web de producción:
 	- `flutter build web --release`
-- Build Android (apk/appbundle):
-	- `flutter build apk --release`
-	- `flutter build appbundle --release`
-- Build iOS (requiere macOS/Xcode):
-	- `flutter build ios --release`
 
 ## 📤 Deploy
 
@@ -129,9 +122,7 @@ Ver versión exacta en `pubspec.yaml`.
 
 ## 🔐 Notas de plataforma
 
-- iOS/macOS: requiere Xcode y cuentas Apple para firmar y publicar.
-- Android: configurar keystore para release si se publica en Play Store.
-- Web: asegurarse de limpiar caché en cambios de assets/JS.
+- Web: asegurarse de limpiar caché en cambios de assets/JS; revisar Service Worker.
 
 ## 🗺️ Roadmap (corto)
 
