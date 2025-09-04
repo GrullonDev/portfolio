@@ -41,7 +41,7 @@ class _ContactPageState extends State<ContactPage> {
     return Scaffold(
       appBar: CustomAppBar(
         isMobile: isMobile,
-        title: 'Contacto',
+        title: '',
       ),
       drawer:
           Responsive.isMobile(context) ? const Drawer(child: Navbar()) : null,

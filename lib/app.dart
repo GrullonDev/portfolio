@@ -8,6 +8,7 @@ import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/theme_switcher/theme_switcher_bloc.dart';
+import 'package:portafolio_app/utils/language/language_provider.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,9 +23,12 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => ThemeProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => LanguageProvider(),
+        ),
       ],
-      child: Consumer<ThemeProvider>(
-        builder: (context, themeProvider, child) => MaterialApp.router(
+      child: Consumer2<ThemeProvider, LanguageProvider>(
+        builder: (context, themeProvider, langProvider, child) => MaterialApp.router(
           routerConfig: router,
           title: 'GrullonDev Portfolio',
           debugShowCheckedModeBanner: false,
@@ -32,6 +36,7 @@ class MyApp extends StatelessWidget {
           darkTheme: _darkTheme(),
           themeMode:
               themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+          locale: langProvider.locale,
           localizationsDelegates: [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,

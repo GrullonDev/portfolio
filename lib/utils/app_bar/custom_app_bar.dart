@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/theme_switcher/theme_switcher.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
+import 'package:provider/provider.dart';
+import 'package:portafolio_app/utils/language/language_provider.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -35,6 +37,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           )
         else
           const Navbar(),
+        // Switch ES/EN
+        IconButton(
+          tooltip: 'ES / EN',
+          onPressed: () => context.read<LanguageProvider>().toggle(),
+          icon: const Icon(Icons.translate),
+        ),
         const ThemeSwitcher(),
       ],
     );
