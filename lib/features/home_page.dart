@@ -171,8 +171,11 @@ class _HeroSectionState extends State<_HeroSection>
             position: _slideTitle,
             child: Column(
               children: [
-                Text(t.homeGreeting,
-                    style: titleStyle, textAlign: TextAlign.center),
+                Text(
+                  t.homeGreeting,
+                  style: titleStyle,
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(height: 8),
                 Text(
                   t.homeRoleTagline,

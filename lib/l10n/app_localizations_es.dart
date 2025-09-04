@@ -27,7 +27,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navContact => 'Contacto';
 
   @override
-  String get homeGreeting => 'Hola, soy Jorge Grullón, un Flutter Developer 👋';
+  String get homeGreeting => 'Hola, soy Jorge Grullón👋';
 
   @override
   String get homeSubtitle => 'Desarrollo aplicaciones móviles y web.';
