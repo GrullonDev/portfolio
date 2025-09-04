@@ -111,5 +111,7 @@
   "videoErrorLoading": "Error al cargar el video",
   "languageToggleLabel": "Idioma",
   "platformAndroid": "Android",
-  "platformIos": "iOS"
+  "platformIos": "iOS",
+  "contactSlaLanguages": "Respondo en menos de 24h ⏱️ | Español & English 🌍",
+  "contactClassicFormTitle": "Formulario clásico"
 }

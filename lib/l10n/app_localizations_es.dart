@@ -334,4 +334,11 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get platformIos => 'iOS';
+
+  @override
+  String get contactSlaLanguages =>
+      'Respondo en menos de 24h ⏱️ | Español & English 🌍';
+
+  @override
+  String get contactClassicFormTitle => 'Formulario clásico';
 }

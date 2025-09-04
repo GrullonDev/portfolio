@@ -709,6 +709,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'iOS'**
   String get platformIos;
+
+  /// No description provided for @contactSlaLanguages.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply within 24h ⏱️ | Spanish & English 🌍'**
+  String get contactSlaLanguages;
+
+  /// No description provided for @contactClassicFormTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic form'**
+  String get contactClassicFormTitle;
 }
 
 class _AppLocalizationsDelegate

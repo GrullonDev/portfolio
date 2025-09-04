@@ -69,119 +69,159 @@ class _ContactPageState extends State<ContactPage> {
                     t.contactPickOption,
                     textAlign: TextAlign.center,
                   ),
+                  const SizedBox(height: 8),
+                  Text(
+                    t.contactSlaLanguages,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall
+                        ?.copyWith(color: Colors.black54),
+                  ),
                   const SizedBox(height: 16),
-                  Wrap(
-                    spacing: 12,
-                    runSpacing: 12,
-                    alignment: WrapAlignment.center,
+                  // CTA hierarchy: 1) Calendar (primary), 2) WhatsApp (green), 3) Email (outlined)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       ElevatedButton.icon(
                         onPressed: () {
                           context.read<PortfolioLogic>().launchURL(
                               'https://calendar.app.google/pa4CCPAQBonh5e5s7');
                         },
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 16),
+                          textStyle: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                         icon: const Icon(Icons.calendar_today),
-                        label: Text(t.contactBtnCalendar),
+                        label: Text('1️⃣  ${t.contactBtnCalendar}'),
                       ),
-                      OutlinedButton.icon(
+                      const SizedBox(height: 12),
+                      ElevatedButton.icon(
                         onPressed: () {
                           context.read<PortfolioLogic>().launchURL(
                               'https://wa.me/+50242909548?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.');
                         },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green.shade600,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 16),
+                          textStyle: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                         icon: const Icon(Icons.chat_bubble_outline),
-                        label: Text(t.contactBtnWhatsapp),
+                        label: Text('2️⃣  ${t.contactBtnWhatsapp}'),
                       ),
+                      const SizedBox(height: 12),
                       OutlinedButton.icon(
                         onPressed: () {
                           context.read<PortfolioLogic>().launchURL(
                               'mailto:prosystem155@gmail.com?subject=Quiero%20hablar%20de%20un%20proyecto&body=Hola%20Jorge%2C%20tengo%20esta%20idea%20y%20me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n.');
                         },
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 16),
+                          textStyle: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                         icon: const Icon(Icons.email_outlined),
-                        label: Text(t.contactBtnEmail),
+                        label: Text('3️⃣  ${t.contactBtnEmail}'),
                       ),
                     ],
                   ),
                   const SizedBox(height: 28),
+                  // Secondary option: Classic form at the end in an expandable section
                   Card(
-                    elevation: 4,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Form(
-                        key: _formKey,
-                        child: Column(
-                          children: [
-                            TextFormField(
-                              controller: _nameController,
-                              decoration: InputDecoration(
-                                labelText: t.contactFormName,
-                                prefixIcon: const Icon(Icons.person),
-                              ),
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return t.contactErrorNameRequired;
-                                }
-                                return null;
-                              },
-                            ),
-                            const SizedBox(height: 20),
-                            TextFormField(
-                              controller: _emailController,
-                              decoration: InputDecoration(
-                                labelText: t.contactFormEmail,
-                                prefixIcon: const Icon(Icons.email),
-                              ),
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return t.contactErrorEmailRequired;
-                                }
-                                if (!value.contains('@')) {
-                                  return t.contactErrorEmailInvalid;
-                                }
-                                return null;
-                              },
-                            ),
-                            const SizedBox(height: 20),
-                            TextFormField(
-                              controller: _messageController,
-                              decoration: InputDecoration(
-                                labelText: t.contactFormMessage,
-                                prefixIcon: const Icon(Icons.message),
-                              ),
-                              maxLines: 5,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return t.contactErrorMessageRequired;
-                                }
-                                return null;
-                              },
-                            ),
-                            const SizedBox(height: 20),
-                            ElevatedButton(
-                              onPressed: () {
-                                if (_formKey.currentState!.validate()) {
-                                  context.read<PortfolioLogic>().launchWhatsApp(
-                                        name: _nameController.text,
-                                        email: _emailController.text,
-                                        message: _messageController.text,
+                    elevation: 2,
+                    child: ExpansionTile(
+                      leading: const Icon(Icons.description_outlined),
+                      title: Text('4️⃣  ${t.contactClassicFormTitle}'),
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Form(
+                            key: _formKey,
+                            child: Column(
+                              children: [
+                                TextFormField(
+                                  controller: _nameController,
+                                  decoration: InputDecoration(
+                                    labelText: t.contactFormName,
+                                    prefixIcon: const Icon(Icons.person),
+                                  ),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return t.contactErrorNameRequired;
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                const SizedBox(height: 20),
+                                TextFormField(
+                                  controller: _emailController,
+                                  decoration: InputDecoration(
+                                    labelText: t.contactFormEmail,
+                                    prefixIcon: const Icon(Icons.email),
+                                  ),
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return t.contactErrorEmailRequired;
+                                    }
+                                    if (!value.contains('@')) {
+                                      return t.contactErrorEmailInvalid;
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                const SizedBox(height: 20),
+                                TextFormField(
+                                  controller: _messageController,
+                                  decoration: InputDecoration(
+                                    labelText: t.contactFormMessage,
+                                    prefixIcon: const Icon(Icons.message),
+                                  ),
+                                  maxLines: 5,
+                                  validator: (value) {
+                                    if (value == null || value.isEmpty) {
+                                      return t.contactErrorMessageRequired;
+                                    }
+                                    return null;
+                                  },
+                                ),
+                                const SizedBox(height: 20),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    if (_formKey.currentState!.validate()) {
+                                      context
+                                          .read<PortfolioLogic>()
+                                          .launchWhatsApp(
+                                            name: _nameController.text,
+                                            email: _emailController.text,
+                                            message: _messageController.text,
+                                          );
+                                      _clearForm();
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                          content: Text(t.contactSentOk),
+                                        ),
                                       );
-                                  _clearForm();
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(t.contactSentOk),
-                                    ),
-                                  );
-                                }
-                              },
-                              style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 30, vertical: 15),
-                                textStyle: const TextStyle(fontSize: 18),
-                              ),
-                              child: Text(t.contactSend),
+                                    }
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 30, vertical: 15),
+                                    textStyle: const TextStyle(fontSize: 18),
+                                  ),
+                                  child: Text(t.contactSend),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 30),

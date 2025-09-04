@@ -111,5 +111,7 @@
   "videoErrorLoading": "Error loading video",
   "languageToggleLabel": "Language",
   "platformAndroid": "Android",
-  "platformIos": "iOS"
+  "platformIos": "iOS",
+  "contactSlaLanguages": "Reply within 24h ⏱️ | Spanish & English 🌍",
+  "contactClassicFormTitle": "Classic form"
 }
