@@ -1,6 +1,7 @@
 class ImageAssets {
   static const String profile = 'assets/images/profile.webp';
   static const String commingSoon = 'assets/images/commingSoon.webp';
+  // Portfolio (under projects/portfolio)
   static const String inicio = 'assets/images/projects/portfolio/inicio.webp';
   static const String aboutMe1 =
       'assets/images/projects/portfolio/about_me1.webp';
@@ -10,6 +11,8 @@ class ImageAssets {
       'assets/images/projects/portfolio/services1.webp';
   static const String services2 =
       'assets/images/projects/portfolio/services2.webp';
+
+  // Pomodoro (under projects/pomodoro)
   static const String pomodoroBreak =
       'assets/images/projects/pomodoro/break.webp';
   static const String pomodoroData =
@@ -20,6 +23,36 @@ class ImageAssets {
       'assets/images/projects/pomodoro/init.webp';
   static const String pomodoroSession =
       'assets/images/projects/pomodoro/session.webp';
+
+  // Yellow Flowers (under projects/yellow_flowers)
+  static const String phase1 =
+      'assets/images/projects/yellow_flowers/phase1.webp';
+  static const String phase2 =
+      'assets/images/projects/yellow_flowers/phase2.webp';
+  static const String phase3 =
+      'assets/images/projects/yellow_flowers/phase20.webp';
+  static const String phase4 =
+      'assets/images/projects/yellow_flowers/idea.webp';
+  static const String newVersion =
+      'assets/images/projects/yellow_flowers/inicio.webp';
+  static const String message =
+      'assets/images/projects/yellow_flowers/message.webp';
+  static const String name = 'assets/images/projects/yellow_flowers/name.webp';
+  static const String onboarding =
+      'assets/images/projects/yellow_flowers/onboarding.webp';
+  static const String share =
+      'assets/images/projects/yellow_flowers/share.webp';
+
+  // Finanzas Personales (under projects/finanzas_personales)
+
+  // EduPlay (under projects/eduplay)
+  static const String menu = 'assets/images/projects/eduplay/menu.webp';
+
+  // Parroquia (under projects/parroquia)
+  static const String parroquiaLogin =
+      'assets/images/projects/parroquia/login_parroquia.webp';
+
+  // Certificates (under certificate/)
   static const String english = 'assets/certificate/English.webp';
   static const String flutter = 'assets/certificate/flutter.webp';
   static const String frontend = 'assets/certificate/frontend.webp';
@@ -28,6 +61,7 @@ class ImageAssets {
   static const String blandas = 'assets/certificate/blandas.webp';
   static const String marcaPersonal = 'assets/certificate/marcaPersonal.webp';
   static const String productividad = 'assets/certificate/productividad.webp';
+
   // Tropigas (under projects/tropigas)
   static const String loginTropi = 'assets/images/projects/tropigas/login.webp';
   static const String dashboardTropi =
