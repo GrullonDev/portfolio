@@ -78,8 +78,11 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.pomodoroHistory,
                       ImageAssets.pomodoroBreak,
                     ],
+                    betaEnabled: true,
                     platform: PhonePlatform.android,
                     github: 'https://github.com/GrullonDev/pomodoro',
+                    googlePlay:
+                        'https://play.google.com/store/apps/details?id=com.grullondev.pomodoro&pcampaignid=web_share',
                   ),
 
                   // 2) Finanzas Personales
@@ -91,6 +94,9 @@ class ProjectsPage extends StatelessWidget {
                       'Firebase',
                       'REST APIs',
                     ],
+                    betaEnabled: true,
+                    platform: PhonePlatform.ios,
+                    github: 'https://github.com/GrullonDev/PersonalFinance.git',
                     images: [
                       ImageAssets.login,
                       ImageAssets.home,
@@ -99,8 +105,6 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.reports,
                       ImageAssets.profileFinance
                     ],
-                    betaEnabled: true,
-                    platform: PhonePlatform.ios,
                   ),
 
                   const SizedBox(height: 24),
@@ -154,6 +158,7 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.services2,
                     ],
                     github: 'https://github.com/GrullonDev/portfolio',
+                    demo: 'https://jorgegrullondev.com/',
                   ),
 
                   const SizedBox(height: 12),
@@ -214,6 +219,7 @@ class ProjectsPage extends StatelessWidget {
                     ],
                     platform: PhonePlatform.ios,
                     github: 'https://github.com/GrullonDev/YellowFlowers',
+                    betaEnabled: true,
                   ),
 
                   const SizedBox(height: 12),

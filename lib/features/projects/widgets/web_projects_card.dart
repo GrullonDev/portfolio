@@ -4,10 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
-import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
-import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class WebProjectsCard extends StatefulWidget {
   const WebProjectsCard({
@@ -145,12 +144,12 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                     icon: const Icon(Icons.link),
                     label: Text(t.btnDemo),
                   ),
-                ElevatedButton.icon(
+                /* ElevatedButton.icon(
                   onPressed: () =>
                       showBetaRequestSheet(context, projectName: widget.title),
                   icon: const Icon(Icons.bug_report_outlined),
                   label: Text(t.btnRequestBeta),
-                ),
+                ), */
               ],
             ),
             const SizedBox(height: 12),
