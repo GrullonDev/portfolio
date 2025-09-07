@@ -44,6 +44,17 @@ class ImageAssets {
       'assets/images/projects/yellow_flowers/share.webp';
 
   // Finanzas Personales (under projects/finanzas_personales)
+  static const String login =
+      'assets/images/projects/personal_finance/login.webp';
+  static const String home =
+      'assets/images/projects/personal_finance/home.webp';
+  static const String homeData =
+      'assets/images/projects/personal_finance/home_data.webp';
+  static const String add = 'assets/images/projects/personal_finance/add.webp';
+  static const String reports =
+      'assets/images/projects/personal_finance/reports.webp';
+  static const String profileFinance =
+      'assets/images/projects/personal_finance/profile.webp';
 
   // EduPlay (under projects/eduplay)
   static const String menu = 'assets/images/projects/eduplay/menu_web.webp';

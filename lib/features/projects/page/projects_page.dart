@@ -31,7 +31,10 @@ class ProjectsPage extends StatelessWidget {
               maxWidth: Responsive.isMobile(context) ? 400 : 950,
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 30,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -45,13 +48,18 @@ class ProjectsPage extends StatelessWidget {
                       fontFamily: 'Montserrat',
                     ),
                   ),
+
                   const SizedBox(height: 30),
+
                   // Categoría: Apps móviles
                   Text(
                     t.projectsMobile,
                     style: const TextStyle(
-                        fontSize: 24, fontWeight: FontWeight.bold),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+
                   const SizedBox(height: 12),
 
                   // 1) Pomodoro App
@@ -84,11 +92,12 @@ class ProjectsPage extends StatelessWidget {
                       'REST APIs',
                     ],
                     images: [
-                      ImageAssets.pomodoroInit,
-                      ImageAssets.pomodoroData,
-                      ImageAssets.pomodoroSession,
-                      ImageAssets.pomodoroBreak,
-                      ImageAssets.pomodoroHistory,
+                      ImageAssets.login,
+                      ImageAssets.home,
+                      ImageAssets.homeData,
+                      ImageAssets.add,
+                      ImageAssets.reports,
+                      ImageAssets.profileFinance
                     ],
                     betaEnabled: true,
                     platform: PhonePlatform.ios,
@@ -119,8 +128,11 @@ class ProjectsPage extends StatelessWidget {
                   Text(
                     t.projectsWeb,
                     style: const TextStyle(
-                        fontSize: 24, fontWeight: FontWeight.bold),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+
                   const SizedBox(height: 12),
 
                   // 1) Portafolio App
@@ -175,12 +187,20 @@ class ProjectsPage extends StatelessWidget {
                   Text(
                     t.projectsPersonal,
                     style: const TextStyle(
-                        fontSize: 24, fontWeight: FontWeight.bold),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
+
                   const SizedBox(height: 12),
+
                   MobileProjectCard(
                     title: t.projectYellowFlowersName,
                     description: t.projectYellowFlowersDesc,
+                    technologies: [
+                      'Flutter',
+                      'Animations',
+                    ],
                     images: [
                       ImageAssets.phase1,
                       ImageAssets.phase2,
@@ -193,13 +213,11 @@ class ProjectsPage extends StatelessWidget {
                       ImageAssets.share,
                     ],
                     platform: PhonePlatform.ios,
-                    technologies: [
-                      'Flutter',
-                      'Animations',
-                    ],
                     github: 'https://github.com/GrullonDev/YellowFlowers',
                   ),
+
                   const SizedBox(height: 12),
+
                   WebProjectsCard(
                     title: t.eduPlayTitle,
                     description: t.eduPlayDesc,
