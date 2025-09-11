@@ -107,23 +107,33 @@ class ProjectsPage extends StatelessWidget {
                     ],
                   ),
 
-                  const SizedBox(height: 24),
+                  // const SizedBox(height: 24),
 
-                  // 4) App interna Tropigas (demo privado)
+                  // 4) Fitness App
                   MobileProjectCard(
-                    title: t.projectTropigasName,
-                    description: t.projectTropigasDesc,
+                    title: t.projectFitmotivName,
+                    description: t.projectFitmotivDesc,
+                    platform: PhonePlatform.android,
+                    github: 'https://github.com/GrullonDev/FitMotiv',
+                    betaEnabled: false,
                     technologies: [
                       'Flutter',
-                      'REST APIs',
+                      'UI/UX Design',
+                      'Animations',
                     ],
                     images: [
-                      ImageAssets.loginTropi,
-                      ImageAssets.dashboardTropi,
-                      ImageAssets.scheduleTropi,
+                      ImageAssets.onboardingFitmotiv,
+                      ImageAssets.loginFitmotiv,
+                      ImageAssets.createAccountFitmotiv,
+                      ImageAssets.forgotPasswordFitmotiv,
+                      ImageAssets.homeFitmotiv,
+                      ImageAssets.plansFitmotiv,
+                      ImageAssets.routinesFitmotiv,
+                      ImageAssets.progressFitmotiv,
+                      ImageAssets.communityFitmotiv,
+                      ImageAssets.profileFitmotiv,
+                      ImageAssets.settingsFitmotiv,
                     ],
-                    platform: PhonePlatform.android,
-                    betaEnabled: false,
                   ),
 
                   const SizedBox(height: 24),

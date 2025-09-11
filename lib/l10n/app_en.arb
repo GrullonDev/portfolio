@@ -119,5 +119,8 @@
   "projectParroquiaDesc": "I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.",
 
   "eduPlayTitle": "Educational Management System | EduPlay",
-  "eduPlayDesc": "I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management."
+  "eduPlayDesc": "I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.",
+
+  "projectFitmotivName": "Fitmotiv App",
+  "projectFitmotivDesc": "Fitness app for personalized routines and progress tracking."
 }

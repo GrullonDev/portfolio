@@ -745,6 +745,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.'**
   String get eduPlayDesc;
+
+  /// No description provided for @projectFitmotivName.
+  ///
+  /// In en, this message translates to:
+  /// **'Fitmotiv App'**
+  String get projectFitmotivName;
+
+  /// No description provided for @projectFitmotivDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Fitness app for personalized routines and progress tracking.'**
+  String get projectFitmotivDesc;
 }
 
 class _AppLocalizationsDelegate

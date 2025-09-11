@@ -356,4 +356,11 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get eduPlayDesc =>
       'Plataforma web para educación interactiva con juegos y quizzes. Beta privada, solicita acceso.';
+
+  @override
+  String get projectFitmotivName => 'Fitmotiv App';
+
+  @override
+  String get projectFitmotivDesc =>
+      'Aplicación de fitness para rutinas personalizadas y seguimiento del progreso.';
 }
