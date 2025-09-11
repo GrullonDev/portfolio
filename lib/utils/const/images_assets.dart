@@ -79,4 +79,28 @@ class ImageAssets {
       'assets/images/projects/tropigas/dashboard.webp';
   static const String scheduleTropi =
       'assets/images/projects/tropigas/agendar.webp';
+
+  // FitMotiv (under projects/fitmotiv)
+  static const String onboardingFitmotiv =
+    'assets/images/projects/fitmotiv/onboarding.png';
+  static const String loginFitmotiv =
+    'assets/images/projects/fitmotiv/login.png';
+  static const String createAccountFitmotiv =
+    'assets/images/projects/fitmotiv/create_account.png';
+  static const String forgotPasswordFitmotiv =
+    'assets/images/projects/fitmotiv/forgot_password.png';
+  static const String homeFitmotiv =
+    'assets/images/projects/fitmotiv/home.png';
+  static const String plansFitmotiv =
+    'assets/images/projects/fitmotiv/plans.png';
+  static const String routinesFitmotiv =
+    'assets/images/projects/fitmotiv/routines.png';
+  static const String progressFitmotiv =
+    'assets/images/projects/fitmotiv/progress.png';
+  static const String communityFitmotiv =
+    'assets/images/projects/fitmotiv/community.png';
+  static const String profileFitmotiv =
+    'assets/images/projects/fitmotiv/profile.png';
+  static const String settingsFitmotiv =
+    'assets/images/projects/fitmotiv/settings.png';
 }

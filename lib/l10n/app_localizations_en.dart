@@ -352,4 +352,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get eduPlayDesc =>
       'I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.';
+
+  @override
+  String get projectFitmotivName => 'Fitmotiv App';
+
+  @override
+  String get projectFitmotivDesc =>
+      'Fitness app for personalized routines and progress tracking.';
 }
