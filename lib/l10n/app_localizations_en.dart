@@ -358,5 +358,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get projectFitmotivDesc =>
-      'Fitness app for personalized routines and progress tracking.';
+      'Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.';
+
+  @override
+  String get projectLunaHubName => 'LUNA HUB';
+
+  @override
+  String get projectLunaHubDesc =>
+      'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.';
 }

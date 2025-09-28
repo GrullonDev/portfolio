@@ -122,5 +122,8 @@
   "eduPlayDesc": "I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.",
 
   "projectFitmotivName": "Fitmotiv App",
-  "projectFitmotivDesc": "Fitness app for personalized routines and progress tracking."
+  "projectFitmotivDesc": "Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.",
+  
+  "projectLunaHubName": "LUNA HUB",
+  "projectLunaHubDesc": "E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines."
 }

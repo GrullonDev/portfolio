@@ -75,6 +75,75 @@ Requisitos: Flutter SDK 3.35.2, Dart 3.9.0.
 - Build Web de producción:
 	- `flutter build web --release`
 
+## ⌨️ Comandos frecuentes (localización, assets, limpieza y compilación)
+
+Aquí tienes una lista de comandos útiles y el orden recomendado al trabajar en este proyecto. Están en español y son copy-paste friendly.
+
+- Regenerar localizaciones (después de editar o agregar archivos ARB en `lib/l10n/`):
+
+```bash
+# Genera las clases de localización basadas en los ARB (usa la configuración de l10n.yaml)
+flutter gen-l10n
+
+# Alternativamente, un build también disparará la generación si es necesario:
+flutter pub get
+flutter build apk   # o flutter build web --release
+```
+
+- Pasos recomendados al añadir o modificar ARB (`lib/l10n/*.arb`):
+
+1. Asegúrate de que el ARB esté en formato JSON válido (comas finales, comillas, etc.).
+2. Ejecuta `flutter gen-l10n` para crear/actualizar `AppLocalizations` en `lib/l10n/`.
+3. Si aplicas cambios grandes, ejecutar `flutter clean` seguido de `flutter pub get` antes de compilar puede evitar artefactos.
+
+- Actualizar assets (imágenes, videos, fonts) después de agregar o cambiar archivos en `assets/` o `web/`:
+
+```bash
+# Si agregaste o cambiaste rutas en pubspec.yaml o añadiste archivos bajo assets/
+flutter pub get
+flutter clean
+# Luego compilar o correr para que los cambios se reflejen
+flutter run -d chrome
+```
+
+- Limpieza completa (útil cuando aparece comportamiento extraño tras muchos cambios o cambios de assets/localizations):
+
+```bash
+flutter clean
+flutter pub get
+```
+
+- Ejecutar la app en modo debug en Chrome (útil para inspeccionar errores del runtime y logs del DebugService):
+
+```bash
+flutter run -d chrome --debug
+```
+
+- Ejecutar web en release (producción) para verificar el build final y archivos en `build/web`:
+
+```bash
+flutter build web --release
+```
+
+- Comandos rápidos de diagnóstico:
+
+```bash
+# Analizar el código estáticamente
+flutter analyze
+
+# Ver versiones del SDK y herramientas
+flutter --version
+
+# Mostrar paquetes desactualizados (por si necesitas actualizar dependencias)
+flutter pub outdated
+```
+
+- Sugerencias prácticas:
+	- Siempre valida la sintaxis JSON de los ARB (por ejemplo con un linter JSON o el propio editor) antes de agregar claves nuevas.
+	- Si ves errores como "Unsupported operation: Cannot send Null" al ejecutar en web, intenta un `flutter clean` + `flutter pub get` y vuelve a correr; si persiste, revisa en consola si hay assets 404 o excepciones al construir widgets que puedan disparar spam del DebugService.
+	- Para cambios en imágenes sólo (sin tocar pubspec.yaml), normalmente basta con recargar la pestaña del navegador o reiniciar `flutter run`.
+
+
 ## 📤 Deploy
 
 - Hosting: Firebase Hosting.
