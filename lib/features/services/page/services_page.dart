@@ -5,12 +5,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portafolio_app/features/services/widgets/service_category_card.dart';
 import 'package:portafolio_app/features/services/widgets/service_project_card.dart';
 import 'package:portafolio_app/features/services/widgets/tech.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
-import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
@@ -141,9 +141,19 @@ class ServicesPage extends StatelessWidget {
                     alignment: WrapAlignment.center,
                     children: [
                       ServiceProjectCard(
-                        image: ImageAssets.commingSoon,
-                        title: t.comingSoon,
-                        description: t.featuredProjectsComingSoonDesc,
+                        image: ImageAssets.pomodoroInit,
+                        title: t.projectPomodoroName,
+                        description: 'Pomodoro Timer App',
+                      ),
+                      ServiceProjectCard(
+                        image: ImageAssets.inicio,
+                        title: t.appTitle,
+                        description: 'Portafolio App',
+                      ),
+                      ServiceProjectCard(
+                        image: ImageAssets.homeInitLunahub,
+                        title: t.projectLunaHubName,
+                        description: 'LUNA HUB',
                       ),
                     ],
                   ),
@@ -153,7 +163,9 @@ class ServicesPage extends StatelessWidget {
                   Text(
                     t.ctaReady,
                     style: const TextStyle(
-                        fontSize: 24, fontWeight: FontWeight.bold),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 10),
                   Text(

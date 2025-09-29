@@ -36,6 +36,7 @@ pubspec.lock
 *.freezed.dart
 *.mocks.dart
 .fvmrc
+pubspec.lock
 
 # Web related
 web/firebase-config.js
@@ -107,3 +108,11 @@ coverage/
 
 # FVM Version Cache
 .fvm/
+
+# --- IGNORE ---
+DEPLOY_INSTRUCTIONS.md
+scripts/deploy.sh
+scripts/clear_cache.sh
+deploy.sh
+clear_cache.sh
+# --- END IGNORE ---

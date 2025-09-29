@@ -82,25 +82,43 @@ class ImageAssets {
 
   // FitMotiv (under projects/fitmotiv)
   static const String onboardingFitmotiv =
-    'assets/images/projects/fitmotiv/onboarding.png';
+      'assets/images/projects/fitmotiv/onboarding.png';
   static const String loginFitmotiv =
-    'assets/images/projects/fitmotiv/login.png';
+      'assets/images/projects/fitmotiv/login.png';
   static const String createAccountFitmotiv =
-    'assets/images/projects/fitmotiv/create_account.png';
+      'assets/images/projects/fitmotiv/create_account.png';
   static const String forgotPasswordFitmotiv =
-    'assets/images/projects/fitmotiv/forgot_password.png';
-  static const String homeFitmotiv =
-    'assets/images/projects/fitmotiv/home.png';
+      'assets/images/projects/fitmotiv/forgot_password.png';
+  static const String homeFitmotiv = 'assets/images/projects/fitmotiv/home.png';
   static const String plansFitmotiv =
-    'assets/images/projects/fitmotiv/plans.png';
+      'assets/images/projects/fitmotiv/plans.png';
   static const String routinesFitmotiv =
-    'assets/images/projects/fitmotiv/routines.png';
+      'assets/images/projects/fitmotiv/routines.png';
   static const String progressFitmotiv =
-    'assets/images/projects/fitmotiv/progress.png';
+      'assets/images/projects/fitmotiv/progress.png';
   static const String communityFitmotiv =
-    'assets/images/projects/fitmotiv/community.png';
+      'assets/images/projects/fitmotiv/community.png';
   static const String profileFitmotiv =
-    'assets/images/projects/fitmotiv/profile.png';
+      'assets/images/projects/fitmotiv/profile.png';
   static const String settingsFitmotiv =
-    'assets/images/projects/fitmotiv/settings.png';
+      'assets/images/projects/fitmotiv/settings.png';
+
+  // Luna Hub (under projects/luna_hub)
+  static const String homeInitLunahub =
+      'assets/images/projects/lunahub/home1.png';
+  static const String homeFooterLunahub =
+      'assets/images/projects/lunahub/home2.png';
+  static const String homeFiltersLunahub =
+      'assets/images/projects/lunahub/home_filtros.png';
+  static const String cartLunahub =
+      'assets/images/projects/lunahub/carrito.png';
+  static const String profileLunahub =
+      'assets/images/projects/lunahub/perfil1.png';
+  static const String profileFinalLunahub =
+      'assets/images/projects/lunahub/perfil2.png';
+  static const String babyLunahub = 'assets/images/projects/lunahub/baby.png';
+  static const String streamingLunahub =
+      'assets/images/projects/lunahub/streaming.png';
+  static const String paymentLunahub =
+      'assets/images/projects/lunahub/payment.png';
 }

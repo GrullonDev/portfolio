@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -22,56 +20,8 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  final PageController _pageController = PageController(viewportFraction: 0.85);
-  Timer? _timer;
-  int _currentPage = 0;
-  bool _isReversed = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _startAutoScroll();
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel(); // Cancelar el Timer cuando el widget se destruya
-    _pageController.dispose();
-    super.dispose();
-  }
-
-  // Método para iniciar el desplazamiento automático
-  void _startAutoScroll() {
-    _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
-      if (!_isReversed) {
-        // Desplazamiento ascendente
-        if (_currentPage <
-            context.read<PortfolioLogic>().certificates.length - 1) {
-          _currentPage++;
-        } else {
-          // Cambiar a dirección descendente
-          _isReversed = true;
-          _currentPage--;
-        }
-      } else {
-        // Desplazamiento descendente
-        if (_currentPage > 0) {
-          _currentPage--;
-        } else {
-          // Cambiar a dirección ascendente
-          _isReversed = false;
-          _currentPage++;
-        }
-      }
-
-      // Desplazar a la página correspondiente
-      _pageController.animateToPage(
-        _currentPage,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      );
-    });
-  }
+  // AboutPage no longer manages the PageController or autoplay. Those
+  // responsibilities are delegated to CertificationCarousel.
 
   @override
   Widget build(BuildContext context) {
@@ -140,9 +90,30 @@ class _AboutPageState extends State<AboutPage> {
 
                       const SizedBox(height: 30),
 
-                      // Carrusel de imágenes animado
+                      // Carrusel de imágenes animado (ahora el widget maneja su propio PageController)
                       CertificationCarousel(
-                          pageController: _pageController, onlyRelevant: true),
+                        onlyRelevant: true,
+                        autoplay: true,
+                        autoplayDelay: const Duration(seconds: 3),
+                        animationDuration: const Duration(milliseconds: 500),
+                        viewportFraction: 0.85,
+                        placeholder: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[100],
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          alignment: Alignment.center,
+                          child: const Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.broken_image,
+                                  size: 48, color: Colors.grey),
+                              SizedBox(height: 8),
+                              Text('Imagen no disponible')
+                            ],
+                          ),
+                        ),
+                      ),
 
                       const SizedBox(height: 8),
                       TextButton.icon(

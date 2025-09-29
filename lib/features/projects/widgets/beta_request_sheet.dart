@@ -29,7 +29,8 @@ Future<void> showBetaRequestSheet(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(t.betaRequestTitle, style: Theme.of(ctx).textTheme.titleLarge),
+              Text(t.betaRequestTitle,
+                  style: Theme.of(ctx).textTheme.titleLarge),
               const SizedBox(height: 8),
               Text(t.betaRequestSubtitle,
                   style: Theme.of(ctx).textTheme.bodyMedium),
@@ -50,7 +51,8 @@ Future<void> showBetaRequestSheet(
                   const SizedBox(width: 8),
                   SegmentedButton<String>(
                     segments: [
-                      ButtonSegment(value: 'Android', label: Text(t.platformAndroid)),
+                      ButtonSegment(
+                          value: 'Android', label: Text(t.platformAndroid)),
                       ButtonSegment(value: 'iOS', label: Text(t.platformIos)),
                     ],
                     selected: {platform},

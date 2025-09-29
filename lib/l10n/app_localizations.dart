@@ -755,8 +755,20 @@ abstract class AppLocalizations {
   /// No description provided for @projectFitmotivDesc.
   ///
   /// In en, this message translates to:
-  /// **'Fitness app for personalized routines and progress tracking.'**
+  /// **'Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.'**
   String get projectFitmotivDesc;
+
+  /// No description provided for @projectLunaHubName.
+  ///
+  /// In en, this message translates to:
+  /// **'LUNA HUB'**
+  String get projectLunaHubName;
+
+  /// No description provided for @projectLunaHubDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.'**
+  String get projectLunaHubDesc;
 }
 
 class _AppLocalizationsDelegate

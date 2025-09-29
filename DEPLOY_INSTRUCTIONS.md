@@ -98,3 +98,20 @@ Si tienes problemas con el deploy, verifica:
 2. Que Firebase CLI esté instalado: `firebase --version`
 3. Que estés en el directorio correcto del proyecto
 4. Los logs de error en la consola 
+
+## 🧠 Sobre la limpieza de caché para usuarios finales
+
+Importante: no es posible forzar que todos los navegadores de los usuarios borren su caché desde el servidor. Los pasos automáticos incluidos en este repositorio ayudan en tu máquina y en entornos de desarrollo, pero los usuarios ya existentes pueden seguir viendo contenido en caché hasta que su navegador vuelva a solicitar los archivos.
+
+Recomendaciones para asegurar que los usuarios vean actualizaciones inmediatamente:
+
+- Asegurar que `index.html` y `flutter_service_worker.js` se sirvan con cabeceras que deshabiliten el cache (ej.: `Cache-Control: no-cache, no-store`). Ya se añadió una configuración de `headers` en `firebase.json` para esto.
+- Servir assets estáticos (imágenes, JS/CSS con hash en el nombre) con `Cache-Control: public, max-age=31536000, immutable` para que sean cacheables y utilizar fingerprinting (hash en el filename) para invalidarlos cuando cambian.
+- Incrementar la versión del service worker o cambiar su contenido para que se registre una nueva versión en los clientes.
+- Si usas un CDN (Cloudflare, Fastly, etc.), invalidar las rutas importantes tras el deploy.
+- En casos críticos, comunicar a los usuarios que hagan hard-refresh o borrar manualmente almacenamiento (DevTools → Application → Clear storage / Unregister service worker).
+
+Si quieres, puedo abrir un PR adicional que:
+
+1. Añada un paso opcional de invalidación de CDN/Firebase (si tienes credenciales o una API Key segura para ello).
+2. Automatice la versión del service worker durante el build para forzar actualizaciones de cliente.

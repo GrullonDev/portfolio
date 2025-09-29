@@ -196,6 +196,37 @@ class ProjectsPage extends StatelessWidget {
                         'https://github.com/GrullonDev/AngularIglesiaConcepcion',
                   ),
 
+                  const SizedBox(height: 12),
+
+                  // 3) Tienda Virtual
+                  WebProjectsCard(
+                    title: t.projectLunaHubName,
+                    description: t.projectLunaHubDesc,
+                    technologies: [
+                      'Flutter',
+                      'Node.js',
+                      'Express',
+                      'MongoDB',
+                      'REST API',
+                      'Firebase',
+                      'Stripe',
+                      'GitHub Actions',
+                      'CI/CD',
+                      'Docker',
+                    ],
+                    images: [
+                      ImageAssets.homeInitLunahub,
+                      ImageAssets.homeFooterLunahub,
+                      ImageAssets.homeFiltersLunahub,
+                      ImageAssets.cartLunahub,
+                      ImageAssets.profileLunahub,
+                      ImageAssets.profileFinalLunahub,
+                      ImageAssets.babyLunahub,
+                      ImageAssets.streamingLunahub,
+                      ImageAssets.paymentLunahub,
+                    ],
+                  ),
+
                   const SizedBox(height: 24),
 
                   // Categoría: Proyectos personales / experimentales
