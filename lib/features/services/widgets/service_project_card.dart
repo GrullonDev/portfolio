@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ServiceProjectCard extends StatelessWidget {
-  final String image;
-  final String title;
-  final String description;
-
   const ServiceProjectCard({
     super.key,
     required this.image,
     required this.title,
     required this.description,
   });
+
+  final String image;
+  final String title;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
