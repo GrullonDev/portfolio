@@ -84,6 +84,24 @@ if firebase deploy; then
     echo -e "${GREEN}  🌐 https://jorgegrullondev.com${NC}"
     echo ""
     print_warning "Nota: Es posible que necesites limpiar la caché del navegador (Ctrl+Shift+R) para ver los cambios inmediatamente."
+
+    # Intentar ejecutar el script local clear_cache.sh para limpiar caché del navegador
+    # Solo se ejecutará si el script existe y si la sesión es interactiva (evita correr en CI/CD)
+    CLEAR_CACHE_SCRIPT="$(pwd)/clear_cache.sh"
+    if [ -f "$CLEAR_CACHE_SCRIPT" ]; then
+        # Detectar si estamos en una sesión interactiva (tty)
+        if [ -t 1 ]; then
+            print_status "Ejecutando script local de limpieza de caché: $CLEAR_CACHE_SCRIPT"
+            # Asegurarse de que el script sea ejecutable
+            chmod +x "$CLEAR_CACHE_SCRIPT" 2>/dev/null || true
+            # Ejecutar el script en una subshell para no interrumpir el deploy script
+            ("$CLEAR_CACHE_SCRIPT") || print_warning "El script clear_cache.sh terminó con un error, pero el deploy está completado."
+        else
+            print_status "Sesión no interactiva: omitido ejecutar clear_cache.sh. Si estás en tu máquina local, ejecuta: $CLEAR_CACHE_SCRIPT"
+        fi
+    else
+        print_status "No se encontró $CLEAR_CACHE_SCRIPT. Saltando limpieza local de caché."
+    fi
 else
     print_error "Error en el deploy de Firebase"
     exit 1
