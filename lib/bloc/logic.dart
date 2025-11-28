@@ -63,6 +63,51 @@ class PortfolioLogic extends ChangeNotifier {
     },
   ];
 
+  // Experience Data
+  List<Map<String, dynamic>> get experience => [
+        {
+          'role': 'Senior Flutter Developer',
+          'company': 'Tropigas de Guatemala',
+          'period': '2025 - Presente',
+          'description':
+              'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales. Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.',
+        },
+        {
+          'role': 'Flutter Developer',
+          'company': 'Freelance',
+          'period': '2024 - Presente',
+          'description':
+              'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales. Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.',
+        },
+        {
+          'role': 'Mobile Flutter Developer Jr',
+          'company': 'Agropecuaria Popoyán',
+          'period': '2023 - 2025',
+          'description':
+              'Lideré el desarrollo de la app principal de la empresa, migrando de nativo a Flutter. Reduje el tiempo de desarrollo en un 40% y mejoré la estabilidad en un 99.9%.',
+        },
+      ];
+
+  // Skills Data
+  Map<String, List<String>> get skills => {
+        'Mobile': ['Flutter', 'Dart', 'iOS', 'Android', 'State Management', ],
+        'Backend': [
+          'Node.js',
+          'NestJS',
+          'Firebase',
+          'REST APIs',
+          'GraphQL',
+          'Firebase',
+          'Firestore',
+          'Cloud Functions',
+          'Stripe',
+          'PayPal',
+          'Mercado Pago',
+          'Python',
+        ],
+        'Tools': ['Git', 'Figma', 'CI/CD', 'Jira', 'Agile/Scrum'],
+      };
+
   // URL launcher method
   Future<void> launchURL(String url) async {
     final Uri uri = Uri.parse(url);
