@@ -86,9 +86,9 @@
   "ctaInvite": "Contáctame para discutir tus ideas y hacerlas realidad.",
 
   "aboutTrajectoryTitle": "🎓 Trayectoria",
-  "aboutImpact1": "3+ años desarrollando software.",
+  "aboutImpact1": "6+ años desarrollando software.",
   "aboutImpact2": "Experto en Flutter, Firebase, APIs REST/GraphQL.",
-  "aboutImpact3": "Experiencia en backend con Node.js y NestJS.",
+  "aboutImpact3": "Experiencia en backend con Node.js, NestJS, Python.",
   "aboutCertificationsTitle": "🏆 Certificaciones",
   "aboutMoreCertsLinkedIn": "Ver más certificaciones en LinkedIn",
   "aboutConnectTitle": "🌎 Conéctate conmigo",
@@ -124,5 +124,44 @@
   "projectFitmotivName": "Fitmotiv App",
   "projectFitmotivDesc": "Aplicación de fitness con planes de entrenamiento personalizados, seguimiento de progreso y funciones sociales. Incluye onboarding, rutinas, planes y métricas para mantener a los usuarios motivados.",
   "projectLunaHubName": "LUNA HUB",
-  "projectLunaHubDesc": "Plataforma de e‑commerce para productos de bebé y artículos curados. Implementa catálogos, carrito de compras, perfiles de usuario y pagos seguros. Proyecto colaborativo que demuestra integración de frontend en Flutter con backends en Node.js y pipelines de CI/CD."
+  "projectLunaHubDesc": "Plataforma de e‑commerce para productos de bebé y artículos curados. Implementa catálogos, carrito de compras, perfiles de usuario y pagos seguros. Proyecto colaborativo que demuestra integración de frontend en Flutter con backends en Node.js y pipelines de CI/CD.",
+
+  "expTropigasRole": "Analista Programador Senior",
+  "expTropigasCompany": "Tropigas de Guatemala",
+  "expTropigasPeriod": "Jun 2025 - Presente",
+  "expTropigasDesc": "• Desarrollo y evolución de aplicaciones móviles corporativas utilizadas en varios países, orientadas a operación y ventas.\n• Implementación de funcionalidades móviles para monitoreo de ventas, planeación de rutas e inventarios en campo, integrando servicios backend.\n• Automatización de procesos de supervisión y control, con validaciones en tiempo real para mejorar la calidad de la información capturada.\n• Participación en el diseño técnico y buenas prácticas de código para asegurar apps mantenibles y escalables en el tiempo.",
+
+  "expFreelanceRole": "Flutter Developer",
+  "expFreelanceCompany": "Freelance",
+  "expFreelancePeriod": "2024 - Presente",
+  "expFreelanceDesc": "• Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales.\n• Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.\n• Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js.",
+
+  "expPopoyanRole": "Desarrollador Mobile (Jr.)",
+  "expPopoyanCompany": "Agropecuaria Popoyán",
+  "expPopoyanPeriod": "Feb 2023 - 2025",
+  "expPopoyanDesc": "• Desarrollo de apps móviles y web utilizando Flutter, NestJS y GraphQL, orientadas a productividad en campo y gestión de datos.\n• Integración de Firebase (Auth, Firestore) para autenticación y persistencia de información en tiempo real.\n• Participación en el proyecto Agriconecta (USAID/PROINNOVA), desarrollando funcionalidades centradas en la conectividad, productividad y trazabilidad del sector agrícola mediante soluciones móviles.",
+
+  "stackCatMobileMulti": "Mobile Multiplataforma",
+  "stackItemFlutter": "Flutter (Dart) – desarrollo de apps productivas, consumo de APIs REST/GraphQL, manejo de estado, navegación, theming.",
+  "stackItemReactNative": "React Native – desarrollo de vistas, componentes reutilizables, integración con APIs y servicios backend.",
+
+  "stackCatMobileNative": "Mobile Nativo",
+  "stackItemAndroid": "Android: Kotlin, Jetpack Compose, Android SDK, consumo de servicios REST/GraphQL.",
+  "stackItemIOS": "iOS: SwiftUI, patrones de diseño básicos y consumo de servicios remotos.",
+
+  "stackCatBackend": "Backend / APIs",
+  "stackItemNest": "NestJS, GraphQL, diseño e implementación de APIs para consumo móvil.",
+  "stackItemPython": "Python – Desarrollo de scripts, automatización y backend básico.",
+
+  "stackCatCloud": "Cloud / BaaS & Low-Code",
+  "stackItemFirebase": "Firebase (Auth, Firestore), notificaciones.",
+  "stackItemLowCode": "WordPress, Microsoft Power Apps para soluciones de soporte y backoffice.",
+
+  "stackCatBestPractices": "Buenas prácticas",
+  "stackItemCleanCode": "Clean Code, principios SOLID.",
+  "stackItemTesting": "Pruebas unitarias (Unit Testing).",
+  "stackItemGit": "Versionamiento con Git y trabajo colaborativo.",
+
+  "expSectionTitle": "Experiencia Profesional",
+  "skillsSectionTitle": "Stack Técnico (Mobile & Backend)"
 }

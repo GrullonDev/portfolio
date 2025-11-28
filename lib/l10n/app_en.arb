@@ -86,9 +86,9 @@
   "ctaInvite": "Contact me to discuss your idea and make it real.",
 
   "aboutTrajectoryTitle": "🎓 Journey",
-  "aboutImpact1": "3+ years building software.",
+  "aboutImpact1": "6+ years building software.",
   "aboutImpact2": "Expert in Flutter, Firebase, REST/GraphQL APIs.",
-  "aboutImpact3": "Backend experience with Node.js and NestJS.",
+  "aboutImpact3": "Backend experience with Node.js, NestJS, and Python.",
   "aboutCertificationsTitle": "🏆 Certifications",
   "aboutMoreCertsLinkedIn": "See more certifications on LinkedIn",
   "aboutConnectTitle": "🌎 Connect with me",
@@ -125,5 +125,44 @@
   "projectFitmotivDesc": "Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.",
   
   "projectLunaHubName": "LUNA HUB",
-  "projectLunaHubDesc": "E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines."
+  "projectLunaHubDesc": "E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.",
+
+  "expTropigasRole": "Senior Programmer Analyst",
+  "expTropigasCompany": "Tropigas de Guatemala",
+  "expTropigasPeriod": "Jun 2025 - Present",
+  "expTropigasDesc": "• Development and evolution of corporate mobile applications used in several countries, oriented to operations and sales.\n• Implementation of mobile functionalities for sales monitoring, route planning and field inventories, integrating backend services.\n• Automation of supervision and control processes, with real-time validations to improve the quality of captured information.\n• Participation in technical design and code best practices to ensure maintainable and scalable apps over time.",
+
+  "expFreelanceRole": "Flutter Developer",
+  "expFreelanceCompany": "Freelance",
+  "expFreelancePeriod": "2024 - Present",
+  "expFreelanceDesc": "• Development of high-impact mobile and web applications for international clients.\n• Specialization in clean architecture, performance optimization and UI/UX design.\n• Implementation of custom solutions using Flutter, Firebase and Node.js.",
+
+  "expPopoyanRole": "Mobile Developer (Jr.)",
+  "expPopoyanCompany": "Agropecuaria Popoyán",
+  "expPopoyanPeriod": "Feb 2023 - 2025",
+  "expPopoyanDesc": "• Development of mobile and web apps using Flutter, NestJS and GraphQL, oriented to field productivity and data management.\n• Integration of Firebase (Auth, Firestore) for authentication and real-time information persistence.\n• Participation in the Agriconecta project (USAID/PROINNOVA), developing functionalities focused on connectivity, productivity and traceability of the agricultural sector through mobile solutions.",
+
+  "stackCatMobileMulti": "Cross-Platform Mobile",
+  "stackItemFlutter": "Flutter (Dart) – productive app development, REST/GraphQL API consumption, state management, navigation, theming.",
+  "stackItemReactNative": "React Native – view development, reusable components, API and backend service integration.",
+
+  "stackCatMobileNative": "Native Mobile",
+  "stackItemAndroid": "Android: Kotlin, Jetpack Compose, Android SDK, REST/GraphQL service consumption.",
+  "stackItemIOS": "iOS: SwiftUI, basic design patterns and remote service consumption.",
+
+  "stackCatBackend": "Backend / APIs",
+  "stackItemNest": "NestJS, GraphQL, API design and implementation for mobile consumption.",
+  "stackItemPython": "Python – Script development, automation, and basic backend integration.",
+
+  "stackCatCloud": "Cloud / BaaS & Low-Code",
+  "stackItemFirebase": "Firebase (Auth, Firestore), notifications.",
+  "stackItemLowCode": "WordPress, Microsoft Power Apps for support and backoffice solutions.",
+
+  "stackCatBestPractices": "Best Practices",
+  "stackItemCleanCode": "Clean Code, SOLID principles.",
+  "stackItemTesting": "Unit Testing.",
+  "stackItemGit": "Git versioning and collaborative work.",
+
+  "expSectionTitle": "Professional Experience",
+  "skillsSectionTitle": "Technical Skills"
 }

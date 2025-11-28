@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class PortfolioLogic extends ChangeNotifier {
   PortfolioLogic();
@@ -62,6 +63,54 @@ class PortfolioLogic extends ChangeNotifier {
       'image': ImageAssets.productividad,
     },
   ];
+
+  // Experience Data
+  // Experience Data
+  List<Map<String, dynamic>> getExperience(AppLocalizations t) => [
+        {
+          'role': t.expTropigasRole,
+          'company': t.expTropigasCompany,
+          'period': t.expTropigasPeriod,
+          'description': t.expTropigasDesc,
+        },
+        {
+          'role': t.expFreelanceRole,
+          'company': t.expFreelanceCompany,
+          'period': t.expFreelancePeriod,
+          'description': t.expFreelanceDesc,
+        },
+        {
+          'role': t.expPopoyanRole,
+          'company': t.expPopoyanCompany,
+          'period': t.expPopoyanPeriod,
+          'description': t.expPopoyanDesc,
+        },
+      ];
+
+  // Skills Data
+  Map<String, List<String>> getSkills(AppLocalizations t) => {
+        t.stackCatMobileMulti: [
+          t.stackItemFlutter,
+          t.stackItemReactNative,
+        ],
+        t.stackCatMobileNative: [
+          t.stackItemAndroid,
+          t.stackItemIOS,
+        ],
+        t.stackCatBackend: [
+          t.stackItemNest,
+          t.stackItemPython,
+        ],
+        t.stackCatCloud: [
+          t.stackItemFirebase,
+          t.stackItemLowCode,
+        ],
+        t.stackCatBestPractices: [
+          t.stackItemCleanCode,
+          t.stackItemTesting,
+          t.stackItemGit,
+        ],
+      };
 
   // URL launcher method
   Future<void> launchURL(String url) async {

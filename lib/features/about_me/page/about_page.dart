@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/features/about_me/widgets/carrousel_certificate.dart';
 import 'package:portafolio_app/features/about_me/widgets/certificate_list.dart';
+import 'package:portafolio_app/features/about_me/widgets/experience_timeline.dart';
+import 'package:portafolio_app/features/about_me/widgets/skills_grid.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
@@ -53,29 +55,55 @@ class _AboutPageState extends State<AboutPage> {
                     runSpacing: 40,
                     alignment: WrapAlignment.center,
                     children: [
-                      Card(
-                        elevation: 4,
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                t.aboutTrajectoryTitle,
-                                style: const TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(height: 10),
-                              _ImpactLine(t.aboutImpact1),
-                              _ImpactLine(t.aboutImpact2),
-                              _ImpactLine(t.aboutImpact3),
-                            ],
-                          ),
+                      // Professional Summary
+                      Text(
+                        t.aboutTrajectoryTitle,
+                        style: const TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(height: 10),
+                      _ImpactLine(t.aboutImpact1),
+                      _ImpactLine(t.aboutImpact2),
+                      _ImpactLine(t.aboutImpact3),
+
+                      // const SizedBox(height: 40),
+
+                      // Experience Timeline
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '💼 ${t.expSectionTitle}',
+                          style: const TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                       ),
+                      // const SizedBox(height: 20),
+                      Consumer<PortfolioLogic>(
+                        builder: (context, logic, child) {
+                          return ExperienceTimeline(
+                              experience: logic.getExperience(t));
+                        },
+                      ),
+
+                      // const SizedBox(height: 40),
+
+                      // Skills Grid
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '🛠️ ${t.skillsSectionTitle}',
+                          style: const TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      // const SizedBox(height: 20),
+                      Consumer<PortfolioLogic>(
+                        builder: (context, logic, child) {
+                          return SkillsGrid(skills: logic.getSkills(t));
+                        },
+                      ),
+
+                      // const SizedBox(height: 40),
 
                       Text(
                         t.aboutCertificationsTitle,
@@ -83,12 +111,12 @@ class _AboutPageState extends State<AboutPage> {
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
 
-                      const SizedBox(height: 10),
+                      // const SizedBox(height: 10),
 
                       // Lista de Certificaciones en Texto
                       const CertificationList(onlyRelevant: true),
 
-                      const SizedBox(height: 30),
+                      // const SizedBox(height: 30),
 
                       // Carrusel de imágenes animado (ahora el widget maneja su propio PageController)
                       CertificationCarousel(
@@ -175,21 +203,18 @@ class _ImpactLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = Theme.of(context).colorScheme.primary;
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(Icons.check_circle, color: color, size: 22),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              text,
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(Icons.check_circle, color: color, size: 22),
+        const SizedBox(width: 10),
+        Expanded(
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

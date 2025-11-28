@@ -1,6 +1,6 @@
 {
   "CodeGPT.apiKey": "CodeGPT Plus Beta",
-  "dart.flutterSdkPath": ".fvm/versions/3.35.2",
+  "dart.flutterSdkPath": ".fvm/versions/3.38.1",
   "yaml.schemas": {},
   "yaml.validate": false
 }
