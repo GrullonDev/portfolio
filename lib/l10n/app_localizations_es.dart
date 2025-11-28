@@ -268,13 +268,14 @@ class AppLocalizationsEs extends AppLocalizations {
   String get aboutTrajectoryTitle => '🎓 Trayectoria';
 
   @override
-  String get aboutImpact1 => '3+ años desarrollando software.';
+  String get aboutImpact1 => '6+ años desarrollando software.';
 
   @override
   String get aboutImpact2 => 'Experto en Flutter, Firebase, APIs REST/GraphQL.';
 
   @override
-  String get aboutImpact3 => 'Experiencia en backend con Node.js y NestJS.';
+  String get aboutImpact3 =>
+      'Experiencia en backend con Node.js, NestJS, Python.';
 
   @override
   String get aboutCertificationsTitle => '🏆 Certificaciones';
@@ -370,4 +371,104 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get projectLunaHubDesc =>
       'Plataforma de e‑commerce para productos de bebé y artículos curados. Implementa catálogos, carrito de compras, perfiles de usuario y pagos seguros. Proyecto colaborativo que demuestra integración de frontend en Flutter con backends en Node.js y pipelines de CI/CD.';
+
+  @override
+  String get expTropigasRole => 'Analista Programador Senior';
+
+  @override
+  String get expTropigasCompany => 'Tropigas de Guatemala';
+
+  @override
+  String get expTropigasPeriod => 'Jun 2025 - Presente';
+
+  @override
+  String get expTropigasDesc =>
+      '• Desarrollo y evolución de aplicaciones móviles corporativas utilizadas en varios países, orientadas a operación y ventas.\n• Implementación de funcionalidades móviles para monitoreo de ventas, planeación de rutas e inventarios en campo, integrando servicios backend.\n• Automatización de procesos de supervisión y control, con validaciones en tiempo real para mejorar la calidad de la información capturada.\n• Participación en el diseño técnico y buenas prácticas de código para asegurar apps mantenibles y escalables en el tiempo.';
+
+  @override
+  String get expFreelanceRole => 'Flutter Developer';
+
+  @override
+  String get expFreelanceCompany => 'Freelance';
+
+  @override
+  String get expFreelancePeriod => '2024 - Presente';
+
+  @override
+  String get expFreelanceDesc =>
+      '• Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales.\n• Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.\n• Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js.';
+
+  @override
+  String get expPopoyanRole => 'Desarrollador Mobile (Jr.)';
+
+  @override
+  String get expPopoyanCompany => 'Agropecuaria Popoyán';
+
+  @override
+  String get expPopoyanPeriod => 'Feb 2023 - 2025';
+
+  @override
+  String get expPopoyanDesc =>
+      '• Desarrollo de apps móviles y web utilizando Flutter, NestJS y GraphQL, orientadas a productividad en campo y gestión de datos.\n• Integración de Firebase (Auth, Firestore) para autenticación y persistencia de información en tiempo real.\n• Participación en el proyecto Agriconecta (USAID/PROINNOVA), desarrollando funcionalidades centradas en la conectividad, productividad y trazabilidad del sector agrícola mediante soluciones móviles.';
+
+  @override
+  String get stackCatMobileMulti => 'Mobile Multiplataforma';
+
+  @override
+  String get stackItemFlutter =>
+      'Flutter (Dart) – desarrollo de apps productivas, consumo de APIs REST/GraphQL, manejo de estado, navegación, theming.';
+
+  @override
+  String get stackItemReactNative =>
+      'React Native – desarrollo de vistas, componentes reutilizables, integración con APIs y servicios backend.';
+
+  @override
+  String get stackCatMobileNative => 'Mobile Nativo';
+
+  @override
+  String get stackItemAndroid =>
+      'Android: Kotlin, Jetpack Compose, Android SDK, consumo de servicios REST/GraphQL.';
+
+  @override
+  String get stackItemIOS =>
+      'iOS: SwiftUI, patrones de diseño básicos y consumo de servicios remotos.';
+
+  @override
+  String get stackCatBackend => 'Backend / APIs';
+
+  @override
+  String get stackItemNest =>
+      'NestJS, GraphQL, diseño e implementación de APIs para consumo móvil.';
+
+  @override
+  String get stackItemPython =>
+      'Python – Desarrollo de scripts, automatización y backend básico.';
+
+  @override
+  String get stackCatCloud => 'Cloud / BaaS & Low-Code';
+
+  @override
+  String get stackItemFirebase => 'Firebase (Auth, Firestore), notificaciones.';
+
+  @override
+  String get stackItemLowCode =>
+      'WordPress, Microsoft Power Apps para soluciones de soporte y backoffice.';
+
+  @override
+  String get stackCatBestPractices => 'Buenas prácticas';
+
+  @override
+  String get stackItemCleanCode => 'Clean Code, principios SOLID.';
+
+  @override
+  String get stackItemTesting => 'Pruebas unitarias (Unit Testing).';
+
+  @override
+  String get stackItemGit => 'Versionamiento con Git y trabajo colaborativo.';
+
+  @override
+  String get expSectionTitle => 'Experiencia Profesional';
+
+  @override
+  String get skillsSectionTitle => 'Stack Técnico (Mobile & Backend)';
 }
