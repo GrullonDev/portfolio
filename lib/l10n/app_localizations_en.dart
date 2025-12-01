@@ -271,7 +271,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutImpact2 => 'Expert in Flutter, Firebase, REST/GraphQL APIs.';
 
   @override
-  String get aboutImpact3 => 'Backend experience with Node.js and NestJS.';
+  String get aboutImpact3 =>
+      'Backend experience with Node.js, NestJS, and Python.';
 
   @override
   String get aboutCertificationsTitle => '🏆 Certifications';
@@ -366,4 +367,104 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get projectLunaHubDesc =>
       'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.';
+
+  @override
+  String get expTropigasRole => 'Senior Programmer Analyst';
+
+  @override
+  String get expTropigasCompany => 'Tropigas de Guatemala';
+
+  @override
+  String get expTropigasPeriod => 'Jun 2025 - Present';
+
+  @override
+  String get expTropigasDesc =>
+      '• Development and evolution of corporate mobile applications used in several countries, oriented to operations and sales.\n• Implementation of mobile functionalities for sales monitoring, route planning and field inventories, integrating backend services.\n• Automation of supervision and control processes, with real-time validations to improve the quality of captured information.\n• Participation in technical design and code best practices to ensure maintainable and scalable apps over time.';
+
+  @override
+  String get expFreelanceRole => 'Flutter Developer';
+
+  @override
+  String get expFreelanceCompany => 'Freelance';
+
+  @override
+  String get expFreelancePeriod => '2024 - Present';
+
+  @override
+  String get expFreelanceDesc =>
+      '• Development of high-impact mobile and web applications for international clients.\n• Specialization in clean architecture, performance optimization and UI/UX design.\n• Implementation of custom solutions using Flutter, Firebase and Node.js.';
+
+  @override
+  String get expPopoyanRole => 'Mobile Developer (Jr.)';
+
+  @override
+  String get expPopoyanCompany => 'Agropecuaria Popoyán';
+
+  @override
+  String get expPopoyanPeriod => 'Feb 2023 - 2025';
+
+  @override
+  String get expPopoyanDesc =>
+      '• Development of mobile and web apps using Flutter, NestJS and GraphQL, oriented to field productivity and data management.\n• Integration of Firebase (Auth, Firestore) for authentication and real-time information persistence.\n• Participation in the Agriconecta project (USAID/PROINNOVA), developing functionalities focused on connectivity, productivity and traceability of the agricultural sector through mobile solutions.';
+
+  @override
+  String get stackCatMobileMulti => 'Cross-Platform Mobile';
+
+  @override
+  String get stackItemFlutter =>
+      'Flutter (Dart) – productive app development, REST/GraphQL API consumption, state management, navigation, theming.';
+
+  @override
+  String get stackItemReactNative =>
+      'React Native – view development, reusable components, API and backend service integration.';
+
+  @override
+  String get stackCatMobileNative => 'Native Mobile';
+
+  @override
+  String get stackItemAndroid =>
+      'Android: Kotlin, Jetpack Compose, Android SDK, REST/GraphQL service consumption.';
+
+  @override
+  String get stackItemIOS =>
+      'iOS: SwiftUI, basic design patterns and remote service consumption.';
+
+  @override
+  String get stackCatBackend => 'Backend / APIs';
+
+  @override
+  String get stackItemNest =>
+      'NestJS, GraphQL, API design and implementation for mobile consumption.';
+
+  @override
+  String get stackItemPython =>
+      'Python – Script development, automation, and basic backend integration.';
+
+  @override
+  String get stackCatCloud => 'Cloud / BaaS & Low-Code';
+
+  @override
+  String get stackItemFirebase => 'Firebase (Auth, Firestore), notifications.';
+
+  @override
+  String get stackItemLowCode =>
+      'WordPress, Microsoft Power Apps for support and backoffice solutions.';
+
+  @override
+  String get stackCatBestPractices => 'Best Practices';
+
+  @override
+  String get stackItemCleanCode => 'Clean Code, SOLID principles.';
+
+  @override
+  String get stackItemTesting => 'Unit Testing.';
+
+  @override
+  String get stackItemGit => 'Git versioning and collaborative work.';
+
+  @override
+  String get expSectionTitle => 'Professional Experience';
+
+  @override
+  String get skillsSectionTitle => 'Technical Skills';
 }

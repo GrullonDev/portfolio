@@ -71,11 +71,11 @@ class _AboutPageState extends State<AboutPage> {
                       ),
 
                       // Experience Timeline
-                      const Align(
+                      Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Experiencia Profesional',
-                          style: TextStyle(
+                          '💼 ${t.expSectionTitle}',
+                          style: const TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -83,7 +83,7 @@ class _AboutPageState extends State<AboutPage> {
                       Consumer<PortfolioLogic>(
                         builder: (context, logic, child) {
                           return ExperienceTimeline(
-                              experience: logic.experience);
+                              experience: logic.getExperience(t));
                         },
                       ),
 
@@ -92,17 +92,17 @@ class _AboutPageState extends State<AboutPage> {
                       ),
 
                       // Skills Grid
-                      const Align(
+                      Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          'Habilidades Técnicas',
-                          style: TextStyle(
+                          '🛠️ ${t.skillsSectionTitle}',
+                          style: const TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                       ),
                       Consumer<PortfolioLogic>(
                         builder: (context, logic, child) {
-                          return SkillsGrid(skills: logic.skills);
+                          return SkillsGrid(skills: logic.getSkills(t));
                         },
                       ),
 
@@ -116,12 +116,12 @@ class _AboutPageState extends State<AboutPage> {
                             fontSize: 28, fontWeight: FontWeight.bold),
                       ),
 
-                      const SizedBox(height: 10),
+                      // const SizedBox(height: 10),
 
                       // Lista de Certificaciones en Texto
                       const CertificationList(onlyRelevant: true),
 
-                      const SizedBox(height: 30),
+                      // const SizedBox(height: 30),
 
                       // Carrusel de imágenes animado (ahora el widget maneja su propio PageController)
                       CertificationCarousel(

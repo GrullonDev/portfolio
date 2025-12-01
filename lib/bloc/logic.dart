@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class PortfolioLogic extends ChangeNotifier {
   PortfolioLogic();
@@ -64,48 +65,51 @@ class PortfolioLogic extends ChangeNotifier {
   ];
 
   // Experience Data
-  List<Map<String, dynamic>> get experience => [
+  // Experience Data
+  List<Map<String, dynamic>> getExperience(AppLocalizations t) => [
         {
-          'role': 'Senior Flutter Developer',
-          'company': 'Tropigas de Guatemala',
-          'period': '2025 - Presente',
-          'description':
-              'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales. Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.',
+          'role': t.expTropigasRole,
+          'company': t.expTropigasCompany,
+          'period': t.expTropigasPeriod,
+          'description': t.expTropigasDesc,
         },
         {
-          'role': 'Flutter Developer',
-          'company': 'Freelance',
-          'period': '2024 - Presente',
-          'description':
-              'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales. Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.',
+          'role': t.expFreelanceRole,
+          'company': t.expFreelanceCompany,
+          'period': t.expFreelancePeriod,
+          'description': t.expFreelanceDesc,
         },
         {
-          'role': 'Mobile Flutter Developer Jr',
-          'company': 'Agropecuaria Popoyán',
-          'period': '2023 - 2025',
-          'description':
-              'Lideré el desarrollo de la app principal de la empresa, migrando de nativo a Flutter. Reduje el tiempo de desarrollo en un 40% y mejoré la estabilidad en un 99.9%.',
+          'role': t.expPopoyanRole,
+          'company': t.expPopoyanCompany,
+          'period': t.expPopoyanPeriod,
+          'description': t.expPopoyanDesc,
         },
       ];
 
   // Skills Data
-  Map<String, List<String>> get skills => {
-        'Mobile': ['Flutter', 'Dart', 'iOS', 'Android', 'State Management', ],
-        'Backend': [
-          'Node.js',
-          'NestJS',
-          'Firebase',
-          'REST APIs',
-          'GraphQL',
-          'Firebase',
-          'Firestore',
-          'Cloud Functions',
-          'Stripe',
-          'PayPal',
-          'Mercado Pago',
-          'Python',
+  Map<String, List<String>> getSkills(AppLocalizations t) => {
+        t.stackCatMobileMulti: [
+          t.stackItemFlutter,
+          t.stackItemReactNative,
         ],
-        'Tools': ['Git', 'Figma', 'CI/CD', 'Jira', 'Agile/Scrum'],
+        t.stackCatMobileNative: [
+          t.stackItemAndroid,
+          t.stackItemIOS,
+        ],
+        t.stackCatBackend: [
+          t.stackItemNest,
+          t.stackItemPython,
+        ],
+        t.stackCatCloud: [
+          t.stackItemFirebase,
+          t.stackItemLowCode,
+        ],
+        t.stackCatBestPractices: [
+          t.stackItemCleanCode,
+          t.stackItemTesting,
+          t.stackItemGit,
+        ],
       };
 
   // URL launcher method

@@ -593,7 +593,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutImpact3.
   ///
   /// In en, this message translates to:
-  /// **'Backend experience with Node.js and NestJS.'**
+  /// **'Backend experience with Node.js, NestJS, and Python.'**
   String get aboutImpact3;
 
   /// No description provided for @aboutCertificationsTitle.
@@ -769,6 +769,186 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.'**
   String get projectLunaHubDesc;
+
+  /// No description provided for @expTropigasRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Senior Programmer Analyst'**
+  String get expTropigasRole;
+
+  /// No description provided for @expTropigasCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Tropigas de Guatemala'**
+  String get expTropigasCompany;
+
+  /// No description provided for @expTropigasPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'Jun 2025 - Present'**
+  String get expTropigasPeriod;
+
+  /// No description provided for @expTropigasDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'• Development and evolution of corporate mobile applications used in several countries, oriented to operations and sales.\n• Implementation of mobile functionalities for sales monitoring, route planning and field inventories, integrating backend services.\n• Automation of supervision and control processes, with real-time validations to improve the quality of captured information.\n• Participation in technical design and code best practices to ensure maintainable and scalable apps over time.'**
+  String get expTropigasDesc;
+
+  /// No description provided for @expFreelanceRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter Developer'**
+  String get expFreelanceRole;
+
+  /// No description provided for @expFreelanceCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Freelance'**
+  String get expFreelanceCompany;
+
+  /// No description provided for @expFreelancePeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'2024 - Present'**
+  String get expFreelancePeriod;
+
+  /// No description provided for @expFreelanceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'• Development of high-impact mobile and web applications for international clients.\n• Specialization in clean architecture, performance optimization and UI/UX design.\n• Implementation of custom solutions using Flutter, Firebase and Node.js.'**
+  String get expFreelanceDesc;
+
+  /// No description provided for @expPopoyanRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile Developer (Jr.)'**
+  String get expPopoyanRole;
+
+  /// No description provided for @expPopoyanCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Agropecuaria Popoyán'**
+  String get expPopoyanCompany;
+
+  /// No description provided for @expPopoyanPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'Feb 2023 - 2025'**
+  String get expPopoyanPeriod;
+
+  /// No description provided for @expPopoyanDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'• Development of mobile and web apps using Flutter, NestJS and GraphQL, oriented to field productivity and data management.\n• Integration of Firebase (Auth, Firestore) for authentication and real-time information persistence.\n• Participation in the Agriconecta project (USAID/PROINNOVA), developing functionalities focused on connectivity, productivity and traceability of the agricultural sector through mobile solutions.'**
+  String get expPopoyanDesc;
+
+  /// No description provided for @stackCatMobileMulti.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-Platform Mobile'**
+  String get stackCatMobileMulti;
+
+  /// No description provided for @stackItemFlutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter (Dart) – productive app development, REST/GraphQL API consumption, state management, navigation, theming.'**
+  String get stackItemFlutter;
+
+  /// No description provided for @stackItemReactNative.
+  ///
+  /// In en, this message translates to:
+  /// **'React Native – view development, reusable components, API and backend service integration.'**
+  String get stackItemReactNative;
+
+  /// No description provided for @stackCatMobileNative.
+  ///
+  /// In en, this message translates to:
+  /// **'Native Mobile'**
+  String get stackCatMobileNative;
+
+  /// No description provided for @stackItemAndroid.
+  ///
+  /// In en, this message translates to:
+  /// **'Android: Kotlin, Jetpack Compose, Android SDK, REST/GraphQL service consumption.'**
+  String get stackItemAndroid;
+
+  /// No description provided for @stackItemIOS.
+  ///
+  /// In en, this message translates to:
+  /// **'iOS: SwiftUI, basic design patterns and remote service consumption.'**
+  String get stackItemIOS;
+
+  /// No description provided for @stackCatBackend.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend / APIs'**
+  String get stackCatBackend;
+
+  /// No description provided for @stackItemNest.
+  ///
+  /// In en, this message translates to:
+  /// **'NestJS, GraphQL, API design and implementation for mobile consumption.'**
+  String get stackItemNest;
+
+  /// No description provided for @stackItemPython.
+  ///
+  /// In en, this message translates to:
+  /// **'Python – Script development, automation, and basic backend integration.'**
+  String get stackItemPython;
+
+  /// No description provided for @stackCatCloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud / BaaS & Low-Code'**
+  String get stackCatCloud;
+
+  /// No description provided for @stackItemFirebase.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase (Auth, Firestore), notifications.'**
+  String get stackItemFirebase;
+
+  /// No description provided for @stackItemLowCode.
+  ///
+  /// In en, this message translates to:
+  /// **'WordPress, Microsoft Power Apps for support and backoffice solutions.'**
+  String get stackItemLowCode;
+
+  /// No description provided for @stackCatBestPractices.
+  ///
+  /// In en, this message translates to:
+  /// **'Best Practices'**
+  String get stackCatBestPractices;
+
+  /// No description provided for @stackItemCleanCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean Code, SOLID principles.'**
+  String get stackItemCleanCode;
+
+  /// No description provided for @stackItemTesting.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit Testing.'**
+  String get stackItemTesting;
+
+  /// No description provided for @stackItemGit.
+  ///
+  /// In en, this message translates to:
+  /// **'Git versioning and collaborative work.'**
+  String get stackItemGit;
+
+  /// No description provided for @expSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Professional Experience'**
+  String get expSectionTitle;
+
+  /// No description provided for @skillsSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical Skills'**
+  String get skillsSectionTitle;
 }
 
 class _AppLocalizationsDelegate
