@@ -581,7 +581,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutImpact1.
   ///
   /// In en, this message translates to:
-  /// **'3+ years building software.'**
+  /// **'6+ years building software.'**
   String get aboutImpact1;
 
   /// No description provided for @aboutImpact2.

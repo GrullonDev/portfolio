@@ -265,7 +265,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutTrajectoryTitle => '🎓 Journey';
 
   @override
-  String get aboutImpact1 => '3+ years building software.';
+  String get aboutImpact1 => '6+ years building software.';
 
   @override
   String get aboutImpact2 => 'Expert in Flutter, Firebase, REST/GraphQL APIs.';

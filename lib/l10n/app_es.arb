@@ -5,7 +5,6 @@
   "navAbout": "Trayectoria",
   "navServices": "Servicios",
   "navContact": "Contacto",
-
   "homeGreeting": "Hola, soy Jorge Grullón👋",
   "homeSubtitle": "Desarrollo aplicaciones móviles y web.",
   "homeCtaProjects": "Ver mis proyectos",
@@ -15,10 +14,8 @@
   "homeRoleTagline": "Flutter Developer | Apps móviles y web de alto impacto",
   "homeDifferentiator": "Especialista en apps de productividad con Flutter",
   "homeValueProp": "Ahorra tiempo y costos con apps multiplataforma. Trabajo remoto con clientes en todo el mundo.",
-  
   "homeCtaBudget": "Pide un presupuesto gratis",
   "homeTestimonialParroquia": "“Jorge nos ayudó a lanzar nuestra app más rápido de lo esperado.” — Parroquia",
-
   "projectsTitle": "Proyectos",
   "projectsIntro": "Proyectos reales en desarrollo. Solicita betas y demos.",
   "projectsMobile": "Apps móviles",
@@ -37,14 +34,12 @@
   "btnGithub": "GitHub",
   "btnDemo": "Demo",
   "btnRequestBeta": "Solicitar beta",
-
   "whatIDoTitle": "Lo que hago",
   "whatIDoBullet1": "Desarrollo de apps móviles multiplataforma (iOS/Android).",
   "whatIDoBullet2": "Integración con APIs y Firebase (Auth, Firestore, Cloud Functions).",
   "whatIDoBullet3": "Diseño UI/UX y optimización de rendimiento.",
   "whatIDoCtaTalk": "Hablemos de tu proyecto 🚀",
   "whatIDoResponseSla": "Respuesta en menos de 24h · Presupuesto gratis",
-
   "contactTitle": "Contacto",
   "contactPersonal": "Me encantaría escuchar tu idea y ayudarte a hacerla realidad.",
   "contactPickOption": "Elige una opción rápida o envíame un mensaje con el formulario.",
@@ -60,7 +55,6 @@
   "contactErrorEmailInvalid": "Ingresa un correo electrónico válido",
   "contactErrorMessageRequired": "Por favor, ingresa un mensaje",
   "contactSentOk": "Mensaje enviado correctamente.",
-
   "servicesTitle": "🛠️ Servicios Ofertados",
   "servicesIntro": "Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.",
   "serviceCategoryDevelopment": "Desarrollo",
@@ -84,21 +78,17 @@
   "ctaReady": "¿Listo para comenzar tu proyecto?",
   "ctaContact": "Contáctame",
   "ctaInvite": "Contáctame para discutir tus ideas y hacerlas realidad.",
-
   "aboutTrajectoryTitle": "🎓 Trayectoria",
-  "aboutImpact1": "3+ años desarrollando software.",
+  "aboutImpact1": "6+ años desarrollando software.",
   "aboutImpact2": "Experto en Flutter, Firebase, APIs REST/GraphQL.",
   "aboutImpact3": "Experiencia en backend con Node.js y NestJS.",
   "aboutCertificationsTitle": "🏆 Certificaciones",
   "aboutMoreCertsLinkedIn": "Ver más certificaciones en LinkedIn",
   "aboutConnectTitle": "🌎 Conéctate conmigo",
-
   "navMenu": "Menú",
   "footerMadeWith": "Desarrollado con Flutter",
-
   "projectVideoTitle": "Video del Proyecto",
   "linkOpenError": "No se pudo abrir el enlace",
-
   "betaRequestTitle": "Solicitar acceso a la beta",
   "betaRequestSubtitle": "Déjame tu correo y la plataforma para enviarte una build de prueba por Firebase App Distribution.",
   "betaFieldEmail": "Correo electrónico",
@@ -107,20 +97,16 @@
   "betaSendWhatsapp": "Enviar por WhatsApp",
   "betaSendEmail": "Enviar por Email",
   "betaNote": "Nota: Para Android necesitas una cuenta de Google. Para iOS, compartiré un enlace de TestFlight si aplica.",
-
   "videoErrorLoading": "Error al cargar el video",
   "languageToggleLabel": "Idioma",
   "platformAndroid": "Android",
   "platformIos": "iOS",
   "contactSlaLanguages": "Respondo en menos de 24h ⏱️ | Español & English 🌍",
   "contactClassicFormTitle": "Formulario clásico",
-
   "projectParroquiaName": "Sistema de Gestión Parroquial | Villa Nueva",
   "projectParroquiaDesc": "Desarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción.",
-
   "eduPlayTitle": "EduPlay - Plataforma Educativa (Beta)",
   "eduPlayDesc": "Plataforma web para educación interactiva con juegos y quizzes. Beta privada, solicita acceso.",
-
   "projectFitmotivName": "Fitmotiv App",
   "projectFitmotivDesc": "Aplicación de fitness con planes de entrenamiento personalizados, seguimiento de progreso y funciones sociales. Incluye onboarding, rutinas, planes y métricas para mantener a los usuarios motivados.",
   "projectLunaHubName": "LUNA HUB",

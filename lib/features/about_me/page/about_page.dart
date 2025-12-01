@@ -66,7 +66,9 @@ class _AboutPageState extends State<AboutPage> {
                       _ImpactLine(t.aboutImpact2),
                       _ImpactLine(t.aboutImpact3),
 
-                      const SizedBox(height: 40),
+                      const Divider(
+                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
+                      ),
 
                       // Experience Timeline
                       const Align(
@@ -85,7 +87,9 @@ class _AboutPageState extends State<AboutPage> {
                         },
                       ),
 
-                      const SizedBox(height: 40),
+                      const Divider(
+                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
+                      ),
 
                       // Skills Grid
                       const Align(
@@ -96,14 +100,15 @@ class _AboutPageState extends State<AboutPage> {
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                       ),
-                      const SizedBox(height: 20),
                       Consumer<PortfolioLogic>(
                         builder: (context, logic, child) {
                           return SkillsGrid(skills: logic.skills);
                         },
                       ),
 
-                      const SizedBox(height: 40),
+                      const Divider(
+                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
+                      ),
 
                       Text(
                         t.aboutCertificationsTitle,
