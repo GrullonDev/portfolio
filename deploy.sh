@@ -57,6 +57,14 @@ else
     print_warning "No se encontró carpeta build/web para limpiar"
 fi
 
+print_status "Preparando entorno (clean & pub get)..."
+if fvm flutter clean && fvm flutter pub get; then
+    print_success "Entorno limpio y dependencias actualizadas"
+else
+    print_error "Error al limpiar o actualizar dependencias"
+    exit 1
+fi
+
 print_status "Compilando proyecto para web..."
 # Compilar el proyecto
 if fvm flutter build web; then

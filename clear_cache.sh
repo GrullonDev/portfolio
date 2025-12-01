@@ -45,6 +45,24 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         print_success "Caché de Firefox limpiada"
     fi
     
+elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" || "$OS" == "Windows_NT" ]]; then
+    print_info "Detectado Windows"
+
+    # Chrome Cache
+    if [ -d "$LOCALAPPDATA/Google/Chrome/User Data/Default/Cache" ]; then
+        rm -rf "$LOCALAPPDATA/Google/Chrome/User Data/Default/Cache"/*
+        print_success "Caché de Chrome limpiada"
+    else
+        # Intentar ruta alternativa o informar
+        print_warning "No se encontró la ruta estándar de caché de Chrome"
+    fi
+
+    # Edge Cache
+    if [ -d "$LOCALAPPDATA/Microsoft/Edge/User Data/Default/Cache" ]; then
+        rm -rf "$LOCALAPPDATA/Microsoft/Edge/User Data/Default/Cache"/*
+        print_success "Caché de Edge limpiada"
+    fi
+    
 else
     print_warning "Sistema operativo no soportado para limpieza automática"
 fi
