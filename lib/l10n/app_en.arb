@@ -5,7 +5,6 @@
   "navAbout": "Journey",
   "navServices": "Services",
   "navContact": "Contact",
-
   "homeGreeting": "Hi, I'm Jorge Grullón, a Flutter Developer 👋",
   "homeSubtitle": "I build high-quality mobile and web apps.",
   "homeCtaProjects": "View my projects",
@@ -15,10 +14,8 @@
   "homeRoleTagline": "Flutter Developer | High-impact mobile and web apps",
   "homeDifferentiator": "Specialist in productivity apps with Flutter",
   "homeValueProp": "Save time and costs with cross-platform apps. I work remotely with clients worldwide.",
-
   "homeCtaBudget": "Request a free quote",
   "homeTestimonialParroquia": "“Jorge helped us launch our app faster than expected.” — Parroquia",
-
   "projectsTitle": "Projects",
   "projectsIntro": "Real projects in active development. Request betas and demos.",
   "projectsMobile": "Mobile Apps",
@@ -37,14 +34,12 @@
   "btnGithub": "GitHub",
   "btnDemo": "Demo",
   "btnRequestBeta": "Request beta",
-
   "whatIDoTitle": "What I do",
   "whatIDoBullet1": "Cross-platform mobile app development (iOS/Android).",
   "whatIDoBullet2": "API and Firebase integration (Auth, Firestore, Cloud Functions).",
   "whatIDoBullet3": "UI/UX design and performance optimization.",
   "whatIDoCtaTalk": "Let's talk about your project 🚀",
   "whatIDoResponseSla": "Reply within 24h · Free quote",
-
   "contactTitle": "Contact",
   "contactPersonal": "I'd love to hear your idea and help you make it real.",
   "contactPickOption": "Choose a quick option or send me a message using the form.",
@@ -60,7 +55,6 @@
   "contactErrorEmailInvalid": "Enter a valid email address",
   "contactErrorMessageRequired": "Please enter a message",
   "contactSentOk": "Message sent successfully.",
-
   "servicesTitle": "Offered Services",
   "servicesIntro": "I group my services into three key areas to maximize value and clarity.",
   "serviceCategoryDevelopment": "Development",
@@ -84,21 +78,18 @@
   "ctaReady": "Ready to start your project?",
   "ctaContact": "Contact me",
   "ctaInvite": "Contact me to discuss your idea and make it real.",
-
   "aboutTrajectoryTitle": "🎓 Journey",
+  "aboutImpact1": "6+ years building software.",
   "aboutImpact1": "6+ years building software.",
   "aboutImpact2": "Expert in Flutter, Firebase, REST/GraphQL APIs.",
   "aboutImpact3": "Backend experience with Node.js, NestJS, and Python.",
   "aboutCertificationsTitle": "🏆 Certifications",
   "aboutMoreCertsLinkedIn": "See more certifications on LinkedIn",
   "aboutConnectTitle": "🌎 Connect with me",
-
   "navMenu": "Menu",
   "footerMadeWith": "Built with Flutter",
-
   "projectVideoTitle": "Project Video",
   "linkOpenError": "Could not open the link",
-
   "betaRequestTitle": "Request beta access",
   "betaRequestSubtitle": "Leave your email and platform to send you a test build via Firebase App Distribution.",
   "betaFieldEmail": "Email",
@@ -107,62 +98,18 @@
   "betaSendWhatsapp": "Send via WhatsApp",
   "betaSendEmail": "Send via Email",
   "betaNote": "Note: For Android you need a Google account. For iOS, I will share a TestFlight link if applicable.",
-
   "videoErrorLoading": "Error loading video",
   "languageToggleLabel": "Language",
   "platformAndroid": "Android",
   "platformIos": "iOS",
   "contactSlaLanguages": "Reply within 24h ⏱️ | Spanish & English 🌍",
   "contactClassicFormTitle": "Classic form",
-
   "projectParroquiaName": "Parish Management System | Villa Nueva",
   "projectParroquiaDesc": "I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.",
-
   "eduPlayTitle": "Educational Management System | EduPlay",
   "eduPlayDesc": "I developed a comprehensive web platform for the administration of educational processes, including student, course, and assessment management.",
-
   "projectFitmotivName": "Fitmotiv App",
   "projectFitmotivDesc": "Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.",
-  
   "projectLunaHubName": "LUNA HUB",
-  "projectLunaHubDesc": "E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.",
-
-  "expTropigasRole": "Senior Programmer Analyst",
-  "expTropigasCompany": "Tropigas de Guatemala",
-  "expTropigasPeriod": "Jun 2025 - Present",
-  "expTropigasDesc": "• Development and evolution of corporate mobile applications used in several countries, oriented to operations and sales.\n• Implementation of mobile functionalities for sales monitoring, route planning and field inventories, integrating backend services.\n• Automation of supervision and control processes, with real-time validations to improve the quality of captured information.\n• Participation in technical design and code best practices to ensure maintainable and scalable apps over time.",
-
-  "expFreelanceRole": "Flutter Developer",
-  "expFreelanceCompany": "Freelance",
-  "expFreelancePeriod": "2024 - Present",
-  "expFreelanceDesc": "• Development of high-impact mobile and web applications for international clients.\n• Specialization in clean architecture, performance optimization and UI/UX design.\n• Implementation of custom solutions using Flutter, Firebase and Node.js.",
-
-  "expPopoyanRole": "Mobile Developer (Jr.)",
-  "expPopoyanCompany": "Agropecuaria Popoyán",
-  "expPopoyanPeriod": "Feb 2023 - 2025",
-  "expPopoyanDesc": "• Development of mobile and web apps using Flutter, NestJS and GraphQL, oriented to field productivity and data management.\n• Integration of Firebase (Auth, Firestore) for authentication and real-time information persistence.\n• Participation in the Agriconecta project (USAID/PROINNOVA), developing functionalities focused on connectivity, productivity and traceability of the agricultural sector through mobile solutions.",
-
-  "stackCatMobileMulti": "Cross-Platform Mobile",
-  "stackItemFlutter": "Flutter (Dart) – productive app development, REST/GraphQL API consumption, state management, navigation, theming.",
-  "stackItemReactNative": "React Native – view development, reusable components, API and backend service integration.",
-
-  "stackCatMobileNative": "Native Mobile",
-  "stackItemAndroid": "Android: Kotlin, Jetpack Compose, Android SDK, REST/GraphQL service consumption.",
-  "stackItemIOS": "iOS: SwiftUI, basic design patterns and remote service consumption.",
-
-  "stackCatBackend": "Backend / APIs",
-  "stackItemNest": "NestJS, GraphQL, API design and implementation for mobile consumption.",
-  "stackItemPython": "Python – Script development, automation, and basic backend integration.",
-
-  "stackCatCloud": "Cloud / BaaS & Low-Code",
-  "stackItemFirebase": "Firebase (Auth, Firestore), notifications.",
-  "stackItemLowCode": "WordPress, Microsoft Power Apps for support and backoffice solutions.",
-
-  "stackCatBestPractices": "Best Practices",
-  "stackItemCleanCode": "Clean Code, SOLID principles.",
-  "stackItemTesting": "Unit Testing.",
-  "stackItemGit": "Git versioning and collaborative work.",
-
-  "expSectionTitle": "Professional Experience",
-  "skillsSectionTitle": "Technical Skills"
+  "projectLunaHubDesc": "E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines."
 }
