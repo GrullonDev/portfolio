@@ -15,8 +15,9 @@ Ficha técnica del proyecto de portafolio personal desarrollado con Flutter. Dep
 
 ## 🧰 Stack y Versiones
 
-- Flutter: 3.35.2 (stable)
-- Dart: 3.9.0
+- Flutter: 3.38.3 (stable) - Gestionado con FVM
+- FVM: Configurado en `.fvm/`
+- Dart: 3.10.1
 - Router: `go_router`
 - Estado: `provider`
 - i18n: ARB + `flutter_localizations` (l10n.yaml)
@@ -70,10 +71,10 @@ public/                  # Host público (404, index opcional)
 
 Requisitos: Flutter SDK 3.35.2, Dart 3.9.0.
 
-- Ejecutar en Chrome (dev):
-	- `flutter run -d chrome`
+- Ejecutar en Chrome (dev) usando FVM:
+	- `fvm flutter run -d chrome`
 - Build Web de producción:
-	- `flutter build web --release`
+	- `fvm flutter build web --release`
 
 ## ⌨️ Comandos frecuentes (localización, assets, limpieza y compilación)
 
@@ -83,34 +84,49 @@ Aquí tienes una lista de comandos útiles y el orden recomendado al trabajar en
 
 ```bash
 # Genera las clases de localización basadas en los ARB (usa la configuración de l10n.yaml)
-flutter gen-l10n
+# Genera las clases de localización basadas en los ARB (usa la configuración de l10n.yaml)
+fvm flutter gen-l10n
 
 # Alternativamente, un build también disparará la generación si es necesario:
-flutter pub get
-flutter build apk   # o flutter build web --release
+fvm flutter pub get
+fvm flutter build apk   # o fvm flutter build web --release
 ```
 
 - Pasos recomendados al añadir o modificar ARB (`lib/l10n/*.arb`):
 
 1. Asegúrate de que el ARB esté en formato JSON válido (comas finales, comillas, etc.).
-2. Ejecuta `flutter gen-l10n` para crear/actualizar `AppLocalizations` en `lib/l10n/`.
-3. Si aplicas cambios grandes, ejecutar `flutter clean` seguido de `flutter pub get` antes de compilar puede evitar artefactos.
+2. Ejecuta `fvm flutter gen-l10n` para crear/actualizar `AppLocalizations` en `lib/l10n/`.
+3. Si aplicas cambios grandes, ejecutar `fvm flutter clean` seguido de `fvm flutter pub get` antes de compilar puede evitar artefactos.
 
 - Actualizar assets (imágenes, videos, fonts) después de agregar o cambiar archivos en `assets/` o `web/`:
 
 ```bash
 # Si agregaste o cambiaste rutas en pubspec.yaml o añadiste archivos bajo assets/
-flutter pub get
-flutter clean
+fvm flutter pub get
+fvm flutter clean
 # Luego compilar o correr para que los cambios se reflejen
-flutter run -d chrome
+fvm flutter run -d chrome
 ```
 
 - Limpieza completa (útil cuando aparece comportamiento extraño tras muchos cambios o cambios de assets/localizations):
 
 ```bash
-flutter clean
-flutter pub get
+fvm flutter clean
+fvm flutter pub get
+fvm flutter gen-l10n
+```
+
+### 🛠️ Tareas de VS Code (Automatización)
+
+Este proyecto incluye configuración de VS Code para facilitar estas tareas.
+
+- **Generación automática al iniciar**: Al presionar `F5` o iniciar depuración, se ejecuta automáticamente `gen-l10n`.
+- **Limpieza completa**:
+    1. Presiona `Ctrl+Shift+P` (o `Cmd+Shift+P`).
+    2. Escribe "Run Task" (Ejecutar Tarea).
+    3. Selecciona **"Flutter Clean & Setup"**.
+    
+    Esta tarea ejecuta en orden: `clean` -> `pub get` -> `gen-l10n`, solucionando la mayoría de problemas de compilación y localización.
 ```
 
 - Ejecutar la app en modo debug en Chrome (útil para inspeccionar errores del runtime y logs del DebugService):
