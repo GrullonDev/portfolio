@@ -17,7 +17,9 @@ class TechChip extends StatelessWidget {
     return Chip(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       avatar: SizedBox(width: 18, height: 18, child: Center(child: icon)),
-      label: Text(label),
+      label: Text(label, style: const TextStyle(color: Colors.white)),
+      backgroundColor: const Color(0xFF7B61FF).withOpacity(0.15),
+      side: const BorderSide(color: Color(0xFF7B61FF), width: 1),
     );
   }
 }

@@ -18,6 +18,7 @@ class ProjectsPage extends StatelessWidget {
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
+      backgroundColor: const Color(0xFF0B0D17),
       appBar: CustomAppBar(
         isMobile: isMobile,
         title: '',
@@ -33,30 +34,107 @@ class ProjectsPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
-                vertical: 30,
+                vertical: 60,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 10),
-                  Text(
-                    t.projectsIntro,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Montserrat',
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF7B61FF).withOpacity(0.15),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                          color: const Color(0xFF7B61FF).withOpacity(0.3)),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: const BoxDecoration(
+                            color: Colors.greenAccent,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        const Text(
+                          'Disponible para freelance y consultoría', // Ideally move to localizations
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                  const SizedBox(height: 24),
+                  Column(
+                    children: [
+                      RichText(
+                        textAlign: TextAlign.center,
+                        text: const TextSpan(
+                          style: TextStyle(
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontFamily: 'Inter',
+                          ),
+                          children: [
+                            TextSpan(text: 'Proyectos '),
+                            TextSpan(
+                              text: 'Enterprise',
+                              style: TextStyle(color: Color(0xFF9D5CFF)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        width: 120,
+                        height: 4,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF7B61FF),
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      const Text(
+                        'Soluciones reales en producción para empresas energéticas, retail y e-commerce',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xFFA0A0A0),
+                        ),
+                      ),
+                    ],
+                  ),
 
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 48),
 
                   // Categoría: Apps móviles
-                  Text(
-                    t.projectsMobile,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Color(0xFF7B61FF),
+                            width: 3,
+                          ),
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        t.projectsMobile,
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
 
@@ -139,11 +217,26 @@ class ProjectsPage extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Categoría: Proyectos web
-                  Text(
-                    t.projectsWeb,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Color(0xFF7B61FF),
+                            width: 3,
+                          ),
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        t.projectsWeb,
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
 
@@ -230,11 +323,26 @@ class ProjectsPage extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Categoría: Proyectos personales / experimentales
-                  Text(
-                    t.projectsPersonal,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Color(0xFF7B61FF),
+                            width: 3,
+                          ),
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        t.projectsPersonal,
+                        style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
 

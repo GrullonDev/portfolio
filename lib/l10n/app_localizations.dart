@@ -770,6 +770,18 @@ abstract class AppLocalizations {
   /// **'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.'**
   String get projectLunaHubDesc;
 
+  /// No description provided for @expSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Professional Experience'**
+  String get expSectionTitle;
+
+  /// No description provided for @skillsSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical Skills'**
+  String get skillsSectionTitle;
+
   /// No description provided for @expTropigasRole.
   ///
   /// In en, this message translates to:
@@ -937,18 +949,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Git versioning and collaborative work.'**
   String get stackItemGit;
-
-  /// No description provided for @expSectionTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Professional Experience'**
-  String get expSectionTitle;
-
-  /// No description provided for @skillsSectionTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Technical Skills'**
-  String get skillsSectionTitle;
 }
 
 class _AppLocalizationsDelegate

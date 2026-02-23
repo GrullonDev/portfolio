@@ -369,6 +369,12 @@ class AppLocalizationsEn extends AppLocalizations {
       'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.';
 
   @override
+  String get expSectionTitle => 'Professional Experience';
+
+  @override
+  String get skillsSectionTitle => 'Technical Skills';
+
+  @override
   String get expTropigasRole => 'Senior Programmer Analyst';
 
   @override
@@ -461,10 +467,4 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get stackItemGit => 'Git versioning and collaborative work.';
-
-  @override
-  String get expSectionTitle => 'Professional Experience';
-
-  @override
-  String get skillsSectionTitle => 'Technical Skills';
 }

@@ -19,47 +19,54 @@ class ServiceCategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final cardWidth = Responsive.isMobile(context) ? double.infinity : 440.0;
 
     return SizedBox(
       width: cardWidth,
       child: Card(
-        elevation: 4,
+        color: const Color(0xFF151921),
+        elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
+          side: const BorderSide(color: Colors.white10),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(32),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                children: [
-                  Icon(icon, size: 28, color: theme.colorScheme.primary),
-                  const SizedBox(width: 10),
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF7B61FF).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Icon(icon, size: 36, color: const Color(0xFF9D5CFF)),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 20),
+              Text(
+                title,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 24),
               ...bullets.map((b) => Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    padding: const EdgeInsets.symmetric(vertical: 6),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.check_circle,
-                            size: 18, color: theme.colorScheme.primary),
-                        const SizedBox(width: 8),
+                        const Icon(Icons.play_arrow,
+                            size: 16, color: Color(0xFF9D5CFF)),
+                        const SizedBox(width: 12),
                         Expanded(
                           child: Text(
                             b,
-                            style: const TextStyle(fontSize: 16),
+                            style: const TextStyle(
+                                fontSize: 16, color: Color(0xFFD1D5DB)),
                           ),
                         ),
                       ],
