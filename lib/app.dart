@@ -71,13 +71,25 @@ class MyApp extends StatelessWidget {
 ThemeData _lightTheme() {
   final base = ThemeData.light();
   return base.copyWith(
-    textTheme: GoogleFonts.notoSansTextTheme(base.textTheme),
+    primaryColor: const Color(0xFF8B5CF6),
+    colorScheme: const ColorScheme.light(
+      primary: Color(0xFF8B5CF6),
+      secondary: Color(0xFF6366F1),
+    ),
+    textTheme: GoogleFonts.interTextTheme(base.textTheme),
   );
 }
 
 ThemeData _darkTheme() {
   final base = ThemeData.dark();
   return base.copyWith(
-    textTheme: GoogleFonts.notoSansTextTheme(base.textTheme),
+    scaffoldBackgroundColor: const Color(0xFF0F172A),
+    primaryColor: const Color(0xFF8B5CF6),
+    colorScheme: const ColorScheme.dark(
+      primary: Color(0xFF8B5CF6),
+      secondary: Color(0xFF6366F1),
+      surface: Color(0xFF1E293B),
+    ),
+    textTheme: GoogleFonts.interTextTheme(base.textTheme),
   );
 }
