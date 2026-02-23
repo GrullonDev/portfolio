@@ -21,6 +21,7 @@ class ServicesPage extends StatelessWidget {
     final isMobile = Responsive.isMobile(context);
 
     return Scaffold(
+      backgroundColor: const Color(0xFF0B0D17),
       appBar: CustomAppBar(
         isMobile: isMobile,
         title: '',
@@ -37,7 +38,7 @@ class ServicesPage extends StatelessWidget {
               maxWidth: Responsive.isMobile(context) ? 400 : 1500,
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -45,15 +46,23 @@ class ServicesPage extends StatelessWidget {
                   Text(
                     t.servicesTitle,
                     style: const TextStyle(
-                        fontSize: 32, fontWeight: FontWeight.bold),
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      height: 1.2,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 16),
                   Text(
                     t.servicesIntro,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 18),
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Color(0xFFA0A0A0),
+                    ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 48),
 
                   // Categorías principales
                   Wrap(
@@ -126,15 +135,19 @@ class ServicesPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 48),
 
                   // Proyectos destacados
                   Text(
                     t.featuredProjectsTitle,
                     style: const TextStyle(
-                        fontSize: 28, fontWeight: FontWeight.bold),
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 32),
                   Wrap(
                     spacing: 20,
                     runSpacing: 20,
@@ -157,36 +170,62 @@ class ServicesPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 48),
 
                   // Llamado a la acción (CTA)
-                  Text(
-                    t.ctaReady,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                  Card(
+                    color: const Color(0xFF151921),
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      side: const BorderSide(color: Colors.white10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(40),
+                      child: Column(
+                        children: [
+                          Text(
+                            t.ctaReady,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            t.ctaInvite,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              color: Color(0xFFA0A0A0),
+                            ),
+                          ),
+                          const SizedBox(height: 32),
+                          ElevatedButton.icon(
+                            onPressed: () {
+                              navigateTo(context, 'contact');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF7B61FF),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 32, vertical: 20),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                              textStyle: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                              elevation: 0,
+                            ),
+                            icon: const Icon(Icons.rocket_launch_outlined),
+                            label: Text(t.ctaContact),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  Text(
-                    t.ctaInvite,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Aquí puedes agregar la lógica para redirigir a un formulario de contacto o enviar un correo.
-                      navigateTo(context, 'contact');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      textStyle: const TextStyle(fontSize: 18),
-                    ),
-                    child: Text(t.ctaContact),
-                  ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 40),
                 ],
               ),
             ),

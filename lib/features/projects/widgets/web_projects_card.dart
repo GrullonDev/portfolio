@@ -67,23 +67,51 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context);
     return Card(
-      elevation: 4,
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      color: const Color(0xFF151921),
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: Colors.white10),
+      ),
+      margin: const EdgeInsets.symmetric(vertical: 16),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              widget.title,
-              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Text(
+                    widget.title,
+                    style: const TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF7B61FF).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(Icons.language,
+                      color: Color(0xFF9D5CFF), size: 24),
+                ),
+              ],
             ),
-            const SizedBox(height: 10),
-            Text(
-              widget.description,
-              style: const TextStyle(fontSize: 20),
-            ),
-            const SizedBox(height: 20),
+            if (widget.description.isNotEmpty) ...[
+              const SizedBox(height: 12),
+              Text(
+                widget.description,
+                style: const TextStyle(
+                    fontSize: 18, color: Color(0xFFD1D5DB), height: 1.5),
+              ),
+            ],
+            const SizedBox(height: 24),
             if (widget.technologies != null && widget.technologies!.isNotEmpty)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,7 +126,15 @@ class _WebProjectsCardState extends State<WebProjectsCard> {
                     spacing: 8,
                     runSpacing: 8,
                     children: widget.technologies!
-                        .map((t) => Chip(label: Text(t)))
+                        .map((t) => Chip(
+                              label: Text(t,
+                                  style:
+                                      const TextStyle(color: Colors.white70)),
+                              backgroundColor:
+                                  const Color(0xFF7B61FF).withOpacity(0.1),
+                              side: const BorderSide(
+                                  color: Color(0xFF7B61FF), width: 0.5),
+                            ))
                         .toList(),
                   ),
                   const SizedBox(height: 12),

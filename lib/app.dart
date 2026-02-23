@@ -71,10 +71,12 @@ class MyApp extends StatelessWidget {
 ThemeData _lightTheme() {
   final base = ThemeData.light();
   return base.copyWith(
-    primaryColor: const Color(0xFF8B5CF6),
+    primaryColor: const Color(0xFF7B61FF),
+    scaffoldBackgroundColor: const Color(0xFFF5F5F5),
     colorScheme: const ColorScheme.light(
-      primary: Color(0xFF8B5CF6),
-      secondary: Color(0xFF6366F1),
+      primary: Color(0xFF7B61FF),
+      secondary: Color(0xFF9D5CFF),
+      surface: Colors.white,
     ),
     textTheme: GoogleFonts.interTextTheme(base.textTheme),
   );
@@ -83,12 +85,13 @@ ThemeData _lightTheme() {
 ThemeData _darkTheme() {
   final base = ThemeData.dark();
   return base.copyWith(
-    scaffoldBackgroundColor: const Color(0xFF0F172A),
-    primaryColor: const Color(0xFF8B5CF6),
+    scaffoldBackgroundColor: const Color(0xFF0B0D17),
+    primaryColor: const Color(0xFF7B61FF),
     colorScheme: const ColorScheme.dark(
-      primary: Color(0xFF8B5CF6),
-      secondary: Color(0xFF6366F1),
-      surface: Color(0xFF1E293B),
+      primary: Color(0xFF7B61FF),
+      secondary: Color(0xFF9D5CFF),
+      surface: Color(0xFF151921),
+      onSurface: Colors.white,
     ),
     textTheme: GoogleFonts.interTextTheme(base.textTheme),
   );

@@ -42,26 +42,49 @@ class MobileProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context);
     return Card(
-      elevation: 4,
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      color: const Color(0xFF151921),
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: const BorderSide(color: Colors.white10),
+      ),
+      margin: const EdgeInsets.symmetric(vertical: 16),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF7B61FF).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(Icons.mobile_friendly,
+                      color: Color(0xFF9D5CFF), size: 24),
+                ),
+              ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
             Text(
               description,
-              style: const TextStyle(fontSize: 20),
+              style: const TextStyle(
+                  fontSize: 18, color: Color(0xFFD1D5DB), height: 1.5),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 24),
             if ((customSlides != null && customSlides!.isNotEmpty) ||
                 images.isNotEmpty)
               CarouselSlider(
@@ -91,8 +114,16 @@ class MobileProjectCard extends StatelessWidget {
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
-                children:
-                    technologies!.map((t) => Chip(label: Text(t))).toList(),
+                children: technologies!
+                    .map((t) => Chip(
+                          label: Text(t,
+                              style: const TextStyle(color: Colors.white70)),
+                          backgroundColor:
+                              const Color(0xFF7B61FF).withOpacity(0.1),
+                          side: const BorderSide(
+                              color: Color(0xFF7B61FF), width: 0.5),
+                        ))
+                    .toList(),
               ),
             ],
             const SizedBox(height: 16),
