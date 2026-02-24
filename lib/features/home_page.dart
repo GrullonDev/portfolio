@@ -4,13 +4,16 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/features/about_me/page/about_page.dart';
+import 'package:portafolio_app/features/contact/contact_page.dart';
+import 'package:portafolio_app/features/projects/page/projects_page.dart';
+import 'package:portafolio_app/features/services/page/services_page.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
 
 import 'package:portafolio_app/utils/widgets/footer.dart';
-import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,13 +21,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = Responsive.isMobile(context);
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: const Color(0xFF0B0D17),
-      appBar: CustomAppBar(isMobile: isMobile, title: ''),
-      drawer: isMobile ? const Drawer(child: Navbar()) : null,
+      appBar: const CustomAppBar(),
       body: Stack(
         children: [
           // Subtle purple glow background
@@ -49,10 +50,23 @@ class HomePage extends StatelessWidget {
                 maxWidth: screenWidth,
                 minHeight: MediaQuery.of(context).size.height - 100,
               ),
-              child: const Center(
+              child: Center(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
-                  child: _HeroSection(),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                  child: Column(
+                    children: [
+                      const _HeroSection(),
+                      const SizedBox(height: 100),
+                      const AboutPage(),
+                      const SizedBox(height: 100),
+                      const ServicesPage(),
+                      const SizedBox(height: 100),
+                      const ProjectsPage(),
+                      const SizedBox(height: 100),
+                      const ContactPage(),
+                    ],
+                  ),
                 ),
               ),
             ),
