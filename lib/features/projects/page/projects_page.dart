@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'package:portafolio_app/features/projects/widgets/mobile_projects_card.dart';
-import 'package:portafolio_app/features/projects/widgets/web_projects_card.dart';
-import 'package:portafolio_app/l10n/app_localizations.dart';
-import 'package:portafolio_app/utils/const/images_assets.dart';
-import 'package:portafolio_app/utils/widgets/device_mockups.dart';
+import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/features/projects/widgets/enterprise_project_card.dart';
+import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ProjectsPage extends StatelessWidget {
@@ -12,8 +11,6 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final t = AppLocalizations.of(context);
-
     return Center(
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -31,10 +28,10 @@ class ProjectsPage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF7B61FF).withOpacity(0.15),
+                  color: const Color(0xFF7B61FF).withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                      color: const Color(0xFF7B61FF).withOpacity(0.3)),
+                      color: const Color(0xFF7B61FF).withValues(alpha: 0.3)),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -99,280 +96,355 @@ class ProjectsPage extends StatelessWidget {
                   ),
                 ],
               ),
-
               const SizedBox(height: 48),
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  final isMobile = constraints.maxWidth < 800;
+                  final List<Widget> cards = [
+                    EnterpriseProjectCard(
+                      title: 'Sistema de Gestión Parroquial | Villa Nueva',
+                      subtitle: 'Plataforma web empresarial full-stack',
+                      contribution:
+                          'Desarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción.',
+                      result:
+                          'Sistema completo en producción con autenticación, base de datos PostgreSQL, deploy automatizado y arquitectura escalable',
+                      technologies: const [
+                        'Angular',
+                        'NestJS',
+                        'PostgreSQL',
+                        'TypeScript',
+                        'Docker',
+                        'Firebase Hosting',
+                        'Google Cloud',
+                        'GitHub Actions',
+                        'CI/CD',
+                        'GraphQL',
+                      ],
+                      trailingIcon: const Icon(Icons.phone_iphone,
+                          color: Color(0xFF9D5CFF)),
+                      actions: [
+                        OutlinedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.code, size: 18),
+                          label: const Text('Repositorio'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFFA0A0A0),
+                            side: const BorderSide(color: Colors.white10),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                      ],
+                    ),
+                    EnterpriseProjectCard(
+                      title: 'LUNA HUB',
+                      subtitle: 'E-commerce full-stack',
+                      contribution:
+                          'Plataforma de e-commerce para productos de bebé y artículos curados. Implementa catálogos, carrito de compras, perfiles de usuario y pagos seguros. Proyecto colaborativo que demuestra integración de frontend en Flutter con backends en Node.js y pipelines de CI/CD.',
+                      result:
+                          'E-commerce completo en producción con integración de pagos y sistema de gestión de inventario',
+                      technologies: const [
+                        'Flutter',
+                        'Node.js',
+                        'MongoDB',
+                        'Stripe',
+                        'REST API',
+                        'Firebase',
+                        'CI/CD',
+                      ],
+                      trailingIcon: const Icon(Icons.phone_iphone,
+                          color: Color(0xFF9D5CFF)),
+                      actions: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 12),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF102A20),
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: const Color(0xFF1F4D36)),
+                          ),
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.business,
+                                  size: 18, color: Color(0xFF4ADE80)),
+                              SizedBox(width: 8),
+                              Text(
+                                'Proyecto confidencial',
+                                style: TextStyle(
+                                  color: Color(0xFF4ADE80),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    EnterpriseProjectCard(
+                      title: 'Fitmotiv App',
+                      subtitle: 'App móvil de fitness',
+                      contribution:
+                          'Aplicación de fitness con planes de entrenamiento personalizados, seguimiento de progreso y funciones sociales. Incluye onboarding, rutinas, planes y métricas para mantener a los usuarios motivados.',
+                      result:
+                          'App completa con experiencia de usuario fluida, animaciones personalizadas y diseño UI/UX profesional',
+                      technologies: const [
+                        'Flutter',
+                        'UI/UX Design',
+                        'Animations',
+                        'Firebase',
+                        'Provider',
+                      ],
+                      trailingIcon: const Icon(Icons.phone_iphone,
+                          color: Color(0xFF9D5CFF)),
+                      actions: [
+                        OutlinedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.code, size: 18),
+                          label: const Text('Repositorio'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFFA0A0A0),
+                            side: const BorderSide(color: Colors.white10),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                      ],
+                    ),
+                    EnterpriseProjectCard(
+                      title: 'Pomodoro App (Enfoque)',
+                      subtitle: 'App de productividad',
+                      contribution:
+                          'Mejora el enfoque con sesiones cronometradas y estadísticas sencillas. Implementación de la técnica Pomodoro con notificaciones locales y persistencia de datos.',
+                      result:
+                          'Publicada en Google Play con UI minimalista enfocada en la concentración',
+                      technologies: const [
+                        'Flutter',
+                        'Local Notifications',
+                        'Shared Preferences',
+                        'Isar',
+                      ],
+                      trailingIcon: const Icon(Icons.phone_iphone,
+                          color: Color(0xFF9D5CFF)),
+                      actions: [
+                        OutlinedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.code, size: 18),
+                          label: const Text('Repositorio'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFFA0A0A0),
+                            side: const BorderSide(color: Colors.white10),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                      ],
+                    ),
+                    EnterpriseProjectCard(
+                      title: 'GrullonDev - Portafolio',
+                      subtitle: 'Portafolio web profesional',
+                      contribution:
+                          'Portafolio personal desarrollado con Flutter Web, diseño moderno glass-morphism, optimizado para SEO y con animaciones fluidas.',
+                      result:
+                          'Sitio web profesional en producción con excelente performance y experiencia de usuario',
+                      technologies: const [
+                        'Flutter',
+                        'Firebase Auth',
+                        'Cloud Firestore',
+                        'Firebase Storage',
+                        'Riverpod/Provider',
+                      ],
+                      trailingIcon: const Icon(Icons.phone_iphone,
+                          color: Color(0xFF9D5CFF)),
+                      actions: [
+                        OutlinedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.open_in_new, size: 18),
+                          label: const Text('Ver Demo'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFF9D5CFF),
+                            side: BorderSide(
+                                color: const Color(0xFF9D5CFF)
+                                    .withValues(alpha: 0.3)),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: () {},
+                          icon: const Icon(Icons.code, size: 18),
+                          label: const Text('Repositorio'),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: const Color(0xFFA0A0A0),
+                            side: const BorderSide(color: Colors.white10),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ];
 
-              // Categoría: Apps móviles
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Color(0xFF7B61FF),
-                        width: 3,
+                  if (isMobile) {
+                    return Column(
+                      children: cards
+                          .map((card) => Padding(
+                                padding: const EdgeInsets.only(bottom: 24),
+                                child: card,
+                              ))
+                          .toList(),
+                    );
+                  }
+
+                  return Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            cards[0],
+                            const SizedBox(height: 24),
+                            cards[2],
+                            const SizedBox(height: 24),
+                            cards[4],
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 24),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            cards[1],
+                            const SizedBox(height: 24),
+                            cards[3],
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+              const SizedBox(height: 64),
+              // Más Proyectos Section
+              Container(
+                width: double.infinity,
+                padding:
+                    const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1B202D),
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Column(
+                  children: [
+                    const Text(
+                      'Más Proyectos',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
-                  ),
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(
-                    t.projectsMobile,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    const SizedBox(height: 32),
+                    Wrap(
+                      spacing: 24,
+                      runSpacing: 24,
+                      alignment: WrapAlignment.center,
+                      children: [
+                        MiniProjectCard(
+                          title: 'Finanzas Personales',
+                          subtitle: 'App de gestión financiera',
+                          technologies: const [
+                            'Flutter',
+                            'Charts',
+                            'Local Database',
+                            'BLoC'
+                          ],
+                          onCodePressed: () {},
+                        ),
+                        MiniProjectCard(
+                          title: 'Flores Amarillas (Motivación)',
+                          subtitle: 'Mini app experimental',
+                          technologies: const [
+                            'Flutter',
+                            'Animations',
+                            'Custom Paint'
+                          ],
+                          onCodePressed: () {},
+                        ),
+                        MiniProjectCard(
+                          title: 'EduPlay - Plataforma Educativa (Beta)',
+                          subtitle: 'Plataforma educativa interactiva',
+                          technologies: const [
+                            'Flutter',
+                            'Firebase',
+                            'REST API',
+                            'Gamification'
+                          ],
+                          onCodePressed: () {},
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 12),
-
-              // 1) Pomodoro App
-              MobileProjectCard(
-                title: t.projectPomodoroName,
-                description: t.projectPomodoroDesc,
-                technologies: [
-                  'Flutter',
-                  'Local Notifications',
-                  'Shared Preferences/Isar',
-                ],
-                images: [
-                  ImageAssets.pomodoroInit,
-                  ImageAssets.pomodoroSession,
-                  ImageAssets.pomodoroData,
-                  ImageAssets.pomodoroHistory,
-                  ImageAssets.pomodoroBreak,
-                ],
-                betaEnabled: true,
-                platform: PhonePlatform.android,
-                github: 'https://github.com/GrullonDev/pomodoro',
-                googlePlay:
-                    'https://play.google.com/store/apps/details?id=com.grullondev.pomodoro&pcampaignid=web_share',
-              ),
-
-              // 2) Finanzas Personales
-              MobileProjectCard(
-                title: t.projectFinanceName,
-                description: t.projectFinanceDesc,
-                technologies: [
-                  'Flutter',
-                  'Firebase',
-                  'REST APIs',
-                ],
-                betaEnabled: true,
-                platform: PhonePlatform.ios,
-                github: 'https://github.com/GrullonDev/PersonalFinance.git',
-                images: [
-                  ImageAssets.login,
-                  ImageAssets.home,
-                  ImageAssets.homeData,
-                  ImageAssets.add,
-                  ImageAssets.reports,
-                  ImageAssets.profileFinance
-                ],
-              ),
-
-              // const SizedBox(height: 24),
-
-              // 4) Fitness App
-              MobileProjectCard(
-                title: t.projectFitmotivName,
-                description: t.projectFitmotivDesc,
-                platform: PhonePlatform.android,
-                github: 'https://github.com/GrullonDev/FitMotiv',
-                betaEnabled: false,
-                technologies: [
-                  'Flutter',
-                  'UI/UX Design',
-                  'Animations',
-                ],
-                images: [
-                  ImageAssets.onboardingFitmotiv,
-                  ImageAssets.loginFitmotiv,
-                  ImageAssets.createAccountFitmotiv,
-                  ImageAssets.forgotPasswordFitmotiv,
-                  ImageAssets.homeFitmotiv,
-                  ImageAssets.plansFitmotiv,
-                  ImageAssets.routinesFitmotiv,
-                  ImageAssets.progressFitmotiv,
-                  ImageAssets.communityFitmotiv,
-                  ImageAssets.profileFitmotiv,
-                  ImageAssets.settingsFitmotiv,
-                ],
-              ),
-
-              const SizedBox(height: 24),
-
-              // Categoría: Proyectos web
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Color(0xFF7B61FF),
-                        width: 3,
+                    const SizedBox(height: 48),
+                    const Text(
+                      'Estos son solo algunos ejemplos. Explora mi GitHub para ver más proyectos, contribuciones open source y código.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xFFA0A0A0),
                       ),
                     ),
-                  ),
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(
-                    t.projectsWeb,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 12),
-
-              // 1) Portafolio App
-              WebProjectsCard(
-                title: t.appTitle,
-                description: '',
-                technologies: [
-                  'Flutter',
-                  'Firebase Auth',
-                  'Cloud Firestore',
-                  'Firebase Storage',
-                  'Riverpod/Provider',
-                ],
-                images: [
-                  ImageAssets.inicio,
-                  ImageAssets.aboutMe1,
-                  ImageAssets.aboutMe2,
-                  ImageAssets.services1,
-                  ImageAssets.services2,
-                ],
-                github: 'https://github.com/GrullonDev/portfolio',
-                demo: 'https://jorgegrullondev.com/',
-              ),
-
-              const SizedBox(height: 12),
-
-              // 2) Parroquia App
-              WebProjectsCard(
-                title: t.projectParroquiaName,
-                description: t.projectParroquiaDesc,
-                technologies: [
-                  'Angular',
-                  'NestJS',
-                  'PostgreSQL',
-                  'TypeScript',
-                  'Docker',
-                  'Firebase Hosting',
-                  'Google Cloud',
-                  'GitHub Actions',
-                  'CI/CD',
-                  'GraphQL',
-                ],
-                images: [
-                  ImageAssets.parroquiaLogin,
-                ],
-                github:
-                    'https://github.com/GrullonDev/AngularIglesiaConcepcion',
-              ),
-
-              const SizedBox(height: 12),
-
-              // 3) Tienda Virtual
-              WebProjectsCard(
-                title: t.projectLunaHubName,
-                description: t.projectLunaHubDesc,
-                technologies: [
-                  'Flutter',
-                  'Node.js',
-                  'Express',
-                  'MongoDB',
-                  'REST API',
-                  'Firebase',
-                  'Stripe',
-                  'GitHub Actions',
-                  'CI/CD',
-                  'Docker',
-                ],
-                images: [
-                  ImageAssets.homeInitLunahub,
-                  ImageAssets.homeFooterLunahub,
-                  ImageAssets.homeFiltersLunahub,
-                  ImageAssets.cartLunahub,
-                  ImageAssets.profileLunahub,
-                  ImageAssets.profileFinalLunahub,
-                  ImageAssets.babyLunahub,
-                  ImageAssets.streamingLunahub,
-                  ImageAssets.paymentLunahub,
-                ],
-              ),
-
-              const SizedBox(height: 24),
-
-              // Categoría: Proyectos personales / experimentales
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Color(0xFF7B61FF),
-                        width: 3,
+                    const SizedBox(height: 24),
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color:
+                                const Color(0xFF9D5CFF).withValues(alpha: 0.3),
+                            blurRadius: 24,
+                            spreadRadius: 2,
+                          ),
+                        ],
+                      ),
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          context
+                              .read<PortfolioLogic>()
+                              .launchURL('https://github.com/GrullonDev');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF9D5CFF),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 32, vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        icon: const Icon(Icons.code),
+                        label: const Text(
+                          'Portafolio completo en GitHub',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                  ),
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(
-                    t.projectsPersonal,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
+                  ],
                 ),
-              ),
-
-              const SizedBox(height: 12),
-
-              MobileProjectCard(
-                title: t.projectYellowFlowersName,
-                description: t.projectYellowFlowersDesc,
-                technologies: [
-                  'Flutter',
-                  'Animations',
-                ],
-                images: [
-                  ImageAssets.phase1,
-                  ImageAssets.phase2,
-                  ImageAssets.phase3,
-                  ImageAssets.phase4,
-                  ImageAssets.newVersion,
-                  ImageAssets.onboarding,
-                  ImageAssets.name,
-                  ImageAssets.message,
-                  ImageAssets.share,
-                ],
-                platform: PhonePlatform.ios,
-                github: 'https://github.com/GrullonDev/YellowFlowers',
-                betaEnabled: true,
-              ),
-
-              const SizedBox(height: 12),
-
-              WebProjectsCard(
-                title: t.eduPlayTitle,
-                description: t.eduPlayDesc,
-                technologies: [
-                  'Flutter',
-                  'Firebase',
-                  'REST API',
-                ],
-                images: [
-                  ImageAssets.menu,
-                ],
-                github: 'https://github.com/GrullonDev/EduPlay',
               ),
             ],
           ),

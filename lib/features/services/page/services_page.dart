@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:portafolio_app/features/services/widgets/service_category_card.dart';
-import 'package:portafolio_app/features/services/widgets/service_project_card.dart';
 import 'package:portafolio_app/features/services/widgets/tech.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
-import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ServicesPage extends StatelessWidget {
@@ -27,19 +25,40 @@ class ServicesPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Título y descripción general
-              Text(
-                t.servicesTitle,
-                style: const TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  height: 1.2,
-                ),
-                textAlign: TextAlign.center,
+              Column(
+                children: [
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
+                      style: TextStyle(
+                        fontSize: 48,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontFamily: 'Inter',
+                      ),
+                      children: [
+                        TextSpan(text: 'Servicios '),
+                        TextSpan(
+                          text: 'Ofertados',
+                          style: TextStyle(color: Color(0xFF9D5CFF)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Container(
+                    width: 60,
+                    height: 4,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF9D5CFF),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 16),
-              Text(
-                t.servicesIntro,
+              const SizedBox(height: 24),
+              const Text(
+                'Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 20,
@@ -114,97 +133,6 @@ class ServicesPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 48),
-
-              // Proyectos destacados
-              Text(
-                t.featuredProjectsTitle,
-                style: const TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 32),
-              Wrap(
-                spacing: 20,
-                runSpacing: 20,
-                alignment: WrapAlignment.center,
-                children: [
-                  ServiceProjectCard(
-                    image: ImageAssets.pomodoroInit,
-                    title: t.projectPomodoroName,
-                    description: 'Pomodoro Timer App',
-                  ),
-                  ServiceProjectCard(
-                    image: ImageAssets.inicio,
-                    title: t.appTitle,
-                    description: 'Portafolio App',
-                  ),
-                  ServiceProjectCard(
-                    image: ImageAssets.homeInitLunahub,
-                    title: t.projectLunaHubName,
-                    description: 'LUNA HUB',
-                  ),
-                ],
-              ),
-              const SizedBox(height: 48),
-
-              // Llamado a la acción (CTA)
-              Card(
-                color: const Color(0xFF151921),
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                  side: const BorderSide(color: Colors.white10),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(40),
-                  child: Column(
-                    children: [
-                      Text(
-                        t.ctaReady,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        t.ctaInvite,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          color: Color(0xFFA0A0A0),
-                        ),
-                      ),
-                      const SizedBox(height: 32),
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          // navigateTo(context, 'contact'); // REMOVED FOR SINGLE PAGE
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF7B61FF),
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 32, vertical: 20),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8)),
-                          textStyle: const TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                          elevation: 0,
-                        ),
-                        icon: const Icon(Icons.rocket_launch_outlined),
-                        label: Text(t.ctaContact),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 40),
             ],
           ),
         ),
