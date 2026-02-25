@@ -44,14 +44,18 @@ class AboutPage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 30),
                       _ImpactLine(t.aboutImpact1),
                       _ImpactLine(t.aboutImpact2),
                       _ImpactLine(t.aboutImpact3),
 
+                      const SizedBox(height: 30),
+
                       const Divider(
                         radius: BorderRadius.all(Radius.elliptical(10, 15)),
                       ),
+
+                      const SizedBox(height: 30),
 
                       // Experience Timeline
                       Align(
@@ -64,23 +68,32 @@ class AboutPage extends StatelessWidget {
                               color: Colors.white),
                         ),
                       ),
-                      // const SizedBox(height: 20),
+                      const SizedBox(height: 30),
                       const ExperienceTimeline(),
 
                       const Divider(
                         radius: BorderRadius.all(Radius.elliptical(10, 15)),
                       ),
 
+                      const SizedBox(height: 30),
+
                       const SkillsGrid(),
+
+                      const SizedBox(height: 30),
 
                       const Divider(
                         radius: BorderRadius.all(Radius.elliptical(10, 15)),
                       ),
 
+                      const SizedBox(height: 30),
+
                       const CertificationsSection(),
-                      const SizedBox(height: 64),
+
+                      const SizedBox(height: 30),
+
                       const BusinessResultsSection(),
-                      const SizedBox(height: 64),
+
+                      const SizedBox(height: 30),
 
                       // Sección de redes sociales
                       Text(

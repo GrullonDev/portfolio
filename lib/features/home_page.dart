@@ -45,34 +45,40 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: screenWidth,
-                minHeight: MediaQuery.of(context).size.height - 100,
-              ),
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
-                  child: Column(
-                    children: [
-                      _HeroSection(),
-                      SizedBox(height: 100),
-                      AboutPage(),
-                      SizedBox(height: 100),
-                      ServicesPage(),
-                      SizedBox(height: 100),
-                      ProjectsPage(),
-                      SizedBox(height: 100),
-                      ContactPage(),
-                    ],
+            child: Column(
+              children: [
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: screenWidth,
+                    minHeight: MediaQuery.of(context).size.height -
+                        kToolbarHeight, // Adjusted minimum height
+                  ),
+                  child: const Center(
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                      child: Column(
+                        children: [
+                          _HeroSection(),
+                          SizedBox(height: 100),
+                          AboutPage(),
+                          SizedBox(height: 45),
+                          ServicesPage(),
+                          SizedBox(height: 30),
+                          ProjectsPage(),
+                          SizedBox(height: 30),
+                          ContactPage(),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                const Footer(),
+              ],
             ),
           ),
         ],
       ),
-      bottomNavigationBar: const Footer(),
     );
   }
 }

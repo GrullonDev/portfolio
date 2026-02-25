@@ -15,7 +15,7 @@ class Footer extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: Color(0xFF0F111A), // Dark background color
+        color: Color(0xFF0F111A),
         border: Border(top: BorderSide(color: Colors.white10)),
       ),
       padding:
@@ -50,7 +50,7 @@ class Footer extends StatelessWidget {
           const Divider(color: Colors.white10),
           const SizedBox(height: 32),
           const Text(
-            '© 2026 Jorge Luis Grullón Marroquín. Hecho con 💜 y mucho café ☕',
+            '© 2020 Jorge Luis Grullón Marroquín. Hecho con 💜 y mucho café ☕',
             style: TextStyle(
               color: Color(0xFFA0A0A0),
               fontSize: 14,
@@ -155,8 +155,7 @@ class _FooterRight extends StatelessWidget {
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.email_outlined,
-                  color: Color(0xFFA0A0A0), size: 20),
+              Icon(Icons.email_outlined, color: Color(0xFFA0A0A0), size: 20),
               SizedBox(width: 12),
               Text(
                 'contacto@jorgegrullondev.com',
