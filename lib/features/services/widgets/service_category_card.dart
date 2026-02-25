@@ -38,7 +38,7 @@ class ServiceCategoryCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF7B61FF).withOpacity(0.1),
+                  color: const Color(0xFF7B61FF).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Icon(icon, size: 36, color: const Color(0xFF9D5CFF)),

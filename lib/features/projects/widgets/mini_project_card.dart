@@ -74,16 +74,16 @@ class MiniProjectCard extends StatelessWidget {
           const SizedBox(height: 24),
           InkWell(
             onTap: onCodePressed,
-            child: Row(
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(
+                Icon(
                   Icons.code,
                   color: Color(0xFF9D5CFF),
                   size: 16,
                 ),
-                const SizedBox(width: 8),
-                const Text(
+                SizedBox(width: 8),
+                Text(
                   'Ver código',
                   style: TextStyle(
                     color: Color(0xFF9D5CFF),

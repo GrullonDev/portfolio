@@ -50,21 +50,20 @@ class HomePage extends StatelessWidget {
                 maxWidth: screenWidth,
                 minHeight: MediaQuery.of(context).size.height - 100,
               ),
-              child: Center(
+              child: const Center(
                 child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
                   child: Column(
                     children: [
-                      const _HeroSection(),
-                      const SizedBox(height: 100),
-                      const AboutPage(),
-                      const SizedBox(height: 100),
-                      const ServicesPage(),
-                      const SizedBox(height: 100),
-                      const ProjectsPage(),
-                      const SizedBox(height: 100),
-                      const ContactPage(),
+                      _HeroSection(),
+                      SizedBox(height: 100),
+                      AboutPage(),
+                      SizedBox(height: 100),
+                      ServicesPage(),
+                      SizedBox(height: 100),
+                      ProjectsPage(),
+                      SizedBox(height: 100),
+                      ContactPage(),
                     ],
                   ),
                 ),
@@ -127,13 +126,13 @@ class _HeroSection extends StatelessWidget {
             border: Border.all(color: const Color(0xFF7B61FF), width: 3),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF7B61FF).withOpacity(0.3),
+                color: const Color(0xFF7B61FF).withValues(alpha: 0.3),
                 blurRadius: 40,
                 spreadRadius: 2,
               ),
             ],
           ),
-          child: ClipOval(
+          child: const ClipOval(
             child: CustomImage(
               imagePath: ImageAssets.profile,
               width: 140,
@@ -173,13 +172,13 @@ class _HeroSection extends StatelessWidget {
               onPressed: () => context.read<PortfolioLogic>().launchURL(
                   'https://jorgegrullondev.com/'), // Cambiar por ruta a tu CV si quieres
               style: secondaryButtonStyle,
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                       'Descargar CV'), // Placeholder extra para cuadrar con Figma
-                  const SizedBox(width: 12),
-                  const Icon(Icons.download_rounded, size: 20),
+                  SizedBox(width: 12),
+                  Icon(Icons.download_rounded, size: 20),
                 ],
               ),
             ),

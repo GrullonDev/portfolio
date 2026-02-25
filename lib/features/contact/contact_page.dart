@@ -68,172 +68,195 @@ class _ContactPageState extends State<ContactPage> {
             children: [
               RichText(
                 textAlign: TextAlign.center,
-                text: TextSpan(
-                  style: const TextStyle(
+                text: const TextSpan(
+                  style: TextStyle(
                     fontSize: 48,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontFamily: 'Inter',
                   ),
                   children: [
-                    const TextSpan(text: '¿Trabajamos '),
                     TextSpan(
-                      text: 'juntos?',
-                      style: const TextStyle(color: Color(0xFF9D5CFF)),
+                        text: 'Me encantaría escuchar tu idea y\nayudarte a '),
+                    TextSpan(
+                      text: 'hacerla realidad',
+                      style: TextStyle(color: Color(0xFF9D5CFF)),
                     ),
+                    TextSpan(text: '.'),
                   ],
                 ),
               ),
               const SizedBox(height: 24),
-              Text(
-                t.contactPersonal,
+              const Text(
+                'Elige una opción rápida o envíame un mensaje con el formulario.',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 18,
                   color: Color(0xFFA0A0A0),
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                t.contactPickOption,
+              const SizedBox(height: 16),
+              const Text(
+                'Respondo en menos de 24h 🚀  |  Español & English 🌍',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: 14,
                   color: Color(0xFFA0A0A0),
                 ),
               ),
               const SizedBox(height: 48),
-
-              Wrap(
-                spacing: 16,
-                runSpacing: 16,
-                alignment: WrapAlignment.center,
-                children: [
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      context.read<PortfolioLogic>().launchURL(
-                          'https://calendar.app.google/pa4CCPAQBonh5e5s7');
-                    },
-                    style: primaryButtonStyle,
-                    icon: const Icon(Icons.calendar_today, size: 20),
-                    label: Text(t.contactBtnCalendar),
-                  ),
-                  OutlinedButton.icon(
-                    onPressed: () {
-                      context.read<PortfolioLogic>().launchURL(
-                          'https://wa.me/+50242909548?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.');
-                    },
-                    style: secondaryButtonStyle,
-                    icon: const Icon(Icons.chat_bubble_outline, size: 20),
-                    label: Text(t.contactBtnWhatsapp),
-                  ),
-                  OutlinedButton.icon(
-                    onPressed: () {
-                      context.read<PortfolioLogic>().launchURL(
-                          'mailto:prosystem155@gmail.com?subject=Proyecto');
-                    },
-                    style: secondaryButtonStyle,
-                    icon: const Icon(Icons.email_outlined, size: 20),
-                    label: Text(t.contactBtnEmail),
-                  ),
-                ],
-              ),
-
-              const SizedBox(height: 48),
-
-              // Stats Row
               Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF151921),
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.white10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                constraints: const BoxConstraints(maxWidth: 500),
+                child: Column(
                   children: [
-                    _StatItem(number: '6+', label: 'Años\nExperiencia'),
-                    _StatItem(number: '20+', label: 'Proyectos\nDesarrollados'),
-                    _StatItem(number: '100%', label: 'Compromiso\nCalidad'),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 48),
-
-              Card(
-                color: const Color(0xFF151921),
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                  side: const BorderSide(color: Colors.white10),
-                ),
-                child: ExpansionTile(
-                  iconColor: Colors.white,
-                  collapsedIconColor: Colors.white54,
-                  leading: const Icon(Icons.description_outlined,
-                      color: Color(0xFFA0A0A0)),
-                  title: Text(
-                    t.contactClassicFormTitle,
-                    style: const TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Form(
-                        key: _formKey,
-                        child: Column(
+                    // Button 1: Google Calendar
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'https://calendar.app.google/pa4CCPAQBonh5e5s7');
+                        },
+                        style: secondaryButtonStyle,
+                        icon: const Icon(Icons.calendar_today, size: 20),
+                        label: const Text('📅 Agendar en Google Calendar'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // Button 2: WhatsApp
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color:
+                                const Color(0xFF25D366).withValues(alpha: 0.3),
+                            blurRadius: 20,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
+                      ),
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'https://wa.me/+50242909548?text=Hola%20Jorge%2C%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto.');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF25D366),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 18),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8)),
+                          elevation: 0,
+                          textStyle: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        icon: const Icon(Icons.chat_bubble_outline, size: 20),
+                        label: const Text('💬 WhatsApp'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // Button 3: Email Directo
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          context.read<PortfolioLogic>().launchURL(
+                              'mailto:prosystem155@gmail.com?subject=Proyecto');
+                        },
+                        style: secondaryButtonStyle,
+                        icon: const Icon(Icons.email_outlined, size: 20),
+                        label: const Text('✉️ Email directo'),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // Dropdown/ExpansionTile for Formulario
+                    Card(
+                      color: const Color(0xFF151921),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        side: const BorderSide(color: Colors.white10),
+                      ),
+                      child: Theme(
+                        data: Theme.of(context).copyWith(
+                          dividerColor: Colors.transparent,
+                        ),
+                        child: ExpansionTile(
+                          iconColor: Colors.white,
+                          collapsedIconColor: Colors.white54,
+                          leading: const Icon(Icons.send_outlined,
+                              color: Color(0xFF9D5CFF)),
+                          title: const Text(
+                            '📋 Formulario clásico',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
                           children: [
-                            _CustomTextField(
-                              controller: _nameController,
-                              label: t.contactFormName,
-                              icon: Icons.person,
-                              validator: (v) => (v == null || v.isEmpty)
-                                  ? t.contactErrorNameRequired
-                                  : null,
-                            ),
-                            const SizedBox(height: 20),
-                            _CustomTextField(
-                              controller: _emailController,
-                              label: t.contactFormEmail,
-                              icon: Icons.email,
-                              validator: (v) => (v == null || !v.contains('@'))
-                                  ? t.contactErrorEmailInvalid
-                                  : null,
-                            ),
-                            const SizedBox(height: 20),
-                            _CustomTextField(
-                              controller: _messageController,
-                              label: t.contactFormMessage,
-                              icon: Icons.message,
-                              maxLines: 5,
-                              validator: (v) => (v == null || v.isEmpty)
-                                  ? t.contactErrorMessageRequired
-                                  : null,
-                            ),
-                            const SizedBox(height: 24),
-                            SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    context
-                                        .read<PortfolioLogic>()
-                                        .launchWhatsApp(
-                                          name: _nameController.text,
-                                          email: _emailController.text,
-                                          message: _messageController.text,
-                                        );
-                                    _clearForm();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(
-                                            content: Text(t.contactSentOk)));
-                                  }
-                                },
-                                style: primaryButtonStyle,
-                                child: Text(t.contactSend),
+                            Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: Form(
+                                key: _formKey,
+                                child: Column(
+                                  children: [
+                                    _CustomTextField(
+                                      controller: _nameController,
+                                      label: t.contactFormName,
+                                      icon: Icons.person,
+                                      validator: (v) => (v == null || v.isEmpty)
+                                          ? t.contactErrorNameRequired
+                                          : null,
+                                    ),
+                                    const SizedBox(height: 20),
+                                    _CustomTextField(
+                                      controller: _emailController,
+                                      label: t.contactFormEmail,
+                                      icon: Icons.email,
+                                      validator: (v) =>
+                                          (v == null || !v.contains('@'))
+                                              ? t.contactErrorEmailInvalid
+                                              : null,
+                                    ),
+                                    const SizedBox(height: 20),
+                                    _CustomTextField(
+                                      controller: _messageController,
+                                      label: t.contactFormMessage,
+                                      icon: Icons.message,
+                                      maxLines: 5,
+                                      validator: (v) => (v == null || v.isEmpty)
+                                          ? t.contactErrorMessageRequired
+                                          : null,
+                                    ),
+                                    const SizedBox(height: 24),
+                                    SizedBox(
+                                      width: double.infinity,
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          if (_formKey.currentState!
+                                              .validate()) {
+                                            context
+                                                .read<PortfolioLogic>()
+                                                .launchWhatsApp(
+                                                  name: _nameController.text,
+                                                  email: _emailController.text,
+                                                  message:
+                                                      _messageController.text,
+                                                );
+                                            _clearForm();
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(SnackBar(
+                                                    content:
+                                                        Text(t.contactSentOk)));
+                                          }
+                                        },
+                                        style: primaryButtonStyle,
+                                        child: Text(t.contactSend),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ],
@@ -243,56 +266,29 @@ class _ContactPageState extends State<ContactPage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 40),
-              TextButton.icon(
+              const SizedBox(height: 120),
+              const Text(
+                '¿Quieres ver más detalles de mi trayectoria y recomendaciones?',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, color: Color(0xFFA0A0A0)),
+              ),
+              const SizedBox(height: 24),
+              OutlinedButton.icon(
                 onPressed: () => context.read<PortfolioLogic>().launchURL(
                     'https://www.linkedin.com/in/jorgeluisgrullonmarroquin/'),
+                style: secondaryButtonStyle,
                 icon: const FaIcon(FontAwesomeIcons.linkedin,
-                    color: Color(0xFFA0A0A0)),
+                    color: Color(0xFF9D5CFF), size: 18),
                 label: const Text(
                   'Ver perfil completo en LinkedIn',
                   style: TextStyle(
-                      color: Color(0xFFA0A0A0),
-                      decoration: TextDecoration.underline),
+                      color: Colors.white, fontWeight: FontWeight.normal),
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class _StatItem extends StatelessWidget {
-  final String number;
-  final String label;
-
-  const _StatItem({required this.number, required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          number,
-          style: const TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF7B61FF),
-          ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          label,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 14,
-            color: Color(0xFFA0A0A0),
-          ),
-        ),
-      ],
     );
   }
 }

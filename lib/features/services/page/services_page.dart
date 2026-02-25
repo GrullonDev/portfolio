@@ -60,7 +60,7 @@ class ServicesPage extends StatelessWidget {
               const Text(
                 'Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 20,
                   color: Color(0xFFA0A0A0),
                 ),

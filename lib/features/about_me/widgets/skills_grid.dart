@@ -48,6 +48,8 @@ class SkillsGrid extends StatelessWidget {
         title: 'Buenas prácticas',
         descriptions: [
           'Clean Code, principios SOLID.',
+          'Pruebas unitarias (Unit Testing).',
+          'Versionamiento con Git y trabajo colaborativo.',
         ],
       ),
     ];

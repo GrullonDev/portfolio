@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/features/about_me/widgets/experience_timeline.dart';
 import 'package:portafolio_app/features/about_me/widgets/skills_grid.dart';
-import 'package:portafolio_app/features/about_me/widgets/certificate_list.dart';
-import 'package:portafolio_app/features/about_me/widgets/carrousel_certificate.dart';
+import 'package:portafolio_app/features/about_me/widgets/certifications_section.dart';
+import 'package:portafolio_app/features/about_me/widgets/business_results_section.dart';
 import 'package:portafolio_app/utils/widgets/social_media/social_icon.dart';
 
 class AboutPage extends StatelessWidget {
@@ -79,57 +77,10 @@ class AboutPage extends StatelessWidget {
                         radius: BorderRadius.all(Radius.elliptical(10, 15)),
                       ),
 
-                      Text(
-                        t.aboutCertificationsTitle,
-                        style: const TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-
-                      // const SizedBox(height: 10),
-
-                      // Lista de Certificaciones en Texto
-                      const CertificationList(onlyRelevant: true),
-
-                      // const SizedBox(height: 30),
-
-                      // Carrusel de imágenes animado
-                      CertificationCarousel(
-                        onlyRelevant: true,
-                        autoplay: true,
-                        autoplayDelay: const Duration(seconds: 3),
-                        animationDuration: const Duration(milliseconds: 500),
-                        viewportFraction: 0.85,
-                        placeholder: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.grey[100],
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          alignment: Alignment.center,
-                          child: const Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.broken_image,
-                                  size: 48, color: Colors.grey),
-                              SizedBox(height: 8),
-                              Text('Imagen no disponible')
-                            ],
-                          ),
-                        ),
-                      ),
-
-                      const SizedBox(height: 8),
-                      TextButton.icon(
-                        onPressed: () {
-                          context.read<PortfolioLogic>().launchURL(
-                              'https://www.linkedin.com/in/jorgeluisgrullonmarroquin/');
-                        },
-                        icon: const FaIcon(FontAwesomeIcons.linkedin),
-                        label: Text(t.aboutMoreCertsLinkedIn),
-                      ),
-
-                      const SizedBox(height: 20),
+                      const CertificationsSection(),
+                      const SizedBox(height: 64),
+                      const BusinessResultsSection(),
+                      const SizedBox(height: 64),
 
                       // Sección de redes sociales
                       Text(
