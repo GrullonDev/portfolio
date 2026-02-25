@@ -1,169 +1,287 @@
 import 'package:flutter/material.dart';
 
 class ExperienceTimeline extends StatelessWidget {
-  final List<Map<String, dynamic>> experience;
-
-  const ExperienceTimeline({super.key, required this.experience});
+  const ExperienceTimeline({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> experienceData = [
+      {
+        'role': 'Analista Programador Senior',
+        'company': 'Tropigas de Guatemala',
+        'period': 'Jun 2025 - Presente',
+        'badge': 'Corporativo',
+        'icon': Icons.business_center,
+        'bullets': [
+          'Desarrollo y evolución de aplicaciones móviles corporativas para operación y ventas en múltiples países',
+          'Implementación de integraciones con hardware (impresoras térmicas Bixolon) y servicios backend',
+          'Automatización de procesos de supervisión y control con validaciones en tiempo real para calidad de datos',
+          'Participación en diseño técnico y buenas prácticas para apps mantenibles y escalables'
+        ],
+        'technologies': [
+          'Flutter',
+          'Dart',
+          'Hardware Integration',
+          'Backend APIs',
+          'Enterprise Apps'
+        ]
+      },
+      {
+        'role': 'Flutter Developer',
+        'company': 'Freelance',
+        'period': '2024 - Presente',
+        'badge': 'Freelance',
+        'icon': Icons.rocket_launch,
+        'bullets': [
+          'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales',
+          'Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX',
+          'Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js'
+        ],
+        'technologies': [
+          'Flutter',
+          'Clean Architecture',
+          'BLoC',
+          'Riverpod',
+          'Firebase',
+          'Node.js'
+        ]
+      },
+      {
+        'role': 'Desarrollador Full Stack',
+        'company': 'Proyectos Independientes',
+        'period': '2020 - 2024',
+        'badge': 'Fundamentos',
+        'icon': Icons.code,
+        'bullets': [
+          'Desarrollo web con PHP y tecnologías relacionadas',
+          'Sistemas administrativos y gestión empresarial',
+          'Bases de datos relacionales (MySQL, PostgreSQL) y diseño de esquemas'
+        ],
+        'technologies': [
+          'PHP',
+          'MySQL',
+          'PostgreSQL',
+          'Web Development',
+          'CRUD Systems'
+        ]
+      }
+    ];
+
     return ListView.builder(
       shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: experience.length,
+      physics: const ScrollPhysics(),
+      itemCount: experienceData.length,
       itemBuilder: (context, index) {
-        final item = experience[index];
-        final isLast = index == experience.length - 1;
+        final item = experienceData[index];
+        final isLast = index == experienceData.length - 1;
 
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 24.0),
-          child: IntrinsicHeight(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Timeline line and dot
-                Column(
+        return Stack(
+          children: [
+            // Timeline line
+            if (!isLast)
+              Positioned(
+                top: 72, // 24 (margin) + 48 (dot height)
+                bottom: 0,
+                left:
+                    23, // Center of the 48px dot (24 - 1px for half the line width)
+                width: 2,
+                child: Container(
+                  color: const Color(0xFF9D5CFF),
+                ),
+              ),
+            // Timeline dot
+            Positioned(
+              top: 24,
+              left: 0,
+              child: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF9D5CFF).withValues(alpha: 0.15),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: const Color(0xFF9D5CFF).withValues(alpha: 0.3)),
+                ),
+                alignment: Alignment.center,
+                child: Icon(
+                  item['icon'],
+                  color: const Color(0xFF9D5CFF),
+                  size: 20,
+                ),
+              ),
+            ),
+            // Content Card
+            Padding(
+              padding: const EdgeInsets.only(left: 72.0, bottom: 32.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xFF151921),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: Colors.white10,
+                    width: 1,
+                  ),
+                ),
+                padding: const EdgeInsets.all(32),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: 16,
-                      height: 16,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Theme.of(context).primaryColor,
-                            Theme.of(context).primaryColor.withOpacity(0.7),
-                          ],
-                        ),
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Theme.of(context).primaryColor.withOpacity(0.3),
-                            blurRadius: 8,
-                            spreadRadius: 2,
-                          ),
-                        ],
-                      ),
-                    ),
-                    if (!isLast)
-                      Expanded(
-                        child: Container(
-                          width: 2,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                Theme.of(context).primaryColor.withOpacity(0.5),
-                                Colors.grey.withOpacity(0.2),
-                              ],
+                    // Header
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            item['role'],
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
                           ),
                         ),
-                      ),
-                  ],
-                ),
-                const SizedBox(width: 20),
-                // Content Card
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).cardColor,
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.grey.withOpacity(0.2),
-                        width: 1,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.05),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 8),
+                          decoration: BoxDecoration(
+                            color:
+                                const Color(0xFF9D5CFF).withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                                color: const Color(0xFF9D5CFF)
+                                    .withValues(alpha: 0.3)),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.show_chart,
+                                  color: Color(0xFF9D5CFF), size: 16),
+                              const SizedBox(width: 8),
+                              Text(
+                                item['badge'],
+                                style: const TextStyle(
+                                  color: Color(0xFF9D5CFF),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    const SizedBox(height: 16),
+                    // Company
+                    Row(
                       children: [
-                        Text(
-                          item['role'],
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).primaryColor,
+                        const Icon(
+                          Icons.business,
+                          size: 20,
+                          color: Color(0xFF9D5CFF),
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            item['company'],
+                            style: const TextStyle(
+                              fontSize: 18,
+                              color: Color(0xFF9D5CFF),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.business,
-                              size: 16,
-                              color: Colors.grey[600],
-                            ),
-                            const SizedBox(width: 6),
-                            Expanded(
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    // Period
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.calendar_today,
+                          size: 16,
+                          color: Color(0xFFA0A0A0),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          item['period'],
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFFA0A0A0),
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    // Bullets
+                    ...(item['bullets'] as List<String>)
+                        .map((bullet) => Padding(
+                              padding: const EdgeInsets.only(bottom: 12.0),
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(
+                                        top: 8, right: 12),
+                                    width: 4,
+                                    height: 4,
+                                    decoration: const BoxDecoration(
+                                      color: Color(0xFF9D5CFF),
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                      bullet,
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                        height: 1.6,
+                                        color: Color(0xFFE2E8F0),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                    const SizedBox(height: 24),
+                    const Divider(color: Colors.white10),
+                    const SizedBox(height: 24),
+                    // Technologies
+                    Wrap(
+                      spacing: 12,
+                      runSpacing: 12,
+                      children: (item['technologies'] as List<String>)
+                          .map(
+                            (tech) => Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF9D5CFF)
+                                    .withValues(alpha: 0.05),
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: const Color(0xFF9D5CFF)
+                                      .withValues(alpha: 0.2),
+                                ),
+                              ),
                               child: Text(
-                                item['company'],
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.grey[700],
+                                tech,
+                                style: const TextStyle(
+                                  color: Color(0xFF9D5CFF),
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 6),
-                        Row(
-                          children: [
-                            Icon(
-                              Icons.calendar_today,
-                              size: 16,
-                              color: Colors.grey[600],
-                            ),
-                            const SizedBox(width: 6),
-                            Text(
-                              item['period'],
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.grey[600],
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 16),
-                        Container(
-                          width: 40,
-                          height: 3,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Theme.of(context).primaryColor,
-                                Theme.of(context).primaryColor.withOpacity(0.3),
-                              ],
-                            ),
-                            borderRadius: BorderRadius.circular(2),
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          item['description'],
-                          style: TextStyle(
-                            fontSize: 15,
-                            height: 1.6,
-                            color: Colors.grey[800],
-                          ),
-                        ),
-                      ],
+                          )
+                          .toList(),
                     ),
-                  ),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ),
+          ],
         );
       },
     );

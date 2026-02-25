@@ -4,13 +4,16 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/features/about_me/page/about_page.dart';
+import 'package:portafolio_app/features/contact/contact_page.dart';
+import 'package:portafolio_app/features/projects/page/projects_page.dart';
+import 'package:portafolio_app/features/services/page/services_page.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
 
 import 'package:portafolio_app/utils/widgets/footer.dart';
-import 'package:portafolio_app/utils/widgets/nav_bar.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,13 +21,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = Responsive.isMobile(context);
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: const Color(0xFF0B0D17),
-      appBar: CustomAppBar(isMobile: isMobile, title: ''),
-      drawer: isMobile ? const Drawer(child: Navbar()) : null,
+      appBar: const CustomAppBar(),
       body: Stack(
         children: [
           // Subtle purple glow background
@@ -44,22 +45,40 @@ class HomePage extends StatelessWidget {
             ),
           ),
           SingleChildScrollView(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: screenWidth,
-                minHeight: MediaQuery.of(context).size.height - 100,
-              ),
-              child: const Center(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 80),
-                  child: _HeroSection(),
+            child: Column(
+              children: [
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: screenWidth,
+                    minHeight: MediaQuery.of(context).size.height -
+                        kToolbarHeight, // Adjusted minimum height
+                  ),
+                  child: const Center(
+                    child: Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+                      child: Column(
+                        children: [
+                          _HeroSection(),
+                          SizedBox(height: 100),
+                          AboutPage(),
+                          SizedBox(height: 45),
+                          ServicesPage(),
+                          SizedBox(height: 30),
+                          ProjectsPage(),
+                          SizedBox(height: 30),
+                          ContactPage(),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+                const Footer(),
+              ],
             ),
           ),
         ],
       ),
-      bottomNavigationBar: const Footer(),
     );
   }
 }
@@ -113,13 +132,13 @@ class _HeroSection extends StatelessWidget {
             border: Border.all(color: const Color(0xFF7B61FF), width: 3),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF7B61FF).withOpacity(0.3),
+                color: const Color(0xFF7B61FF).withValues(alpha: 0.3),
                 blurRadius: 40,
                 spreadRadius: 2,
               ),
             ],
           ),
-          child: ClipOval(
+          child: const ClipOval(
             child: CustomImage(
               imagePath: ImageAssets.profile,
               width: 140,
@@ -159,13 +178,13 @@ class _HeroSection extends StatelessWidget {
               onPressed: () => context.read<PortfolioLogic>().launchURL(
                   'https://jorgegrullondev.com/'), // Cambiar por ruta a tu CV si quieres
               style: secondaryButtonStyle,
-              child: Row(
+              child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                       'Descargar CV'), // Placeholder extra para cuadrar con Figma
-                  const SizedBox(width: 12),
-                  const Icon(Icons.download_rounded, size: 20),
+                  SizedBox(width: 12),
+                  Icon(Icons.download_rounded, size: 20),
                 ],
               ),
             ),

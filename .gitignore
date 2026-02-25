@@ -116,3 +116,10 @@ scripts/clear_cache.sh
 deploy.sh
 clear_cache.sh
 # --- END IGNORE ---
+
+# Platforms (Web only project)
+android/
+ios/
+macos/
+linux/
+windows/

@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 
 // A simple bottom sheet to collect an email and platform and send a beta request
+
 Future<void> showBetaRequestSheet(
   BuildContext context, {
   required String projectName,
@@ -29,11 +30,15 @@ Future<void> showBetaRequestSheet(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(t.betaRequestTitle,
-                  style: Theme.of(ctx).textTheme.titleLarge),
+              Text(
+                t.betaRequestTitle,
+                style: Theme.of(ctx).textTheme.titleLarge,
+              ),
               const SizedBox(height: 8),
-              Text(t.betaRequestSubtitle,
-                  style: Theme.of(ctx).textTheme.bodyMedium),
+              Text(
+                t.betaRequestSubtitle,
+                style: Theme.of(ctx).textTheme.bodyMedium,
+              ),
               const SizedBox(height: 12),
               TextField(
                 controller: emailController,
@@ -52,7 +57,9 @@ Future<void> showBetaRequestSheet(
                   SegmentedButton<String>(
                     segments: [
                       ButtonSegment(
-                          value: 'Android', label: Text(t.platformAndroid)),
+                        value: 'Android',
+                        label: Text(t.platformAndroid),
+                      ),
                       ButtonSegment(value: 'iOS', label: Text(t.platformIos)),
                     ],
                     selected: {platform},
@@ -77,8 +84,10 @@ Future<void> showBetaRequestSheet(
                           'https://wa.me/+50242909548?text=${Uri.encodeComponent(text)}',
                         );
                         if (await canLaunchUrl(uri)) {
-                          await launchUrl(uri,
-                              mode: LaunchMode.externalApplication);
+                          await launchUrl(
+                            uri,
+                            mode: LaunchMode.externalApplication,
+                          );
                         }
                       },
                       icon: const Icon(Icons.chat),
@@ -94,7 +103,8 @@ Future<void> showBetaRequestSheet(
                         final body =
                             'Hola Jorge,%0D%0A%0D%0AMe gustaría acceder a la beta de $projectName.%0D%0APlataforma: $platform%0D%0AMi correo: $email%0D%0A%0D%0AGracias!';
                         final uri = Uri.parse(
-                            'mailto:prosystem155@gmail.com?subject=$subject&body=$body');
+                          'mailto:prosystem155@gmail.com?subject=$subject&body=$body',
+                        );
                         if (await canLaunchUrl(uri)) {
                           await launchUrl(uri);
                         }
