@@ -28,7 +28,6 @@ class HomePage extends StatelessWidget {
       appBar: const CustomAppBar(),
       body: Stack(
         children: [
-          // Subtle purple glow background
           Positioned.fill(
             child: Container(
               decoration: const BoxDecoration(
@@ -36,8 +35,8 @@ class HomePage extends StatelessWidget {
                   center: Alignment.center,
                   radius: 0.8,
                   colors: [
-                    Color(0xFF231C4A), // soft purple glow
-                    Color(0xFF0B0D17), // bg color
+                    Color(0xFF231C4A),
+                    Color(0xFF0B0D17),
                   ],
                   stops: [0.0, 1.0],
                 ),
@@ -50,8 +49,8 @@ class HomePage extends StatelessWidget {
                 ConstrainedBox(
                   constraints: BoxConstraints(
                     maxWidth: screenWidth,
-                    minHeight: MediaQuery.of(context).size.height -
-                        kToolbarHeight, // Adjusted minimum height
+                    minHeight:
+                        MediaQuery.of(context).size.height - kToolbarHeight,
                   ),
                   child: const Center(
                     child: Padding(
@@ -91,7 +90,6 @@ class _HeroSection extends StatelessWidget {
     final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
 
-    // Figma Typography
     final titleStyle = TextStyle(
       fontSize: isMobile ? 38 : 56,
       fontWeight: FontWeight.bold,
@@ -123,7 +121,6 @@ class _HeroSection extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        // Profile Image
         Container(
           width: 140,
           height: 140,
@@ -148,13 +145,11 @@ class _HeroSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 40),
-
         Text(t.homeGreeting, style: titleStyle, textAlign: TextAlign.center),
         const SizedBox(height: 16),
         Text(t.homeRoleTagline,
             style: subtitleStyle, textAlign: TextAlign.center),
         const SizedBox(height: 48),
-
         Wrap(
           spacing: 16,
           runSpacing: 16,
@@ -176,13 +171,12 @@ class _HeroSection extends StatelessWidget {
             ),
             OutlinedButton(
               onPressed: () => context.read<PortfolioLogic>().launchURL(
-                  'https://jorgegrullondev.com/'), // Cambiar por ruta a tu CV si quieres
+                  'https://drive.google.com/file/d/1KSn4v56sTwiVMGyWLB5sVJsOr54-9rHS/view?usp=sharing'),
               style: secondaryButtonStyle,
               child: const Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                      'Descargar CV'), // Placeholder extra para cuadrar con Figma
+                  Text('Descargar CV'),
                   SizedBox(width: 12),
                   Icon(Icons.download_rounded, size: 20),
                 ],
