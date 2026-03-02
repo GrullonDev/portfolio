@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/router/routes.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
 
 const _kPrimary = Color(0xFF8B5CF6);
 
@@ -37,22 +38,29 @@ class Navbar extends StatelessWidget {
                     width: 44,
                     height: 44,
                     decoration: BoxDecoration(
-                      color: _kPrimary,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      'JG',
-                      style: GoogleFonts.inter(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 18,
+                    clipBehavior: Clip.antiAlias,
+                    child: Image.asset(
+                      ImageAssets.logo,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) => Container(
+                        color: _kPrimary,
+                        alignment: Alignment.center,
+                        child: Text(
+                          'JG',
+                          style: GoogleFonts.inter(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 18,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   const SizedBox(width: 12),
                   Text(
-                    'Jorge Grullón',
+                    'GrullonDev',
                     style: GoogleFonts.inter(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,

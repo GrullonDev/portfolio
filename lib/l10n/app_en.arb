@@ -233,5 +233,6 @@
   "testimonialName1": "Client / Colleague",
   "testimonialQuote1": "Excellent performance and professionalism in every stage of the project.",
   "expTropigasDesc": "Development of corporate mobile applications for operations and sales, integrating specialized hardware and automating supervision processes.",
-  "expFreelanceDesc": "Development of custom mobile and web solutions using Flutter, Firebase, and scalable architectures for various clients."
+  "expFreelanceDesc": "Development of custom mobile and web solutions using Flutter, Firebase, and scalable architectures for various clients.",
+  "homeAvailableStatus": "Available for work"
 }

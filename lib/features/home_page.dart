@@ -147,7 +147,40 @@ class _HeroSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 32),
+        // Available for work badge
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            color: const Color(0xFF10B981).withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+                color: const Color(0xFF10B981).withValues(alpha: 0.2)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 8,
+                height: 8,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF10B981),
+                  shape: BoxShape.circle,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                t.homeAvailableStatus,
+                style: const TextStyle(
+                  color: Color(0xFF10B981),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 24),
         Text(t.homeGreeting, style: titleStyle, textAlign: TextAlign.center),
         const SizedBox(height: 16),
         Text(t.homeSubtitle, style: subtitleStyle, textAlign: TextAlign.center),

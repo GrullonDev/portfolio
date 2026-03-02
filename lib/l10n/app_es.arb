@@ -233,5 +233,6 @@
   "testimonialName1": "Cliente / Colega",
   "testimonialQuote1": "Excelente desenvolvimiento y profesionalismo en cada etapa del proyecto.",
   "expTropigasDesc": "Desarrollo de aplicaciones móviles corporativas para operación y ventas, integrando hardware especializado y automatizando procesos de supervisión.",
-  "expFreelanceDesc": "Desarrollo de soluciones personalizadas móviles y web utilizando Flutter, Firebase y arquitecturas escalables para diversos clientes."
+  "expFreelanceDesc": "Desarrollo de soluciones personalizadas móviles y web utilizando Flutter, Firebase y arquitecturas escalables para diversos clientes.",
+  "homeAvailableStatus": "Disponible para trabajar"
 }

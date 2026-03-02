@@ -1459,6 +1459,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Development of custom mobile and web solutions using Flutter, Firebase, and scalable architectures for various clients.'**
   String get expFreelanceDesc;
+
+  /// No description provided for @homeAvailableStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Available for work'**
+  String get homeAvailableStatus;
 }
 
 class _AppLocalizationsDelegate

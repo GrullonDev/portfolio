@@ -764,4 +764,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get expFreelanceDesc =>
       'Development of custom mobile and web solutions using Flutter, Firebase, and scalable architectures for various clients.';
+
+  @override
+  String get homeAvailableStatus => 'Available for work';
 }
