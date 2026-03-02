@@ -78,7 +78,14 @@ ThemeData _lightTheme() {
       secondary: Color(0xFF9D5CFF),
       surface: Colors.white,
     ),
-    textTheme: GoogleFonts.interTextTheme(base.textTheme),
+    textTheme: GoogleFonts.interTextTheme(base.textTheme).apply(
+      fontFamily: GoogleFonts.inter().fontFamily,
+      fontFamilyFallback: [
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Noto Color Emoji',
+      ],
+    ),
   );
 }
 
@@ -93,6 +100,13 @@ ThemeData _darkTheme() {
       surface: Color(0xFF151921),
       onSurface: Colors.white,
     ),
-    textTheme: GoogleFonts.interTextTheme(base.textTheme),
+    textTheme: GoogleFonts.interTextTheme(base.textTheme).apply(
+      fontFamily: GoogleFonts.inter().fontFamily,
+      fontFamilyFallback: [
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Noto Color Emoji',
+      ],
+    ),
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class StackItem {
   final String title;
@@ -15,41 +16,43 @@ class SkillsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
+
     final stackItems = [
-      const StackItem(
-        title: 'Mobile Multiplataforma',
+      StackItem(
+        title: t.skillMobileMultiTitle,
         descriptions: [
-          'Flutter (Dart) – desarrollo de apps productivas, consumo de APIs REST/GraphQL, manejo de estado, navegación, theming.',
-          'React Native – desarrollo de vistas, componentes reutilizables, integración con APIs y servicios backend.'
+          t.skillMobileMultiDesc1,
+          t.skillMobileMultiDesc2,
         ],
       ),
-      const StackItem(
-        title: 'Mobile Nativo',
+      StackItem(
+        title: t.skillMobileNativeTitle,
         descriptions: [
-          'Android: Kotlin, Jetpack Compose, Android SDK, consumo de servicios REST/GraphQL.',
-          'iOS: SwiftUI, patrones de diseño básicos y consumo de servicios remotos.'
+          t.skillMobileNativeDesc1,
+          t.skillMobileNativeDesc2,
         ],
       ),
-      const StackItem(
-        title: 'Backend / APIs',
+      StackItem(
+        title: t.skillBackendTitle,
         descriptions: [
-          'NestJS, GraphQL, diseño e implementación de APIs para consumo móvil.',
-          'Python – Desarrollo de scripts, automatización y backend básico.'
+          t.skillBackendDesc1,
+          t.skillBackendDesc2,
         ],
       ),
-      const StackItem(
-        title: 'Cloud / BaaS & Low-Code',
+      StackItem(
+        title: t.skillCloudTitle,
         descriptions: [
-          'Firebase (Auth, Firestore), notificaciones.',
-          'WordPress, Microsoft Power Apps para soluciones de soporte y backoffice.'
+          t.skillCloudDesc1,
+          t.skillCloudDesc2,
         ],
       ),
-      const StackItem(
-        title: 'Buenas prácticas',
+      StackItem(
+        title: t.skillBestPracticesTitle,
         descriptions: [
-          'Clean Code, principios SOLID.',
-          'Pruebas unitarias (Unit Testing).',
-          'Versionamiento con Git y trabajo colaborativo.',
+          t.skillBestPracticesDesc1,
+          t.skillBestPracticesDesc2,
+          t.skillBestPracticesDesc3,
         ],
       ),
     ];
@@ -59,25 +62,25 @@ class SkillsGrid extends StatelessWidget {
       children: [
         RichText(
           textAlign: TextAlign.center,
-          text: const TextSpan(
-            style: TextStyle(
+          text: TextSpan(
+            style: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
               color: Colors.white,
               fontFamily: 'Inter',
             ),
             children: [
-              WidgetSpan(
+              const WidgetSpan(
                 alignment: PlaceholderAlignment.middle,
                 child: Padding(
                   padding: EdgeInsets.only(right: 12.0),
                   child: Icon(Icons.build, color: Color(0xFF9D5CFF), size: 32),
                 ),
               ),
-              TextSpan(text: 'Stack Técnico '),
+              TextSpan(text: '${t.techStackTitle} '),
               TextSpan(
-                text: '(Mobile & Backend)',
-                style: TextStyle(color: Color(0xFF9D5CFF)),
+                text: t.techStackMobileDescription,
+                style: const TextStyle(color: Color(0xFF9D5CFF)),
               ),
             ],
           ),

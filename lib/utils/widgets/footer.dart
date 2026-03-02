@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -75,23 +76,32 @@ class _FooterLeft extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: const EdgeInsets.all(8),
+              width: 44,
+              height: 44,
               decoration: BoxDecoration(
-                color: const Color(0xFF9D5CFF),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
-              child: const Text(
-                'JG',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                ImageAssets.logo,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  color: const Color(0xFF9D5CFF),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'JG',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
                 ),
               ),
             ),
             const SizedBox(width: 12),
             const Text(
-              'Jorge Grullón',
+              'GrullonDev',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,

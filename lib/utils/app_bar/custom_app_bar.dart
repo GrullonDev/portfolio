@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/utils/language/language_provider.dart';
 import 'package:portafolio_app/utils/theme_switcher/theme_switcher.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
 
 const _kPrimary = Color(0xFF8B5CF6);
 const _kBg = Color(0xFF0F172A);
@@ -71,22 +72,29 @@ class _LogoBrand extends StatelessWidget {
               width: 40,
               height: 40,
               decoration: BoxDecoration(
-                color: _kPrimary,
                 borderRadius: BorderRadius.circular(10),
               ),
-              alignment: Alignment.center,
-              child: Text(
-                'JG',
-                style: GoogleFonts.inter(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w800,
-                  fontSize: 16,
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                ImageAssets.logo,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  color: _kPrimary,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'JG',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
               ),
             ),
             const SizedBox(width: 12),
             Text(
-              'Jorge Grullón',
+              'GrullonDev',
               style: GoogleFonts.inter(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,

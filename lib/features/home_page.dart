@@ -9,6 +9,7 @@ import 'package:portafolio_app/features/contact/contact_page.dart';
 import 'package:portafolio_app/features/projects/page/projects_page.dart';
 import 'package:portafolio_app/features/services/page/services_page.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:portafolio_app/features/testimonials/testimonials_section.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
@@ -62,9 +63,11 @@ class HomePage extends StatelessWidget {
                           SizedBox(height: 100),
                           AboutPage(),
                           SizedBox(height: 45),
-                          ServicesPage(),
-                          SizedBox(height: 30),
                           ProjectsPage(),
+                          SizedBox(height: 45),
+                          TestimonialsSection(),
+                          SizedBox(height: 45),
+                          ServicesPage(),
                           SizedBox(height: 30),
                           ContactPage(),
                         ],
@@ -144,11 +147,50 @@ class _HeroSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 40),
+        const SizedBox(height: 32),
+        // Available for work badge
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            color: const Color(0xFF10B981).withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+                color: const Color(0xFF10B981).withValues(alpha: 0.2)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 8,
+                height: 8,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF10B981),
+                  shape: BoxShape.circle,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                t.homeAvailableStatus,
+                style: const TextStyle(
+                  color: Color(0xFF10B981),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 24),
         Text(t.homeGreeting, style: titleStyle, textAlign: TextAlign.center),
         const SizedBox(height: 16),
-        Text(t.homeRoleTagline,
-            style: subtitleStyle, textAlign: TextAlign.center),
+        Text(t.homeSubtitle, style: subtitleStyle, textAlign: TextAlign.center),
+        const SizedBox(height: 24),
+        Text(t.homeValuePropShort,
+            style: subtitleStyle.copyWith(
+              fontSize: isMobile ? 16 : 18,
+              color: Colors.white70,
+            ),
+            textAlign: TextAlign.center),
         const SizedBox(height: 48),
         Wrap(
           spacing: 16,
@@ -173,12 +215,12 @@ class _HeroSection extends StatelessWidget {
               onPressed: () => context.read<PortfolioLogic>().launchURL(
                   'https://drive.google.com/file/d/1KSn4v56sTwiVMGyWLB5sVJsOr54-9rHS/view?usp=sharing'),
               style: secondaryButtonStyle,
-              child: const Row(
+              child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text('Descargar CV'),
-                  SizedBox(width: 12),
-                  Icon(Icons.download_rounded, size: 20),
+                  Text(t.btnDownloadCV),
+                  const SizedBox(width: 12),
+                  const Icon(Icons.download_rounded, size: 20),
                 ],
               ),
             ),

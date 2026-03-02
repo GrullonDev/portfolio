@@ -29,19 +29,21 @@ class ServicesPage extends StatelessWidget {
                 children: [
                   RichText(
                     textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      style: TextStyle(
+                    text: TextSpan(
+                      style: const TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         fontFamily: 'Inter',
                       ),
                       children: [
-                        TextSpan(text: 'Servicios '),
-                        TextSpan(
-                          text: 'Ofertados',
-                          style: TextStyle(color: Color(0xFF9D5CFF)),
-                        ),
+                        TextSpan(text: '${t.servicesTitle.split(' ')[0]} '),
+                        if (t.servicesTitle.split(' ').length > 1)
+                          TextSpan(
+                            text:
+                                t.servicesTitle.split(' ').sublist(1).join(' '),
+                            style: const TextStyle(color: Color(0xFF9D5CFF)),
+                          ),
                       ],
                     ),
                   ),
@@ -57,10 +59,10 @@ class ServicesPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 24),
-              const Text(
-                'Agrupo mis servicios en tres áreas clave para maximizar el valor y la claridad.',
+              Text(
+                t.servicesIntro,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   color: Color(0xFFA0A0A0),
                 ),

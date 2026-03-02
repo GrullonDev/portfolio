@@ -15,120 +15,148 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context);
+    final isMobile = Responsive.isMobile(context);
 
     return Center(
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxWidth: Responsive.isMobile(context) ? 400 : 950,
+          maxWidth: isMobile ? 400 : 950,
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 20),
-              // Secciones en un Wrap si hay espacio suficiente
-              Wrap(
-                spacing: 70,
-                runSpacing: 40,
-                alignment: WrapAlignment.center,
-                children: [
-                  // Professional Summary
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        t.aboutTrajectoryTitle,
-                        style: const TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(height: 30),
-                      _ImpactLine(t.aboutImpact1),
-                      _ImpactLine(t.aboutImpact2),
-                      _ImpactLine(t.aboutImpact3),
+              // Biography Section
+              Text(
+                'Jorge Grullón',
+                style: TextStyle(
+                  fontSize: isMobile ? 36 : 48,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 16),
+              Container(
+                width: 60,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF9D5CFF),
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              const SizedBox(height: 32),
+              Text(
+                t.aboutBio,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Color(0xFFA0A0A0),
+                  height: 1.6,
+                ),
+              ),
+              const SizedBox(height: 60),
 
-                      const SizedBox(height: 30),
+              // Trajectory / Journey
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  t.aboutTrajectoryTitle,
+                  style: const TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 32),
+              _ImpactLine(t.aboutImpact1),
+              _ImpactLine(t.aboutImpact2),
+              _ImpactLine(t.aboutImpact3),
 
-                      const Divider(
-                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
-                      ),
+              const SizedBox(height: 60),
+              const Divider(color: Colors.white10),
+              const SizedBox(height: 60),
 
-                      const SizedBox(height: 30),
+              // Experience Timeline
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '💼 ${t.expSectionTitle}',
+                  style: const TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ),
+              const SizedBox(height: 40),
+              const ExperienceTimeline(),
 
-                      // Experience Timeline
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          '💼 ${t.expSectionTitle}',
-                          style: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+              const SizedBox(height: 60),
+              const Divider(color: Colors.white10),
+              const SizedBox(height: 60),
+
+              // Skills Grid
+              const SkillsGrid(),
+
+              const SizedBox(height: 60),
+              const Divider(color: Colors.white10),
+              const SizedBox(height: 60),
+
+              // Business Results
+              const BusinessResultsSection(),
+
+              const SizedBox(height: 60),
+              const Divider(color: Colors.white10),
+              const SizedBox(height: 60),
+
+              // Certifications
+              const CertificationsSection(),
+
+              const SizedBox(height: 80),
+
+              // Social Media Section
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 60),
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1B202D),
+                  borderRadius: BorderRadius.circular(24),
+                  border: Border.all(color: Colors.white10),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      t.aboutConnectTitle,
+                      style: const TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    const SizedBox(height: 32),
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SocialIcon(
+                          icon: FontAwesomeIcons.github,
+                          url: 'https://github.com/GrullonDev',
                         ),
-                      ),
-                      const SizedBox(height: 30),
-                      const ExperienceTimeline(),
-
-                      const Divider(
-                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
-                      ),
-
-                      const SizedBox(height: 30),
-
-                      const SkillsGrid(),
-
-                      const SizedBox(height: 30),
-
-                      const Divider(
-                        radius: BorderRadius.all(Radius.elliptical(10, 15)),
-                      ),
-
-                      const SizedBox(height: 30),
-
-                      const CertificationsSection(),
-
-                      const SizedBox(height: 30),
-
-                      const BusinessResultsSection(),
-
-                      const SizedBox(height: 30),
-
-                      // Sección de redes sociales
-                      Text(
-                        t.aboutConnectTitle,
-                        style: const TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(height: 10),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SocialIcon(
-                            icon: FontAwesomeIcons.github,
-                            url: 'https://github.com/GrullonDev',
-                          ),
-                          SocialIcon(
-                            icon: FontAwesomeIcons.linkedin,
-                            url:
-                                'https://www.linkedin.com/in/jorgeluisgrullonmarroquin/',
-                          ),
-                          SocialIcon(
-                            icon: FontAwesomeIcons.instagram,
-                            url: 'https://www.instagram.com/jorgegrullondev',
-                          ),
-                          SocialIcon(
-                            icon: FontAwesomeIcons.tiktok,
-                            url: 'https://www.tiktok.com/@grullondev',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+                        SocialIcon(
+                          icon: FontAwesomeIcons.linkedin,
+                          url:
+                              'https://www.linkedin.com/in/jorgeluisgrullonmarroquin/',
+                        ),
+                        SocialIcon(
+                          icon: FontAwesomeIcons.instagram,
+                          url: 'https://www.instagram.com/jorgegrullondev',
+                        ),
+                        SocialIcon(
+                          icon: FontAwesomeIcons.tiktok,
+                          url: 'https://www.tiktok.com/@grullondev',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
@@ -144,14 +172,14 @@ class _ImpactLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = const Color(0xFF7B61FF);
+    const color = Color(0xFF7B61FF);
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
+      padding: const EdgeInsets.only(bottom: 16.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.check_circle, color: color, size: 22),
-          const SizedBox(width: 10),
+          const Icon(Icons.check_circle, color: color, size: 24),
+          const SizedBox(width: 16),
           Expanded(
             child: Text(
               text,

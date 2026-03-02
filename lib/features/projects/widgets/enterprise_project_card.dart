@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class EnterpriseProjectCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final String contribution;
   final String result;
+  final String? objective;
+  final String? challenges;
+  final String? solution;
+  final String? learning;
   final List<String> technologies;
   final Widget? trailingIcon;
   final List<Widget>? actions;
@@ -16,12 +21,18 @@ class EnterpriseProjectCard extends StatelessWidget {
     required this.contribution,
     required this.result,
     required this.technologies,
+    this.objective,
+    this.challenges,
+    this.solution,
+    this.learning,
     this.trailingIcon,
     this.actions,
   });
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
+
     return Container(
       decoration: BoxDecoration(
         color: const Color(0xFF151921),
@@ -77,7 +88,16 @@ class EnterpriseProjectCard extends StatelessWidget {
               ]
             ],
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 32),
+          if (objective != null)
+            _StoryItem(label: t.projectObjective, content: objective!),
+          if (challenges != null)
+            _StoryItem(label: t.projectChallenges, content: challenges!),
+          if (solution != null)
+            _StoryItem(label: t.projectSolution, content: solution!),
+          if (learning != null)
+            _StoryItem(label: t.projectLearning, content: learning!),
+          const Divider(color: Colors.white10, height: 48),
           const Text(
             'Tu aporte:',
             style: TextStyle(
@@ -113,7 +133,7 @@ class EnterpriseProjectCard extends StatelessWidget {
               color: Color(0xFFD1D5DB),
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 32),
           Wrap(
             spacing: 12,
             runSpacing: 12,
@@ -149,6 +169,43 @@ class EnterpriseProjectCard extends StatelessWidget {
               children: actions!,
             ),
           ],
+        ],
+      ),
+    );
+  }
+}
+
+class _StoryItem extends StatelessWidget {
+  final String label;
+  final String content;
+
+  const _StoryItem({required this.label, required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label.toUpperCase(),
+            style: const TextStyle(
+              fontSize: 12,
+              letterSpacing: 1.2,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF7B61FF),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            content,
+            style: const TextStyle(
+              fontSize: 15,
+              height: 1.5,
+              color: Color(0xFFD1D5DB),
+            ),
+          ),
         ],
       ),
     );

@@ -27,10 +27,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navContact => 'Contacto';
 
   @override
-  String get homeGreeting => 'Hola, soy Jorge Grullón👋';
+  String get homeGreeting => 'Soy Jorge Grullón👋';
 
   @override
-  String get homeSubtitle => 'Desarrollo aplicaciones móviles y web.';
+  String get homeSubtitle =>
+      'Desarrollador Flutter | Apps móviles y web orientadas a resultados';
 
   @override
   String get homeCtaProjects => 'Ver mis proyectos';
@@ -47,7 +48,11 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get homeRoleTagline =>
-      'Flutter Developer | Apps móviles y web de alto impacto';
+      'Transformo ideas en productos digitales de alto rendimiento.';
+
+  @override
+  String get homeValuePropShort =>
+      'Soluciones móviles y web escalables, diseñadas para impactar y generar resultados.';
 
   @override
   String get homeDifferentiator =>
@@ -109,7 +114,23 @@ class AppLocalizationsEs extends AppLocalizations {
       'Mini app para experimentar onboarding y animaciones.';
 
   @override
+  String get aboutBio =>
+      'Desarrollador de Software con más de 6 años de experiencia, especializado en la creación de aplicaciones móviles y web de alto impacto. Mi enfoque se centra en la arquitectura limpia, la escalabilidad y la entrega de valor real al negocio a través de soluciones tecnológicas innovadoras. Apasionado por el ecosistema Flutter y el desarrollo full-stack.';
+
+  @override
   String get tech => 'Tecnologías';
+
+  @override
+  String get projectObjective => 'Objetivo';
+
+  @override
+  String get projectChallenges => 'Retos';
+
+  @override
+  String get projectSolution => 'Solución';
+
+  @override
+  String get projectLearning => 'Aprendizaje';
 
   @override
   String get btnGooglePlay => 'Google Play';
@@ -122,6 +143,9 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get btnRequestBeta => 'Solicitar beta';
+
+  @override
+  String get btnDownloadCV => 'Descargar CV';
 
   @override
   String get whatIDoTitle => 'Lo que hago';
@@ -191,6 +215,40 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get contactSentOk => 'Mensaje enviado correctamente.';
+
+  @override
+  String get contactHeroHeadline =>
+      'Me encantaría escuchar tu idea y ayudarte a ';
+
+  @override
+  String get contactHeroAction => 'hacerla realidad';
+
+  @override
+  String get contactOptionQuick =>
+      'Elige una opción rápida o envíame un mensaje con el formulario.';
+
+  @override
+  String get contactSla =>
+      'Respondo en menos de 24h 🚀  |  Español & English 🌍';
+
+  @override
+  String get contactBtnCalendarLong => 'Agendar en Google Calendar';
+
+  @override
+  String get contactBtnWhatsappLong => 'WhatsApp';
+
+  @override
+  String get contactBtnEmailLong => 'Email directo';
+
+  @override
+  String get contactFormClassic => 'Formulario clásico';
+
+  @override
+  String get contactLinkedInPrompt =>
+      '¿Quieres ver más detalles de mi trayectoria y recomendaciones?';
+
+  @override
+  String get contactLinkedInBtn => 'Ver perfil completo en LinkedIn';
 
   @override
   String get servicesTitle => '🛠️ Servicios Ofertados';
@@ -344,12 +402,27 @@ class AppLocalizationsEs extends AppLocalizations {
   String get contactClassicFormTitle => 'Formulario clásico';
 
   @override
-  String get projectParroquiaName =>
-      'Sistema de Gestión Parroquial | Villa Nueva';
+  String get projectParroquiaName => 'Sistema de Gestión Parroquial';
 
   @override
   String get projectParroquiaDesc =>
-      'Desarrollé una plataforma web integral para la administración de sacramentos y documentos eclesiásticos de la Parroquia Inmaculada Concepción.';
+      'Plataforma web integral para la administración eclesiástica.';
+
+  @override
+  String get projectParroquiaObjective =>
+      'Digitalizar la gestión de sacramentos y documentos históricos.';
+
+  @override
+  String get projectParroquiaChallenges =>
+      'Migración de datos antiguos y necesidad de interfaz simplificada para administración.';
+
+  @override
+  String get projectParroquiaSolution =>
+      'Arquitectura full-stack moderna con NestJS/Angular y base de datos PostgreSQL.';
+
+  @override
+  String get projectParroquiaLearning =>
+      'Gestión de stakeholders y diseño de sistemas críticos de información.';
 
   @override
   String get eduPlayTitle => 'EduPlay - Plataforma Educativa (Beta)';
@@ -363,14 +436,46 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get projectFitmotivDesc =>
-      'Aplicación de fitness con planes de entrenamiento personalizados, seguimiento de progreso y funciones sociales. Incluye onboarding, rutinas, planes y métricas para mantener a los usuarios motivados.';
+      'App de fitness con planes personalizados y seguimiento social.';
+
+  @override
+  String get projectFitmotivObjective =>
+      'Aumentar la retención de usuarios mediante gamificación y planes a medida.';
+
+  @override
+  String get projectFitmotivChallenges =>
+      'Animaciones complejas y manejo eficiente de datos multimedia.';
+
+  @override
+  String get projectFitmotivSolution =>
+      'Implementación de Rive para animaciones y Firebase para tiempo real.';
+
+  @override
+  String get projectFitmotivLearning =>
+      'Diseño UI/UX centrado en la motivación y rendimiento gráfico en móviles.';
 
   @override
   String get projectLunaHubName => 'LUNA HUB';
 
   @override
   String get projectLunaHubDesc =>
-      'Plataforma de e‑commerce para productos de bebé y artículos curados. Implementa catálogos, carrito de compras, perfiles de usuario y pagos seguros. Proyecto colaborativo que demuestra integración de frontend en Flutter con backends en Node.js y pipelines de CI/CD.';
+      'Plataforma de e-commerce completa con integración de pagos y gestión de inventario.';
+
+  @override
+  String get projectLunaHubObjective =>
+      'Lanzar un marketplace robusto para productos curados.';
+
+  @override
+  String get projectLunaHubChallenges =>
+      'Integración compleja de pasarelas de pago y sincronización de stock en tiempo real.';
+
+  @override
+  String get projectLunaHubSolution =>
+      'Uso de Flutter para el frontend y una API REST escalable con Node.js.';
+
+  @override
+  String get projectLunaHubLearning =>
+      'Optimización de flujos de checkout y manejo de estados complejos en e-commerce.';
 
   @override
   String get expSectionTitle => 'Experiencia Profesional';
@@ -388,8 +493,23 @@ class AppLocalizationsEs extends AppLocalizations {
   String get expTropigasPeriod => 'Jun 2025 - Presente';
 
   @override
-  String get expTropigasDesc =>
-      '• Desarrollo y evolución de aplicaciones móviles corporativas utilizadas en varios países, orientadas a operación y ventas.\n• Implementación de funcionalidades móviles para monitoreo de ventas, planeación de rutas e inventarios en campo, integrando servicios backend.\n• Automatización de procesos de supervisión y control, con validaciones en tiempo real para mejorar la calidad de la información capturada.\n• Participación en el diseño técnico y buenas prácticas de código para asegurar apps mantenibles y escalables en el tiempo.';
+  String get expTropigasBadge => 'Corporativo';
+
+  @override
+  String get expTropigasBullet1 =>
+      'Desarrollo y evolución de aplicaciones móviles corporativas para operación y ventas en múltiples países.';
+
+  @override
+  String get expTropigasBullet2 =>
+      'Implementación de integraciones con hardware (impresoras térmicas Bixolon) y servicios backend.';
+
+  @override
+  String get expTropigasBullet3 =>
+      'Automatización de procesos de supervisión y control con validaciones en tiempo real para calidad de datos.';
+
+  @override
+  String get expTropigasBullet4 =>
+      'Participación en diseño técnico y buenas prácticas para apps mantenibles y escalables.';
 
   @override
   String get expFreelanceRole => 'Flutter Developer';
@@ -401,8 +521,168 @@ class AppLocalizationsEs extends AppLocalizations {
   String get expFreelancePeriod => '2024 - Presente';
 
   @override
-  String get expFreelanceDesc =>
-      '• Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales.\n• Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.\n• Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js.';
+  String get expFreelanceBadge => 'Freelance';
+
+  @override
+  String get expFreelanceBullet1 =>
+      'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales.';
+
+  @override
+  String get expFreelanceBullet2 =>
+      'Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX.';
+
+  @override
+  String get expFreelanceBullet3 =>
+      'Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js.';
+
+  @override
+  String get expIndieRole => 'Desarrollador Full Stack';
+
+  @override
+  String get expIndieCompany => 'Proyectos Independientes';
+
+  @override
+  String get expIndiePeriod => '2020 - 2024';
+
+  @override
+  String get expIndieBadge => 'Fundamentos';
+
+  @override
+  String get expIndieBullet1 =>
+      'Desarrollo web con PHP y tecnologías relacionadas.';
+
+  @override
+  String get expIndieBullet2 =>
+      'Sistemas administrativos y gestión empresarial.';
+
+  @override
+  String get expIndieBullet3 =>
+      'Optimización y mantenimiento de bases de datos relacionales.';
+
+  @override
+  String get businessResultsTitle => 'Resultados Empresariales';
+
+  @override
+  String get businessResultsSubtitle =>
+      'Impacto medible en proyectos reales de producción.';
+
+  @override
+  String get businessResultsAppsTitle => 'Apps en producción';
+
+  @override
+  String get businessResultsAppsDesc =>
+      'Desarrollo y mantenimiento de apps móviles utilizadas diariamente por equipos corporativos.';
+
+  @override
+  String get businessResultsHardwareTitle => 'Integración de hardware';
+
+  @override
+  String get businessResultsHardwareDesc =>
+      'Soluciones de hardware móvil (Bixolon/ESC-POS) para cobro y facturación en tiempo real.';
+
+  @override
+  String get businessResultsSecureTitle => 'Backend seguro';
+
+  @override
+  String get businessResultsSecureDesc =>
+      'Sistemas backend con autenticación robusta y arquitecturas limpias.';
+
+  @override
+  String get businessResultsEcommerceTitle => 'E-commerce & Web';
+
+  @override
+  String get businessResultsEcommerceDesc =>
+      'Plataformas de e-commerce con integración de pagos y gestión de productos.';
+
+  @override
+  String get businessResultsStat1 => 'Entrega exitosa';
+
+  @override
+  String get businessResultsStat2 => 'Apps en producción';
+
+  @override
+  String get businessResultsStat3 => 'Proyectos completados';
+
+  @override
+  String get businessResultsFooter =>
+      'Cada proyecto desarrollado con enfoque en calidad, rendimiento y resultados medibles.';
+
+  @override
+  String get activeNow => 'En uso activo';
+
+  @override
+  String get automatedProcesses => 'Procesos automatizados';
+
+  @override
+  String get secureData => 'Datos protegidos';
+
+  @override
+  String get onlineSales => 'Ventas online';
+
+  @override
+  String get implementedAndWorking => 'Implementado y funcionando';
+
+  @override
+  String get techStackTitle => 'Stack Técnico';
+
+  @override
+  String get techStackMobileDescription => '(Mobile & Backend)';
+
+  @override
+  String get skillMobileMultiTitle => 'Mobile Multiplataforma';
+
+  @override
+  String get skillMobileMultiDesc1 =>
+      'Flutter (Dart) – desarrollo de apps productivas, consumo de APIs REST/GraphQL, manejo de estado, navegación, theming.';
+
+  @override
+  String get skillMobileMultiDesc2 =>
+      'React Native – desarrollo de vistas, componentes reutilizables, integración con APIs y servicios backend.';
+
+  @override
+  String get skillMobileNativeTitle => 'Mobile Nativo';
+
+  @override
+  String get skillMobileNativeDesc1 =>
+      'Android: Kotlin, Jetpack Compose, Android SDK, consumo de servicios REST/GraphQL.';
+
+  @override
+  String get skillMobileNativeDesc2 =>
+      'iOS: SwiftUI, patrones de diseño básicos y consumo de servicios remotos.';
+
+  @override
+  String get skillBackendTitle => 'Backend / APIs';
+
+  @override
+  String get skillBackendDesc1 =>
+      'NestJS, GraphQL, diseño e implementación de APIs para consumo móvil.';
+
+  @override
+  String get skillBackendDesc2 =>
+      'Python – Desarrollo de scripts, automatización y backend básico.';
+
+  @override
+  String get skillCloudTitle => 'Cloud / BaaS & Low-Code';
+
+  @override
+  String get skillCloudDesc1 => 'Firebase (Auth, Firestore), notificaciones.';
+
+  @override
+  String get skillCloudDesc2 =>
+      'WordPress, Microsoft Power Apps para soluciones de soporte y backoffice.';
+
+  @override
+  String get skillBestPracticesTitle => 'Buenas prácticas';
+
+  @override
+  String get skillBestPracticesDesc1 => 'Clean Code, principios SOLID.';
+
+  @override
+  String get skillBestPracticesDesc2 => 'Pruebas unitarias (Unit Testing).';
+
+  @override
+  String get skillBestPracticesDesc3 =>
+      'Versionamiento con Git y trabajo colaborativo.';
 
   @override
   String get expPopoyanRole => 'Desarrollador Mobile (Jr.)';
@@ -471,4 +751,25 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get stackItemGit => 'Versionamiento con Git y trabajo colaborativo.';
+
+  @override
+  String get testimonialsTitle => 'Testimonios';
+
+  @override
+  String get testimonialName1 => 'Cliente / Colega';
+
+  @override
+  String get testimonialQuote1 =>
+      'Excelente desenvolvimiento y profesionalismo en cada etapa del proyecto.';
+
+  @override
+  String get expTropigasDesc =>
+      'Desarrollo de aplicaciones móviles corporativas para operación y ventas, integrando hardware especializado y automatizando procesos de supervisión.';
+
+  @override
+  String get expFreelanceDesc =>
+      'Desarrollo de soluciones personalizadas móviles y web utilizando Flutter, Firebase y arquitecturas escalables para diversos clientes.';
+
+  @override
+  String get homeAvailableStatus => 'Disponible para trabajar';
 }

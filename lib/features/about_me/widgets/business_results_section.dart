@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class BusinessResultsSection extends StatelessWidget {
   const BusinessResultsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
+
     return Column(
       children: [
         RichText(
           textAlign: TextAlign.center,
-          text: const TextSpan(
-            style: TextStyle(
+          text: TextSpan(
+            style: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
               color: Colors.white,
               fontFamily: 'Inter',
             ),
             children: [
-              TextSpan(text: 'Resultados '),
-              TextSpan(
-                text: 'Empresariales',
-                style: TextStyle(color: Color(0xFF9D5CFF)),
-              ),
+              TextSpan(text: '${t.businessResultsTitle.split(' ')[0]} '),
+              if (t.businessResultsTitle.split(' ').length > 1)
+                TextSpan(
+                  text: t.businessResultsTitle.split(' ').sublist(1).join(' '),
+                  style: const TextStyle(color: Color(0xFF9D5CFF)),
+                ),
             ],
           ),
         ),
@@ -35,10 +39,10 @@ class BusinessResultsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 24),
-        const Text(
-          'Impacto medible en proyectos reales de producción',
+        Text(
+          t.businessResultsSubtitle,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             color: Color(0xFFA0A0A0),
           ),
@@ -48,33 +52,29 @@ class BusinessResultsSection extends StatelessWidget {
           builder: (context, constraints) {
             final isMobile = constraints.maxWidth < 800;
             final cards = [
-              const _ResultCard(
+              _ResultCard(
                 emoji: '🏢',
-                badgeText: 'En uso activo',
-                title: 'Aplicaciones empresariales en producción',
-                description:
-                    'Desarrollo y mantenimiento de apps móviles utilizadas diariamente por equipos corporativos en el sector energético',
+                badgeText: t.activeNow,
+                title: t.businessResultsAppsTitle,
+                description: t.businessResultsAppsDesc,
               ),
-              const _ResultCard(
+              _ResultCard(
                 emoji: '🖨️',
-                badgeText: 'Procesos automatizados',
-                title: 'Integración de impresión térmica',
-                description:
-                    'Soluciones de hardware móvil (Bixolon/ESC-POS) para procesos de cobro y facturación en tiempo real',
+                badgeText: t.automatedProcesses,
+                title: t.businessResultsHardwareTitle,
+                description: t.businessResultsHardwareDesc,
               ),
-              const _ResultCard(
+              _ResultCard(
                 emoji: '🔐',
-                badgeText: 'Datos protegidos',
-                title: 'Backend seguro y escalable',
-                description:
-                    'Implementación de sistemas backend con autenticación robusta, bases de datos seguras y arquitecturas limpias',
+                badgeText: t.secureData,
+                title: t.businessResultsSecureTitle,
+                description: t.businessResultsSecureDesc,
               ),
-              const _ResultCard(
+              _ResultCard(
                 emoji: '🛒',
-                badgeText: 'Ventas online',
-                title: 'E-commerce en Flutter Web',
-                description:
-                    'Desarrollo de plataforma de comercio electrónico con integración de pasarelas de pago y gestión completa de productos',
+                badgeText: t.onlineSales,
+                title: t.businessResultsEcommerceTitle,
+                description: t.businessResultsEcommerceDesc,
               ),
             ];
 
@@ -128,50 +128,35 @@ class BusinessResultsSection extends StatelessWidget {
           child: LayoutBuilder(
             builder: (context, constraints) {
               if (constraints.maxWidth < 600) {
-                return const Column(
+                return Column(
                   children: [
-                    _StatItem('100%', 'Entrega exitosa'),
-                    SizedBox(height: 32),
-                    _StatItem('24/7', 'Apps en producción'),
-                    SizedBox(height: 32),
-                    _StatItem('+50', 'Proyectos completados'),
+                    _StatItem('100%', t.businessResultsStat1),
+                    const SizedBox(height: 32),
+                    _StatItem('24/7', t.businessResultsStat2),
+                    const SizedBox(height: 32),
+                    _StatItem('+50', t.businessResultsStat3),
                   ],
                 );
               }
-              return const Row(
+              return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _StatItem('100%', 'Entrega exitosa'),
-                  _StatItem('24/7', 'Apps en producción'),
-                  _StatItem('+50', 'Proyectos completados'),
+                  _StatItem('100%', t.businessResultsStat1),
+                  _StatItem('24/7', t.businessResultsStat2),
+                  _StatItem('+50', t.businessResultsStat3),
                 ],
               );
             },
           ),
         ),
         const SizedBox(height: 24),
-        RichText(
+        Text(
+          t.businessResultsFooter,
           textAlign: TextAlign.center,
-          text: const TextSpan(
-            style: TextStyle(
-              fontSize: 14,
-              color: Color(0xFFA0A0A0),
-              fontFamily: 'Inter',
-            ),
-            children: [
-              TextSpan(text: 'Cada proyecto desarrollado con enfoque en '),
-              TextSpan(
-                text: 'calidad, rendimiento',
-                style: TextStyle(
-                    color: Color(0xFF9D5CFF), fontWeight: FontWeight.bold),
-              ),
-              TextSpan(text: ' y '),
-              TextSpan(
-                text: 'resultados medibles',
-                style: TextStyle(
-                    color: Color(0xFF9D5CFF), fontWeight: FontWeight.bold),
-              ),
-            ],
+          style: const TextStyle(
+            fontSize: 14,
+            color: Color(0xFFA0A0A0),
+            fontFamily: 'Inter',
           ),
         ),
       ],
@@ -194,6 +179,7 @@ class _ResultCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.all(32),
       decoration: BoxDecoration(
@@ -258,13 +244,13 @@ class _ResultCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 32),
-          const Row(
+          Row(
             children: [
-              Icon(Icons.bolt, color: Color(0xFF9D5CFF), size: 18),
-              SizedBox(width: 8),
+              const Icon(Icons.bolt, color: Color(0xFF9D5CFF), size: 18),
+              const SizedBox(width: 8),
               Text(
-                'Implementado y funcionando',
-                style: TextStyle(
+                t.implementedAndWorking,
+                style: const TextStyle(
                   color: Color(0xFF9D5CFF),
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
