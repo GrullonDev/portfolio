@@ -68,38 +68,37 @@ class _ContactPageState extends State<ContactPage> {
             children: [
               RichText(
                 textAlign: TextAlign.center,
-                text: const TextSpan(
-                  style: TextStyle(
+                text: TextSpan(
+                  style: const TextStyle(
                     fontSize: 48,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontFamily: 'Inter',
                   ),
                   children: [
+                    TextSpan(text: t.contactHeroHeadline),
                     TextSpan(
-                        text: 'Me encantaría escuchar tu idea y\nayudarte a '),
-                    TextSpan(
-                      text: 'hacerla realidad',
-                      style: TextStyle(color: Color(0xFF9D5CFF)),
+                      text: t.contactHeroAction,
+                      style: const TextStyle(color: Color(0xFF9D5CFF)),
                     ),
-                    TextSpan(text: '.'),
+                    const TextSpan(text: '.'),
                   ],
                 ),
               ),
               const SizedBox(height: 24),
-              const Text(
-                'Elige una opción rápida o envíame un mensaje con el formulario.',
+              Text(
+                t.contactOptionQuick,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   color: Color(0xFFA0A0A0),
                 ),
               ),
               const SizedBox(height: 16),
-              const Text(
-                'Respondo en menos de 24h 🚀  |  Español & English 🌍',
+              Text(
+                t.contactSla,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   color: Color(0xFFA0A0A0),
                 ),
@@ -119,7 +118,7 @@ class _ContactPageState extends State<ContactPage> {
                         },
                         style: secondaryButtonStyle,
                         icon: const Icon(Icons.calendar_today, size: 20),
-                        label: const Text('📅 Agendar en Google Calendar'),
+                        label: Text('📅 ${t.contactBtnCalendarLong}'),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -153,7 +152,7 @@ class _ContactPageState extends State<ContactPage> {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         icon: const Icon(Icons.chat_bubble_outline, size: 20),
-                        label: const Text('💬 WhatsApp'),
+                        label: Text('💬 ${t.contactBtnWhatsappLong}'),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -167,7 +166,7 @@ class _ContactPageState extends State<ContactPage> {
                         },
                         style: secondaryButtonStyle,
                         icon: const Icon(Icons.email_outlined, size: 20),
-                        label: const Text('✉️ Email directo'),
+                        label: Text('✉️ ${t.contactBtnEmailLong}'),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -188,9 +187,9 @@ class _ContactPageState extends State<ContactPage> {
                           collapsedIconColor: Colors.white54,
                           leading: const Icon(Icons.send_outlined,
                               color: Color(0xFF9D5CFF)),
-                          title: const Text(
-                            '📋 Formulario clásico',
-                            style: TextStyle(
+                          title: Text(
+                            '📋 ${t.contactFormClassic}',
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -267,10 +266,10 @@ class _ContactPageState extends State<ContactPage> {
                 ),
               ),
               const SizedBox(height: 120),
-              const Text(
-                '¿Quieres ver más detalles de mi trayectoria y recomendaciones?',
+              Text(
+                t.contactLinkedInPrompt,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Color(0xFFA0A0A0)),
+                style: const TextStyle(fontSize: 16, color: Color(0xFFA0A0A0)),
               ),
               const SizedBox(height: 24),
               OutlinedButton.icon(
@@ -279,9 +278,9 @@ class _ContactPageState extends State<ContactPage> {
                 style: secondaryButtonStyle,
                 icon: const FaIcon(FontAwesomeIcons.linkedin,
                     color: Color(0xFF9D5CFF), size: 18),
-                label: const Text(
-                  'Ver perfil completo en LinkedIn',
-                  style: TextStyle(
+                label: Text(
+                  t.contactLinkedInBtn,
+                  style: const TextStyle(
                       color: Colors.white, fontWeight: FontWeight.normal),
                 ),
               ),

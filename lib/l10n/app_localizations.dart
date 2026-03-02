@@ -137,13 +137,13 @@ abstract class AppLocalizations {
   /// No description provided for @homeGreeting.
   ///
   /// In en, this message translates to:
-  /// **'Hi, I\'m Jorge Grullón, a Flutter Developer 👋'**
+  /// **'I\'m Jorge Grullón👋'**
   String get homeGreeting;
 
   /// No description provided for @homeSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'I build high-quality mobile and web apps.'**
+  /// **'Flutter Developer | Results-oriented mobile and web apps'**
   String get homeSubtitle;
 
   /// No description provided for @homeCtaProjects.
@@ -167,14 +167,20 @@ abstract class AppLocalizations {
   /// No description provided for @homeSocialProof.
   ///
   /// In en, this message translates to:
-  /// **'I\'ve built apps for productivity, finance and entertainment — helping companies and people launch their ideas with Flutter.'**
+  /// **'I\'ve built apps for productivity, finance, and entertainment, helping companies and individuals launch their ideas with Flutter.'**
   String get homeSocialProof;
 
   /// No description provided for @homeRoleTagline.
   ///
   /// In en, this message translates to:
-  /// **'Flutter Developer | High-impact mobile and web apps'**
+  /// **'Transforming ideas into high-performance digital products.'**
   String get homeRoleTagline;
+
+  /// No description provided for @homeValuePropShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Scalable mobile and web solutions, designed to impact and deliver results.'**
+  String get homeValuePropShort;
 
   /// No description provided for @homeDifferentiator.
   ///
@@ -278,11 +284,41 @@ abstract class AppLocalizations {
   /// **'Small motivation app to experiment with onboarding and animations.'**
   String get projectYellowFlowersDesc;
 
+  /// No description provided for @aboutBio.
+  ///
+  /// In en, this message translates to:
+  /// **'Software Developer with over 6 years of experience, specializing in creating high-impact mobile and web applications. My focus is on clean architecture, scalability, and delivering real business value through innovative technological solutions. Passionate about the Flutter ecosystem and full-stack development.'**
+  String get aboutBio;
+
   /// No description provided for @tech.
   ///
   /// In en, this message translates to:
   /// **'Technologies'**
   String get tech;
+
+  /// No description provided for @projectObjective.
+  ///
+  /// In en, this message translates to:
+  /// **'Objective'**
+  String get projectObjective;
+
+  /// No description provided for @projectChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenges'**
+  String get projectChallenges;
+
+  /// No description provided for @projectSolution.
+  ///
+  /// In en, this message translates to:
+  /// **'Solution'**
+  String get projectSolution;
+
+  /// No description provided for @projectLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'Learning'**
+  String get projectLearning;
 
   /// No description provided for @btnGooglePlay.
   ///
@@ -307,6 +343,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Request beta'**
   String get btnRequestBeta;
+
+  /// No description provided for @btnDownloadCV.
+  ///
+  /// In en, this message translates to:
+  /// **'Download CV'**
+  String get btnDownloadCV;
 
   /// No description provided for @whatIDoTitle.
   ///
@@ -433,6 +475,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Message sent successfully.'**
   String get contactSentOk;
+
+  /// No description provided for @contactHeroHeadline.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'d love to hear your idea and help you '**
+  String get contactHeroHeadline;
+
+  /// No description provided for @contactHeroAction.
+  ///
+  /// In en, this message translates to:
+  /// **'make it real'**
+  String get contactHeroAction;
+
+  /// No description provided for @contactOptionQuick.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a quick option or send me a message using the form.'**
+  String get contactOptionQuick;
+
+  /// No description provided for @contactSla.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply within 24h 🚀  |  Spanish & English 🌍'**
+  String get contactSla;
+
+  /// No description provided for @contactBtnCalendarLong.
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule on Google Calendar'**
+  String get contactBtnCalendarLong;
+
+  /// No description provided for @contactBtnWhatsappLong.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp'**
+  String get contactBtnWhatsappLong;
+
+  /// No description provided for @contactBtnEmailLong.
+  ///
+  /// In en, this message translates to:
+  /// **'Direct Email'**
+  String get contactBtnEmailLong;
+
+  /// No description provided for @contactFormClassic.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic Form'**
+  String get contactFormClassic;
+
+  /// No description provided for @contactLinkedInPrompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Want to see more details of my journey and recommendations?'**
+  String get contactLinkedInPrompt;
+
+  /// No description provided for @contactLinkedInBtn.
+  ///
+  /// In en, this message translates to:
+  /// **'View full profile on LinkedIn'**
+  String get contactLinkedInBtn;
 
   /// No description provided for @servicesTitle.
   ///
@@ -725,14 +827,38 @@ abstract class AppLocalizations {
   /// No description provided for @projectParroquiaName.
   ///
   /// In en, this message translates to:
-  /// **'Parish Management System | Villa Nueva'**
+  /// **'Parish Management System'**
   String get projectParroquiaName;
 
   /// No description provided for @projectParroquiaDesc.
   ///
   /// In en, this message translates to:
-  /// **'I developed a comprehensive web platform for the administration of sacraments and ecclesiastical documents for the Immaculate Conception Parish.'**
+  /// **'Comprehensive web platform for ecclesiastical administration.'**
   String get projectParroquiaDesc;
+
+  /// No description provided for @projectParroquiaObjective.
+  ///
+  /// In en, this message translates to:
+  /// **'Digitize the management of sacraments and historical documents.'**
+  String get projectParroquiaObjective;
+
+  /// No description provided for @projectParroquiaChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Migration of legacy data and the need for a simplified interface for administration.'**
+  String get projectParroquiaChallenges;
+
+  /// No description provided for @projectParroquiaSolution.
+  ///
+  /// In en, this message translates to:
+  /// **'Modern full-stack architecture with NestJS/Angular and PostgreSQL database.'**
+  String get projectParroquiaSolution;
+
+  /// No description provided for @projectParroquiaLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'Stakeholder management and design of critical information systems.'**
+  String get projectParroquiaLearning;
 
   /// No description provided for @eduPlayTitle.
   ///
@@ -755,8 +881,32 @@ abstract class AppLocalizations {
   /// No description provided for @projectFitmotivDesc.
   ///
   /// In en, this message translates to:
-  /// **'Fitness app for personalized training plans, progress tracking and social motivation. Includes onboarding, routines, plans and analytics to keep users engaged.'**
+  /// **'Fitness app with personalized plans and social tracking.'**
   String get projectFitmotivDesc;
+
+  /// No description provided for @projectFitmotivObjective.
+  ///
+  /// In en, this message translates to:
+  /// **'Increase user retention through gamification and tailored plans.'**
+  String get projectFitmotivObjective;
+
+  /// No description provided for @projectFitmotivChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Complex animations and efficient handling of multimedia data.'**
+  String get projectFitmotivChallenges;
+
+  /// No description provided for @projectFitmotivSolution.
+  ///
+  /// In en, this message translates to:
+  /// **'Implemented Rive for animations and Firebase for real-time features.'**
+  String get projectFitmotivSolution;
+
+  /// No description provided for @projectFitmotivLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'UI/UX design focused on motivation and graphic performance on mobile.'**
+  String get projectFitmotivLearning;
 
   /// No description provided for @projectLunaHubName.
   ///
@@ -767,8 +917,32 @@ abstract class AppLocalizations {
   /// No description provided for @projectLunaHubDesc.
   ///
   /// In en, this message translates to:
-  /// **'E‑commerce platform for baby products and curated lifestyle items. Features product catalogs, carts, user profiles and secure payments. Built as a collaborative project showcasing Flutter frontend integration with Node.js backends and CI/CD pipelines.'**
+  /// **'Complete e-commerce platform with payment integration and inventory management.'**
   String get projectLunaHubDesc;
+
+  /// No description provided for @projectLunaHubObjective.
+  ///
+  /// In en, this message translates to:
+  /// **'Launch a robust marketplace for curated products.'**
+  String get projectLunaHubObjective;
+
+  /// No description provided for @projectLunaHubChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Complex integration of payment gateways and real-time stock synchronization.'**
+  String get projectLunaHubChallenges;
+
+  /// No description provided for @projectLunaHubSolution.
+  ///
+  /// In en, this message translates to:
+  /// **'Used Flutter for the frontend and a scalable REST API with Node.js.'**
+  String get projectLunaHubSolution;
+
+  /// No description provided for @projectLunaHubLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'Optimized checkout flows and handling complex application state in e-commerce.'**
+  String get projectLunaHubLearning;
 
   /// No description provided for @expSectionTitle.
   ///
@@ -800,11 +974,35 @@ abstract class AppLocalizations {
   /// **'Jun 2025 - Present'**
   String get expTropigasPeriod;
 
-  /// No description provided for @expTropigasDesc.
+  /// No description provided for @expTropigasBadge.
   ///
   /// In en, this message translates to:
-  /// **'• Development and evolution of corporate mobile applications used in several countries, oriented to operations and sales.\n• Implementation of mobile functionalities for sales monitoring, route planning and field inventories, integrating backend services.\n• Automation of supervision and control processes, with real-time validations to improve the quality of captured information.\n• Participation in technical design and code best practices to ensure maintainable and scalable apps over time.'**
-  String get expTropigasDesc;
+  /// **'Corporate'**
+  String get expTropigasBadge;
+
+  /// No description provided for @expTropigasBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'Development and evolution of corporate mobile applications for operations and sales across multiple countries.'**
+  String get expTropigasBullet1;
+
+  /// No description provided for @expTropigasBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Implementation of hardware integrations (Bixolon thermal printers) and backend services.'**
+  String get expTropigasBullet2;
+
+  /// No description provided for @expTropigasBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'Automation of supervision and control processes with real-time validations for data quality.'**
+  String get expTropigasBullet3;
+
+  /// No description provided for @expTropigasBullet4.
+  ///
+  /// In en, this message translates to:
+  /// **'Participation in technical design and best practices for maintainable and scalable apps.'**
+  String get expTropigasBullet4;
 
   /// No description provided for @expFreelanceRole.
   ///
@@ -824,11 +1022,293 @@ abstract class AppLocalizations {
   /// **'2024 - Present'**
   String get expFreelancePeriod;
 
-  /// No description provided for @expFreelanceDesc.
+  /// No description provided for @expFreelanceBadge.
   ///
   /// In en, this message translates to:
-  /// **'• Development of high-impact mobile and web applications for international clients.\n• Specialization in clean architecture, performance optimization and UI/UX design.\n• Implementation of custom solutions using Flutter, Firebase and Node.js.'**
-  String get expFreelanceDesc;
+  /// **'Freelance'**
+  String get expFreelanceBadge;
+
+  /// No description provided for @expFreelanceBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'Development of high-impact mobile and web applications for international clients.'**
+  String get expFreelanceBullet1;
+
+  /// No description provided for @expFreelanceBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Specialization in clean architecture, performance optimization, and UI/UX design.'**
+  String get expFreelanceBullet2;
+
+  /// No description provided for @expFreelanceBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'Implementation of tailored solutions using Flutter, Firebase, and Node.js.'**
+  String get expFreelanceBullet3;
+
+  /// No description provided for @expIndieRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Stack Developer'**
+  String get expIndieRole;
+
+  /// No description provided for @expIndieCompany.
+  ///
+  /// In en, this message translates to:
+  /// **'Independent Projects'**
+  String get expIndieCompany;
+
+  /// No description provided for @expIndiePeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'2020 - 2024'**
+  String get expIndiePeriod;
+
+  /// No description provided for @expIndieBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Foundations'**
+  String get expIndieBadge;
+
+  /// No description provided for @expIndieBullet1.
+  ///
+  /// In en, this message translates to:
+  /// **'Web development with PHP and related technologies.'**
+  String get expIndieBullet1;
+
+  /// No description provided for @expIndieBullet2.
+  ///
+  /// In en, this message translates to:
+  /// **'Administrative systems and business management.'**
+  String get expIndieBullet2;
+
+  /// No description provided for @expIndieBullet3.
+  ///
+  /// In en, this message translates to:
+  /// **'Optimization and maintenance of relational databases.'**
+  String get expIndieBullet3;
+
+  /// No description provided for @businessResultsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Business Results'**
+  String get businessResultsTitle;
+
+  /// No description provided for @businessResultsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Measurable impact in real production projects.'**
+  String get businessResultsSubtitle;
+
+  /// No description provided for @businessResultsAppsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Apps in Production'**
+  String get businessResultsAppsTitle;
+
+  /// No description provided for @businessResultsAppsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Development and maintenance of mobile apps used daily by corporate teams.'**
+  String get businessResultsAppsDesc;
+
+  /// No description provided for @businessResultsHardwareTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hardware Integration'**
+  String get businessResultsHardwareTitle;
+
+  /// No description provided for @businessResultsHardwareDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile hardware solutions (Bixolon/ESC-POS) for real-time payments and invoicing.'**
+  String get businessResultsHardwareDesc;
+
+  /// No description provided for @businessResultsSecureTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Secure Backend'**
+  String get businessResultsSecureTitle;
+
+  /// No description provided for @businessResultsSecureDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend systems with robust authentication and clean architectures.'**
+  String get businessResultsSecureDesc;
+
+  /// No description provided for @businessResultsEcommerceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'E-commerce & Web'**
+  String get businessResultsEcommerceTitle;
+
+  /// No description provided for @businessResultsEcommerceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'E-commerce platforms with payment integration and product management.'**
+  String get businessResultsEcommerceDesc;
+
+  /// No description provided for @businessResultsStat1.
+  ///
+  /// In en, this message translates to:
+  /// **'Successful Delivery'**
+  String get businessResultsStat1;
+
+  /// No description provided for @businessResultsStat2.
+  ///
+  /// In en, this message translates to:
+  /// **'Apps in Production'**
+  String get businessResultsStat2;
+
+  /// No description provided for @businessResultsStat3.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed Projects'**
+  String get businessResultsStat3;
+
+  /// No description provided for @businessResultsFooter.
+  ///
+  /// In en, this message translates to:
+  /// **'Every project developed with a focus on quality, performance, and measurable results.'**
+  String get businessResultsFooter;
+
+  /// No description provided for @activeNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Use'**
+  String get activeNow;
+
+  /// No description provided for @automatedProcesses.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated Processes'**
+  String get automatedProcesses;
+
+  /// No description provided for @secureData.
+  ///
+  /// In en, this message translates to:
+  /// **'Protected Data'**
+  String get secureData;
+
+  /// No description provided for @onlineSales.
+  ///
+  /// In en, this message translates to:
+  /// **'Online Sales'**
+  String get onlineSales;
+
+  /// No description provided for @implementedAndWorking.
+  ///
+  /// In en, this message translates to:
+  /// **'Implemented and Working'**
+  String get implementedAndWorking;
+
+  /// No description provided for @techStackTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Technical Stack'**
+  String get techStackTitle;
+
+  /// No description provided for @techStackMobileDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'(Mobile & Backend)'**
+  String get techStackMobileDescription;
+
+  /// No description provided for @skillMobileMultiTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cross-Platform Mobile'**
+  String get skillMobileMultiTitle;
+
+  /// No description provided for @skillMobileMultiDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter (Dart) – production app development, REST/GraphQL API consumption, state management, navigation, theming.'**
+  String get skillMobileMultiDesc1;
+
+  /// No description provided for @skillMobileMultiDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'React Native – view development, reusable components, API and backend service integration.'**
+  String get skillMobileMultiDesc2;
+
+  /// No description provided for @skillMobileNativeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Native Mobile'**
+  String get skillMobileNativeTitle;
+
+  /// No description provided for @skillMobileNativeDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'Android: Kotlin, Jetpack Compose, Android SDK, REST/GraphQL service consumption.'**
+  String get skillMobileNativeDesc1;
+
+  /// No description provided for @skillMobileNativeDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'iOS: SwiftUI, basic design patterns and remote service consumption.'**
+  String get skillMobileNativeDesc2;
+
+  /// No description provided for @skillBackendTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend / APIs'**
+  String get skillBackendTitle;
+
+  /// No description provided for @skillBackendDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'NestJS, GraphQL, API design and implementation for mobile consumption.'**
+  String get skillBackendDesc1;
+
+  /// No description provided for @skillBackendDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'Python – Script development, automation, and basic backend.'**
+  String get skillBackendDesc2;
+
+  /// No description provided for @skillCloudTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud / BaaS & Low-Code'**
+  String get skillCloudTitle;
+
+  /// No description provided for @skillCloudDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase (Auth, Firestore), notifications.'**
+  String get skillCloudDesc1;
+
+  /// No description provided for @skillCloudDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'WordPress, Microsoft Power Apps for support and backoffice solutions.'**
+  String get skillCloudDesc2;
+
+  /// No description provided for @skillBestPracticesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Best Practices'**
+  String get skillBestPracticesTitle;
+
+  /// No description provided for @skillBestPracticesDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean Code, SOLID principles.'**
+  String get skillBestPracticesDesc1;
+
+  /// No description provided for @skillBestPracticesDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit Testing.'**
+  String get skillBestPracticesDesc2;
+
+  /// No description provided for @skillBestPracticesDesc3.
+  ///
+  /// In en, this message translates to:
+  /// **'Git versioning and collaborative work.'**
+  String get skillBestPracticesDesc3;
 
   /// No description provided for @expPopoyanRole.
   ///
@@ -949,6 +1429,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Git versioning and collaborative work.'**
   String get stackItemGit;
+
+  /// No description provided for @testimonialsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Testimonials'**
+  String get testimonialsTitle;
+
+  /// No description provided for @testimonialName1.
+  ///
+  /// In en, this message translates to:
+  /// **'Client / Colleague'**
+  String get testimonialName1;
+
+  /// No description provided for @testimonialQuote1.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent performance and professionalism in every stage of the project.'**
+  String get testimonialQuote1;
+
+  /// No description provided for @expTropigasDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Development of corporate mobile applications for operations and sales, integrating specialized hardware and automating supervision processes.'**
+  String get expTropigasDesc;
+
+  /// No description provided for @expFreelanceDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Development of custom mobile and web solutions using Flutter, Firebase, and scalable architectures for various clients.'**
+  String get expFreelanceDesc;
 }
 
 class _AppLocalizationsDelegate

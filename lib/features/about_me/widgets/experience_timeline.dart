@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class ExperienceTimeline extends StatelessWidget {
   const ExperienceTimeline({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = AppLocalizations.of(context);
+
     final List<Map<String, dynamic>> experienceData = [
       {
-        'role': 'Analista Programador Senior',
-        'company': 'Tropigas de Guatemala',
-        'period': 'Jun 2025 - Presente',
-        'badge': 'Corporativo',
+        'role': t.expTropigasRole,
+        'company': t.expTropigasCompany,
+        'period': t.expTropigasPeriod,
+        'badge': t.expTropigasBadge,
         'icon': Icons.business_center,
         'bullets': [
-          'Desarrollo y evolución de aplicaciones móviles corporativas para operación y ventas en múltiples países',
-          'Implementación de integraciones con hardware (impresoras térmicas Bixolon) y servicios backend',
-          'Automatización de procesos de supervisión y control con validaciones en tiempo real para calidad de datos',
-          'Participación en diseño técnico y buenas prácticas para apps mantenibles y escalables'
+          t.expTropigasBullet1,
+          t.expTropigasBullet2,
+          t.expTropigasBullet3,
+          t.expTropigasBullet4,
         ],
         'technologies': [
           'Flutter',
@@ -27,15 +30,15 @@ class ExperienceTimeline extends StatelessWidget {
         ]
       },
       {
-        'role': 'Flutter Developer',
-        'company': 'Freelance',
-        'period': '2024 - Presente',
-        'badge': 'Freelance',
+        'role': t.expFreelanceRole,
+        'company': t.expFreelanceCompany,
+        'period': t.expFreelancePeriod,
+        'badge': t.expFreelanceBadge,
         'icon': Icons.rocket_launch,
         'bullets': [
-          'Desarrollo de aplicaciones móviles y web de alto impacto para clientes internacionales',
-          'Especialización en arquitectura limpia, optimización de rendimiento y diseño UI/UX',
-          'Implementación de soluciones a medida utilizando Flutter, Firebase y Node.js'
+          t.expFreelanceBullet1,
+          t.expFreelanceBullet2,
+          t.expFreelanceBullet3,
         ],
         'technologies': [
           'Flutter',
@@ -47,15 +50,15 @@ class ExperienceTimeline extends StatelessWidget {
         ]
       },
       {
-        'role': 'Desarrollador Full Stack',
-        'company': 'Proyectos Independientes',
-        'period': '2020 - 2024',
-        'badge': 'Fundamentos',
+        'role': t.expIndieRole,
+        'company': t.expIndieCompany,
+        'period': t.expIndiePeriod,
+        'badge': t.expIndieBadge,
         'icon': Icons.code,
         'bullets': [
-          'Desarrollo web con PHP y tecnologías relacionadas',
-          'Sistemas administrativos y gestión empresarial',
-          'Bases de datos relacionales (MySQL, PostgreSQL) y diseño de esquemas'
+          t.expIndieBullet1,
+          t.expIndieBullet2,
+          t.expIndieBullet3,
         ],
         'technologies': [
           'PHP',
@@ -69,7 +72,7 @@ class ExperienceTimeline extends StatelessWidget {
 
     return ListView.builder(
       shrinkWrap: true,
-      physics: const ScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: experienceData.length,
       itemBuilder: (context, index) {
         final item = experienceData[index];
@@ -80,10 +83,9 @@ class ExperienceTimeline extends StatelessWidget {
             // Timeline line
             if (!isLast)
               Positioned(
-                top: 72, // 24 (margin) + 48 (dot height)
+                top: 72,
                 bottom: 0,
-                left:
-                    23, // Center of the 48px dot (24 - 1px for half the line width)
+                left: 23,
                 width: 2,
                 child: Container(
                   color: const Color(0xFF9D5CFF),
