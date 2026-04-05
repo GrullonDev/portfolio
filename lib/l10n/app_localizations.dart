@@ -305,19 +305,19 @@ abstract class AppLocalizations {
   /// No description provided for @projectATSC.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'A key challenge was designing an intuitive and efficient interface that allowed recruiters to manage multiple candidates and selection processes simultaneously.'**
   String get projectATSC;
 
   /// No description provided for @projectATSS.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'An intuitive and efficient platform that allowed recruiters to manage multiple candidates and selection processes simultaneously.'**
   String get projectATSS;
 
   /// No description provided for @projectATSL.
   ///
   /// In en, this message translates to:
-  /// **''**
+  /// **'I learned the importance of clean architecture and scalability in mobile application development.'**
   String get projectATSL;
 
   /// No description provided for @aboutBio.

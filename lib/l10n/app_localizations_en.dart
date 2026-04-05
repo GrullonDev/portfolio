@@ -125,13 +125,16 @@ class AppLocalizationsEn extends AppLocalizations {
       'Develop a mobile platform for tracking candidates for recruiters and HR professionals.';
 
   @override
-  String get projectATSC => '';
+  String get projectATSC =>
+      'A key challenge was designing an intuitive and efficient interface that allowed recruiters to manage multiple candidates and selection processes simultaneously.';
 
   @override
-  String get projectATSS => '';
+  String get projectATSS =>
+      'An intuitive and efficient platform that allowed recruiters to manage multiple candidates and selection processes simultaneously.';
 
   @override
-  String get projectATSL => '';
+  String get projectATSL =>
+      'I learned the importance of clean architecture and scalability in mobile application development.';
 
   @override
   String get aboutBio =>
