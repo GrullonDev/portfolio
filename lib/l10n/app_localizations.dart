@@ -284,6 +284,42 @@ abstract class AppLocalizations {
   /// **'Small motivation app to experiment with onboarding and animations.'**
   String get projectYellowFlowersDesc;
 
+  /// No description provided for @projectATSTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'ATS - Applicant Tracking System'**
+  String get projectATSTitle;
+
+  /// No description provided for @projectATSDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Applicant Tracking System for recruiters and HR professionals.'**
+  String get projectATSDesc;
+
+  /// No description provided for @projectATSO.
+  ///
+  /// In en, this message translates to:
+  /// **'Develop a mobile platform for tracking candidates for recruiters and HR professionals.'**
+  String get projectATSO;
+
+  /// No description provided for @projectATSC.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get projectATSC;
+
+  /// No description provided for @projectATSS.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get projectATSS;
+
+  /// No description provided for @projectATSL.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get projectATSL;
+
   /// No description provided for @aboutBio.
   ///
   /// In en, this message translates to:
@@ -1439,7 +1475,7 @@ abstract class AppLocalizations {
   /// No description provided for @testimonialName1.
   ///
   /// In en, this message translates to:
-  /// **'Client / Colleague'**
+  /// **'Colleague'**
   String get testimonialName1;
 
   /// No description provided for @testimonialQuote1.

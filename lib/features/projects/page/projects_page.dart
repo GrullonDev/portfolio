@@ -5,6 +5,7 @@ import 'package:portafolio_app/features/projects/widgets/enterprise_project_card
 import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:url_launcher/url_launcher.dart' as urlLauncher;
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -51,6 +52,52 @@ class ProjectsPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
               ),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+          ),
+        ],
+      ),
+      EnterpriseProjectCard(
+        title: t.projectATSTitle,
+        subtitle: t.projectATSDesc,
+        contribution:
+            'Desarrollo de una plataforma movil para el seguimiento de candidatos para reclutadores y profesionales de RRHH.',
+        result:
+            'Plataforma en producción gestionando eficientemente candidatos para miles de usuarios.',
+        objective: t.projectATSO,
+        challenges: t.projectATSC,
+        solution: t.projectATSS,
+        learning: t.projectATSL,
+        technologies: const [
+          'React Native',
+          'AWS S3',
+          'AWS EC2',
+          'AWS RDS',
+          'AWS Lambda',
+          'AWS API Gateway',
+          'CI/CD',
+        ],
+        trailingIcon: const Icon(Icons.shopping_bag, color: Color(0xFF9D5CFF)),
+        actions: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: const Color(0xFF102A20),
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: const Color(0xFF1F4D36)),
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.business, size: 18, color: Color(0xFF4ADE80)),
+                SizedBox(width: 8),
+                Text(
+                  'Proyecto confidencial',
+                  style: TextStyle(
+                    color: Color(0xFF4ADE80),
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -161,7 +208,25 @@ class ProjectsPage extends StatelessWidget {
         trailingIcon: const Icon(Icons.timer, color: Color(0xFF9D5CFF)),
         actions: [
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () => urlLauncher.launchUrl(
+              Uri.parse('https://github.com/GrullonDev/pomodoro.git'),
+            ),
+            icon: const Icon(Icons.code, size: 18),
+            label: const Text('Repositorio'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFFA0A0A0),
+              side: const BorderSide(color: Colors.white10),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+          ),
+          OutlinedButton.icon(
+            onPressed: () => urlLauncher.launchUrl(
+              Uri.parse(
+                  'https://play.google.com/apps/testing/com.grullondev.pomodorofocus'),
+            ),
             icon: const Icon(Icons.play_arrow, size: 18),
             label: const Text('Google Play'),
             style: OutlinedButton.styleFrom(
@@ -201,12 +266,31 @@ class ProjectsPage extends StatelessWidget {
             const Icon(Icons.account_balance_wallet, color: Color(0xFF9D5CFF)),
         actions: [
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () => urlLauncher.launchUrl(
+              Uri.parse('https://github.com/GrullonDev/PersonalFinance.git'),
+            ),
             icon: const Icon(Icons.code, size: 18),
             label: const Text('Repositorio'),
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color(0xFFA0A0A0),
               side: const BorderSide(color: Colors.white10),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+          ),
+          OutlinedButton.icon(
+            onPressed: () => urlLauncher.launchUrl(
+              Uri.parse(
+                  'https://play.google.com/apps/testing/com.grullondev.personal_finance'),
+            ),
+            icon: const Icon(Icons.play_arrow, size: 18),
+            label: const Text('Google Play'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF7B61FF),
+              side: BorderSide(
+                  color: const Color(0xFF7B61FF).withValues(alpha: 0.3)),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -373,7 +457,10 @@ class ProjectsPage extends StatelessWidget {
                             'Animations',
                             'Custom Paint'
                           ],
-                          onCodePressed: () {},
+                          onCodePressed: () => urlLauncher.launchUrl(
+                            Uri.parse(
+                                'https://github.com/GrullonDev/YellowFlowers.git'),
+                          ),
                         ),
                         MiniProjectCard(
                           title: t.eduPlayTitle,
