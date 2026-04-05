@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -51,7 +52,7 @@ class Footer extends StatelessWidget {
           const Divider(color: Colors.white10),
           const SizedBox(height: 32),
           const Text(
-            '© 2020 Jorge Luis Grullón Marroquín. Hecho con 💜 y mucho café ☕',
+            '© 2026 Jorge Luis Grullón Marroquín. Hecho con 💜 y mucho café ☕',
             style: TextStyle(
               color: Color(0xFFA0A0A0),
               fontSize: 14,
@@ -121,19 +122,15 @@ class _FooterLeft extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         TextButton.icon(
-          onPressed: () {
-            // Placeholder CV Download Link Action
-            context.read<PortfolioLogic>().launchURL(
-                'https://jorgegrullondev.com/cv.pdf'); // Update URL as needed
-          },
+          onPressed: () => context.read<PortfolioLogic>().downloadCV(),
           style: TextButton.styleFrom(
             foregroundColor: Colors.white,
             padding: EdgeInsets.zero,
           ),
           icon: const Icon(Icons.download, size: 20),
-          label: const Text(
-            'Descargar CV',
-            style: TextStyle(fontWeight: FontWeight.bold),
+          label: Text(
+            AppLocalizations.of(context).btnDownloadCV,
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
       ],

@@ -212,8 +212,7 @@ class _HeroSection extends StatelessWidget {
               ),
             ),
             OutlinedButton(
-              onPressed: () => context.read<PortfolioLogic>().launchURL(
-                  'https://drive.google.com/file/d/1KSn4v56sTwiVMGyWLB5sVJsOr54-9rHS/view?usp=sharing'),
+              onPressed: () => context.read<PortfolioLogic>().downloadCV(),
               style: secondaryButtonStyle,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
