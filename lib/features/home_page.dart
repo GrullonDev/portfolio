@@ -256,7 +256,7 @@ class _HeroSection extends StatelessWidget {
 }
 
 class _SocialIconMinimal extends StatelessWidget {
-  final IconData icon;
+  final FaIconData icon;
   final VoidCallback onPressed;
 
   const _SocialIconMinimal({required this.icon, required this.onPressed});

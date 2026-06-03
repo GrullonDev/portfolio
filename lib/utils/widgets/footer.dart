@@ -195,7 +195,7 @@ class _FooterRight extends StatelessWidget {
 }
 
 class _SocialRectButton extends StatelessWidget {
-  final IconData icon;
+  final FaIconData icon;
   final VoidCallback onTap;
 
   const _SocialRectButton({required this.icon, required this.onTap});

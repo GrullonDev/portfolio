@@ -12,7 +12,7 @@ class SocialIcon extends StatelessWidget {
     required this.url,
   });
 
-  final IconData icon;
+  final FaIconData icon;
   final String url;
 
   @override
