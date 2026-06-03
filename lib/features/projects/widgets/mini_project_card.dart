@@ -5,6 +5,7 @@ class MiniProjectCard extends StatelessWidget {
   final String subtitle;
   final List<String> technologies;
   final VoidCallback onCodePressed;
+  final List<String>? platforms;
 
   const MiniProjectCard({
     super.key,
@@ -12,6 +13,7 @@ class MiniProjectCard extends StatelessWidget {
     required this.subtitle,
     required this.technologies,
     required this.onCodePressed,
+    this.platforms,
   });
 
   @override
@@ -43,6 +45,76 @@ class MiniProjectCard extends StatelessWidget {
               color: Color(0xFFA0A0A0),
             ),
           ),
+          if (platforms != null && platforms!.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF102A20),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: const Color(0xFF1F4D36)),
+                  ),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.check_circle,
+                          size: 10, color: Color(0xFF4ADE80)),
+                      SizedBox(width: 4),
+                      Text(
+                        'En producción',
+                        style: TextStyle(
+                          color: Color(0xFF4ADE80),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                ...platforms!.map((p) {
+                  final color = p.toLowerCase() == 'ios'
+                      ? const Color(0xFF60B4FF)
+                      : p.toLowerCase() == 'web'
+                          ? const Color(0xFF9D5CFF)
+                          : const Color(0xFF3DDC84);
+                  final icon = p.toLowerCase() == 'ios'
+                      ? Icons.apple
+                      : p.toLowerCase() == 'web'
+                          ? Icons.language
+                          : Icons.android;
+                  return Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: color.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: color.withValues(alpha: 0.35)),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(icon, size: 10, color: color),
+                        const SizedBox(width: 4),
+                        Text(
+                          p,
+                          style: TextStyle(
+                            color: color,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ],
           const SizedBox(height: 16),
           Wrap(
             spacing: 8,
