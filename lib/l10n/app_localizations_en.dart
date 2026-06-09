@@ -86,11 +86,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get projectsPersonal => 'Personal / Experimental';
 
   @override
-  String get projectFinanceName => 'Personal Finance';
+  String get projectFinanceName => 'Finanzas Maestras';
 
   @override
   String get projectFinanceDesc =>
-      'Helps users control their monthly budget with clear reports and achievable goals.';
+      'Track your monthly budget with visual reports, savings goals, and expense insights.';
 
   @override
   String get projectPomodoroName => 'Pomodoro App (Focus)';

@@ -13,6 +13,7 @@ class EnterpriseProjectCard extends StatelessWidget {
   final List<String> technologies;
   final Widget? trailingIcon;
   final List<Widget>? actions;
+  final List<String>? platforms;
 
   const EnterpriseProjectCard({
     super.key,
@@ -27,6 +28,7 @@ class EnterpriseProjectCard extends StatelessWidget {
     this.learning,
     this.trailingIcon,
     this.actions,
+    this.platforms,
   });
 
   @override
@@ -69,6 +71,42 @@ class EnterpriseProjectCard extends StatelessWidget {
                         color: Color(0xFFA0A0A0),
                       ),
                     ),
+                    if (platforms != null && platforms!.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF102A20),
+                              borderRadius: BorderRadius.circular(20),
+                              border:
+                                  Border.all(color: const Color(0xFF1F4D36)),
+                            ),
+                            child: const Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.check_circle,
+                                    size: 11, color: Color(0xFF4ADE80)),
+                                SizedBox(width: 4),
+                                Text(
+                                  'En producción',
+                                  style: TextStyle(
+                                    color: Color(0xFF4ADE80),
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ...platforms!.map((p) => _PlatformChip(platform: p)),
+                        ],
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -169,6 +207,45 @@ class EnterpriseProjectCard extends StatelessWidget {
               children: actions!,
             ),
           ],
+        ],
+      ),
+    );
+  }
+}
+
+class _PlatformChip extends StatelessWidget {
+  final String platform;
+
+  const _PlatformChip({required this.platform});
+
+  @override
+  Widget build(BuildContext context) {
+    final (icon, color) = switch (platform.toLowerCase()) {
+      'ios' => (Icons.apple, const Color(0xFF60B4FF)),
+      'web' => (Icons.language, const Color(0xFF9D5CFF)),
+      _ => (Icons.android, const Color(0xFF3DDC84)),
+    };
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: color.withValues(alpha: 0.35)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 11, color: color),
+          const SizedBox(width: 4),
+          Text(
+            platform,
+            style: TextStyle(
+              color: color,
+              fontSize: 11,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );

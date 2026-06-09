@@ -239,13 +239,13 @@ abstract class AppLocalizations {
   /// No description provided for @projectFinanceName.
   ///
   /// In en, this message translates to:
-  /// **'Personal Finance'**
+  /// **'Finanzas Maestras'**
   String get projectFinanceName;
 
   /// No description provided for @projectFinanceDesc.
   ///
   /// In en, this message translates to:
-  /// **'Helps users control their monthly budget with clear reports and achievable goals.'**
+  /// **'Track your monthly budget with visual reports, savings goals, and expense insights.'**
   String get projectFinanceDesc;
 
   /// No description provided for @projectPomodoroName.

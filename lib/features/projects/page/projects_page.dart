@@ -5,7 +5,7 @@ import 'package:portafolio_app/features/projects/widgets/enterprise_project_card
 import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart' as urlLauncher;
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -40,6 +40,7 @@ class ProjectsPage extends StatelessWidget {
           'GraphQL',
         ],
         trailingIcon: const Icon(Icons.business, color: Color(0xFF9D5CFF)),
+        platforms: const ['Web'],
         actions: [
           OutlinedButton.icon(
             onPressed: () {},
@@ -206,9 +207,10 @@ class ProjectsPage extends StatelessWidget {
           'Isar DB',
         ],
         trailingIcon: const Icon(Icons.timer, color: Color(0xFF9D5CFF)),
+        platforms: const ['Android'],
         actions: [
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse('https://github.com/GrullonDev/pomodoro.git'),
             ),
             icon: const Icon(Icons.code, size: 18),
@@ -223,7 +225,7 @@ class ProjectsPage extends StatelessWidget {
             ),
           ),
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse(
                   'https://play.google.com/apps/testing/com.grullondev.pomodorofocus'),
             ),
@@ -264,9 +266,10 @@ class ProjectsPage extends StatelessWidget {
         ],
         trailingIcon:
             const Icon(Icons.account_balance_wallet, color: Color(0xFF9D5CFF)),
+        platforms: const ['Android', 'iOS'],
         actions: [
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse('https://github.com/GrullonDev/PersonalFinance.git'),
             ),
             icon: const Icon(Icons.code, size: 18),
@@ -281,16 +284,32 @@ class ProjectsPage extends StatelessWidget {
             ),
           ),
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse(
-                  'https://play.google.com/apps/testing/com.grullondev.personal_finance'),
+                  'https://play.google.com/apps/internaltest/4701744229965287282'),
             ),
-            icon: const Icon(Icons.play_arrow, size: 18),
+            icon: const Icon(Icons.android, size: 18),
             label: const Text('Google Play'),
             style: OutlinedButton.styleFrom(
-              foregroundColor: const Color(0xFF7B61FF),
+              foregroundColor: const Color(0xFF3DDC84),
               side: BorderSide(
-                  color: const Color(0xFF7B61FF).withValues(alpha: 0.3)),
+                  color: const Color(0xFF3DDC84).withValues(alpha: 0.3)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+          ),
+          OutlinedButton.icon(
+            onPressed: () => url_launcher.launchUrl(
+              Uri.parse('https://testflight.apple.com/join/2DYkgW28'),
+            ),
+            icon: const Icon(Icons.apple, size: 18),
+            label: const Text('TestFlight'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF60B4FF),
+              side: BorderSide(
+                  color: const Color(0xFF60B4FF).withValues(alpha: 0.3)),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -407,7 +426,7 @@ class ProjectsPage extends StatelessWidget {
                           const SizedBox(height: 24),
                           cards[2],
                           const SizedBox(height: 24),
-                          cards[4],
+                          cards[3],
                         ],
                       ),
                     ),
@@ -417,7 +436,9 @@ class ProjectsPage extends StatelessWidget {
                         children: [
                           cards[1],
                           const SizedBox(height: 24),
-                          cards[3],
+                          cards[5],
+                          const SizedBox(height: 24),
+                          cards[4],
                         ],
                       ),
                     ),
@@ -457,7 +478,8 @@ class ProjectsPage extends StatelessWidget {
                             'Animations',
                             'Custom Paint'
                           ],
-                          onCodePressed: () => urlLauncher.launchUrl(
+                          platforms: const ['Android'],
+                          onCodePressed: () => url_launcher.launchUrl(
                             Uri.parse(
                                 'https://github.com/GrullonDev/YellowFlowers.git'),
                           ),
