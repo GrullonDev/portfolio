@@ -1465,6 +1465,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Available for work'**
   String get homeAvailableStatus;
+
+  /// No description provided for @homeMissionPerformance.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance optimization to >99%'**
+  String get homeMissionPerformance;
+
+  /// No description provided for @homeMissionArchitecture.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean & Scalable Architecture'**
+  String get homeMissionArchitecture;
+
+  /// No description provided for @homeMissionUx.
+  ///
+  /// In en, this message translates to:
+  /// **'Modern UI/UX Integration'**
+  String get homeMissionUx;
+
+  /// No description provided for @homeStatCrashFreeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Crash-Free Sessions'**
+  String get homeStatCrashFreeLabel;
+
+  /// No description provided for @homeStatPerformanceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Score'**
+  String get homeStatPerformanceLabel;
 }
 
 class _AppLocalizationsDelegate

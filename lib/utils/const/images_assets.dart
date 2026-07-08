@@ -2,6 +2,7 @@ class ImageAssets {
   static const String profile = 'assets/images/profile.webp';
   static const String commingSoon = 'assets/images/commingSoon.webp';
   static const String logo = 'assets/images/logo.jpeg';
+  static const String heroBackground = 'assets/images/logo.png';
   // Portfolio (under projects/portfolio)
   static const String inicio = 'assets/images/projects/portfolio/inicio.webp';
   static const String aboutMe1 =

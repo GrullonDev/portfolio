@@ -772,4 +772,19 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get homeAvailableStatus => 'Disponible para trabajar';
+
+  @override
+  String get homeMissionPerformance => 'Optimización de Performance a >99%';
+
+  @override
+  String get homeMissionArchitecture => 'Arquitectura Limpia & Escalable';
+
+  @override
+  String get homeMissionUx => 'Integración de UI/UX Moderna';
+
+  @override
+  String get homeStatCrashFreeLabel => 'Sesiones sin errores';
+
+  @override
+  String get homeStatPerformanceLabel => 'Score de Rendimiento';
 }

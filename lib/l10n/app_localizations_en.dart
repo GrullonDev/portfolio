@@ -767,4 +767,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeAvailableStatus => 'Available for work';
+
+  @override
+  String get homeMissionPerformance => 'Performance optimization to >99%';
+
+  @override
+  String get homeMissionArchitecture => 'Clean & Scalable Architecture';
+
+  @override
+  String get homeMissionUx => 'Modern UI/UX Integration';
+
+  @override
+  String get homeStatCrashFreeLabel => 'Crash-Free Sessions';
+
+  @override
+  String get homeStatPerformanceLabel => 'Performance Score';
 }
