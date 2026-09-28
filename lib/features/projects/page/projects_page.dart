@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 import 'package:portafolio_app/bloc/logic.dart';
+import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
 import 'package:portafolio_app/features/projects/widgets/enterprise_project_card.dart';
+import 'package:portafolio_app/features/projects/widgets/featured_labs_card.dart';
 import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
@@ -170,6 +172,7 @@ class ProjectsPage extends StatelessWidget {
         ],
         trailingIcon:
             const Icon(Icons.fitness_center, color: Color(0xFF9D5CFF)),
+        betaPlatforms: const [BetaPlatform.android, BetaPlatform.ios],
         actions: [
           OutlinedButton.icon(
             onPressed: () {},
@@ -208,6 +211,7 @@ class ProjectsPage extends StatelessWidget {
           'Isar DB',
         ],
         trailingIcon: const Icon(Icons.timer, color: Color(0xFF9D5CFF)),
+        betaPlatforms: const [BetaPlatform.android, BetaPlatform.ios],
         actions: [
           OutlinedButton.icon(
             onPressed: () => url_launcher.launchUrl(
@@ -266,6 +270,7 @@ class ProjectsPage extends StatelessWidget {
         ],
         trailingIcon:
             const Icon(Icons.account_balance_wallet, color: Color(0xFF9D5CFF)),
+        betaPlatforms: const [BetaPlatform.android, BetaPlatform.ios],
         actions: [
           OutlinedButton.icon(
             onPressed: () => url_launcher.launchUrl(
@@ -389,6 +394,8 @@ class ProjectsPage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 48),
+              const FeaturedLabsCard(),
+              const SizedBox(height: 48),
               if (isMobile)
                 Column(
                   children: cards
@@ -420,6 +427,8 @@ class ProjectsPage extends StatelessWidget {
                           cards[1],
                           const SizedBox(height: 24),
                           cards[3],
+                          const SizedBox(height: 24),
+                          cards[5],
                         ],
                       ),
                     ),
@@ -463,6 +472,10 @@ class ProjectsPage extends StatelessWidget {
                             Uri.parse(
                                 'https://github.com/GrullonDev/YellowFlowers.git'),
                           ),
+                          betaPlatforms: const [
+                            BetaPlatform.android,
+                            BetaPlatform.ios,
+                          ],
                         ),
                         MiniProjectCard(
                           title: t.eduPlayTitle,
@@ -474,6 +487,7 @@ class ProjectsPage extends StatelessWidget {
                             'Gamification'
                           ],
                           onCodePressed: () {},
+                          betaPlatforms: const [BetaPlatform.web],
                         ),
                       ],
                     ),
