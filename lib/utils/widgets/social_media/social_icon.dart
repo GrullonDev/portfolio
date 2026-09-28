@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 import 'package:portafolio_app/bloc/logic.dart';
-import 'package:provider/provider.dart';
 
 class SocialIcon extends StatelessWidget {
   const SocialIcon({
@@ -12,7 +12,7 @@ class SocialIcon extends StatelessWidget {
     required this.url,
   });
 
-  final IconData icon;
+  final FaIconData icon;
   final String url;
 
   @override
