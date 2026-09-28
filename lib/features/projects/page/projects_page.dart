@@ -8,6 +8,7 @@ import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart
 import 'package:portafolio_app/features/projects/widgets/enterprise_project_card.dart';
 import 'package:portafolio_app/features/projects/widgets/featured_labs_card.dart';
 import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
+import 'package:portafolio_app/features/projects/widgets/success_case_card.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
@@ -395,6 +396,8 @@ class ProjectsPage extends StatelessWidget {
               ),
               const SizedBox(height: 48),
               const FeaturedLabsCard(),
+              const SizedBox(height: 48),
+              const SuccessCaseCard(),
               const SizedBox(height: 48),
               if (isMobile)
                 Column(
