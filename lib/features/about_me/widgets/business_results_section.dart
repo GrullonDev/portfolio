@@ -91,26 +91,22 @@ class BusinessResultsSection extends StatelessWidget {
 
             return Column(
               children: [
-                IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(child: cards[0]),
-                      const SizedBox(width: 24),
-                      Expanded(child: cards[1]),
-                    ],
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: cards[0]),
+                    const SizedBox(width: 24),
+                    Expanded(child: cards[1]),
+                  ],
                 ),
                 const SizedBox(height: 24),
-                IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(child: cards[2]),
-                      const SizedBox(width: 24),
-                      Expanded(child: cards[3]),
-                    ],
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: cards[2]),
+                    const SizedBox(width: 24),
+                    Expanded(child: cards[3]),
+                  ],
                 ),
               ],
             );

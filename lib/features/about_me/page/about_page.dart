@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:portafolio_app/l10n/app_localizations.dart';
-import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
+import 'package:portafolio_app/features/about_me/widgets/business_results_section.dart';
+import 'package:portafolio_app/features/about_me/widgets/certifications_section.dart';
 import 'package:portafolio_app/features/about_me/widgets/experience_timeline.dart';
 import 'package:portafolio_app/features/about_me/widgets/skills_grid.dart';
-import 'package:portafolio_app/features/about_me/widgets/certifications_section.dart';
-import 'package:portafolio_app/features/about_me/widgets/business_results_section.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/utils/widgets/social_media/social_icon.dart';
 
 class AboutPage extends StatelessWidget {

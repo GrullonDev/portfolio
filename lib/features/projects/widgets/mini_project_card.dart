@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
+
 class MiniProjectCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final List<String> technologies;
   final VoidCallback onCodePressed;
+  final List<BetaPlatform>? betaPlatforms;
 
   const MiniProjectCard({
     super.key,
@@ -12,6 +16,7 @@ class MiniProjectCard extends StatelessWidget {
     required this.subtitle,
     required this.technologies,
     required this.onCodePressed,
+    this.betaPlatforms,
   });
 
   @override
@@ -94,6 +99,35 @@ class MiniProjectCard extends StatelessWidget {
               ],
             ),
           ),
+          if (betaPlatforms != null) ...[
+            const SizedBox(height: 12),
+            InkWell(
+              onTap: () => showBetaRequestSheet(
+                context,
+                projectName: title,
+                platforms: betaPlatforms!,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.rocket_launch,
+                    color: Color(0xFF4ADE80),
+                    size: 16,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    AppLocalizations.of(context).btnJoinBeta,
+                    style: const TextStyle(
+                      color: Color(0xFF4ADE80),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ],
       ),
     );

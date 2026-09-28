@@ -8,12 +8,11 @@ import 'package:portafolio_app/features/about_me/page/about_page.dart';
 import 'package:portafolio_app/features/contact/contact_page.dart';
 import 'package:portafolio_app/features/projects/page/projects_page.dart';
 import 'package:portafolio_app/features/services/page/services_page.dart';
-import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/features/testimonials/testimonials_section.dart';
+import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/app_bar/custom_app_bar.dart';
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/utils/image/asset_image.dart';
-
 import 'package:portafolio_app/utils/widgets/device_mockups.dart';
 import 'package:portafolio_app/utils/widgets/footer.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
@@ -287,8 +286,7 @@ class _HeroText extends StatelessWidget {
               ),
             ),
             OutlinedButton(
-              onPressed: () => context.read<PortfolioLogic>().launchURL(
-                  'https://drive.google.com/file/d/1KSn4v56sTwiVMGyWLB5sVJsOr54-9rHS/view?usp=sharing'),
+              onPressed: () => context.read<PortfolioLogic>().downloadCV(),
               style: secondaryButtonStyle,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -539,7 +537,7 @@ class _StatCard extends StatelessWidget {
 }
 
 class _SocialIconMinimal extends StatelessWidget {
-  final IconData icon;
+  final FaIconData icon;
   final VoidCallback onPressed;
 
   const _SocialIconMinimal({required this.icon, required this.onPressed});
