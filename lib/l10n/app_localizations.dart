@@ -785,7 +785,7 @@ abstract class AppLocalizations {
   /// No description provided for @betaRequestSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Leave your email and platform to send you a test build via Firebase App Distribution.'**
+  /// **'Leave your name, email and platform so I can add you to the testers list (Google Play Closed Testing, TestFlight or web access).'**
   String get betaRequestSubtitle;
 
   /// No description provided for @betaFieldEmail.
@@ -847,6 +847,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'iOS'**
   String get platformIos;
+
+  /// No description provided for @platformWeb.
+  ///
+  /// In en, this message translates to:
+  /// **'Web'**
+  String get platformWeb;
+
+  /// No description provided for @btnJoinBeta.
+  ///
+  /// In en, this message translates to:
+  /// **'Join the Beta'**
+  String get btnJoinBeta;
+
+  /// No description provided for @betaFieldName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get betaFieldName;
+
+  /// No description provided for @betaFieldNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'John Doe'**
+  String get betaFieldNameHint;
+
+  /// No description provided for @betaErrorRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get betaErrorRequired;
+
+  /// No description provided for @betaErrorEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get betaErrorEmail;
 
   /// No description provided for @contactSlaLanguages.
   ///
@@ -1531,6 +1567,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Performance Score'**
   String get homeStatPerformanceLabel;
+
+  /// No description provided for @labsBadgeFeatured.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured project'**
+  String get labsBadgeFeatured;
+
+  /// No description provided for @labsBadgeSlots.
+  ///
+  /// In en, this message translates to:
+  /// **'Limited slots this month'**
+  String get labsBadgeSlots;
+
+  /// No description provided for @labsTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Need a website for your business? Professional web development at a fixed price from Q500, delivered fast.'**
+  String get labsTagline;
+
+  /// No description provided for @labsFeatureResponsive.
+  ///
+  /// In en, this message translates to:
+  /// **'Responsive design'**
+  String get labsFeatureResponsive;
+
+  /// No description provided for @labsFeatureSections.
+  ///
+  /// In en, this message translates to:
+  /// **'Up to 3 sections'**
+  String get labsFeatureSections;
+
+  /// No description provided for @labsFeatureSeo.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast loading & basic SEO'**
+  String get labsFeatureSeo;
+
+  /// No description provided for @labsFeaturePrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Fixed price, no surprises'**
+  String get labsFeaturePrice;
+
+  /// No description provided for @labsCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Get my website for Q500'**
+  String get labsCta;
+
+  /// No description provided for @labsFootnote.
+  ///
+  /// In en, this message translates to:
+  /// **'No hidden costs · Fast delivery'**
+  String get labsFootnote;
 }
 
 class _AppLocalizationsDelegate

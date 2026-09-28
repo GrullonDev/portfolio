@@ -379,7 +379,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get betaRequestSubtitle =>
-      'Leave your email and platform to send you a test build via Firebase App Distribution.';
+      'Leave your name, email and platform so I can add you to the testers list (Google Play Closed Testing, TestFlight or web access).';
 
   @override
   String get betaFieldEmail => 'Email';
@@ -411,6 +411,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get platformIos => 'iOS';
+
+  @override
+  String get platformWeb => 'Web';
+
+  @override
+  String get btnJoinBeta => 'Join the Beta';
+
+  @override
+  String get betaFieldName => 'Full name';
+
+  @override
+  String get betaFieldNameHint => 'John Doe';
+
+  @override
+  String get betaErrorRequired => 'This field is required';
+
+  @override
+  String get betaErrorEmail => 'Enter a valid email';
 
   @override
   String get contactSlaLanguages =>
@@ -805,4 +823,32 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeStatPerformanceLabel => 'Performance Score';
+
+  @override
+  String get labsBadgeFeatured => 'Featured project';
+
+  @override
+  String get labsBadgeSlots => 'Limited slots this month';
+
+  @override
+  String get labsTagline =>
+      'Need a website for your business? Professional web development at a fixed price from Q500, delivered fast.';
+
+  @override
+  String get labsFeatureResponsive => 'Responsive design';
+
+  @override
+  String get labsFeatureSections => 'Up to 3 sections';
+
+  @override
+  String get labsFeatureSeo => 'Fast loading & basic SEO';
+
+  @override
+  String get labsFeaturePrice => 'Fixed price, no surprises';
+
+  @override
+  String get labsCta => 'Get my website for Q500';
+
+  @override
+  String get labsFootnote => 'No hidden costs · Fast delivery';
 }
