@@ -114,6 +114,29 @@ class AppLocalizationsEs extends AppLocalizations {
       'Mini app para experimentar onboarding y animaciones.';
 
   @override
+  String get projectATSTitle => 'ATS - Applicant Tracking System';
+
+  @override
+  String get projectATSDesc =>
+      'Applicant Tracking System for recruiters and HR professionals.';
+
+  @override
+  String get projectATSO =>
+      'Desarrollar una plataforma móvil para el seguimiento de candidatos para reclutadores y profesionales de RRHH.';
+
+  @override
+  String get projectATSC =>
+      'Un desafío clave fue diseñar una interfaz intuitiva y eficiente que permitiera a los reclutadores gestionar múltiples candidatos y procesos de selección de manera simultánea.';
+
+  @override
+  String get projectATSS =>
+      'Una plataforma móvil intuitiva y eficiente que permitiera a los reclutadores gestionar múltiples candidatos y procesos de selección de manera simultánea.';
+
+  @override
+  String get projectATSL =>
+      'Aprendí la importancia de la arquitectura limpia y la escalabilidad en el desarrollo de aplicaciones móviles.';
+
+  @override
   String get aboutBio =>
       'Desarrollador de Software con más de 6 años de experiencia, especializado en la creación de aplicaciones móviles y web de alto impacto. Mi enfoque se centra en la arquitectura limpia, la escalabilidad y la entrega de valor real al negocio a través de soluciones tecnológicas innovadoras. Apasionado por el ecosistema Flutter y el desarrollo full-stack.';
 
@@ -756,7 +779,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get testimonialsTitle => 'Testimonios';
 
   @override
-  String get testimonialName1 => 'Cliente / Colega';
+  String get testimonialName1 => 'Colega';
 
   @override
   String get testimonialQuote1 =>

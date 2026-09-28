@@ -1,7 +1,8 @@
 import 'dart:core';
 import 'package:flutter/foundation.dart';
-
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:universal_html/html.dart' as html;
 
 import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
@@ -140,6 +141,44 @@ class PortfolioLogic extends ChangeNotifier {
       await launchUrl(whatsappUri);
     } else {
       throw 'No se pudo abrir WhatsApp.';
+    }
+  }
+
+  // Download CV method
+  Future<void> downloadCV() async {
+    const String assetPath = 'assets/docs/JorgeGrullon_CV.pdf';
+    
+    try {
+      if (kIsWeb) {
+        // Use rootBundle to load the file as bytes, ensuring we get the file regardless of host path
+        final byteData = await rootBundle.load(assetPath);
+        final bytes = byteData.buffer.asUint8List();
+        
+        // Create a blob and trigger a direct browser download
+        final blob = html.Blob([bytes], 'application/pdf');
+        final url = html.Url.createObjectUrlFromBlob(blob);
+        
+        html.AnchorElement(href: url)
+          ..setAttribute('download', 'JorgeGrullon_CV.pdf')
+          ..click();
+          
+        html.Url.revokeObjectUrl(url);
+        return;
+      }
+
+      // For other platforms (Mobile/Desktop), use url_launcher as fallback
+      // Since it's a local asset, we'd normally need a specialized tool to open it on mobile,
+      // but for now, we maintain the previous logic for non-web platforms.
+      const String webFallbackPath = 'assets/docs/JorgeGrullon_CV.pdf';
+      final Uri uri = Uri.parse(webFallbackPath);
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        throw 'No se pudo abrir el CV.';
+      }
+    } catch (e) {
+      debugPrint('Error downloading CV: $e');
+      throw 'No se pudo descargar el CV. Por favor, asegúrate de que el servidor se haya reiniciado correctamente.';
     }
   }
 }
