@@ -137,7 +137,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeGreeting.
   ///
   /// In en, this message translates to:
-  /// **'I\'m Jorge Grullón👋'**
+  /// **'I\'m Jorge Grullón'**
   String get homeGreeting;
 
   /// No description provided for @homeSubtitle.

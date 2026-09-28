@@ -27,7 +27,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navContact => 'Contact';
 
   @override
-  String get homeGreeting => 'I\'m Jorge Grullón👋';
+  String get homeGreeting => 'I\'m Jorge Grullón';
 
   @override
   String get homeSubtitle =>
