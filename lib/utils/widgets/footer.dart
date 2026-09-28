@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:provider/provider.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
+
 import 'package:portafolio_app/bloc/logic.dart';
-import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
-import 'package:portafolio_app/utils/const/images_assets.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
+import 'package:portafolio_app/utils/const/images_assets.dart';
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -195,7 +196,7 @@ class _FooterRight extends StatelessWidget {
 }
 
 class _SocialRectButton extends StatelessWidget {
-  final IconData icon;
+  final FaIconData icon;
   final VoidCallback onTap;
 
   const _SocialRectButton({required this.icon, required this.onTap});

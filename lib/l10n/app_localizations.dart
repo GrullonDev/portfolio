@@ -137,7 +137,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeGreeting.
   ///
   /// In en, this message translates to:
-  /// **'I\'m Jorge Grullón👋'**
+  /// **'I\'m Jorge Grullón'**
   String get homeGreeting;
 
   /// No description provided for @homeSubtitle.
@@ -785,7 +785,7 @@ abstract class AppLocalizations {
   /// No description provided for @betaRequestSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Leave your email and platform to send you a test build via Firebase App Distribution.'**
+  /// **'Leave your name, email and platform so I can add you to the testers list (Google Play Closed Testing, TestFlight or web access).'**
   String get betaRequestSubtitle;
 
   /// No description provided for @betaFieldEmail.
@@ -847,6 +847,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'iOS'**
   String get platformIos;
+
+  /// No description provided for @platformWeb.
+  ///
+  /// In en, this message translates to:
+  /// **'Web'**
+  String get platformWeb;
+
+  /// No description provided for @btnJoinBeta.
+  ///
+  /// In en, this message translates to:
+  /// **'Join the Beta'**
+  String get btnJoinBeta;
+
+  /// No description provided for @betaFieldName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get betaFieldName;
+
+  /// No description provided for @betaFieldNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'John Doe'**
+  String get betaFieldNameHint;
+
+  /// No description provided for @betaErrorRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get betaErrorRequired;
+
+  /// No description provided for @betaErrorEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get betaErrorEmail;
 
   /// No description provided for @contactSlaLanguages.
   ///
@@ -1501,6 +1537,228 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Available for work'**
   String get homeAvailableStatus;
+
+  /// No description provided for @homeMissionPerformance.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance optimization to >99%'**
+  String get homeMissionPerformance;
+
+  /// No description provided for @homeMissionArchitecture.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean & Scalable Architecture'**
+  String get homeMissionArchitecture;
+
+  /// No description provided for @homeMissionUx.
+  ///
+  /// In en, this message translates to:
+  /// **'Modern UI/UX Integration'**
+  String get homeMissionUx;
+
+  /// No description provided for @homeStatCrashFreeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Crash-Free Sessions'**
+  String get homeStatCrashFreeLabel;
+
+  /// No description provided for @homeStatPerformanceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Score'**
+  String get homeStatPerformanceLabel;
+
+  /// No description provided for @labsBadgeFeatured.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured project'**
+  String get labsBadgeFeatured;
+
+  /// No description provided for @labsBadgeSlots.
+  ///
+  /// In en, this message translates to:
+  /// **'Limited slots this month'**
+  String get labsBadgeSlots;
+
+  /// No description provided for @labsTagline.
+  ///
+  /// In en, this message translates to:
+  /// **'Need a website for your business? Professional web development at a fixed price from Q500, delivered fast.'**
+  String get labsTagline;
+
+  /// No description provided for @labsFeatureResponsive.
+  ///
+  /// In en, this message translates to:
+  /// **'Responsive design'**
+  String get labsFeatureResponsive;
+
+  /// No description provided for @labsFeatureSections.
+  ///
+  /// In en, this message translates to:
+  /// **'Up to 3 sections'**
+  String get labsFeatureSections;
+
+  /// No description provided for @labsFeatureSeo.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast loading & basic SEO'**
+  String get labsFeatureSeo;
+
+  /// No description provided for @labsFeaturePrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Fixed price, no surprises'**
+  String get labsFeaturePrice;
+
+  /// No description provided for @labsCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Get my website for Q500'**
+  String get labsCta;
+
+  /// No description provided for @labsFootnote.
+  ///
+  /// In en, this message translates to:
+  /// **'No hidden costs · Fast delivery'**
+  String get labsFootnote;
+
+  /// No description provided for @prosystemBadgeProduction.
+  ///
+  /// In en, this message translates to:
+  /// **'In production'**
+  String get prosystemBadgeProduction;
+
+  /// No description provided for @prosystemBadgeEnterprise.
+  ///
+  /// In en, this message translates to:
+  /// **'Enterprise success story'**
+  String get prosystemBadgeEnterprise;
+
+  /// No description provided for @prosystemDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'High-security corporate system used daily by real clients. Built to protect critical information and control every user\'s access.'**
+  String get prosystemDescription;
+
+  /// No description provided for @prosystemFeatureAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Role-based access control and secure authentication'**
+  String get prosystemFeatureAccess;
+
+  /// No description provided for @prosystemFeatureAudit.
+  ///
+  /// In en, this message translates to:
+  /// **'Audit log of every action'**
+  String get prosystemFeatureAudit;
+
+  /// No description provided for @prosystemFeatureEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'Data encrypted in transit and at rest'**
+  String get prosystemFeatureEncryption;
+
+  /// No description provided for @prosystemCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Request a demo'**
+  String get prosystemCta;
+
+  /// No description provided for @prosystemDemoMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Hi Jorge, I am interested in a demo of Prosystem Security.'**
+  String get prosystemDemoMessage;
+
+  /// No description provided for @prosystemStatUptime.
+  ///
+  /// In en, this message translates to:
+  /// **'Continuous operation'**
+  String get prosystemStatUptime;
+
+  /// No description provided for @prosystemStatClients.
+  ///
+  /// In en, this message translates to:
+  /// **'Satisfied clients'**
+  String get prosystemStatClients;
+
+  /// No description provided for @prosystemQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Validated by companies that rely on it every day.'**
+  String get prosystemQuote;
+
+  /// No description provided for @reviewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share your experience'**
+  String get reviewTitle;
+
+  /// No description provided for @reviewSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks for working with me. Your feedback helps other clients get to know my work.'**
+  String get reviewSubtitle;
+
+  /// No description provided for @reviewFieldName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name / Company'**
+  String get reviewFieldName;
+
+  /// No description provided for @reviewFieldJobTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Job title'**
+  String get reviewFieldJobTitle;
+
+  /// No description provided for @reviewFieldRating.
+  ///
+  /// In en, this message translates to:
+  /// **'Rating'**
+  String get reviewFieldRating;
+
+  /// No description provided for @reviewFieldComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment'**
+  String get reviewFieldComment;
+
+  /// No description provided for @reviewSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Send testimonial'**
+  String get reviewSubmit;
+
+  /// No description provided for @reviewError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not send. Please try again.'**
+  String get reviewError;
+
+  /// No description provided for @reviewSuccessTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you!'**
+  String get reviewSuccessTitle;
+
+  /// No description provided for @reviewSuccessBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your testimonial was received and will appear on the portfolio after review.'**
+  String get reviewSuccessBody;
+
+  /// No description provided for @reviewInvalidTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid link'**
+  String get reviewInvalidTitle;
+
+  /// No description provided for @reviewInvalidBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This link has expired or is incorrect. Ask Jorge for a new one.'**
+  String get reviewInvalidBody;
 }
 
 class _AppLocalizationsDelegate

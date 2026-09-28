@@ -1,14 +1,39 @@
 import 'package:flutter/material.dart';
+
+import 'package:portafolio_app/features/testimonials/data/firestore_testimonial_repository.dart';
+import 'package:portafolio_app/features/testimonials/domain/testimonial.dart';
+import 'package:portafolio_app/features/testimonials/domain/testimonial_repository.dart';
+import 'package:portafolio_app/features/testimonials/presentation/star_rating.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
-class TestimonialsSection extends StatelessWidget {
-  const TestimonialsSection({super.key});
+class TestimonialsSection extends StatefulWidget {
+  final TestimonialRepository? repository;
+
+  const TestimonialsSection({super.key, this.repository});
+
+  @override
+  State<TestimonialsSection> createState() => _TestimonialsSectionState();
+}
+
+class _TestimonialsSectionState extends State<TestimonialsSection> {
+  late final Stream<List<Testimonial>> _stream =
+      (widget.repository ?? FirestoreTestimonialRepository()).watchApproved();
 
   @override
   Widget build(BuildContext context) {
     final t = AppLocalizations.of(context);
     final isMobile = Responsive.isMobile(context);
+
+    // Static testimonial is kept as fallback while loading or if Firestore fails.
+    final fallback = [
+      Testimonial(
+        name: t.testimonialName1,
+        jobTitle: '',
+        rating: 5,
+        comment: t.testimonialQuote1,
+      ),
+    ];
 
     return Column(
       children: [
@@ -30,33 +55,51 @@ class TestimonialsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 48),
-        Wrap(
-          spacing: 24,
-          runSpacing: 24,
-          alignment: WrapAlignment.center,
-          children: [
-            _TestimonialCard(
-              quote: t.testimonialQuote1,
-              author: t.testimonialName1,
-            ),
-            // Add more if needed later
-          ],
+        StreamBuilder<List<Testimonial>>(
+          stream: _stream,
+          builder: (context, snap) {
+            final items = [...?snap.data, ...fallback];
+            return _TestimonialCarousel(items: items, isMobile: isMobile);
+          },
         ),
       ],
     );
   }
 }
 
-class _TestimonialCard extends StatelessWidget {
-  final String quote;
-  final String author;
+class _TestimonialCarousel extends StatelessWidget {
+  final List<Testimonial> items;
+  final bool isMobile;
 
-  const _TestimonialCard({required this.quote, required this.author});
+  const _TestimonialCarousel({required this.items, required this.isMobile});
+
+  @override
+  Widget build(BuildContext context) {
+    final cardWidth = isMobile ? MediaQuery.sizeOf(context).width - 64 : 400.0;
+
+    return SizedBox(
+      height: 340,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        separatorBuilder: (_, __) => const SizedBox(width: 24),
+        itemBuilder: (_, i) =>
+            _TestimonialCard(testimonial: items[i], width: cardWidth),
+      ),
+    );
+  }
+}
+
+class _TestimonialCard extends StatelessWidget {
+  final Testimonial testimonial;
+  final double width;
+
+  const _TestimonialCard({required this.testimonial, required this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
+      width: width,
       padding: const EdgeInsets.all(32),
       decoration: BoxDecoration(
         color: const Color(0xFF151921),
@@ -66,15 +109,25 @@ class _TestimonialCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.format_quote, color: Color(0xFF7B61FF), size: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Icon(Icons.format_quote,
+                  color: Color(0xFF7B61FF), size: 40),
+              StarRating(value: testimonial.rating),
+            ],
+          ),
           const SizedBox(height: 16),
-          Text(
-            quote,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Color(0xFFA0A0A0),
-              fontStyle: FontStyle.italic,
-              height: 1.5,
+          Expanded(
+            child: Text(
+              testimonial.comment,
+              overflow: TextOverflow.fade,
+              style: const TextStyle(
+                fontSize: 18,
+                color: Color(0xFFA0A0A0),
+                fontStyle: FontStyle.italic,
+                height: 1.5,
+              ),
             ),
           ),
           const SizedBox(height: 24),
@@ -90,12 +143,29 @@ class _TestimonialCard extends StatelessWidget {
                 child: const Icon(Icons.person, color: Colors.white, size: 24),
               ),
               const SizedBox(width: 16),
-              Text(
-                author,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      testimonial.name,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    if (testimonial.jobTitle.isNotEmpty)
+                      Text(
+                        testimonial.jobTitle,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 13,
+                          color: Color(0xFFA0A0A0),
+                        ),
+                      ),
+                  ],
                 ),
               ),
             ],

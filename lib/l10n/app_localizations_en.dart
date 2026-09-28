@@ -27,7 +27,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navContact => 'Contact';
 
   @override
-  String get homeGreeting => 'I\'m Jorge Grullón👋';
+  String get homeGreeting => 'I\'m Jorge Grullón';
 
   @override
   String get homeSubtitle =>
@@ -379,7 +379,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get betaRequestSubtitle =>
-      'Leave your email and platform to send you a test build via Firebase App Distribution.';
+      'Leave your name, email and platform so I can add you to the testers list (Google Play Closed Testing, TestFlight or web access).';
 
   @override
   String get betaFieldEmail => 'Email';
@@ -411,6 +411,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get platformIos => 'iOS';
+
+  @override
+  String get platformWeb => 'Web';
+
+  @override
+  String get btnJoinBeta => 'Join the Beta';
+
+  @override
+  String get betaFieldName => 'Full name';
+
+  @override
+  String get betaFieldNameHint => 'John Doe';
+
+  @override
+  String get betaErrorRequired => 'This field is required';
+
+  @override
+  String get betaErrorEmail => 'Enter a valid email';
 
   @override
   String get contactSlaLanguages =>
@@ -790,4 +808,124 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeAvailableStatus => 'Available for work';
+
+  @override
+  String get homeMissionPerformance => 'Performance optimization to >99%';
+
+  @override
+  String get homeMissionArchitecture => 'Clean & Scalable Architecture';
+
+  @override
+  String get homeMissionUx => 'Modern UI/UX Integration';
+
+  @override
+  String get homeStatCrashFreeLabel => 'Crash-Free Sessions';
+
+  @override
+  String get homeStatPerformanceLabel => 'Performance Score';
+
+  @override
+  String get labsBadgeFeatured => 'Featured project';
+
+  @override
+  String get labsBadgeSlots => 'Limited slots this month';
+
+  @override
+  String get labsTagline =>
+      'Need a website for your business? Professional web development at a fixed price from Q500, delivered fast.';
+
+  @override
+  String get labsFeatureResponsive => 'Responsive design';
+
+  @override
+  String get labsFeatureSections => 'Up to 3 sections';
+
+  @override
+  String get labsFeatureSeo => 'Fast loading & basic SEO';
+
+  @override
+  String get labsFeaturePrice => 'Fixed price, no surprises';
+
+  @override
+  String get labsCta => 'Get my website for Q500';
+
+  @override
+  String get labsFootnote => 'No hidden costs · Fast delivery';
+
+  @override
+  String get prosystemBadgeProduction => 'In production';
+
+  @override
+  String get prosystemBadgeEnterprise => 'Enterprise success story';
+
+  @override
+  String get prosystemDescription =>
+      'High-security corporate system used daily by real clients. Built to protect critical information and control every user\'s access.';
+
+  @override
+  String get prosystemFeatureAccess =>
+      'Role-based access control and secure authentication';
+
+  @override
+  String get prosystemFeatureAudit => 'Audit log of every action';
+
+  @override
+  String get prosystemFeatureEncryption =>
+      'Data encrypted in transit and at rest';
+
+  @override
+  String get prosystemCta => 'Request a demo';
+
+  @override
+  String get prosystemDemoMessage =>
+      'Hi Jorge, I am interested in a demo of Prosystem Security.';
+
+  @override
+  String get prosystemStatUptime => 'Continuous operation';
+
+  @override
+  String get prosystemStatClients => 'Satisfied clients';
+
+  @override
+  String get prosystemQuote =>
+      'Validated by companies that rely on it every day.';
+
+  @override
+  String get reviewTitle => 'Share your experience';
+
+  @override
+  String get reviewSubtitle =>
+      'Thanks for working with me. Your feedback helps other clients get to know my work.';
+
+  @override
+  String get reviewFieldName => 'Name / Company';
+
+  @override
+  String get reviewFieldJobTitle => 'Job title';
+
+  @override
+  String get reviewFieldRating => 'Rating';
+
+  @override
+  String get reviewFieldComment => 'Comment';
+
+  @override
+  String get reviewSubmit => 'Send testimonial';
+
+  @override
+  String get reviewError => 'Could not send. Please try again.';
+
+  @override
+  String get reviewSuccessTitle => 'Thank you!';
+
+  @override
+  String get reviewSuccessBody =>
+      'Your testimonial was received and will appear on the portfolio after review.';
+
+  @override
+  String get reviewInvalidTitle => 'Invalid link';
+
+  @override
+  String get reviewInvalidBody =>
+      'This link has expired or is incorrect. Ask Jorge for a new one.';
 }

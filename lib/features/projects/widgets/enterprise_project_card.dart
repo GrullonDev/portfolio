@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portafolio_app/features/projects/widgets/beta_request_sheet.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
 
 class EnterpriseProjectCard extends StatelessWidget {
@@ -13,6 +14,7 @@ class EnterpriseProjectCard extends StatelessWidget {
   final List<String> technologies;
   final Widget? trailingIcon;
   final List<Widget>? actions;
+  final List<BetaPlatform>? betaPlatforms;
 
   const EnterpriseProjectCard({
     super.key,
@@ -27,6 +29,7 @@ class EnterpriseProjectCard extends StatelessWidget {
     this.learning,
     this.trailingIcon,
     this.actions,
+    this.betaPlatforms,
   });
 
   @override
@@ -161,12 +164,32 @@ class EnterpriseProjectCard extends StatelessWidget {
                 )
                 .toList(),
           ),
-          if (actions != null && actions!.isNotEmpty) ...[
+          if ((actions?.isNotEmpty ?? false) || betaPlatforms != null) ...[
             const SizedBox(height: 32),
             Wrap(
               spacing: 16,
               runSpacing: 16,
-              children: actions!,
+              children: [
+                ...?actions,
+                if (betaPlatforms != null)
+                  FilledButton.icon(
+                    onPressed: () => showBetaRequestSheet(
+                      context,
+                      projectName: title,
+                      platforms: betaPlatforms!,
+                    ),
+                    icon: const Icon(Icons.rocket_launch, size: 18),
+                    label: Text(t.btnJoinBeta),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: const Color(0xFF7B61FF),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 12),
+                    ),
+                  ),
+              ],
             ),
           ],
         ],
