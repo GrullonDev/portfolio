@@ -851,4 +851,81 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get labsFootnote => 'No hidden costs · Fast delivery';
+
+  @override
+  String get prosystemBadgeProduction => 'In production';
+
+  @override
+  String get prosystemBadgeEnterprise => 'Enterprise success story';
+
+  @override
+  String get prosystemDescription =>
+      'High-security corporate system used daily by real clients. Built to protect critical information and control every user\'s access.';
+
+  @override
+  String get prosystemFeatureAccess =>
+      'Role-based access control and secure authentication';
+
+  @override
+  String get prosystemFeatureAudit => 'Audit log of every action';
+
+  @override
+  String get prosystemFeatureEncryption =>
+      'Data encrypted in transit and at rest';
+
+  @override
+  String get prosystemCta => 'Request a demo';
+
+  @override
+  String get prosystemDemoMessage =>
+      'Hi Jorge, I am interested in a demo of Prosystem Security.';
+
+  @override
+  String get prosystemStatUptime => 'Continuous operation';
+
+  @override
+  String get prosystemStatClients => 'Satisfied clients';
+
+  @override
+  String get prosystemQuote =>
+      'Validated by companies that rely on it every day.';
+
+  @override
+  String get reviewTitle => 'Share your experience';
+
+  @override
+  String get reviewSubtitle =>
+      'Thanks for working with me. Your feedback helps other clients get to know my work.';
+
+  @override
+  String get reviewFieldName => 'Name / Company';
+
+  @override
+  String get reviewFieldJobTitle => 'Job title';
+
+  @override
+  String get reviewFieldRating => 'Rating';
+
+  @override
+  String get reviewFieldComment => 'Comment';
+
+  @override
+  String get reviewSubmit => 'Send testimonial';
+
+  @override
+  String get reviewError => 'Could not send. Please try again.';
+
+  @override
+  String get reviewSuccessTitle => 'Thank you!';
+
+  @override
+  String get reviewSuccessBody =>
+      'Your testimonial was received and will appear on the portfolio after review.';
+
+  @override
+  String get reviewInvalidTitle => 'Invalid link';
+
+  @override
+  String get reviewInvalidBody =>
+      'This link has expired or is incorrect. Ask Jorge for a new one.';
 }

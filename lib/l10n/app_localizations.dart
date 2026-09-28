@@ -1621,6 +1621,144 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No hidden costs · Fast delivery'**
   String get labsFootnote;
+
+  /// No description provided for @prosystemBadgeProduction.
+  ///
+  /// In en, this message translates to:
+  /// **'In production'**
+  String get prosystemBadgeProduction;
+
+  /// No description provided for @prosystemBadgeEnterprise.
+  ///
+  /// In en, this message translates to:
+  /// **'Enterprise success story'**
+  String get prosystemBadgeEnterprise;
+
+  /// No description provided for @prosystemDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'High-security corporate system used daily by real clients. Built to protect critical information and control every user\'s access.'**
+  String get prosystemDescription;
+
+  /// No description provided for @prosystemFeatureAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Role-based access control and secure authentication'**
+  String get prosystemFeatureAccess;
+
+  /// No description provided for @prosystemFeatureAudit.
+  ///
+  /// In en, this message translates to:
+  /// **'Audit log of every action'**
+  String get prosystemFeatureAudit;
+
+  /// No description provided for @prosystemFeatureEncryption.
+  ///
+  /// In en, this message translates to:
+  /// **'Data encrypted in transit and at rest'**
+  String get prosystemFeatureEncryption;
+
+  /// No description provided for @prosystemCta.
+  ///
+  /// In en, this message translates to:
+  /// **'Request a demo'**
+  String get prosystemCta;
+
+  /// No description provided for @prosystemDemoMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Hi Jorge, I am interested in a demo of Prosystem Security.'**
+  String get prosystemDemoMessage;
+
+  /// No description provided for @prosystemStatUptime.
+  ///
+  /// In en, this message translates to:
+  /// **'Continuous operation'**
+  String get prosystemStatUptime;
+
+  /// No description provided for @prosystemStatClients.
+  ///
+  /// In en, this message translates to:
+  /// **'Satisfied clients'**
+  String get prosystemStatClients;
+
+  /// No description provided for @prosystemQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'Validated by companies that rely on it every day.'**
+  String get prosystemQuote;
+
+  /// No description provided for @reviewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share your experience'**
+  String get reviewTitle;
+
+  /// No description provided for @reviewSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Thanks for working with me. Your feedback helps other clients get to know my work.'**
+  String get reviewSubtitle;
+
+  /// No description provided for @reviewFieldName.
+  ///
+  /// In en, this message translates to:
+  /// **'Name / Company'**
+  String get reviewFieldName;
+
+  /// No description provided for @reviewFieldJobTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Job title'**
+  String get reviewFieldJobTitle;
+
+  /// No description provided for @reviewFieldRating.
+  ///
+  /// In en, this message translates to:
+  /// **'Rating'**
+  String get reviewFieldRating;
+
+  /// No description provided for @reviewFieldComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment'**
+  String get reviewFieldComment;
+
+  /// No description provided for @reviewSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Send testimonial'**
+  String get reviewSubmit;
+
+  /// No description provided for @reviewError.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not send. Please try again.'**
+  String get reviewError;
+
+  /// No description provided for @reviewSuccessTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you!'**
+  String get reviewSuccessTitle;
+
+  /// No description provided for @reviewSuccessBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your testimonial was received and will appear on the portfolio after review.'**
+  String get reviewSuccessBody;
+
+  /// No description provided for @reviewInvalidTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid link'**
+  String get reviewInvalidTitle;
+
+  /// No description provided for @reviewInvalidBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This link has expired or is incorrect. Ask Jorge for a new one.'**
+  String get reviewInvalidBody;
 }
 
 class _AppLocalizationsDelegate

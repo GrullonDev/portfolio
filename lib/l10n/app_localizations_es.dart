@@ -856,4 +856,81 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get labsFootnote => 'Sin costos ocultos · Entrega rápida';
+
+  @override
+  String get prosystemBadgeProduction => 'En producción';
+
+  @override
+  String get prosystemBadgeEnterprise => 'Caso de éxito empresarial';
+
+  @override
+  String get prosystemDescription =>
+      'Sistema corporativo de alta seguridad en uso diario por clientes reales. Diseñado para proteger información crítica y controlar el acceso de cada usuario.';
+
+  @override
+  String get prosystemFeatureAccess =>
+      'Control de acceso por roles y autenticación segura';
+
+  @override
+  String get prosystemFeatureAudit => 'Bitácora de auditoría de cada acción';
+
+  @override
+  String get prosystemFeatureEncryption =>
+      'Datos cifrados en tránsito y en reposo';
+
+  @override
+  String get prosystemCta => 'Solicitar una demo';
+
+  @override
+  String get prosystemDemoMessage =>
+      'Hola Jorge, me interesa una demo de Prosystem Security.';
+
+  @override
+  String get prosystemStatUptime => 'Operación continua';
+
+  @override
+  String get prosystemStatClients => 'Clientes satisfechos';
+
+  @override
+  String get prosystemQuote =>
+      'Validado por empresas que confían en él cada día.';
+
+  @override
+  String get reviewTitle => 'Comparte tu experiencia';
+
+  @override
+  String get reviewSubtitle =>
+      'Gracias por trabajar conmigo. Tu opinión ayuda a otros clientes a conocer mi trabajo.';
+
+  @override
+  String get reviewFieldName => 'Nombre / Empresa';
+
+  @override
+  String get reviewFieldJobTitle => 'Cargo';
+
+  @override
+  String get reviewFieldRating => 'Calificación';
+
+  @override
+  String get reviewFieldComment => 'Comentario';
+
+  @override
+  String get reviewSubmit => 'Enviar testimonio';
+
+  @override
+  String get reviewError => 'No se pudo enviar. Intenta de nuevo.';
+
+  @override
+  String get reviewSuccessTitle => '¡Gracias!';
+
+  @override
+  String get reviewSuccessBody =>
+      'Tu testimonio fue recibido y aparecerá en el portafolio tras ser revisado.';
+
+  @override
+  String get reviewInvalidTitle => 'Enlace no válido';
+
+  @override
+  String get reviewInvalidBody =>
+      'Este enlace expiró o no es correcto. Solicita uno nuevo a Jorge.';
 }
