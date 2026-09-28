@@ -147,21 +147,21 @@ class PortfolioLogic extends ChangeNotifier {
   // Download CV method
   Future<void> downloadCV() async {
     const String assetPath = 'assets/docs/JorgeGrullon_CV.pdf';
-    
+
     try {
       if (kIsWeb) {
         // Use rootBundle to load the file as bytes, ensuring we get the file regardless of host path
         final byteData = await rootBundle.load(assetPath);
         final bytes = byteData.buffer.asUint8List();
-        
+
         // Create a blob and trigger a direct browser download
         final blob = html.Blob([bytes], 'application/pdf');
         final url = html.Url.createObjectUrlFromBlob(blob);
-        
+
         html.AnchorElement(href: url)
           ..setAttribute('download', 'JorgeGrullon_CV.pdf')
           ..click();
-          
+
         html.Url.revokeObjectUrl(url);
         return;
       }

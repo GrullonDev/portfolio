@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
+
 import 'package:portafolio_app/bloc/logic.dart';
 import 'package:portafolio_app/features/projects/widgets/enterprise_project_card.dart';
 import 'package:portafolio_app/features/projects/widgets/mini_project_card.dart';
-import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 import 'package:portafolio_app/l10n/app_localizations.dart';
-import 'package:url_launcher/url_launcher.dart' as urlLauncher;
+import 'package:portafolio_app/utils/widgets/responsive/responsive.dart';
 
 class ProjectsPage extends StatelessWidget {
   const ProjectsPage({super.key});
@@ -208,7 +210,7 @@ class ProjectsPage extends StatelessWidget {
         trailingIcon: const Icon(Icons.timer, color: Color(0xFF9D5CFF)),
         actions: [
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse('https://github.com/GrullonDev/pomodoro.git'),
             ),
             icon: const Icon(Icons.code, size: 18),
@@ -223,7 +225,7 @@ class ProjectsPage extends StatelessWidget {
             ),
           ),
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse(
                   'https://play.google.com/apps/testing/com.grullondev.pomodorofocus'),
             ),
@@ -266,7 +268,7 @@ class ProjectsPage extends StatelessWidget {
             const Icon(Icons.account_balance_wallet, color: Color(0xFF9D5CFF)),
         actions: [
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse('https://github.com/GrullonDev/PersonalFinance.git'),
             ),
             icon: const Icon(Icons.code, size: 18),
@@ -281,7 +283,7 @@ class ProjectsPage extends StatelessWidget {
             ),
           ),
           OutlinedButton.icon(
-            onPressed: () => urlLauncher.launchUrl(
+            onPressed: () => url_launcher.launchUrl(
               Uri.parse(
                   'https://play.google.com/apps/testing/com.grullondev.personal_finance'),
             ),
@@ -457,7 +459,7 @@ class ProjectsPage extends StatelessWidget {
                             'Animations',
                             'Custom Paint'
                           ],
-                          onCodePressed: () => urlLauncher.launchUrl(
+                          onCodePressed: () => url_launcher.launchUrl(
                             Uri.parse(
                                 'https://github.com/GrullonDev/YellowFlowers.git'),
                           ),
